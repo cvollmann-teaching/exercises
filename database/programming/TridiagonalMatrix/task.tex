@@ -1,0 +1,20 @@
+Im folgenden Pseudo-Code wird eine Matrix beschrieben. Beschreiben Sie grob wie die Matrix aussehen würde.
+\begin{verbatim}
+	Anlegen einer Matrix A der größe 10 x 10.
+	
+	solange i in [0, 100):
+	   i1 = i modulo 10
+	   i2 = i ganzzahldivision 10
+	   A[i1, i2] = 0.0
+		
+	A[0, 0] = -2.0
+	A[0, 1] = 1.0
+	
+	solange i in [1, 9):
+	   A[i, i] = -2.0
+	   A[i, i-1] = 1.0
+	   A[i, i+1] = 1.0
+		
+	A[9,8] = 1.0
+	A[9,9] = -2.0
+\end{verbatim}

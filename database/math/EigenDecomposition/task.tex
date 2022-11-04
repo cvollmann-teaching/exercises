@@ -1,0 +1,10 @@
+\textbf{Eigendecomposition}
+
+Let $$A:=\begin{pmatrix}2&3\\3&2 \end{pmatrix} \in \mathbb{R}^{2\times 2}. $$
+Why does this matrix possess an eigendecomposition $A= Q \Lambda Q^T$? Compute the matrices $\Lambda$ and $Q$, by following this recipe:
+\begin{enumerate}
+\item Determine its eigenvalues $\lambda_1$ and $\lambda_2$ to find $\Lambda$ by solving $\chi_A(\lambda) = \det(A-\lambda I) = 0$.
+\item Determine the corresponding eigenvectors $v_1$ and $v_2$ by solving $  (A-\lambda_i I )v = 0$.
+\item Normalize the eigenvectors to find $Q$ by setting $\tilde{v}_i := \frac{v_i}{\|v_i\|_2}$ and $Q := [\tilde{v}_1,\tilde{v}_2]$. Test if $Q^TQ$ equals $I_2$.
+\item Test if $Q \Lambda Q^T$ equals $A$.
+\end{enumerate}

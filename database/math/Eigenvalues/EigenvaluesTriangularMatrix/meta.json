@@ -1,0 +1,13 @@
+{
+    "filename": "EigenvaluesTriangularMatrix.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Eigenvalues Triangular Matrix}\nUse Theorem 12.2iii) to show that the eigenvalues of an upper triangular matrix $A \\in \\mathbb{R}^{n \\times n}$ are given on its diagonal, i.e., that \n$\\det (A - \\lambda I)=0$ for all $\\lambda \\in \\textrm{diag}(A)$.",
+    "solution": "{\\color{solution}\n\\underline{Show:} \n$\\text{det}(A-\\lambda I)=0~~\\forall\\lambda\\in\\text{diag}(A)=\\{a_{11},\\dots,a_{nn}\\}$\\\\\n\\underline{Proof:}\\\\\nSince $(A-\\lambda I)$ is itself upper triangular it remains to show, that \n$$\n\\text{det}(U)=\\prod_{i=1}^{n}u_{ii}\n$$ \nfor any upper triangular matrix.(Because then: $\\text{det}(A-\\lambda I)=\\prod_{i=1}^{n}(a_ii-\\lambda)$.)\\\\\nConsider:\n$$\nU=\\begin{pmatrix}\\textcolor{red}{u_{11}}& & & \\\\0&\\textcolor{blue}{u_{22}}& & \\\\\\vdots&0&\\ddots& \\\\0&\\cdots&0&\\textcolor{blue}{u_{nn}}\\end{pmatrix}\n$$\nThen by T.12.2: $\\text{det}(U)=\\text{det}([\\textcolor{red}{u_{11}}])\\text{det}\\underbrace{\\textcolor{blue}{\\begin{pmatrix}u_{22}& & \\\\0&\\ddots& \\\\0&0&u_{nn}\\end{pmatrix}}}_{\\textcolor{blue}{=:U_{11}}}$\\\\\nWe can now apply the same idea to\n$$\nU_{11}=\\begin{pmatrix}\\textcolor{blue}{u_{22}}& & & \\\\0&\\textcolor{orange}{u_{33}}& & \\\\\\vdots&0&\\ddots& \\\\0&\\cdots&0&\\textcolor{orange}{u_{nn}}\\end{pmatrix}\n$$\n\\begin{align*}\n\\text{det}(U)&=\\underbrace{\\text{det}([\\textcolor{red}{u_{11}}])}_{=u_{11}}\\underbrace{\\text{det}([\\textcolor{blue}{u_{22}}])}_{=u_{22}}\\text{det}\\textcolor{orange}{\\begin{pmatrix}u_{33}& & \\\\0&\\ddots& \\\\0&0&u_{nn}\\end{pmatrix}}\\\\&\\vdots\\\\&=\\prod_{i=1}^{n}u_{ii}\n\\end{align*}\n}",
+    "id": ""
+}

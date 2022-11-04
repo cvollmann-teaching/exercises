@@ -1,0 +1,12 @@
+{
+    "filename": "pseudoCode-progMaximum.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\begin{enumerate}\n\t\\item Gegeben sei ein Index $i \\in \\lbrace 0, \\dots, n-1\\rbrace$ und eine Tupel von Zahlen  $( a_0, a_2, \\dots, a_{n-1})$. Schreiben Sie einen Pseudocode, der testet, ob $a_i$ das Maximum\n\tder Zahlen in der Tupel ist.\n\t\\item Schreiben Sie einen Pseudocode, der eine vorhandene Tupel von $n$ Zahlen $( a_0, a_2, \\dots, a_{n-1})$ durchl\u00e4uft und das Maximum bestimmt. \n\tNutzen Sie dazu Anweisungen, wie sie in Kapitel 1.1.1 gegeben sind.\n\tVersuchen Sie den Algorithmus so zu schreiben, dass nur eine weitere Zahl $n$ gespeichert werden muss.\n\\end{enumerate}\n\n",
+    "solution": "\\begin{enumerate}\n\t\\item\n\t\\begin{verbatim}\n\t\tEingabe von einem Tupel\n\t\tUnd dem index des maximalen Werts maxIndex\n\t\n\t\tmaxWert = Tupel[maxIndex]\n\t\tf\u00fcr jeden Wert in Tupel:\n\t\t    wenn maxWert < Wert:\n\t\t        Ausgabe: Falsch\n\t\t        Ende\n\t\t Ausgabe: Richtig\n\t\t Ende\n\t\\end{verbatim}\n\t\t\n\t\\item \n\t\\begin{verbatim}\n\t\tEingabe von Tupel der L\u00e4nge n\n\t\t\n\t\tIndex = 0\n\t\tWert = Tupel[Index]\n\t\tsolange i in [0, n):\n\t\t    Wenn Tupel[i] > Wert:\n\t\t        Index = i\n\t\t        Wert = Tupel[i] \n\t\tAusgabe: Wert, Index\n\t\tEnde\n\t\\end{verbatim}\n\t\n\\end{enumerate}\n\n"
+}

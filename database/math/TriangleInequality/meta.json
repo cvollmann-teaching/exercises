@@ -1,0 +1,13 @@
+{
+    "filename": "TriangleInequality.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Triangle Inequality}\nLet $x,y \\in \\mathbb{R}$.\nPlease show the triangle inequality and the reverse triangle inequality.\n\\begin{enumerate}\n\t\\item $|x+y| \\leq |x|+|y|$\n\t\\item $|x-y| \\geq \\left|\\, |x| - |y|\\,\\right|$\n\\end{enumerate}",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item First we note that as \n\t\\begin{align*}\n\t|x| = \\begin{cases}\n\tx: x \\geq 0\\\\\n\t-x : x < 0\n\t\\end{cases}\n\t\\end{align*}\n\t$x \\leq |x|$.\\\\\n\t\\textbf{Case 1} ($x = -y$): $\\sqrt{ }$\\\\\t\n\t\\textbf{Case 2} ($x > -y$):\n\t\\begin{align*}\n\t|x+y| = x+y \\leq |x| + |y|.\n\t\\end{align*}\n\t\\textbf{Case 3} ($x < -y \\Leftrightarrow -x >- (-y)$):\n\t\\begin{align*}\n\t|x+y| = |-x-y| = -x-y \\leq |-x| + |-y| = |x| + |y|.\n\t\\end{align*}\n\t\n\t\\item \n\t\\begin{align*}\n\t|x| = |x - y + y| \\leq |x-y| + |y|\\\\\n\t\\Leftrightarrow |x| - |y| \\leq |x-y|\n\t\\end{align*}\n\tBy interchanging $x$ and $y$ we hence obtain the assertion.\n\\end{enumerate}\n}",
+    "id": ""
+}

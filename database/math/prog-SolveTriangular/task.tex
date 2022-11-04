@@ -1,0 +1,15 @@
+\textbf{Solving Linear Systems with Triangular Matrices}
+
+%On Sheet 4 (Ex. 2) we have derived a formula for the solution $x$ of a system $Ax=b$, where $A = (a_{ij})_{ij} \in \mathbb{R}^{n \times n}$ is an upper triangular matrix, i.e., $a_{ij} = 0$ for $i > j$ and $b \in \mathbb{R}^n$. More precisely, assumed $a_{ii}\neq0$, the solution $x$ is given by
+%\begin{align*}
+%x_n &= \frac{1}{a_{nn}}b_n\\
+%x_i &= \frac{1}{a_{ii}} \left(b_i - \sum_{j=i+1}^n a_{ij} x_{j}\right) ~~~\text{for}~i=1,\ldots,n-1.
+%\end{align*}
+%\textbf{Tasks:}
+\begin{enumerate}
+%	\item Find a similar formula for lower triangular matrices $A = (a_{ij})_{ij} \in \mathbb{R}^{n \times n}$, i.e., $a_{ij} = 0$ for $i < j$.
+	\item Implement a function \verb|solve_tri(A, b, lower=False)| which takes as input a triangular matrix $A$, a vector $b$ and an optional boolean parameter \verb|lower|, which is set to \verb|False| by default. This function shall first check if the dimensions of the input parameters fit and if the matrix is invertible and if both is true, compute and output the solution $x$ by applying the above derived formulas. Otherwise return a warning that there is a dimension mismatch or that the matrix is not invertible.
+	\item Test your routine on some examples with lower and upper triangular matrices. Find the corresponding SciPy Routine and compare.
+\end{enumerate}
+
+

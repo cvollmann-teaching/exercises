@@ -1,0 +1,13 @@
+{
+    "filename": "prog-SarrusRule.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Eigenvalues, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{SarrusRule}\n\n\\begin{itemize}\n    \\item[] $\\det(A)=\\det\\left(\\begin{pmatrix}\n     {a_{11}} & \\textcolor{orange}{a_{12}} & \\textcolor{cyan}{a_{13}}\\\\\n    \\color{orange}{a_{21}} & \\textcolor{cyan}{a_{22}} & \\textcolor{orange}{a_{23}}\\\\\n    \\textcolor{cyan}{a_{31}} & \\textcolor{orange}{a_{32}} & \\textcolor{cyan}{a_{33}}\n    \\end{pmatrix}\\right)$\\\\\n    \\item[] $ = a_{11} \\cdot det\\begin{pmatrix}\n    \\textcolor{cyan}{a_{22}} & \\textcolor{orange}{a_{23}} \\\\\n    \\textcolor{orange}{a_{32}} & \\textcolor{cyan}{a_{33}}\n    \\end{pmatrix} - a_{12} \\cdot det\\begin{pmatrix}\n    \\textcolor{cyan}{a_{21}} & \\textcolor{orange}{a_{23}} \\\\\n    \\textcolor{orange}{a_{31}} & \\textcolor{cyan}{a_{33}}\n    \\end{pmatrix} + a_{13} \\cdot det\\begin{pmatrix}\n    \\textcolor{cyan}{a_{21}} & \\textcolor{orange}{a_{22}} \\\\\n    \\textcolor{orange}{a_{31}} & \\textcolor{cyan}{a_{32}}\n    \\end{pmatrix}$\\\\\n    \\item[] $ = a_{11}(a_{22}a_{33}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{31}a_{23})+  a_{12}(a_{21}a_{32}-a_{31}a_{22}) =$\\\\\n    \\item[] $ = a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+ a_{12}a_{31}a_{23}+a_{13}a_{21}a_{32}-a_{13}a_{31}a_{22}$\\\\\n\\end{itemize}\n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-SarrusRule_solution.py}\n",
+    "id": ""
+}

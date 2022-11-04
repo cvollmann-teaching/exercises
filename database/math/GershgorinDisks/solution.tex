@@ -1,0 +1,15 @@
+{\color{solution}
+We show, that $\forall~\lambda\in\sigma(A)~\exists~i\in\{1,\dots,n\}:~~\lambda\in D_i$
+\begin{itemize}
+	\item 
+	Let $\lambda\in\sigma(A)$, then choose an eigenvector $v=\begin{pmatrix}v_1\\\vdots\\v_n\end{pmatrix}$, so that\\ $\exists~i\in\{1,\dots,n\}:~v_i=1$ and $|v_j|\leq 1~~\forall i\neq j$\\ $\left(\text{choose any eigenvector}~ \tilde{v}~ \text{and then set}~ v:=\frac{\tilde{v}}{\tilde{v}_i},~\|\tilde{v}\|_\infty =|\tilde{v}_i|\right)$.
+	\item 
+	We know: $Av=\lambda v$, in particular (componentwise)
+	\begin{align*}
+	&\underbrace{(Av)_i}_{\textcolor{blue}{=\sum_{j=1}^{n}a_{ij}v_j=a_{ii}\cdot 1+\sum_{j\neq i}a_{ij}v_j}}=(\lambda v)_i =\lambda \underbrace{v_i}_{\textcolor{blue}{=1}}=\lambda\\
+	\Leftrightarrow~~&|\lambda-a_{ii}|=\left|\sum_{j\neq i}a_{ij}v_j\right|\stackrel{\textcolor{blue}{[\text{triangle inequality}]}}{\leq}\sum_{j\neq i}|a_{ij}|\underbrace{|v_j|}_{\textcolor{blue}{\leq 1}}\leq R_i\\
+	\Leftrightarrow~~&\lambda\in D_i
+	\end{align*}
+	\begin{flushright}$\square$\end{flushright}
+\end{itemize}
+}

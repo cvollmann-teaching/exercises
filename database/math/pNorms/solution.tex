@@ -1,0 +1,28 @@
+{
+	Some further remarks first:\\
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{ex-pNorms-notes}
+	\end{center}
+\color{solution}
+\begin{enumerate}
+		\item~\\  \includegraphics[width=0.6\textwidth]{norms.pdf}
+		\item Recall: $\|{x}\|_2:=\sqrt{\sum_{i=1}^{n}x_i^2}=\sqrt{x^Tx}$
+		\item[i)] 
+		\begin{align*} 
+		\|{x}\|_2 =0&\Rightarrow \ \ \|{x}\|_2^2 = 0\ \ \Rightarrow\ \ \sum_{i=1}^{n}x_i^2=0\ \ \Rightarrow\ \ x_i^2=0\ \ \forall i\ \ \Rightarrow\ \ x_i=0\ \ \forall i\\
+		&\Rightarrow\ \ x=0
+		\end{align*}
+		\item[ii)] 
+		Let $\lambda\in\mathbb{R},\ x\in\mathbb{R}^n$, then
+		\begin{align*}
+		\|{\lambda x}\|_2=\sqrt{\sum_{i=1}^{n}\underbrace{(\lambda x_i)^2}_{\textcolor{blue}{\lambda^2x_i^2}}}=\sqrt{\lambda^2\sum_{i=1}^{n}x_i^2}=\sqrt{\lambda^2}\sqrt{\sum_{i=1}^{n}x_i^2}=|\lambda|\cdot\|{x}\|_2.
+		\end{align*}
+		\item[iii)] 
+		Let $x,y\in\mathbb{R}^n$ (to show: $\|{x+y}\|\leq\|{x}\|+\|{y}\|$, or equivalently $\|{x+y}\|^2\leq(\|{x}\|+\|{y}\|)^2$ (note that $x \mapsto x^2$ is monotonically increasing for $x\geq 0$)). We find
+		\begin{align*}\|{x+y}\|^2=| \underbrace{\|{x+y}\|^2}_{\textcolor{red}{\geq0}}| 
+		&=\left|(x+y)^T(x+y)\right|=\left|(x+y)^Tx+(x+y)^Ty\right|=\left|x^Tx+y^Tx+x^Ty+y^Ty\right|\\&=\left|x^Tx+2x^Ty+y^Ty\right|=\left|\|{x}\|_2^2+2x^Ty+\|{y}\|_2^2\right|\\
+		&\leq \|{x}\|_2^2 +2\underbrace{|x^Ty|}_{\textcolor{blue}{\leq\|{x}\|\|{y}\|}}+\|{y}\|_2^2\\
+		&\leq\left(\|{x}\|_2+\|{y}\|_2\right)^2.
+		\end{align*}
+\end{enumerate}
+}

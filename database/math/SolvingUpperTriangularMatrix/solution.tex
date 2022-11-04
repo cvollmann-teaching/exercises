@@ -1,0 +1,36 @@
+{
+\color{solution}
+\begin{enumerate}
+	\item  
+	\begin{align*}
+	\textcolor{violet}{\begin{array}{r}(\text{I})\\(\text{II})\\(\text{III})\end{array}}
+	\begin{pmatrix}1&-1&1\\0&2&1\\0&0&\frac{1}{2}\end{pmatrix}\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}=\begin{pmatrix}3\\0\\1\end{pmatrix}
+	\end{align*}
+	\begin{align*}
+	\textcolor{violet}{(\text{III})}~~~&\Rightarrow~~~ \frac{1}{2}x_3=1~~~\Rightarrow~~~ x_3=2\\
+	\textcolor{violet}{(\text{II})}~~~&\Rightarrow~~~2x_2+x_3 = 0~~~\Rightarrow~~~ x_2 = -1\\
+	\textcolor{violet}{(\text{I})}~~~&\Rightarrow~~~x_1 -x_2+x_3 = 3~~~\Rightarrow~~~ x_1 = 0
+	\end{align*}
+	\begin{align*}
+	\Rightarrow\ \ \ x=\begin{pmatrix}0\\-1\\2\end{pmatrix}
+	\end{align*}
+	\item First note that a triangular matrix is invertible if and only if the diagonal entries are nonzero (see the formula below or note that $\text{det}(U)=\prod_i u_{ii}$). 
+	Now, from considering the i-th row (equation)
+	$$
+	u_{ii}x_i + u_{i,i+1}x_{i+1}+\dots+u_{in}x_n = b_i,
+	$$
+	we obtain a representation for $x_i$ given by
+	\begin{align*}
+	x_n &= \frac{b_n}{x_n}\\
+	 x_i &= \underbrace{\frac{1}{u_{ii}}}_{\textcolor{blue}{[\text{assume}~~ u_{ii}\neq 0 ]}}\left(b_i-\sum_{j=i+1}^{n}u_{ij}x_j\right), ~~~\text{for}~ i<n,
+	\end{align*}
+	where all the $x_j$ for $ j\in\{i+1,\dots,n\}$ in the sum are computed in previous steps.	
+	\item In the same way, by simply changing the indices in the sum, we find a formula for lower triangular matrices given by 
+\begin{align*}
+x_1 &= \frac{b_1}{x_1}\\
+x_i &=
+  \underbrace{\frac{1}{\ell_{ii}}}_{\textcolor{blue}{[\text{assume}~~ \ell_{ii}\neq 0 ]}}\left(b_i-\sum_{j=1}^{i-1}\ell_{ij}x_j\right),~~~\text{for}~ i>1,\\
+\end{align*}
+	where the $x_j$ for $j \in \{1,\ldots, i-1\}$ in the sum are determined in previous steps.
+\end{enumerate}
+}

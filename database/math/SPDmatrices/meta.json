@@ -1,0 +1,13 @@
+{
+    "filename": "SPDmatrices.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = en_US\n\\textbf{SPD Matrices}\n\n{\\color{navy}\n\t\\textbf{Definition.} Let  $A\\in\\mathbb{R}^{n \\times n}$ be a matrix.\n\t\\begin{itemize}\n\t\t\\item $A$ is called \\textbf{symmetric}, if $A^\\top = A$.\n\t\t\\item $A$ is called \\textbf{positive definite (semi-definite)}, if $x^\\top Ax>0$ ($x^\\top Ax\\geq0$) for all $x\\neq 0$.\n\t\\end{itemize}\n\\textit{Remark:} If $A$ is symmetric and positive definite (SPD), then $(x,y) := x^T A y $ defines a general so-called \\textit{inner product.} In the lecture we mainly consider the \\textit{standard inner product} $$(\\cdot,\\cdot)_2\\colon \\mathbb{R}^n\\times \\mathbb{R}^n \\to \\mathbb{R},~ (x,y) \\mapsto x^TI_ny=\\sum_{i=1}^n x_i y_i$$ which corresponds to the symmetric and positive definite matrix $I_n$ (identity matrix).\\\\\n}\n~\\\\\n\\textbf{Tasks:}\n\\begin{enumerate}\n\t\\item Find an example $A \\in \\mathbb{R}^{2 \\times 2}$ which is symmetric and positive definite.\n\t\\item Draw the set $\\{ Ax\\colon \\|x\\|_2 = 1\\}$.\n\\end{enumerate}\n\n\n\n",
+    "solution": "{\n\\color{solution}\n\\begin{enumerate}\n\t\\item  Let us consider $A:= \\begin{bmatrix}a_{11}&a_{12}\\\\a_{21}&a_{22}\\end{bmatrix} $ with $a_{12} = a_{21}$ and first analye the property for being $A$ being positive definite. We see\n\t\\begin{align*}\n\t\tx^TAx=a_{11}x_1^2+a_{12}x_1x_2+a_{12}x_2x_1+a_{22}x_2^2\n\t\t=a_{11}x_1^2+2a_{12}x_1x_2+a_{22}x_2^2\n\t\t\\stackrel{!}{>} 0\\ \\ \\forall x=(x_1,x_2)^\\top\\neq (0,0)^\\top.\n\t\t\\end{align*}\n\t\\underline{Example:}\n\t\\begin{align*}\n\t\tA=\\begin{bmatrix}2&1\\\\1&2\\end{bmatrix},~ x^TAx &=\\overbrace{2x_1^2}^{\\textcolor{blue}{x_1^2+x_1^2}}+2x_1x_2+2x_2^2\\\\\n\t\t&=x_1^2+x_2^2+\\underbrace{(x_1+x_2)^2}_{\\geq0}\\\\\n\t\t&\\geq x_1^2+x_2^2\\\\\n\t\t&>0~~~~~~~~~ \\forall\\begin{pmatrix}x_1\\\\x_2\\end{pmatrix}\\neq\\begin{pmatrix}0\\\\0\\end{pmatrix}\n\t\t\\end{align*}\n\t\\item  Consider\n\t$\\{Ax:\\|{x}\\|_2 =1\\}$ with $\\ A=\\begin{bmatrix}2&1\\\\1&2\\end{bmatrix}$. Also recall from the lecture that $\\left(3, \\begin{bmatrix}1\\\\1\\end{bmatrix}\\right), \\left(1, \\begin{bmatrix}1\\\\-1\\end{bmatrix}\\right)$ are eigenpairs (see later).\n\t\\begin{center}\n\t\t\\includegraphics[width=0.6\\textwidth]{spdMatrix.pdf}\n\t\\end{center}\n\t~\\\\Further general note:\n\t\\begin{center}\n\t\t\\includegraphics[width=0.99\\linewidth]{../../rep/exercises/direct-solver/ex-spdMatsAndNorms}\n\t\\end{center}\n\t\n\\end{enumerate}\n}",
+    "id": ""
+}

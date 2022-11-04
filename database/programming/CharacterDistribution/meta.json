@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progCountDistribution.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\href{https://en.wikipedia.org/wiki/Frequency_analysis}{\\textbf{H\u00e4ufigkeitsanalyse}}\\\\\nSchreiben Sie eine Funktion \\verb|dist = characterDistribution(text)|, die einen string \\verb|text| entgegennimmt und eine Liste \\verb|dist| der L\u00e4nge 26 zur\u00fcckgibt. Die Liste \\verb|dist| soll die H\u00e4ufigkeitsverteilung der Buchstaben (nicht case sensitive, ohne Umlaute) in dem String \\verb|text| enthalten. Andere Zeichen sollen ignoriert werden.\\\\~\\\\\n\\textbf{Beispiel}\\\\\n\\texttt{characterDistribution(\"abcdefghijklmnopqrstuvwxyz\")}\\\\\n\\verb|>>> [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]|\\\\\n~\\\\",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progCountDistribution_solution.py}"
+}

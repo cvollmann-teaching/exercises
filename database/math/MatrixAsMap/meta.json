@@ -1,0 +1,13 @@
+{
+    "filename": "MatrixAsMap.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = en_US\n\\textbf{A matrix as a Linear Function}\n\nLet $A \\in \\mathbb{F}^{m\\times n}$ be a matrix. Then consider the mapping $f_A\\colon \\mathbb{F}^{n} \\to \\mathbb{F}^{m}, x \\mapsto Ax$.\n\\begin{enumerate}\n\\item Show that\n$$f_A(\\lambda x+y) = \\lambda f_A(x) + f_A(y), \\nonumber$$\nfor all $x,y \\in \\mathbb{F}^{n} $ and $\\lambda \\in \\mathbb{F}$.\n\n\\textit{Hint:} A vector is a matrix with just one column, so you can make use of the computation rules given above.  \n\n\\textit{Remark:} Functions satisfying this property are called \\textbf{linear}.  \n\n\\item Use this fact to show the following equivalence:\n\\begin{align*}\n\\text{ker}(A):=\\{x \\in \\mathbb{F}^n\\colon Ax=0 \\}  = \\{0\\}~~~\\Leftrightarrow  ~~& f_A ~~\\text{is an injective mapping},~ \\\\\n&(\\text{i.e.},~f_A(x) = f_A(y) ~\\text{implies}~ x=y).\n\\end{align*}\n\\textit{Hint:} Split up the equality $\\Leftrightarrow $ into  $\\Rightarrow $ and $\\Leftarrow$ and prove each of them separately.\n\\end{enumerate}\n\n",
+    "solution": "{ \\color{solution}\n\\begin{enumerate}\n\t\\item Let $x,y \\in \\mathbb{F}^{n} $ and $\\lambda \\in \\mathbb{F}$. Then \n\t\\begin{align*}\n\t f_A(\\lambda x+y) = A(\\lambda x + y) = A(\\lambda x) + Ay = \\lambda Ax + Ay = \\lambda f_A(x) + f_A(y).\n\t\\end{align*} \n\t\\item \n\t\\begin{itemize}\n\t\t\\item[``$\\Rightarrow$'']  \n\t\tLet $\\text{ker} (A)  = \\{0\\}$\\\\ \n\t\t(To show: $f_A ~~\\text{is an injective mapping}$, i.e., $f_A(x) = f_A(y)$ implies $x = y$.)\\\\\n\t\tLet $x,y\\in \\mathbb{F}^{n}$ with $f_A(x) = f_A(y)$, which implies by definition\n%\t\t\\begin{align*}\n\t\t $Ax = Ay $\n%\t\t\\end{align*} \n\t\tand thus by linearity $A(x-y) =0$.\n\t\tThus, since $\\text{ker} (A)  = \\{0\\}$, we conclude $x-y = 0$.\n\t\t\\item[``$\\Leftarrow$''] \n\t\tLet $f_A ~~\\text{be an injective mapping}$, i.e., $f_A(x) = f_A(y)$ implies $x = y$.\\\\\n\t\t(To show:: $Ax = 0 \\Leftrightarrow x = 0$ (here ``$\\Leftarrow$'' is obvious).)\\\\\n\t\tLet $Ax=0$, then we find\n\t\t$$\n\t\tf_A(0) = A0 = 0 = Ax = f_A(x).\n\t\t$$\n\t\tThus, since $f_A$ is assumed to be injective, $x = 0$ (take ``$y = 0$'').\n\t\\end{itemize}\n\\end{enumerate}\n}",
+    "id": ""
+}

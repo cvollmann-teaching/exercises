@@ -1,0 +1,13 @@
+{
+    "filename": "GramSchmidtAlgorithm.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Gram-Schmidt Algorithm}\n\\begin{enumerate}\n\t\\item \tImplement the Gram-Schmidt algorithm as a function \\verb|QR()|, which takes a matrix $A$ as input and returns the matrices $Q$ and $R$.\n\tTest your algorithm by computing $Q^\\top Q$ and $QR - A$, where the first should yield the identity and the latter a zero-matrix.\n\t\n\t\\textit{Hint: } If you use \\verb|np.round(|$\\dots,$\\verb|2)| on $Q^\\top Q$ and $QR - A$ it will be easier to check your results.\n\t\n\t\\item Implement the QR-Eigenvalue algorithm (see lecture page 68) as a function \\verb|eig()|. The function shall take a matrix $A$ as input and return the diagonal of the last iterate $A_n$. Test your results against \\verb|np.linalg.eig()| with some\n\tsymmetric, positive semi-definite matrix $A$ as input. Note that such a matrix has only nonnegative eigenvalues so that there are no $2\\times 2$ blocks on the diagonal (as they can occur for complex eigenvalues within the Schur decomposition).\n\t\n\t\\textit{Hint: } You can directly access the diagonal of a \\verb|numpy.array| by \\verb|A.diagonal()|.\n\\end{enumerate}",
+    "solution": "",
+    "id": ""
+}

@@ -1,0 +1,15 @@
+\textbf{Matrix Product as Sum of rank-1 Matrices}
+\begin{enumerate}
+	\item Let $A \in \mathbb{R}^{m \times k}$ and $B \in \mathbb{R}^{k \times n}$. Show that 
+$$A \cdot B 
+= \sum_{i=1}^k a_i b_i^\top
+= \sum_{i=1}^k 
+\begin{pmatrix}
+a_{1i}\\\vdots\\a_{mi}
+\end{pmatrix}\cdot\begin{pmatrix}
+b_{i1}&\ldots&b_{in}
+\end{pmatrix}, $$
+where $a_i\in \mathbb{R}^{m\times 1}$ denotes the $i$-th \textit{column} of $A$ and $b_i^\top\in \mathbb{R}^{1 \times n}$ denotes the $i$-th \textit{row} of $B$.
+\item Construct two examples with actual numbers.
+\end{enumerate}
+\textit{Remark:} Also see p. 10-11 in Gilbert Strang's ``Linear Algebra and Learning from Data''.\\

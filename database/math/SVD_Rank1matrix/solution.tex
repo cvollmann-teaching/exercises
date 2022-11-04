@@ -1,0 +1,29 @@
+{\color{solution}
+\textit{We will in all detail derive the full and reduced SVD by following our recipe (your answer may be shorter!):	}~\\~\\
+We have $$A^TA=\|u\|^2vv^T.$$
+Following the recipe for computing the SVD of $A$ we determine the eigenpairs of $A^TA$. We find
+$$A^TAv=\|u\|^2\|v\|^2v,$$
+which implies that $v$ is an eigenvector to the positive (note: $u,v \neq 0$) eigenvalue $\|u\|^2\|v\|^2$.
+\begin{itemize}
+	\item 
+	Since $A^TA$ is symmetric we know all eigenvectors are mutually orthogonal.
+	\item 
+	However, any vector $\textcolor{red}{x}$ orthogonal to $\textcolor{cyan}{v}$ is eigenvector to the eigenvalue $\textcolor{violet}{0}$, since $$A^TA\textcolor{red}{x}=\|u\|^2\textcolor{cyan}{v}\underbrace{\textcolor{cyan}{v}^Tx}_{\textcolor{blue}{=0}}=\textcolor{violet}{0}\cdot\textcolor{red}{x}.$$
+	Therefore the eigenvalues of $A^TA$ are given by
+	$$\lambda_1=\|u\|^2\|v\|^2,~\lambda_2=\dots=\lambda_n=\textcolor{violet}{0},$$
+	with precisely $r=1$ positive one ($\textcolor{red}{\Rightarrow\text{rank}(A)=1}$).
+	Thus we find the singular values and right-singular vector by
+	$$v_1:=\frac{v}{\|v\|},~\sigma_1=\|u\|\|v\|>0.$$
+		Extend $v_1$ to the orthogonal matrix $V=\begin{pmatrix}|& \\v_1&\dots\\|& \end{pmatrix}\in\mathbb{R}^{n\times n}$ with orthonormal columns, where $v_2,\ldots,v_n \in \ker(A)$.
+		Also set $$\Sigma = \text{diag}(\sigma_1,0,\ldots, 0) \in \R^{m \times n}.$$
+	\item 
+	Following the recipe, the corresponding left-singular vector is given by  
+	$$u_1 :=\frac{Av_1}{\sigma_1}=\frac{1}{\|u\|\|v\|}uv^T\frac{v}{\|v\|}=\frac{u}{\|u\|}\underbrace{\frac{v^Tv}{\|v\|^2}}_{\textcolor{blue}{=1}}=\frac{u}{\|u\|}.$$
+	Extend $u_1$ to the orthogonal matrix $U=\begin{pmatrix}|& \\u_1&\dots\\|& \end{pmatrix}\in\mathbb{R}^{m\times m}$ with orthonormal columns, where $u_2,\ldots,u_m \in \ker(A^T)$.
+	\item All in all we then obtain the full and reduced (as sum of rank-$1$ matrices) SVD
+	$$
+	\Rightarrow~~A= U\Sigma V^T = \|u\|\|v\|u_1v_1^T.
+	$$
+\end{itemize}
+
+}

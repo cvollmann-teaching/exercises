@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progBreadthFirstSearch.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Breitensuche}\\\\\nBetrachten Sie den Graphen im unten angegebenen Bild. Dort finden sich 6 Knoten mit Kanten zu anderen Knoten. Wir codieren den Graphen mit der unten angegebenen Liste von Listen.\nDer nullte Eintrag der Liste enth\u00e4lt die Elemente 1 und 5, weil der Knoten 0 nach 1 und 5 zeigt und so weiter...\\\\~\\\\\n\\vspace{.5cm}\n\\begin{minipage}{.45\\textwidth}\n\\begin{verbatim}\n[[1, 5],\n [2,4],\n [],\n [],\n [3, 2,],\n [2]]\n\\end{verbatim} \n\\end{minipage}\n\\begin{minipage}{.45\\textwidth}\n\t\\begin{center}\n\t\t\\includegraphics[scale=.2]{prog-progBreadthFirstSearch.jpg}\n\t\\end{center}\n\\end{minipage}\n\n\nSchreiben Sie einen \\href{https://de.wikipedia.org/wiki/Breitensuche}{Breitensuche-Algorithmus} in Python, der gestartet an dem Knoten 0, einen Weg zum Knoten 3 findet und stellen Sie vor wie er funktioniert.\\\\\n\n\\textit{Hinweis:} Arbeiten Sie mit dem Datentyp \\texttt{list} und verwenden Sie die Methoden \\texttt{.append(), .copy(), .pop()}.",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progBreadthFirstSearch_solution.py}"
+}

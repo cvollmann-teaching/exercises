@@ -1,0 +1,13 @@
+{
+    "filename": "prog-RidgeRegressionMinNorm.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Least Squares Problems, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{\\normalsize Ridge Regression and the Minimum Norm Solution}\n\nLet $b \\in \\mathbb{R}^m$ and $A \\in \\mathbb{R}^{m \\times n}$.\nAssume you are given the regularized least squares problem \n$$\n\\min\\limits_{x \\in \\mathbb{R}^n} \\| Ax-b \\|_2^2 + \\tfrac{\\delta}{2} \\|x\\|_2^2.\n$$\n\\begin{enumerate}\n\t\\item Which equation does the solution $x_\\delta$ of the above least squares problem solve?\n\t\\item Assume you are given the following data\n\t\\begin{center}\n\t\t\\begin{tabular}{l|cc}\n\t\t\tz&-1&1\\\\\n\t\t\t\\hline\n\t\t\ty&2&-1\n\t\t\\end{tabular}\n\t\\end{center}\n\twhich you want to explain by a model $f:\\mathbb{R} \\to \\mathbb{R}$ of the form \n\t$$f_c(z) = c_1 + c_2z + c_3z^2.$$ \n\tImplement a program to solve the regularized least squares problem\n\t$$\n\t\\min\\limits_{c \\in \\mathbb{R}^3} \\sum_{i=1}^2 (f_c(z_i) - y_i)^2 + \\tfrac{\\delta}{2} \\sum_{j=1}^{3} c_j^2\n\t$$\n to determine appropriate coefficients $x_\\delta = (c_1^\\delta, c_2^\\delta, c_3^\\delta)$ for \\textit{\\underline{multiple}} $\\delta \\in (0,1)$. Why is regularization an appropriate approach here?\n \\item Find a routine to compute the minimum norm least squares solution $x^+$ and compare it to your solutions $x_\\delta$. What do you observe for small $\\delta$?\n\t\\item Plot the measurements and the fitting polynomial corresponding to $x_\\delta$ and $x^+$ into one figure. What do you observe for small $\\delta$?\\\\~\\\\\n\t\\textit{Hint:} Use \n\t\\begin{itemize}\n\t\t\\item \\verb|scipy.linalg.solve| to solve a linear system and set the correct flag that informs the function about the positivity of the matrix (see documentation),\n\t\t\\item \\verb|numpy.linspace| to create an array of multiple $\\delta \\in (0,1)$,\n\t\t\\item the plot routines from previous exercises if you want.\n\t\\end{itemize}\n%\t\n\n\\end{enumerate} \n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-RidgeRegressionMinNorm_solution.py}\n",
+    "id": ""
+}

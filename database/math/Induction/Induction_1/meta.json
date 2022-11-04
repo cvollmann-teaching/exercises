@@ -1,0 +1,13 @@
+{
+    "filename": "Induction_1.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Show by induction that for any $n \\in \\mathbb{N}$ it holds that\n$$\n\t\\sum_{k=1}^n k = \\frac{n(n+1)}{2}.\n$$",
+    "solution": "{\\color{solution}\n\\underline{Show:} \n$\\sum_{k=1}^{n}k =\\frac{n(n+1)}{2}$\\\\\n\\underline{Proof:}\\\\\n\\textbf{Induction Basis } $(n=1)$\n$$\n1=2=\\frac{1(1+1)}{2}~~\\checkmark~~\\textcolor{exampoints}{(2P)}\n$$\n\\textbf{Induction Step} $(n \\mapsto n+1)$\n$$\n\\sum_{k=1}^{n+1}k=(n+1)+\\sum_{k=1}^{n}k\\stackrel{\\textcolor{blue}{\\text{[I.A.]}}\\textcolor{exampoints}{(2P)}}{=} (n+1)+\\frac{n(n+1)}{2}=(n+1)+\\left(\\frac{n}{2}+1\\right)=\\frac{(n+1)(n+2)}{2}~~\\checkmark~~\\textcolor{exampoints}{(4P)}\n$$\n}",
+    "id": ""
+}

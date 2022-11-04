@@ -1,0 +1,13 @@
+{
+    "filename": "ModellingLinearFunctions.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Linear Modelling}\nLet us assume a car $c_1$ starts driving at time $t=0h$ and runs with 50$\\frac{km}{h}$. A second car $c_2$ runs with $90\\frac{km}{h}$ but starts 2 hours later at time $t=2h$ at the same position as car $c_1$ did.\n\\begin{enumerate}\n\t\\item Describe the positions $c_1(t)$ and $c_2(t)$ of the cars as affine linear function of time, i.e., $c_i(t) = m_i t + b_i$ for some appropriate $m_i, b_i \\in \\mathbb{R}$, $i = 1,2$.\n\t\\item At which time $t$ do the cars meet? \n\\end{enumerate}",
+    "solution": "{\\color{solution}\nWe know, that car 1 starts at $t=0$ with $50\\frac{\\text{km}}{\\text{h}}$ and car 2 starts at $t=2$ with $90\\frac{\\text{km}}{\\text{h}}$. \nNow we want to model the position of car $i$ at time $t$ with the function\n\\begin{align*}\nc_i(t):=m_i t +b_i~~[km].\n\\end{align*}\n\\begin{enumerate}\n\t\\item \n\tWe already know $m_1= 50, m_2= 90$ and\\begin{align*}\n\t& 1)~0=c_1(0)=m_1\\cdot 0+b_1~~\\Rightarrow~~b_1=0,\\\\\n\t& 2)~0=c_2(2)=\\underbrace{m_2}_{=90}\\cdot 2+b_2~~\\Rightarrow~~b_2=-180.\n\t\\end{align*}\n\t\\item \n\tWe want to find a $\\hat{t}$, where the car meet:\n\t\\begin{align*}\n\t&c_1(\\hat{t})=c_2(\\hat{t})\\\\\n\t\\Leftrightarrow &50\\cdot\\hat{t}=90\\cdot\\hat{t}-180\\\\\n\t\\Leftrightarrow &\\hat{t}=\\frac{180}{40}=4.5\n\t\\end{align*}\n\tSo we conclude, that the cars will meet after $4.5$ hours or $270$ minutes.\n\\end{enumerate}\n}",
+    "id": ""
+}

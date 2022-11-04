@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progHorner_exam.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Exam",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\lstinputlisting{prog-progHorner_exam.py}\n",
+    "solution": "% !TeX spellcheck = de_AT_frami\n\\begin{enumerate}\n\t\\item -- $z=2$\\\\\n         -- $p(z)=p(2)=1$\n\t\\item -- \\texttt{14: > 3}\\\\\n\tDenn:\\\\\n\t~\\hspace*{1cm}\\texttt{n=1,~~ x=a[n-1]=a[0]=1,~~~~~ k=0,~x=2*1+a[n-1-0]=2+1=3}\\\\\n\t-- Wir h\u00e4tten 1 als Ergebnis erwartet.\n\t\\item Zum Beispiel:\\\\\n\t-- In Zeile 9:~~ \\texttt{for k in range(1,n)}\\\\\n\t-- Oder in Zeile 9:~~ \\texttt{for k in range(0,n-1)}\\\\\n\t  \\hspace*{0.1cm} und in Zeile 10:~~~\\texttt{a[n-2-k]}\n\\end{enumerate}"
+}

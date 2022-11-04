@@ -1,0 +1,13 @@
+{
+    "filename": "exam-inverse-matrix.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Uniqueness of Inverse Matrix} \n \n Show that an invertible matrix $A\\in\\Fnn$ has exactly one inverse matrix.\n",
+    "solution": "\t\t\n\\begin{minipage}\n\\color{solution}\n\t\t\tSuppose $BA = I_n$ and $AC = I_n$, then\n\t\t\t$$B = BI_n =B(AC) = (BA)C=I_nC = C. $$\n\\end{minipage}\n",
+    "id": ""
+}

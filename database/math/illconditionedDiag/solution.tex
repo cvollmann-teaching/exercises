@@ -1,0 +1,18 @@
+{\color{solution}
+\begin{enumerate}
+	\item Yes, because diagonal entries are nonzero (then, e.g., $\det(D_n) \neq 0$).
+	\item We find
+			$$x_b = (b_1, 2b_2,\ldots,nb_n),$$
+			which is uniquely determined because $D_n$ is invertible.
+	\item We find
+		\begin{align*}
+		0 = \det(D_n - \lambda I) = \prod_{i=1}^{n} (d_{ii} - \lambda) ~~\Leftrightarrow~~\lambda \in \{1,\frac{1}{2},\ldots,\frac{1}{n}\}.
+		\end{align*}
+	\item Set $V:=U:= I_n$ (orthogonal) and $\Sigma := D_n$ (diagonal with positive entries), then obviously $$D_n = U\Sigma V^T. $$
+	\item We find
+	$$\text{cond}_2(D_n) = \frac{\sigma_{max}}{\sigma_{min}}= \frac{1}{\frac{1}{n}}= n ~~~\to \infty~(\text{as}~n \to \infty). $$
+	\item From the lecture 
+	$$\frac{\|\Delta x\|}{\|x\|} \leq \text{cond}_2(D_n)\frac{\|\Delta b\|}{\|b\|} = \frac{ \varepsilon n\sqrt{n}}{\|b\|} .$$
+	Thus for fixed $b$ and $\varepsilon$, the relative error can get arbitrarily large as $n$ increases.
+\end{enumerate}
+}

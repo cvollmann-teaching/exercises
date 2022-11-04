@@ -1,0 +1,28 @@
+{\color{solution}
+	\begin{enumerate}
+		\item First note that by definition of the matrix product we have
+		$$(A^\top A)_{jj} = \sum_{i=1}^m a'_{ji} a_{ij} = \sum_{i=1}^m a_{ij}a_{ij}  = \sum_{i=1}^m a_{ij}^2.$$
+		Therefore, by definition of the trace and the Frobenius norm, we have
+		$$
+		\text{tr}(A^\top A) = \sum_{j=1}^n (A^\top A)_{jj} =  \sum_{j=1}^n\sum_{i=1}^m a_{ij}^2 = \|A\|_F^2.
+		$$
+		\item By definition of the trace and the matrix product and exploiting the commutativity of the product in $\mathbb{R}$, we find
+		\begin{align*}
+		\text{tr}(A^\top B)&=\sum_{i=1}^{n}(A^\top B)_{ii}\\
+		&=\sum_{i=1}^{n}\sum_{k=1}^{m}a'_{ik}b_{ki} =\left( \sum_{i=1}^{n}\sum_{k=1}^{m}b'_{ik}a_{ki}	=\sum_{i=1}^{n}(B^\top A)_{ii}=\text{tr}(B^\top A)\right)\\
+	&=\sum_{i=1}^{n}\sum_{k=1}^{m}b_{ki}a'_{ik}\\
+		&=\sum_{k=1}^{m}\sum_{i=1}^{n}b_{ki}a'_{ik}
+		\left(=\sum_{i=1}^{n}(BA^\top)_{kk}=\text{tr}(BA^\top)\right)
+%		&=\sum_{k=1}^{m}\sum_{i=1}^{n}b'_{ik}a_{ki}=\sum_{i=1}^{n}\sum_{k=1}^{m}b'_{ik}a_{ki}	\left(=\sum_{i=1}^{n}(B^\top A)_{ii}=\text{tr}(B^\top A)\right)\\
+		\end{align*}
+		\item Let $A = U\Sigma V^\top$, then 
+		\begin{align*}
+		 \|A\|_F^2 &= \text{tr}(A^\top A) \stackrel{{\color{blue}SVD}}{=}  \text{tr}((U\Sigma V^\top)^\top U\Sigma V^\top)
+		 \stackrel{\text{\color{blue}reverse prod. of transpose}}{=}\text{tr}(V \Sigma^\top U^\top U\Sigma V^\top)\\
+		& 	 \stackrel{ \text{\color{blue}U ortho.}}{=}\text{tr}(V \Sigma^\top \Sigma V^\top) \stackrel{\text{\color{blue}symmetry of tr}}{=}\text{tr}(\Sigma V^\top V \Sigma^\top )\\
+		& \stackrel{ \text{\color{blue}V ortho.}}{=} \text{tr}(\Sigma\Sigma^\top ) \stackrel{ \text{\color{blue}Def. tr}}{=} \sum_{i=1}^n (\Sigma\Sigma^\top )_{ii}\\
+		&\stackrel{  \text{\color{blue}Def. mat. prod.}}{=}   \sum_{i=1}^m \sum_{j=1}^n \Sigma_{ij}\Sigma^\top_{ji}=   \sum_{i=1}^m \sum_{j=1}^n \Sigma_{ij}^2 \stackrel{  \text{\color{blue}$\Sigma\in \mathbb{R}^{m \times n}$ diag.}}{=}    \sum_{i=1}^{\min(m,n)}   \Sigma_{ii}^2 .
+		\end{align*}
+	\end{enumerate}
+
+}

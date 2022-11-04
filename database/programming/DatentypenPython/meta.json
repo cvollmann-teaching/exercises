@@ -1,0 +1,12 @@
+{
+    "filename": "Datentypen_exam.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = de_AT_frami\n\\begin{enumerate}\n\t\\item Nennen Sie die 3 Merkmale einer Instanz in Python.\n\t\\item Mit welchen Builtin--Funktionen k\u00f6nnen zwei dieser Merkmale abfragen?\n\t\\item Erkl\u00e4ren Sie den Unterschied zwischen ver\u00e4nderlichen und unver\u00e4nderlichen Datentypen.\n\t\\item Nennen Sie jeweils ein Beispiel f\u00fcr einen ver\u00e4nderlichen bzw. unver\u00e4nderlichen Basisdatentyp in Python.\n%\t\\item Konstruieren Sie ein kleines Code--Beispiel, bei dem der Unterschied zwischen ver\u00e4nderlichen bzw. unver\u00e4nderlichen Basisdatentypen deutlich wird, indem Sie \u00fcberpr\u00fcfen, ob zwei Referenzen auf dieselbe Instanz zeigen oder nicht.\n%\t\\item In welchem Zusammenhang stehen die Begriffe ``Klasse'' und ``Objekt''?\n\\end{enumerate}",
+    "solution": "% !TeX spellcheck = de_AT_frami\n\\begin{enumerate}\n\t\\item Typ, Wert, Identit\u00e4t\n\t\\item type, print, id\n\t\\item Unterschiedliches Verhalten bei Manipulation/Ver\u00e4nderung des Wertes: Bei unver\u00e4ndlichen Datentypen wird eine neue Instanz erzeugt, bei ver\u00e4nderlichen nicht.\n\t\\item ver\u00e4nderlich: \\texttt{list,~dict}\\\\ unver\u00e4nderlich: \\texttt{tuple,~string}\n%\t\\item Konstruieren Sie ein kleines Code--Beispiel, bei dem der Unterschied zwischen ver\u00e4nderlichen bzw. unver\u00e4nderlichen Basisdatentypen deutlich wird, indem Sie \u00fcberpr\u00fcfen, ob zwei Referenzen auf dieselbe Instanz zeigen oder nicht.\n%\t\\item In welchem Zusammenhang stehen die Begriffe ``Klasse'' und ``Objekt''?\n\\end{enumerate}"
+}

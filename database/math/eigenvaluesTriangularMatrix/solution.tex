@@ -1,0 +1,16 @@
+{\color{solution}
+\underline{Show:} $A\in\mathbb{R}^{n\times n}$ upper triangular $\Rightarrow~~\sigma(A)=\{a_{11},\dots,a_{nn}\}$\\
+\underline{Proof:}
+\begin{align*}
+\lambda\in\sigma(A)~~&\Leftrightarrow~~\text{det}(A-\lambda I)=0~~\textcolor{exampoints}{(1P)}\\
+&\Leftrightarrow~~\prod_{i=1}^{n}(a_{ii}-\lambda)=0~~\textcolor{exampoints}{(1P)}\\
+&\left[\uparrow~\text{since}~A-\lambda I=:U~\text{is upper triangular and det}(U)=\prod_{i=1}^{n}u_{ii}\right]~~\textcolor{exampoints}{(1P)}
+\end{align*}
+Now we show $\text{det}(U)=\prod_{i=1}^{n}u_{ii}$:
+\begin{align*}
+\text{det}(U)&=u_{11}\cdot\underbrace{\text{det}(U_1)}_{\textcolor{blue}{=u_{22}\cdot\text{det}(U_2)}}\\
+\textcolor{exampoints}{(3P)}~~~&~\vdots\\
+&=\prod_{i=1}^{n}u_{ii}
+\end{align*}
+\begin{flushright}$\square$\end{flushright}
+}

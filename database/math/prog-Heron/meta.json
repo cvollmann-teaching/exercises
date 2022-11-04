@@ -1,0 +1,13 @@
+{
+    "filename": "prog-Heron.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Heron's algorithm}\n\nFor a nonnegative number $a\\ge 0$ compute the square root $\\sqrt{a}$ up to an error of $10^{-10}$. For this purpose, use the following iteration:\n$$ x_{n+1}=\\frac{1}{2} \\left(\\frac{x_n^2+a}{x_n}\\right) \\nonumber.$$ \nChoose different initial values $x_0$ and observe the convergence behavior by printing the error $|x_n-\\sqrt{a}|$ in each iteration step.\n\n\\textit{Hint:} Use a while-loop for the iteration (\\verb|while|) and the built-in function \\verb|abs| as well as the Python value \\verb|a ** 0.5| to compute the error $|x_n-\\sqrt{a}|$ in each iteration step.",
+    "solution": "\\lstinputlisting[numbers=none]{prog-Heron_solution.py}\n",
+    "id": ""
+}

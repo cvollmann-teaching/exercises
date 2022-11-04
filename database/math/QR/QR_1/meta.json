@@ -1,0 +1,13 @@
+{
+    "filename": "QR_1.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\nConsider the matrix\n$$\n\tA := \\begin{pmatrix}\n\t\t1&2\\\\\n\t\t1&0\n\t\\end{pmatrix}.\n$$ \n\\begin{enumerate}\n\t\\item Compute a $QR$-decomposition of $A$ using the Gram--Schmidt algorithm.\\\\\n\t      (\\textit{Hint: Verify the desired properties of the factor matrices and test $QR= A$.}))\n\t\\item Is A invertible? Use your $QR$ decomposition to explain your answer.\n%\t\\item In general, how can you use a $QR$--decomposition of a matrix $A \\in \\mathbb{R}^{n \\times n}$ to solve a system $Ax=b$ with $b \\in \\mathbb{R}^n$?\n\\end{enumerate}",
+    "solution": "{\\color{solution}\n$A=\\begin{pmatrix}1&2\\\\1&0\\end{pmatrix}$\\begin{enumerate}\n\t\\item Compute QR-decomposition via Gram-Schmidt:\n\t\\begin{align*}\n\t\\tilde{q}_1~&:=A_1 =\\begin{pmatrix}1\\\\1\\end{pmatrix}\\\\\n\tr_{11}~&:=\\|\\tilde{q}_1\\|=\\sqrt{2}\\\\\n\tq_1~&:=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\1\\end{pmatrix}\\\\\n\tr_{12}~&:=A_2^Tq_1 = (2,0)\\begin{pmatrix}1\\\\1\\end{pmatrix}\\frac{1}{\\sqrt{2}}=\\sqrt{2}\\\\\n\t\\tilde{q}_2~&:=A_2-r_{12}q_1=\\begin{pmatrix}2\\\\0\\end{pmatrix}-\\sqrt{2}\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\1\\end{pmatrix}=\\begin{pmatrix}1\\\\-1\\end{pmatrix}\\\\\n\tr_{22}~&:=\\|\\tilde{q}_2\\|=\\sqrt{2}\\\\\n\tq_2~&:=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1\\\\-1\\end{pmatrix}\\\\\n\t\\Rightarrow~~&\n\tQ=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}~~\\textcolor{exampoints}{(2P)},~~\n\tR=\\begin{pmatrix}\\sqrt{2}&\\sqrt{2}\\\\0&\\sqrt{2}\\end{pmatrix}~~\\textcolor{exampoints}{(2P)}\n\t\\end{align*}\n\t\\item \n\tTest:\n\t$$\n\tQR=\\frac{1}{\\sqrt{2}}\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}\\begin{pmatrix}\\sqrt{2}&\\sqrt{2}\\\\0&\\sqrt{2}\\end{pmatrix}=\\begin{pmatrix}1&2\\\\1&0\\end{pmatrix}=A~~\\checkmark~~\\textcolor{exampoints}{(2P)}\n\t$$\n\t\\item \n\tYes, because $R$ has nonzero diagonal entries.\n\\end{enumerate}\n}",
+    "id": ""
+}

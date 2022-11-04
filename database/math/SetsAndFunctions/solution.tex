@@ -1,0 +1,24 @@
+{\color{solution}
+\begin{itemize}
+	\item (i) $\Rightarrow$ (ii) \\
+	\begin{align*}
+	i) 
+	&\Rightarrow \forall a_1,a_2 \in A: a_1 \neq a_2 \Rightarrow f(a_1) \neq f(a_2)  \\
+	&\Rightarrow |f(A)| = |A|~~~(\text{note:}~A=\{ a | a \in A\},f(A) = \{ f(a) | a \in A\}  )\\
+	&\Rightarrow |f(A)| = |B| ~~~(\text{since}~|A|=|B|) \\
+	&\Rightarrow f(A) = B ~~~(\text{since}~ f(A)\subset B~\text{and}~B~\text{finite}) \\
+	&\Rightarrow ii)
+	\end{align*}
+	\item (ii) $\Rightarrow$ (i)\\
+	We know by surjectivity and $|A| = |B|$: 
+	$$ f(A) = B ~~\Rightarrow~~ |f(A)|=|B|~~ \Rightarrow ~~|f(A)|=|A|~~~\text{(+)}$$
+	Now let $a_1\neq a_2 \in A$ (to show $f(a_1)\neq f(a_2)$)\\
+	Assumption: $f(a_1)= f(a_2)$, then
+	\begin{align*}
+	f(A) = \{f(a)\colon a\in A\} \subsetneqq B  ~~\Rightarrow~~ |f(A)| < |B|  ~~\Rightarrow~~ |A| < |B| ~~~{\color{red}\text{``contradiction to (+) !"}}
+	\end{align*}
+	\item (iii) $\Leftrightarrow$ (i) (or (ii))\\
+	By definition we have 
+	$$(iii) \Leftrightarrow (i) \land (ii) \Leftrightarrow (i) $$
+\end{itemize}
+}

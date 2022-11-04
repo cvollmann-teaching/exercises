@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progMaximumPython.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Maximum einer Liste}\n\\begin{enumerate}\n\t\\item Gegeben sei ein Index $i \\in \\lbrace 0, \\dots, n-1\\rbrace$ und eine Liste von Zahlen  $[a_0, a_2, \\dots, a_{n-1}]$. Schreiben Sie eine Python Funktion \\texttt{isMaximum(maxIndex, inputList)}, die testet, ob $a_i$ das Maximum\n\tder Zahlen in der Liste ist.\n\t\\item Schreiben Sie eine Python Funktion \\verb|maximum(inputList)|, die eine vorhandene Liste von $n$ Zahlen $[a_0, a_2, \\dots, a_{n-1}]$ durchl\u00e4uft, das Maximum bestimmt und sowohl den Wert als auch seinen Index zur\u00fcck gibt. \n\\end{enumerate}\n\n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progMaximumPython_solution.py}"
+}

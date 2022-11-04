@@ -1,0 +1,60 @@
+% !TeX spellcheck = en_US
+\textbf{The Power Iteration and the \textit{PageRank}}
+%{\color{navy}The \textbf{power method} or \textbf{power iteration} is an eigenvalue algorithm, which, given a matrix $A$, produces a sequence of numbers converging to the largest (in absolute value) eigenvalue of $A$ and a sequence of vectors converging to the corresponding eigenvector. More precisely, the iteration rule is given as follows:
+%\begin{equation} \label{eq:power_it}
+%x^{k+1}:=\frac{Ax^k}{\|Ax^k\|_p},~~~\text{and}~~~\mu^k:=\frac{(x^k,Ax^k)_2}{(x^k,x^k)_2}.
+%\end{equation}
+%Let $\lambda_1 \in \sigma(A)$ be the largest eigenvalue (in absolute value). Then (under certain conditions) we obtain 
+%$$ \mu_k  \xrightarrow[]{k \to \infty}  \lambda_1 
+%~~~\text{and}~~
+%x_k \xrightarrow[]{k \to \infty} v_1 
+%~~\text{with}~~~Av_1=\lambda_1 v_1.$$
+%\textit{Remark:} For the normalization step $\frac{1}{\|Ax^k\|_p}$ in the equation above one can choose any $p$-norm $\|x\|:=\left(\sum_{i=1}^n |x_i|^p\right)^\frac{1}{p}$ with $p\geq 1$; typical choices are $p \in \{ 1, 2, \infty\}$. Note that the choice $p=2$ corresponds to the Euclidean norm introduced in the lecture.}
+%~\\~\\
+%\textbf{Task:}\\
+\begin{enumerate}
+	\item 	Implement a function \verb|power_iteration(A,m,p=1)| which takes as input a matrix $A \in \mathbb{R}^{n \times n}$, a maximum iteration number $m \in \N$ and an \textit{optional} parameter $p$ which determines the order of the $p$-norm and is set to $p=1$ by default. This function shall then return the $m$-th iterates $x_m$ and $\mu_m$ of the power iteration.
+	
+	\textit{Hints:} 
+	\begin{itemize}
+		\item You can use a random distribution $x_0$ as initial guess by calling for example the numpy function $$\verb|x = numpy.random.dirichlet(np.ones(n),size=1).reshape(n) | $$
+		or simply choose
+		$$\texttt{x = 1./n * np.ones(n).} $$
+		\item For the normalization step use the numpy function 
+		$$\verb|numpy.linalg.norm(x, ord=p)|, $$
+		which allows the choices $p \in \{ 1, 2, \infty\}$ (among others).
+	\end{itemize}
+
+\item Determine the \textbf{PageRank} of the web structure given above. Therefore apply your function \verb|power_iteration(A,m,p=1)| to the PageRank matrix 
+$$A:= P = \alpha P_1 + (1-\alpha)P_2, $$
+where
+ $$P_1={ 
+	\left(  \begin{tabular}{cccccccccccc}
+	~ & 1    & 2   & 3    & 4    & 5    & 6 & 7     & 8   & 9  & 10   & 11    \\
+	1 & 1    &~     &  ~   & 1/2  &    ~ & ~ & ~     &  ~  &  ~   & ~ &    ~  \\
+	2 & ~    & ~    &  1   & 1/2  & 1/3  &   & 1/2   & 1/2 & 1/2 &   &    \\
+	3 & ~    & 1    &  ~   &      &      &   &       &     &     &   &    \\
+	4 & ~    &  ~   & ~    &      &  1/3 &   &       &     &     &   &  \\  
+	5 & ~    &  ~   & ~    &      &      & 1 & 1/2   & 1/2 & 1/2 & 1 & 1 \\  
+	6 & ~    &  ~   &  ~   &      & 1/3  &   &       &     &     &   &  \\  
+	7 & ~    & ~    &  ~   &      &      &   &       &     &     &   &  \\  
+	8 &~     & ~    &  ~   &      &      &   &       &     &     &   &  \\  
+	9 & ~    &  ~   &  ~   &      &      &   &       &     &     &   &  \\  
+	10 & ~    &  ~   & ~    &      &      &   &       &     &     &   &  \\  
+	11 & ~    &  ~   & ~    &      &      &   &       &     &     &   &     
+	\end{tabular} \right)
+},
+~~~~P_2 := \frac{1}{n}ee^T= \left(\frac{1}{n}\right)_{ij}.$$
+Play around with the damping factor $\alpha$. What do you observe?
+~\\~\\
+\textit{Hint:} For implementing $P_1$ and $P_2$, and thus $P$, you can use this code snippet.
+\lstinputlisting[numbers=none]{task.py}
+\end{enumerate}
+
+%{\color{red} - PageRank: But also plot (if possible?) (see  7\_ PageRank-py.png, python \_ examples/7 \_ pagerank.py)
+%	a) for different aplha in one plot: $||x_k-x_*||$ vs iteration number k
+%	b) for pages in one plot: pagerank vs alpha}
+
+
+
+

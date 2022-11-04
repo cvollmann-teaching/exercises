@@ -1,0 +1,46 @@
+{\color{solution}
+\begin{align*}
+\textcolor{blue}{ \text{\underline{REMARK:}}}~
+&\textcolor{blue}{A\in\mathbb{R}^{n\times n},~(\lambda, v)~\text{eigenpair of}~A,~\text{then}}\\
+&\textcolor{blue}{A^k v~=~A^{k-1}\underbrace{(Av)}_{=\lambda v}~=\dots=\lambda^k v~~~\forall k\in\mathbb{N}}\\
+&\textcolor{blue}{\Rightarrow (\lambda^k, v)~\text{is eigenpair of}~A^k}.
+\end{align*}
+\begin{enumerate}
+	\item 
+	$A~\text{symmetric}~\Rightarrow~ A^TA=A^2~\Rightarrow~\sigma(A^TA)=\{\lambda^2:\lambda\in\sigma(A)\},\\
+	\Rightarrow~\text{singular values are}~\sigma=\sqrt{\lambda^2}=|\lambda|~\text{for}~\lambda\in\sigma(A) ~\text{nonzero}$
+	$$\textcolor{blue}{\text{("Singular values of a symmetric matrix are the absolute values of its nonzero eigenvalues!")}}$$
+	\item 
+	How does the SVD look like?\\Let $(\lambda_i, v_i)$ be eigenpairs of $A$, so that the $v_i$'s are orthonormal. We set
+	\begin{align*}
+	&\sigma_i=|\lambda_i|,~~~~(i=1,\dots,r)\\
+	&u_i=
+	\begin{cases}
+	\frac{1}{\sigma_i}Av_i=\frac{\lambda_i}{|\lambda_i|}v_i~~&:~\text{for}~ i=1,\dots,r~~ (\lambda_i\neq 0),\\
+	v_i	&:~\text{for}~i=r+1,\dots,n~(\lambda_i=0).  
+	\end{cases}
+	\end{align*}
+ (note: we have shown in the lecture that the $u_i$ as defined here are orthonormal and also note that $\ker(A)=\ker(A^\top)$). Then
+	\begin{align*}
+	 A
+	 &=V\Lambda V^\top~~~~~\textcolor{red}{\text{[eigendecomposition]}}\\
+	&=\underbrace{\underbrace{\begin{pmatrix}|& &|&|& &|\\\frac{\lambda_1}{|\lambda_1|}v_1&\dots&\frac{\lambda_r}{|\lambda_r|}v_r&v_{r+1}&\dots&v_n\\|& &|&|& &|\end{pmatrix}}_{\textcolor{blue}{=:U}}
+	\underbrace{
+		\begin{pmatrix}
+		|\lambda_1|&       &            & &0\\ 
+		           &\ddots        & & & \\
+		           &       &|\lambda_r| & &\\
+		           &       &            & \ddots&\\
+                   0&      &            & &0\\		
+		\end{pmatrix}
+	}_{\textcolor{blue}{=:\Sigma=\text{diag}(\sigma_1,\ldots,\sigma_r)}}}_{\textcolor{violet}{=V\Lambda}}\underbrace{\begin{pmatrix}-&v_1^\top&-\\ &\vdots& \\-&v_n^\top&-\end{pmatrix}}_{\textcolor{blue}{V^\top}}~~\textcolor{red}{[SVD]}
+	\end{align*}
+	~\\
+	$A$ symmetric and positive definite $\Rightarrow~|\lambda_i|=\lambda_i>0~\Rightarrow~\frac{\lambda_i}{|\lambda_i|}=1$. Thus:\\
+	$$\textcolor{blue}{\text{("For spd matrices: SVD = Eigendecomposition!")}}$$
+	\item For the condition and the rank we obtain (by inserting $\sigma_i=|\lambda_i|$ )
+	$$\text{cond}(A) =  \frac{\max(\sigma_i)}{\min(\sigma_i)} =  \frac{\max(|\lambda_i|)}{\min(|\lambda_i|)}$$
+	and
+	$$\rank(A) = |\{i: \sigma_i > 0 \}| = |\{i: |\lambda_i| > 0 \}|= |\{i: \lambda_i \neq 0 \}|.$$
+\end{enumerate}
+}

@@ -1,0 +1,15 @@
+{\color{solution}
+\textbf{\underline{''$\geq$'':}} Since $\{x:\|x\|_1=1\}\supset \{e_1,\dots,e_m\}$, we have 
+$$
+\max_{\|x\|_1=1}\|A\|_1\geq\max_{x\in\{e_1,\dots,e_m\}}\|Ax\|_1.
+$$
+\textbf{\underline{$\leq$:}} Let $x\in\{x:\|x\|_1=1\},~x\in\mathbb{R}^m$ then
+\begin{align*}
+\|\underbrace{Ax}_{\textcolor{blue}{\in\mathbb{R}^n}}\|_1&=\sum_{i=1}^{n}\left|\sum_{j=1}^{m}a_{ij}x_j\right|\leq\sum_{j=1}^{m}\underbrace{\left[\sum_{i=1}^{n}|a_{ij}|\right]}_{\textcolor{blue}{\leq\max_j\sum_{i=1}^{n}|a_{ij}|=:m}}|x_j|\\
+&\leq m\underbrace{\sum_{j=1}^{m}|x_j|}_{\textcolor{blue}{=\|x\|_1=1}}=m\\
+&\stackrel{\textcolor{blue}{\text{x arbitrary}}}{\Rightarrow} \max_{\|x\|_1=1} \|Ax\|_1 \leq m.
+\end{align*}
+\begin{flushright}
+	$\square$
+\end{flushright}
+}

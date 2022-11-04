@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progDictofFunctions.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Dictionary von Funktionen}\\\\\nDictionaries k\u00f6nnen nicht nur Zahlen und Zeichen als Werte enthalten, sondern beliebige Objekte.\n\\begin{enumerate}\n\t\\item Schreiben Sie zwei Funktionen \\verb|add(a,b)| und \\verb|mul(a,b)| die zwei Zahlen addieren beziehungsweise multiplizieren und das Ergebnis zur\u00fcckgeben.\n\t\\item Schreiben Sie ein Dictionary \\verb|compute|, das obige Funktionen enth\u00e4lt.\n\t\\item Implementieren Sie ein kurzes Programm, dass einen Nutzer mit \\verb|input()| nach zwei Zahlen und dem Namen der Operation (\\verb|add| oder \\verb|mul|) fragt. Das Programm soll dann das Ergebnis der gew\u00e4hlten Operation ausgeben. Hierbei soll keine \\verb|if| Abfrage genutzt werden!\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progDictofFunctions_solution.py}"
+}

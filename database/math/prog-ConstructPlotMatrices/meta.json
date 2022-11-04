@@ -1,0 +1,13 @@
+{
+    "filename": "prog-ConstructPlotMatrices.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "SciPy Stack, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{NumPy and Matplotlib II}\n\nIn this exercise you need to make use of the Python packages \\verb|numpy| and \\verb|matplotlib|.\n\\begin{enumerate}\n\\item Construct an identity matrix \\texttt{I} of dimension 100x100 as \\verb|numpy.ndarray|.\n\\item Construct a banded matrix \\texttt{A} of the form \n\\begin{align*}\n\t\t\t\tA = \t\\frac{100^2}{4 \\pi^2} \\begin{bmatrix}\n\t\t\t\t\t\t-2&1 &0 &0&\\dots&0&0\\\\\n\t\t\t\t 1&-2&1 &0&\\dots&0&0\\\\\n\t\t\t\t 0&1&-2 &1&\\dots&0&0\\\\\n\t\t\t\t 0&0&1 &-2&\\dots&0&0\\\\\n\t\t\t\t \\dots &\\dots   &\\dots  & \\dots&\\dots&\\dots &\\dots\\\\\n\t\t\t\t 0& 0&0 &0&\\dots&-2&1\\\\\n\t\t\t\t 0& 0&0 &0&\\dots&1&-2     \n\t\t\t\t\t\\end{bmatrix} \n\\end{align*}\nof dimension 100x100 as \\verb|numpy.ndarray|.\n\\item Plot both matrices with the function \\verb|imshow()| of the package \\verb|matplotlib.pyplot|. \n\\item Construct a vector $z$ with the \\verb|linspace()| function of the \\verb|numpy| package. It should contain a grid of 102 values between 0 and $2\\pi$. \n\\item Use Python's \\textit{slicing} capabilities to copy all except from the first and the last value of $z$ into another vector $x$.\n\\item Calculate $y = \\sin(x)$ and the matrix vector product $d = Ay$ using \\verb|numpy.sin()| and \\verb|numpy.dot()|.\n\\item Plot y and $d$ into the same plot using \\verb|plot()| from the \\verb|matplotlib.pyplot| package.\n\\end{enumerate}\n\\textit{Hint:} You might need to use \\verb|matplotlib.pyplot.show()| in order to guarantee that the notebook shows some output.",
+    "solution": "\\lstinputlisting[numbers=none]{prog-ConstructPlotMatrices_solution.py}\n",
+    "id": ""
+}

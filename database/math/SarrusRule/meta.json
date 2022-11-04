@@ -1,0 +1,13 @@
+{
+    "filename": "SarrusRule.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Eigenvalues",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Rule of Sarrus}\n\nDerive the \\textit{Rule of Sarrus} for the determinant of a $(3 \\times 3)$-matrix by using the Laplace formula from the lecture with $n=3$. Then compute the determinant of\n$$A = \\begin{pmatrix}\n1 & 4 & 3\\\\\n0 & 2 & 2\\\\\n0 & 1 & 1\n\\end{pmatrix}.$$\nWhat does it tell us about the columns?\n\n",
+    "solution": "{\\color{solution}\n\\underline{Recall:}\n\\begin{align*}\n\\text{det}(A)~&=\\sum_{j=1}^{n}(-1)^{i+j}a_{ij}\\text{det}(A_{ij})~~~(i\\in\\{1,\\dots,n\\},~\\text{fixed})\\\\\n\\text{det}(a)~&:=a\n\\end{align*}\nNow consider $n=3$ and let us fix $i=1$. We indicate the submatrices $A_{ij}$ by colors:\n\\begin{align*}\nj=1:~~&\\begin{pmatrix}\\textcolor{orange}{a_{11}}&a_{12}&a_{13}\\\\a_{21}&\\textcolor{orange}{a_{22}}&\\textcolor{orange}{a_{23}}\\\\a_{31}&\\textcolor{orange}{a_{32}}&\\textcolor{orange}{a_{33}}\\end{pmatrix}\\\\\nj=2:~~&\\begin{pmatrix}a_{11}&\\textcolor{cyan}{a_{12}}&a_{13}\\\\\\textcolor{cyan}{a_{21}}&a_{22}&\\textcolor{cyan}{a_{23}}\\\\\\textcolor{cyan}{a_{31}}&a_{32}&\\textcolor{cyan}{a_{33}}\\end{pmatrix}\\\\\nj=3:~~&\\begin{pmatrix}a_{11}&a_{12}&\\textcolor{violet}{a_{13}}\\\\\\textcolor{violet}{a_{21}}&\\textcolor{violet}{a_{22}}&a_{23}\\\\\\textcolor{violet}{a_{31}}&\\textcolor{violet}{a_{32}}&a_{33}\\end{pmatrix}\n\\end{align*}\nBy Laplace formula we obtain\n\\begin{align*}\n\\text{det}(A)~&=\\underbrace{(-1)^{1+1}}_{\\textcolor{blue}{=1}}\\textcolor{orange}{a_{11}}\\text{det}(\\textcolor{orange}{A_{11}})+\\underbrace{(-1)^{1+2}}_{\\textcolor{blue}{=-1}}\\textcolor{cyan}{a_{12}}\\text{det}(\\textcolor{cyan}{A_{12}})+\\underbrace{(-1)^{1+3}}_{\\textcolor{blue}{=1}}\\textcolor{violet}{a_{13}}\\text{det}(\\textcolor{violet}{A_{13}})\\\\\n&=a_{11}(a_{22}a_{33}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{31}a_{23})+  a_{12}(a_{21}a_{32}-a_{31}a_{22})\\\\\n&=a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+ a_{12}a_{31}a_{23}+a_{13}a_{21}a_{32}-a_{13}a_{31}a_{22}.\n\\end{align*}\nNote that we have exploited also the Laplace formula for $2\\times 2$ matrices.\nFor the example matrix this yields\ndet$(A)=2-2=0$, so that we can conclude that the columns are linearly dependent.\n}",
+    "id": ""
+}

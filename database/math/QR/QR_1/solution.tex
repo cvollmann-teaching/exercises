@@ -1,0 +1,24 @@
+{\color{solution}
+$A=\begin{pmatrix}1&2\\1&0\end{pmatrix}$\begin{enumerate}
+	\item Compute QR-decomposition via Gram-Schmidt:
+	\begin{align*}
+	\tilde{q}_1~&:=A_1 =\begin{pmatrix}1\\1\end{pmatrix}\\
+	r_{11}~&:=\|\tilde{q}_1\|=\sqrt{2}\\
+	q_1~&:=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}\\
+	r_{12}~&:=A_2^Tq_1 = (2,0)\begin{pmatrix}1\\1\end{pmatrix}\frac{1}{\sqrt{2}}=\sqrt{2}\\
+	\tilde{q}_2~&:=A_2-r_{12}q_1=\begin{pmatrix}2\\0\end{pmatrix}-\sqrt{2}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}=\begin{pmatrix}1\\-1\end{pmatrix}\\
+	r_{22}~&:=\|\tilde{q}_2\|=\sqrt{2}\\
+	q_2~&:=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}\\
+	\Rightarrow~~&
+	Q=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}~~\textcolor{exampoints}{(2P)},~~
+	R=\begin{pmatrix}\sqrt{2}&\sqrt{2}\\0&\sqrt{2}\end{pmatrix}~~\textcolor{exampoints}{(2P)}
+	\end{align*}
+	\item 
+	Test:
+	$$
+	QR=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}\begin{pmatrix}\sqrt{2}&\sqrt{2}\\0&\sqrt{2}\end{pmatrix}=\begin{pmatrix}1&2\\1&0\end{pmatrix}=A~~\checkmark~~\textcolor{exampoints}{(2P)}
+	$$
+	\item 
+	Yes, because $R$ has nonzero diagonal entries.
+\end{enumerate}
+}

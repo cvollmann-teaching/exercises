@@ -1,0 +1,24 @@
+{
+\color{solution}
+\begin{enumerate}
+	\item $\texttt{piv}_i = j \Leftrightarrow 1 = p_{ij} = \widetilde{p}_{ji} \Leftrightarrow: \texttt{pivT}_j = i $
+	\item By definition, the columns of a permutation matrix are given by the $m$ unit vectors (in potentially permuted order), which are orthonormal.
+	
+%	 Thus any permutation matrix is invertible. Since the inverse matrix is unique it suffices to show that $P^TP = I = (\delta_{ij})_{ij}$ (\textit{Kronecker delta}). We find
+%	\begin{align*}
+%	(P^TP)_{ij} = \sum_{k=1}^m \widetilde{p}_{ik} p_{kj}= \sum_{k=1}^m p_{ki} p_{jk}.
+%	\end{align*}
+%	Thus $(P^TP)_{ij}$ is the inner product of the $i$-th and $j$-th column of $P$ (this actually holds for any matrix as we have just proven). Since these columns are different unit vectors for $i\neq j$, we have that this inner product is $0$ whenever $i\neq j$ and $1$ else.
+	\item Let $P_{jk} = (q_{i\ell})_{i\ell}$ and $P^T_{jk} = (\widetilde{q}_{i\ell})_{i\ell}$, then by definition we find
+	$$q_{i\ell} = \begin{cases}
+	1: &{\color{magenta}(i = \ell,  k \neq i\neq j)} \text{~or~} {\color{blue}(i = j, \ell = k)} \text{~or~}  {\color{red}(i = k, \ell = j)}\\
+	0: &\text{else} 
+	\end{cases} $$
+	and therefore 
+		$$\widetilde{q}_{i\ell}=q_{\ell i} = \begin{cases}
+	1: &{\color{magenta}(\ell = i,  k \neq \ell\neq j)} \text{~or~} {\color{red}(\ell = j, i = k)} \text{~or~}  {\color{blue}(\ell = k, i = j)}\\
+	0: &\text{else} 
+	\end{cases} .$$
+	Thus, we obviously find $q_{i\ell}=\widetilde{q}_{i\ell}$.	
+\end{enumerate}
+}

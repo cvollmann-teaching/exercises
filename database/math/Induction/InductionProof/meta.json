@@ -1,0 +1,13 @@
+{
+    "filename": "InductionProof.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Proof via Induction}\nPlease prove the following assertions by induction.\n\\begin{enumerate}\n\t\\item $\\sum_{k=0}^{n} (2k+1) = (n+1)^2$\n\t\\item $2^n = \\sum_{k=0}^n \\binom{n}{k}$\n\t\\item Let $q \\neq 1$ then\n\t\\begin{align*}\n\t\\sum_{k=0}^{n} q^k = \\frac{q^{n+1} - 1}{q -1}.\n\t\\end{align*}\n\\end{enumerate}\n\\textit{Hint:} Use Exercise 12 for (ii).",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item \\textbf{Induction Basis} $(n=0)$\\\\\n\t\\begin{align*}\n\t\\sum_{k=0}^{0}(2k+1) = 1 = (0+1)^2.\n\t\\end{align*}\n\tHence, \\textit{induction hypothesis} can be used.\\\\\n\t\\textbf{Induction Step} $(n \\mapsto n+1)$\\\\\n\t\\begin{align*}\n\t&\\sum_{k=0}^{n+1}(2k+1)  = (2(n+1) + 1) + \\sum_{k=0}^{n}(2k+1) \n\t= (2(n+1) + 1) + (n+1)^2 = \\\\\n\t&=2n + 2 + 1 + n^2 + 2n + 1 = n^2 + 4n + 4 = (n+2)^2\\\\\n\t&&\\hfill \\square\n\t\\end{align*}\n\t\\item \\textbf{Induction Basis } $(n=0)$\\\\\n\t\\begin{align*}\n\t\\sum_{k=0}^{0} \\binom{n}{k} = \\binom{0}{0} = 1 = 2^0.\n\t\\end{align*}\t\n\t\\textbf{Induction Step} $(n \\mapsto n+1)$\\\\\n\t\\begin{align*}\n\t&\\sum_{k=0}^{n+1} \\binom{n+1}{k} = \\sum_{k=0}^{n+1} \\left[\\binom{n}{k+1} + \\binom{n}{k}\\right] =\\\\\n\t&= \\frac{n!}{k!(n-k)!} + \\frac{n!}{(k+1)!(n-(k+1))!} = \\frac{n!(k+1) + n!(n-k)}{(k+1)!(n-k)!}\\\\\n\t&=\\frac{n! + n!n}{(k+1)!(n-k)!} = \\frac{(n+1)!}{(k+1)!(n+1-(k+1))!} = \\binom{n+1}{k+1}.\n\t\\end{align*}\n\t\\item \\textbf{Induction Basis } $(n=0)$\\\\\n\t$\\sum_{k=0}^{0} q^k = 1  = \\frac{q^{1} - 1}{q -1}.\t$\\\\\n\t%\n\t\\textbf{Induction Step} $(n \\mapsto n+1)$\\\\\n\t\\begin{align*}\n\t&\\sum_{k=0}^{n+1} q^k  = \\frac{q^{n+2} - 1}{q -1} +  \\sum_{k=0}^{n} q^k  = q^{n+1} + \\frac{q^{n+1} - 1}{q -1}=\n\t\\frac{q^{n+2} - 1}{q -1} .\n\t\\end{align*}\n\\end{enumerate}\n}",
+    "id": ""
+}

@@ -1,0 +1,50 @@
+% !TeX spellcheck = en_US
+\textbf{Curve Fitting using reduced $QR$ Decomposition}
+
+{
+\color{navy}
+Let $A \in \mathbb{R}^{m\times n}$ be a matrix with $m\geq n$ and linearly independent columns and let $b \in \mathbb{R}^m$. Solving Least Squares Problems of the form
+$$\min_{x\in\mathbb{R}^n} \|Ax-b\|^2$$
+is equivalent to solving the so-called \textit{normal equation} (derivation follows later in the lecture)
+$$A^\top A x = A^\top b. $$
+This is a linear system and we can apply a ``factor and solve'' approach. Specifically, assume we have the reduced $\widehat{Q}\widehat{R}$, where $\widehat{R}$ is invertible since $A$ has full column rank by assumption.
+Now, inserting $A=\widehat{Q}\widehat{R}$ into the normal equation gives
+$$A^TAx=A^Tb~\Leftrightarrow~\widehat{R}^T\widehat{R}x=\widehat{R}^T\widehat{Q}^Tb~\Leftrightarrow~\widehat{R}x=\widehat{Q}^Tb.$$
+Thus, we can finally compute a least squares solution by solving a triangular system
+$$\widehat{R}x = \widehat{Q}^Tb.$$
+\textit{Interesting Observation:} Applying a ``factor and solve'' approach to $Ax=b$ results in the same the systems!
+}
+~\\~\\
+\textbf{Task}\\
+Assume you were given some \verb|numpy.ndarray| called ``\verb|data|'' containing measurements $(z_1,y_1),\ldots, (z_m,y_m) \in \mathbb{R}\times\mathbb{R}$. Further assume that this data has shape \verb|(2,m)| so that the first row \verb|data[0,:]| contains the $z_i$ values and the second row \verb|data[1,:]| contains the $y_i$ values.
+\begin{enumerate}
+	\item Implement a function \verb|poly_curve_fit(data, p)| which computes a polynomial fit to the data.\\ ~\\
+	The \textbf{input} \verb|data| shall have the form as described above and \verb|p| shall determine the polynomial used to fit the data. More precisely, \verb|p| shall be a list \verb|[p1,..., pn]| containing $n \leq m$ \textit{distinct} natural numbers between $0$ and $m-1$ which determine the polynomial model $f$ by
+	\begin{align*}
+	  f(z) = c_1 z^{p_1} + c_2 z^{p_2} + \ldots +  c_k z^{p_n} = \sum_{j=1}^n c_j f_j(z) ~~~\text{with}~~~f_j(z) := z^{p_j}.
+	\end{align*}
+	With other words, the input \verb|p| determines which \textit{monomials} $z^{p}$ we want to use for our model. For example, \verb|p = [0,1]| amounts for a linear model
+	\begin{align*}
+		f(z) = c_1 z^{p_1} + c_2 z^{p_2}  = c_1 z^0 + c_2 z^1 = c_1 + c_2 z^1.
+	\end{align*}
+	Then the \textbf{function} \verb|poly_curve_fit(data, p)| shall determine appropriate coefficients $c_1,\ldots,c_n$ by following this recipe:
+	\begin{enumerate}
+		\item Assemble the vector $b = (y_1,\ldots,y_m)\in \mathbb{R}^m$.
+		\item Assemble the matrix $A = (a_{ij})_{ij} \in \mathbb{R}^{m \times n}$, where $a_{ij} := f_j(z_i)$.
+		\item Solve the least squares problem $\min_x \|Ax-b\|^2$ via the normal equation above by using the functions \texttt{qr\_factor(A)} and \texttt{solve\_tri((Q,R),b)} from previous exercises (or appropriate SciPy routines).\\ 
+		{\small \textit{Remark:} One can show that the columns of $A$ are independent if the $z_i$ are \textit{distinct} (also see \textit{Vandermonde matrix})!}
+		\item Plot the measurements and the fitting polynomial into one figure.
+	\end{enumerate}
+	The function shall \textbf{output} the solution parameters $x = (c_1,\ldots, c_n)$.
+	\item Test your routine by fitting the data 
+	\begin{center}
+		\begin{tabular}{l|c c c c c}
+			z&-2&-1&0&1&2\\
+			\hline
+			y&-2&1&-1&2&6
+		\end{tabular}
+	\end{center}
+with different polynomials of your choice.
+	\item Find a Scipy routine to solve the least squares problem $\min_x \|Ax-b\|^2$. If you want, you can extend the parameter interface \verb|poly_curve_fit(data, p, own=True)| by an optional parameter, for example \texttt{own=True}, which you can use to switch between either our approach with a (reduced) $QR$-decomposition 
+	or a SciPy routine to solve the least squares problem.
+\end{enumerate}

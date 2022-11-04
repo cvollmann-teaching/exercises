@@ -1,0 +1,53 @@
+Let $f:\mathbb{F}^n\rightarrow\mathbb{F}^m$ be linear with matrix representation $A\in\mathbb{F}^{m\times n}$.
+\begin{enumerate}
+	\item 
+	\underline{Show:}
+	\begin{enumerate}
+		\item $\text{ker}(f)\subset\mathbb{F}^n$ subspace
+		\item $\text{Im}(f)\subset\mathbb{F}^m$ subspace
+	\end{enumerate}
+	\underline{Proof:}
+	\begin{enumerate}
+		\item \begin{enumerate}
+			\item $0\in\text{ker}(f)$
+			\item $\lambda\in\mathbb{F},~u,v\in\text{ker}(f),~\text{then}~f(\lambda u+v)=\lambda\underbrace{f(u)}_{\textcolor{blue}{=0}}+\underbrace{f(v)}_{\textcolor{blue}{=0}}=0\\
+			\Rightarrow~~\lambda u+v\in\text{ker}(f)$
+		\end{enumerate}
+		\item \begin{enumerate}
+			\item $A_0=0\in\text{Im}(f)$
+			\item 
+			\begin{align*}
+			&\lambda\in\mathbb{F},~w_1,w_2\in\text{Im}(f)\subset W\\
+			\Rightarrow~~&\exists v_1,v_2\in V:~w_1=f(v_1),~w_2=f(v_2)\\
+			\Rightarrow~~&\lambda w_1+w_2=\lambda f(v_1)+f(v_2)=f(\lambda v_1+v_2)\\
+			\Rightarrow~~&\lambda w_1+w_2\in\text{Im}(A)
+			\end{align*}
+		\end{enumerate}
+	\end{enumerate}
+%	
+	\item 
+	\underline{Show:} $\text{rank}(A) = \text{dim}(\text{Im}(f))$ \\
+	\underline{Proof:}\\
+	\underline{Recall:}\begin{itemize}
+		\item rank$(A_f)=|\{\sigma\neq 0:~\sigma~\text{singular value of}~A\}|\\
+		A=U\Sigma V^T,~U\in\mathbb{R}^{m\times m},~V\in\mathbb{R}^{n\times n}$ orthogonal, $\Sigma=\begin{pmatrix}\ddots&0\\0&0\end{pmatrix}$
+		\item dim$(V) :=$ length of a basis
+	\end{itemize}
+	Let rank$(A_f)=:k$, then
+	\begin{align*}
+	\text{Im}(f)~=~\text{Im}(A_f)~&=~\{A_fx:~x\in\mathbb{F}^n\}~=~\{U\underbrace{\Sigma V^T x}_{\textcolor{blue}{=:\lambda=(\underbrace{\tilde{\lambda}}_{\in\mathbb{R}^k},\underbrace{0,\dots,0}_{m-k})}}:~x\in\mathbb{F}^n\}\\
+	&=~\{U_k\tilde{\lambda}:~\tilde{\lambda}\in\mathbb{F}^k\}\\
+	\Rightarrow~~\text{Im}(f)~&=~\text{span}(u_1,\dots,u_k)~\text{and}~u_1,\dots,u_k~\text{linearly independent (even orthogonal)}\\
+	\Rightarrow~~\text{dim}(\text{Im}(f))~&=~k~=~\text{rank}(A_f)
+	\end{align*}
+%	
+	\item 
+	\underline{Show:} $\text{ker}(f)=\{0\}~~\Leftrightarrow~~f~\text{injective}$
+	\underline{Proof:}
+	\begin{align*}
+	\text{ker}(f)=\{0\}~~&\Leftrightarrow~~\{f(x)=0~\Rightarrow~x=0\}\\
+	&\Leftrightarrow~~\forall x,y\in\mathbb{F}^n:~f(x)-f(y)=f(x-y)=0~\Rightarrow~x-y=0\\
+	&\Leftrightarrow~~f~\text{injective}
+	\end{align*}
+	\begin{flushright}$\square$\end{flushright}
+\end{enumerate}

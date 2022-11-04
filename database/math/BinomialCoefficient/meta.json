@@ -1,0 +1,13 @@
+{
+    "filename": "BinomialCoefficient.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Binomial Coefficient}\nThe binomial coefficient is defined by\n\\begin{align*}\n\\binom{n}{k} = \\frac{n!}{k!(n-k)!},\n\\end{align*}\nwhere $n! = n\\cdot(n-1)\\cdot(n-2)\\cdot\\dots \\cdot1$.\nPascal's triangle states the equation\n\\begin{align*}\n\\binom{n}{k} + \\binom{n}{k+1} = \\binom{n+1}{k+1}\n\\end{align*}\nfor any $0 \\leq k < n$.\nPlease prove this equation.",
+    "solution": "{\\color{solution}\n\\begin{align*}\n\\binom{n}{k} + \\binom{n}{k+1} = \n\\frac{n!}{k!(n-k)!} + \\frac{n!}{(k+1)!(n-(k+1))!} =\n\\frac{n!(k+1) + n!(n-k)}{(k+1)! (n-k)!} = \\\\\n\\frac{n!k+n! + n!\\,n-n!\\,k}{(k+1)! (n-k)!} = \n\\frac{(n+1)!}{(k+1)! (n+1-1-k)!} =  \\binom{n+1}{k+1}\n\\end{align*}\n}",
+    "id": ""
+}

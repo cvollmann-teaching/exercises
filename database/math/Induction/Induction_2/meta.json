@@ -1,0 +1,13 @@
+{
+    "filename": "Induction_2.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Show by induction that for any $n \\in \\mathbb{N}$ it holds that\n$$\n\t\\sum_{k=1}^n k(k+1) = \\frac{1}{3}n (n+1) (n+2).\n$$",
+    "solution": "{\\color{solution}\n\\noindent\n\\underline{Show:} $\\sum_{k=1}^{n}k(k+1) =\\frac{1}{3}n(n+1)(n+2)$\\\\\n\\underline{Proof:}\\\\\n\\textbf{Induction Basis } $(n=1)$\n$$\n1(1+1)=2=\\frac{1}{3}1(1+1)(1+2)~~\\checkmark~~\\textcolor{exampoints}{(2P)}\n$$\n\\textbf{Induction Step} $(n \\mapsto n+1)$\n\\begin{align*}\n\\sum_{k=1}^{n+1}k(k+1)&=(n+1)(n+1+1)+\\underbrace{\\sum_{k=1}^{n}k(k+1)}_{\\textcolor{blue}{\\stackrel{[\\text{I.A.}]\\textcolor{exampoints}{(2P)}}{=}\\frac{1}{3}n(n+1)(n+2)}}\\\\\n&=(n+1)(n+2)\\underbrace{\\left(1+\\frac{1}{3}n\\right)}_{\\textcolor{blue}{=\\frac{1}{3}(3+n)}}\\\\\n&=\\frac{1}{3}(n+1)((n+1)+1)((n+1)+2)~~\\checkmark~~\\textcolor{exampoints}{(4P)}\n\\end{align*}\n}",
+    "id": ""
+}

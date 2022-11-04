@@ -1,0 +1,20 @@
+{
+\color{solution}
+Take for example 
+$$
+A := [a_1, a_2, a_3] := \begin{pmatrix}
+	  1 & 0 &1\\
+	  1 & 0 &1\\
+	  0 & 1 &1\\
+	  0 & 1 &1 \\
+\end{pmatrix}
+~~~\text{and}~~~
+x := \begin{pmatrix}
+1\\1\\-1
+\end{pmatrix}.
+$$
+Construction recipe: We take two random vectors $x, y$ and form a simple linear combination $x+y$. We know these vectors are linearly dependent, so that we can take those as columns for the example matrix, i.e.,
+$$x + y - (x+y) = 0 ~~~\text{gives}~~~[x, y, (x+y)] \begin{pmatrix}
+1\\1\\-1
+\end{pmatrix} = 0.$$
+}

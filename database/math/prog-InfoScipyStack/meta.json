@@ -1,0 +1,13 @@
+{
+    "filename": "prog-InfoScipyStack.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "SciPy Stack, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "{\\color{navy}\n\\textbf{SCIENTIFIC COMPUTING WITH PYTHON}\\\\~\\\\\n%\nScientific computing in Python is done using the \\textbf{SciPy Stack} (https://scipy.org/). This term is used for a collection of packages developed for scientific computing. From this collection we will mainly use the following three packages during this lecture:\n  % \n\\begin{itemize}\n\\item \\textbf{Numpy} (the basis)\\\\\n    -- provides the data type `numpy.ndarray` (e.g., for matrices and vectors)\\\\\n    -- contains a huge amount of tools to perform all sorts of array manipulation\\\\\n%    \n%\n\\item \\textbf{SciPy} (the core)\\\\\n    -- builds upon numpy\\\\\n    -- contains a huge amount of numerical methods (solving linear systems, optimization, integration, interpolation,...)\\\\\n    %\n\\item \\textbf{Matplotlib} (the visualizer)\\\\\n    -- allows to visualize results with high quality grafics (plots in 2d and 3d, images and videos,...)  \\\\\n%\n\\end{itemize}\n%\n%\nRemarks:\n\\begin{itemize}\n \\item \\textbf{Tutorial:} the official one can be found here: https://scipy-lectures.org/. The first chapter in this tutorial contains already enough to do the programming parts in this lecture. \n% \n \\item \\textbf{Installation:} typically not needed! They are usually contained in the system-side Python installation or come along with the respective distribution (e.g., anaconda)\n%\n \\item \\textbf{Import convention:} a program often starts with\\\\~\\\\\n%\n\\verb|import numpy as np|\\\\\n\\verb|import scipy as sp| \\\\\n\\verb|import matplotlib as mpl|\\\\\n\\verb|import matplotlib.pyplot as plt|\\\\\n\\end{itemize}\n}\n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-InfoScipyStack_solution.py}\n",
+    "id": ""
+}

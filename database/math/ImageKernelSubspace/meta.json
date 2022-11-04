@@ -1,0 +1,13 @@
+{
+    "filename": "ImageKernelSubspace.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = en_US\n\\textbf{The Subspaces Kernel and Image}\n\\begin{enumerate}\n\t\\item Let $A\\in \\mathbb{F}^{m \\times n}$. Show that $\\ker (A)$ and $\\text{Im} (A)$ are subspaces of $\\mathbb{F}^n$ and $\\mathbb{F}^m$, respectively.\n\t\\item Construct two example matrices and consider their kernel and image.\n\\end{enumerate}",
+    "solution": "% !TeX spellcheck = en_US\n{\\color{solution}\n\\begin{enumerate}\n\t\\item \t\n\t\\begin{enumerate}\n\t\t\\item \t\\underline{To show:} $\\text{ker}(A)\\subset\\mathbb{F}^n$ subspace \n\t\t\\item[] \t\\underline{Proof:}\n\t\t\\begin{enumerate}\n\t\t\t\\item $A\\cdot0=0$, so that $0\\in\\text{ker}(A)$, thus $\\text{ker}(A)\\neq \\emptyset$.\n\t\t\t\\item For $i=1,2$ let $\\lambda_i\\in\\mathbb{F},~v_i\\in\\text{ker}(A),~\\text{then by linearity}~\n\t\t\tA(\\lambda_1v_1+ \\lambda_2v_2)\n\t\t\t=\\lambda_1\\underbrace{Av_1}_{\\textcolor{blue}{=0}}+\\lambda_2\\underbrace{Av_2}_{\\textcolor{blue}{=0}}=0\\\\\n\t\t\t\\Rightarrow~~\\lambda_1v_1+ \\lambda_2v_2\\in\\text{ker}(A)$\n\t\t\\end{enumerate}\n\t\t\\item \\underline{To show:} $\\text{Im}(A)\\subset\\mathbb{F}^m$ subspace\n\t\t\\item[] \t\\underline{Proof:}\n\t\t\\begin{enumerate}\n\t\t\t\\item $A\\cdot0=0\\in\\text{Im}(A)$, thus nonempty.\n\t\t\t\\item For $i=1,2$ let $\\lambda_i\\in\\mathbb{F},~w_i\\in\\text{Im}(A)$, then\n\t\t\t\\begin{align*}\n\t\t\t~~&\\exists v_1,v_2\\in \\mathbb{F}^n:~w_1=Av_1,~w_2=Av_2\\\\\n\t\t\t\\Rightarrow~~&\\lambda_1 w_1+ \\lambda_2 w_2=\\lambda_1 Av_1+\\lambda_2Av_2=A(\\lambda_1 v_1+\\lambda_2 v_2)\\\\\n\t\t\t\\Rightarrow~~&\\lambda_1 w_1+ \\lambda_2w_2\\in\\text{Im}(A)\n\t\t\t\\end{align*}\n\t\t\\end{enumerate}\n\\end{enumerate}\n\\item Examples:\n\\begin{enumerate}\n\t\\item Consider the matrix composed of ones from the previous exercise.\n\t\\item Let $A = \\begin{pmatrix}\n\t1&1\\\\0&2\n\t\\end{pmatrix}$.\n\tThen $Ax = 0$ implies $x=0$, so that $\\text{ker}(A)=\\{0\\}$. In particular, the columns are linearly independent, so that they form a basis of $\\R^2$, with other words: $\\R^2 = \\text{span}(a_1,a_2)=\\text{Im}(A)$.\n\\end{enumerate}\n\\end{enumerate}\n}",
+    "id": ""
+}

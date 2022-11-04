@@ -1,0 +1,13 @@
+{
+    "filename": "antisymmetricMatrices.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Let $A \\in \\mathbb{R}^{n \\times n}$ be matrix for which $A^\\top = - A$ (\\textit{antisymmetric}). Show that the diagonal entries are zero, i.e.,  $a_{ii} = 0$ for all $1\\leq i\\leq n$.\n\n",
+    "solution": "From $A^\\top = - A$ it follows that \n$$a_{ii} = - a_{ii} $$\nfor all $1 \\leq i \\leq n$. This equation is only true for the number $0$.\n",
+    "id": ""
+}

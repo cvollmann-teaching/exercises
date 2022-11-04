@@ -1,0 +1,13 @@
+{
+    "filename": "ComputeDet.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "What is the determinant of\n\t$$\n\tA = \\begin{pmatrix}\n\t0\t\t\t\t&-e^{-i\\pi}\t&i^2\t&0\t\t&-\\pi\\\\\n\te^{-i\\pi}\t\t&0\t\t\t&-2\t\t&0\t\t&0\\\\\n\t1\t\t\t\t&2\t\t\t&0\t\t&-1\t\t&0\\\\\n\t0\t\t\t\t&0\t\t\t&1\t\t&0\t\t&-3\\\\\n\t\\pi\t\t\t\t&0\t\t\t&0\t\t&3\t\t&0\n\t\\end{pmatrix}?\n\t$$\n\n ",
+    "solution": "{\\color{solution}\n\\begin{align*}\nA=&\\begin{pmatrix}0&-e^{-i\\pi}&i^2&0&-\\pi\\\\e^{-i\\pi}&0&-2&0&0\\\\1&2&0&-1&0\\\\0&0&1&0&-3\\\\\\pi&0&0&3&0\\end{pmatrix}\\\\\n%\n&\\text{since}~i^2=-1,~A^T=-A~~\\textcolor{exampoints}{(1P)}\\\\\n\\Rightarrow~~&\\text{det}(A)=\\text{det}(A^T)=\\text{det}(-A)=(-1)^5\\text{det}(A)~~\\textcolor{exampoints}{(1P)}\\\\\n\\Rightarrow~~&\\text{det}(A)=0~~\\textcolor{exampoints}{(1P)}\n\\end{align*}\n}",
+    "id": ""
+}

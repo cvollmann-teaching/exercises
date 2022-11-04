@@ -1,0 +1,13 @@
+{
+    "filename": "LinearLeastSquares.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Least Squares Problems",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Linear Least Squares}\n\\begin{table}[h]\n\t\\centering\n\t\\begin{tabular}{l|c c c c c c}\n\t\tz&0&1&2&2.5&3&4\\\\\n\t\t\\hline\n\t\ty&0.15&1&0.84&0&-0.2&-0.96\n\t\\end{tabular}\n\t\\caption{This table contains a dataset of pairs $(z_i, y_i)$ for $i = 1,\\dots,6$.}\n\t\\label{tab:data}\n\\end{table}\nLet $c_0,c_1 \\in \\mathbb{R}$ and let the data points $(z_i, y_i)$ for $i=1,\\dots,6$ be given as in Table \\ref{tab:data}. Please solve the problem\n\t\\begin{align*}\n\t\t\\min \\limits_{c_0,c_1} \\sum_{i=1}^6 (c_0 + c_1z_i - y_i)^2\n\t\\end{align*}\n\tin the following steps.\n\t\\begin{enumerate}\n\t\t\\item Set up the design matrix $A$ and compute $A^\\top A$ as well as $A^\\top y$.\n\t\t\\item Solve the normal equation $A^\\top A \\begin{pmatrix}\n\t\tc_0\\\\\n\t\tc_1\n\t\t\\end{pmatrix} = A^\\top y$.\n\t\\end{enumerate}",
+    "solution": "{\\color{solution}\nModel: $f(x)=c_0 + c_1x$\n\\begin{enumerate}\n\t\\item \n\t$$\n\tA=\\begin{pmatrix}1&0\\\\1&1\\\\1&2\\\\1&2,5\\\\1&3\\\\1&4\\end{pmatrix}~~\\Rightarrow~~\n\t\\underbrace{A^TA}_{\\textcolor{blue}{\\text{[always symmetric]}}}=\\begin{pmatrix}1&1&1&1&1&1\\\\0&1&2&2,5&3&4\\end{pmatrix}\\begin{pmatrix}1&0\\\\1&1\\\\1&2\\\\1&2,5\\\\1&3\\\\1&4\\end{pmatrix}=\\begin{pmatrix}6&12,5\\\\12,5&36,25\\end{pmatrix}\n\t$$\n\t\\item $A^Ty=\\begin{pmatrix}0,83\\\\-1,76\\end{pmatrix},~x:=\\begin{pmatrix}c_0\\\\c_1\\end{pmatrix}$\\\\\n\tThus $A^TAx=A^Ty$ is equivalent to:\n\t\\begin{align*}\n\t&\\left(\n\t\\begin{array}{cc|c}6&12,5&0,83\\\\12,5&36,25&-1,76\\end{array}\n\t\\right)\n\t\\textcolor{blue}{\\begin{pmatrix}1\\\\2\\end{pmatrix}}\\\\\n\t\\stackrel{\\textcolor{violet}{\\text{(I)}\\leftrightarrow\\text{(II)}}}{\\rightsquigarrow}\n\t%\n\t&\\left(\n\t\\begin{array}{cc|c}12,5&36,25&-1,76\\\\6&12,5&0,83\\end{array}\n\t\\right)\n\t\\textcolor{blue}{\\begin{pmatrix}2\\\\1\\end{pmatrix}}\\\\\n\t\\stackrel{\\textcolor{violet}{\\text{(II)'}=\\text{(II)}-\\frac{6}{12,5}\\text{(I)}}}{\\rightsquigarrow}\n\t&\\left(\n\t\\begin{array}{cc|c}12,5&36,25&-1,76\\\\\\textcolor{red}{0,48}&-4,9&1,67\\end{array}\n\t\\right)\n\t\\textcolor{blue}{\\begin{pmatrix}2\\\\1\\end{pmatrix}}\\\\\n\t\\Rightarrow~~&c_0=0,85,~c_1=-0,34\n\t\\end{align*}\n\\end{enumerate}\n}",
+    "id": ""
+}

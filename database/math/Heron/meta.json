@@ -1,0 +1,13 @@
+{
+    "filename": "Heron.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Heron's algorithm}\nPlease implement a function \\verb|sqroot()| which calculates the square root of some number $a > 0$ using Heron's algorithm:\n\t\\begin{verbatim}\n\t\tx = 1.0\n\t\tfor k <= 10:\n\t\t   xi =a/x\n\t\t   x =(xi+x)/2\n\t\\end{verbatim}\n\tTest your function with a function \\verb|test()| which returns the square of its input value.",
+    "solution": "",
+    "id": ""
+}

@@ -1,0 +1,13 @@
+{
+    "filename": "PQFormula.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{PQFormula}\nLet $a,b \\in \\mathbb{R}$ and $a\\neq 0$. Please solve the following quadratic equations.\n\\begin{enumerate}\n\t\\item $x^2 + bx - 2b^2 = 0$\n\t\\item $3a^2x^2 + 4ax + 1  = 0$\n\t\\item $ax^2 + ax + x + 1 = 0$\n\\end{enumerate}",
+    "solution": "{\\color{solution}\nFormula\n\\begin{align*}\nx_{1,2} = -\\frac{p}{2} \\pm \\sqrt{\\left(\\frac{p}{2}\\right)^2 - q}\n\\end{align*}\n\\begin{enumerate}\n\t\\item \\begin{align*}\n\t&x_{1,2} = -\\frac{b}{2} \\pm \\sqrt{\\left(\\frac{b}{2}\\right)^2 + 2b^2} =\\\\\n\t&-\\frac{b}{2} \\pm \\sqrt{ \\frac{b^2 + 8b^2}{4}} = -\\frac{b}{2} \\pm  b\\frac{3}{2} = \n\t\\begin{cases}\n\tb\\\\\n\t-2b\n\t\\end{cases}\n\t\\end{align*}\n%\t\n\t\\item \\begin{align*}\n\tx_{1,2} = \\begin{cases}\n\t-\\frac{1}{3a}\\\\\n\t-\\frac{1}{a}\n\t\\end{cases}\n\t\\end{align*}\n%\t\n\t\\item \\begin{align*}\n\tx_{1,2} = \\begin{cases}\n\t-\\frac{1}{a}\\\\\n\t-1\n\t\\end{cases}\n\t\\end{align*}\n\\end{enumerate}\n}",
+    "id": ""
+}

@@ -1,0 +1,15 @@
+\section{Solving Linear Systems using $QR$ Decomposition: Factorize and Solve}
+
+\textit{\color{red}[Diese Aufgabe nicht mehr stellen, da qr-factor ja schon gemacht und qr-solve exakt solve-triangular ist daher ebenfalls erledigt. daher das besser in die prog aufgabe "curve-fitting mit qr" gesetzt!  ]}\\~\\
+Let $A \in \mathbb{R}^{m\times n}$ be a matrix with $n \leq m$ and linearly independent columns (this implies $R$ is invertible) and let $b \in \mathbb{R}^m$. Then, using a $QR$ decomposition $A=QR$, we can compute the solution $x$ of $Ax=b$ (basically in two steps) by solving
+$$Rx = Q^Tb.$$
+
+\textbf{Tasks:}
+\begin{enumerate}
+	\item Implement a function \verb|factor_qr(A)| which computes a reduced $QR$ decomposition of a matrix $A \in \mathbb{R}^{m\times n}$. Thus, it shall output an orthogonal matrix $Q \in \mathbb{R}^{m\times n}$ and an upper triangular matrix $R \in\mathbb{R}^{n\times n}$, so that $A = QR$.\\ 
+	\textit{You can copy the Gram-Schmidt algorithm implemented as a function} \verb|QR(A)| \textit{from previous sheets or find an appropriate SciPy Routine.}
+	\item Implement a function \verb|solve_qr((Q, R), b)| which takes as input the matrices $Q \in \mathbb{R}^{m\times n}$ and $R \in\mathbb{R}^{n\times n}$ computed by \verb|factor_qr(A)| in form of a tuple, as well as a vector $b \in \mathbb{R}^{m}$. It shall then apply the solving procedure above and output the solution $x$ of $Ax=b$.\\ 
+	\textit{You can recycle the function} \verb|solve_tri(A, b, lower=False)| \textit{from previous sheets or use an appropriate SciPy routine for triangular systems.}
+	\item Test your routine on multiple examples.
+\end{enumerate}
+

@@ -1,0 +1,53 @@
+{
+\color{solution}
+\begin{enumerate}
+	\item 
+	$\hat{x}$ solves the normal equation $A^TA\hat{x}=A^Tb$.
+	\item 
+	We define 
+	\begin{align*}
+	&A:=\begin{pmatrix} z_1^0&z_1^1&z_1^2\\z_2^0&z_2^1&z_2^2\end{pmatrix}=\begin{pmatrix}1&-1&1\\1&1&1\end{pmatrix},~~ b:=\begin{pmatrix}y_1\\y_2\end{pmatrix}=\begin{pmatrix}2\\-1\end{pmatrix},\\
+	&x=(c_0,c_1,c_2).
+	\end{align*}
+	Then: 
+	$$
+	\min_{c\in\mathbb{R}^3} \sum_{i=1}^{2} (f_c(z_i)-y_i)^2\ \ =\ \ \min_{x\in\mathbb{R}^3} \|{Ax-b}\|_2^2.
+	$$
+	Thus we can equivalently solve the normal equation: 
+	\begin{align*} 
+	A^TAx = A^Tb &\Leftrightarrow \underbrace{\begin{pmatrix}1&1\\-1&1\\1&1\end{pmatrix}\begin{pmatrix}1&-1&1\\1&1&1\end{pmatrix}}_{\textcolor{blue}{=\begin{pmatrix}2&0&2\\0&2&0\\2&0&2\end{pmatrix}}}x =\underbrace{\begin{pmatrix}1&1\\-1&1\\1&1\end{pmatrix}\begin{pmatrix}2\\-1\end{pmatrix}}_{\textcolor{blue}{=\begin{pmatrix}1\\-3\\1\end{pmatrix}}}\\
+	&\Leftrightarrow \begin{pmatrix}2&0&2\\0&2&0\\2&0&2\end{pmatrix}\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}=\begin{pmatrix}1\\-3\\1\end{pmatrix}
+	\textcolor{violet}{\begin{matrix}(\text{I})\\ (\text{II})\\ (\text{III})\end{matrix}}\\&\begin{matrix}\textcolor{violet}{(\text{I})'
+	=\frac{1}{2}(\text{I})}\\ \textcolor{violet}{(\text{II})'=\frac{1}{2}(\text{II})}\\ \textcolor{violet}{(\text{III})'=(\text{III})-(\text{I})}\end{matrix} \Leftrightarrow
+	\begin{pmatrix}1&0&1\\0&1&0\\0&0&0\end{pmatrix}
+	\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}
+	=\begin{pmatrix}\frac{1}{2}\\ -\frac{3}{2}\\0\end{pmatrix}\\
+	&\textcolor{violet}{(\text{I})'}\Rightarrow x_1+x_3=\frac{1}{2}\Leftrightarrow x_3=\frac{1}{2}-x_1\\
+	& \textcolor{violet}{(\text{II})'}\Rightarrow x_2=-\frac{3}{2}.
+	\end{align*}
+	Thus the solution set is given by 
+	$$
+	\hat{S}:=\{x\in\mathbb{R}^3:A^TAx=A^Tb\}=\begin{Bmatrix}\begin{pmatrix}s\\-\frac{3}{2}\\\frac{1}{2}-s\end{pmatrix}:s\in\mathbb{R}\end{Bmatrix}.
+	$$
+	We now determine the solution with minimal norm:
+	\begin{enumerate}
+		\item 
+		For an arbitrary solution $x_s:=\begin{pmatrix}s\\-\frac{3}{2}\\\frac{1}{2}-s\end{pmatrix}$ for some $s\in\mathbb{R}$ we find: 
+		\begin{align*} p(s):= \|{x_s}\|_2^2 =s^2+\frac{9}{4}+\left(\frac{1}{2}-s\right)^2
+		=s^2+\frac{9}{4}+\frac{1}{4}-s+s^2
+		=\frac{5}{2}-s+2s^2.
+		\end{align*}
+		\item 
+		We determine the parameter $s\in\mathbb{R}$ for which $\|{x_s}\|_2^2$ is minimal: $$0\stackrel{!}{=} p'(s)=-1+4s\ \ \Leftrightarrow\ \ s=\frac{1}{4}.
+		$$
+		\item 
+		The minimum norm solution is therefore given by $$
+		x_{s=\frac{1}{4}}=\begin{pmatrix}\frac{1}{4}\\-\frac{3}{2}\\\frac{1}{2}-\frac{1}{4}\end{pmatrix}=\begin{pmatrix}0.25\\-1.5\\0.25\end{pmatrix}.
+		$$
+	\end{enumerate}
+	The model function corresponding to the minimum norm solution is then given by 
+	$$
+	f_c(z)=0.25-1.5z+0.25z^2.
+	$$
+\end{enumerate}
+}

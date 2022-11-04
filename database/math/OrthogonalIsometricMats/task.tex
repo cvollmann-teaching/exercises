@@ -1,0 +1,25 @@
+\section{Orthogonal Matrices}
+
+A matrix $Q\in\mathbb{R}^{n\times n}$ is called \textbf{isometric}, if 
+$$\|Qx\|_2=\|x\|_2,  ~~\forall x\in\mathbb{R}^n.$$
+
+\begin{enumerate}
+	\item \textbf{Bonus} (You can get 4 bonus points for this subtask): Show the following equivalence:
+	$$ Q   ~\text{is isometric}~~~ \Leftrightarrow~~Q~ \text{is orthogonal}.$$
+	\textit{Hint:} To show ``$\Rightarrow$'', use the {\color{navy}\textbf{polarization identity}
+	 $$(x,y)_2 = \frac{1}{4}\left(\|x+y\|^2 - \|x-y\|^2\right),~~~x,y \in \mathbb{R}^n $$}and the observation 
+ 		$$a_{ij} = (e_i, Ae_j)_2,~~ \text{for}~~A=(a_{ij})_{ij}\in\Rnn,$$
+ 		where $e_j=(0,\ldots, 1, \ldots, 0)^T \in \mathbb{R}^n$ denote the standard basis vectors.
+	\item For an angle $\alpha \in [0,2\pi]$, consider the \textit{rotation matrix}
+	$$Q_\alpha = \begin{pmatrix}
+	\cos \alpha & -\sin \alpha\\
+	\sin \alpha & \cos \alpha\\
+	\end{pmatrix}.
+	$$
+	\begin{enumerate}
+		\item Show that $Q_\alpha$ is orthogonal for all $\alpha$. \\
+		\textit{Hint:} Use the Pythagorian identity $\sin^2\alpha + \cos^2\alpha = 1$
+		\item Draw the set $\{Q_\alpha x: \|x\|_1 = 1\}$ for $\alpha = \pi/4$.
+	\end{enumerate}
+\end{enumerate}
+

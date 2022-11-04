@@ -1,0 +1,23 @@
+\textbf{Linear Least Squares}\\
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l|c c c c c c}
+		z&0&1&2&2.5&3&4\\
+		\hline
+		y&0.15&1&0.84&0&-0.2&-0.96
+	\end{tabular}
+	\caption{This table contains a dataset of pairs $(z_i, y_i)$ for $i = 1,\dots,6$.}
+	\label{tab:data}
+\end{table}
+Let $c_0,c_1 \in \mathbb{R}$ and let the data points $(z_i, y_i)$ for $i=1,\dots,6$ be given as in Table \ref{tab:data}. Please solve the problem
+	\begin{align*}
+		\min \limits_{c_0,c_1} \sum_{i=1}^6 (c_0 + c_1z_i - y_i)^2
+	\end{align*}
+	in the following steps.
+	\begin{enumerate}
+		\item Set up the design matrix $A$ and compute $A^\top A$ as well as $A^\top y$.
+		\item Solve the normal equation $A^\top A \begin{pmatrix}
+		c_0\\
+		c_1
+		\end{pmatrix} = A^\top y$.
+	\end{enumerate}

@@ -1,0 +1,15 @@
+% !TeX spellcheck = en_US
+\textbf{Permutation Matrices and Row Swap}
+
+A matrix $P\in \mathbb{R}^{m \times m}$ is called \textit{permutation matrix} if it has exactly one entry of 1 in each row and each column and 0s elsewhere.
+\begin{enumerate}
+	\item \textbf{Sparse representation (CSR Format):} A permutation matrix $P=(p_{ij})_{ij}\in \mathbb{R}^{m \times m}$ can be represented by an $m$-dimensional vector \verb|piv|$\in \{1,2,\ldots,m\}^m$  in the following way:
+	$$\texttt{piv}_i = j ~~~:\Leftrightarrow~~~ p_{ij} = 1. $$	
+	Given a permutation matrix $P$ with its sparse representation \texttt{piv}. Determine the sparse representation, say \texttt{pivT}$\in \{1,2,\ldots,m\}^m$, of the transpose $P^T = (\widetilde{p}_{ij})_{ij}$, so that
+	$$\texttt{pivT}_i = j ~~~:\Leftrightarrow~~~ \widetilde{p}_{ij} = 1. $$
+	\textit{Hint:} Have a look at the routine \texttt{numpy.argsort()}.	
+	\item \textbf{Inverse:} Show that the inverse of a permutation matrix $P\in \mathbb{R}^{m \times m}$ is given by its transpose, i.e., $P^T = P^{-1}$.
+	\item \textbf{Row Swap}: Let $P_{jk} \in \mathbb{R}^{m \times m}$ be the permutation matrix which results from interchanging the $j$-th and $k$-th column ($k \geq j$) of the identity matrix in $\mathbb{R}^{m \times m}$. Thus if its applied to a matrix $A \in \mathbb{R}^{m \times n}$ it interchanges the $j$-th and $k$-th row  of $A$. Show that 
+	$$P_{jk}^\top = P_{jk}. $$
+	\textit{In particular we find $P_{jk} = P_{jk}^{-1}$, i.e., $P_{jk}$ is self-inverse.}
+\end{enumerate}

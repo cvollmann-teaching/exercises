@@ -1,0 +1,13 @@
+{
+    "filename": "QR.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Gram--Schmidt Algorithm}\\\\\nLet $A \\in \\mathbb{R}^{n \\times n}$ be defined as \n$$\n\tA := \\begin{pmatrix}\n\t\t3&4\\\\\n\t\t2&7\n\t\\end{pmatrix}.\n$$ \n\\begin{enumerate}\n\t\\item Compute the $QR$-decomposition of $A$ using the Gram-Schmidt algorithm.\n\t\\item Compute $QR= A$ to check your result.\n\\end{enumerate}",
+    "solution": "{\\color{solution}\n%$A=\\begin{pmatrix}3&4\\\\2&7\\end{pmatrix}$\nLet $a_i$ denote the $i$-th column of $A$.\n\\begin{enumerate}\n\t\\item \n\tCompute QR-decomposition via Gram-Schmidt:\n\t\\begin{align*}\n\t\\tilde{q}_1~&:=a_1 =\\begin{pmatrix}3\\\\2\\end{pmatrix}\\\\\n\tr_{11}~&:=\\|\\tilde{q}_1\\|=\\sqrt{13}\\\\\n\tq_1~&:=\\frac{1}{\\sqrt{13}}\\begin{pmatrix}3\\\\2\\end{pmatrix}\\\\\n\tr_{12}~&:=a_2^Tq_1 = (4,7)\\begin{pmatrix}3\\\\2\\end{pmatrix}\\frac{1}{\\sqrt{13}}=\\frac{1}{\\sqrt{13}}26=2\\sqrt{13}\\\\\n\t\\tilde{q}_2~&:=a_2-r_{12}q_1=\\begin{pmatrix}4\\\\7\\end{pmatrix}-2\\sqrt{13}\\frac{1}{\\sqrt{13}}\\begin{pmatrix}3\\\\2\\end{pmatrix}=\\begin{pmatrix}-2\\\\3\\end{pmatrix}\\\\\n\tr_{22}~&:=\\|\\tilde{q}_2\\|=\\sqrt{4+9}=\\sqrt{13}\\\\\n\tq_2~&:=\\frac{1}{\\sqrt{13}}\\begin{pmatrix}-2\\\\3\\end{pmatrix}\\\\\n\t\\Rightarrow~~&\n\tQ=\\frac{1}{\\sqrt{13}}\\begin{pmatrix}3&-2\\\\2&3\\end{pmatrix}~~\\textcolor{exampoints}{},~~\n\tR=\\begin{pmatrix}\\sqrt{13}&2\\sqrt{13}\\\\0&\\sqrt{13}\\end{pmatrix}=\\sqrt{13}\\begin{pmatrix}1&2\\\\0&1\\end{pmatrix}~~\\textcolor{exampoints}{}\n\t\\end{align*}\n\t\\item Test:$$QR=\\frac{1}{\\sqrt{13}}\\begin{pmatrix}3&-2\\\\2&3\\end{pmatrix}\\sqrt{13}\\begin{pmatrix}1&2\\\\0&1\\end{pmatrix}=\\begin{pmatrix}3&4\\\\2&7\\end{pmatrix}=A~~\\checkmark~~\\textcolor{exampoints}{}$$\n\\end{enumerate}\n}",
+    "id": ""
+}

@@ -1,0 +1,13 @@
+{
+    "filename": "SetsAndFunctions.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Sets and Functions}\nLet $A, B$ be finite sets which contain the same number of elements, i.e., $|A| = |B|$ and let $f: A \\rightarrow B$ be a function. Please show that\n\tthe following statements are equivalent.\n\t\\begin{enumerate}\n\t\t\\item $f$ is injective\n\t\t\\item $f$ is surjective\n\t\t\\item $f$ is bijective\n\t\\end{enumerate}\n\t\t\\textit{Hint:} (iii) follows immediately from (i) $\\Leftrightarrow$ (ii).",
+    "solution": "{\\color{solution}\n\\begin{itemize}\n\t\\item (i) $\\Rightarrow$ (ii) \\\\\n\t\\begin{align*}\n\ti) \n\t&\\Rightarrow \\forall a_1,a_2 \\in A: a_1 \\neq a_2 \\Rightarrow f(a_1) \\neq f(a_2)  \\\\\n\t&\\Rightarrow |f(A)| = |A|~~~(\\text{note:}~A=\\{ a | a \\in A\\},f(A) = \\{ f(a) | a \\in A\\}  )\\\\\n\t&\\Rightarrow |f(A)| = |B| ~~~(\\text{since}~|A|=|B|) \\\\\n\t&\\Rightarrow f(A) = B ~~~(\\text{since}~ f(A)\\subset B~\\text{and}~B~\\text{finite}) \\\\\n\t&\\Rightarrow ii)\n\t\\end{align*}\n\t\\item (ii) $\\Rightarrow$ (i)\\\\\n\tWe know by surjectivity and $|A| = |B|$: \n\t$$ f(A) = B ~~\\Rightarrow~~ |f(A)|=|B|~~ \\Rightarrow ~~|f(A)|=|A|~~~\\text{(+)}$$\n\tNow let $a_1\\neq a_2 \\in A$ (to show $f(a_1)\\neq f(a_2)$)\\\\\n\tAssumption: $f(a_1)= f(a_2)$, then\n\t\\begin{align*}\n\tf(A) = \\{f(a)\\colon a\\in A\\} \\subsetneqq B  ~~\\Rightarrow~~ |f(A)| < |B|  ~~\\Rightarrow~~ |A| < |B| ~~~{\\color{red}\\text{``contradiction to (+) !\"}}\n\t\\end{align*}\n\t\\item (iii) $\\Leftrightarrow$ (i) (or (ii))\\\\\n\tBy definition we have \n\t$$(iii) \\Leftrightarrow (i) \\land (ii) \\Leftrightarrow (i) $$\n\\end{itemize}\n}",
+    "id": ""
+}

@@ -1,0 +1,6 @@
+\textbf{\normalsize Minimum Norm Least Squares with Pseudoinverse}
+
+Let $A\in\R^{m\times n},~b\in\Rm$. Consider the SVD $A = U\Sigma V^\top$ and set $A^+ = V \Sigma^+ U^\top$, where $\Sigma^+ = \text{diag}(\frac{1}{\sigma_1},\ldots, \frac{1}{\sigma_r},0,\ldots,0)$ is the pseudoinverse of a diagonal matrix as derived in the lecture.
+Show that $$x^+:=A^+b = \arg \min_{x\in \{x:~A^\top Ax=A^\top b\}} \|x\|_2^2,$$
+i.e., $x^+$ is the minimum norm least squares solution.\\
+\textit{Hint:} First consider the simple case that $A$ is diagonal and then use the SVD for the general case.

@@ -1,0 +1,13 @@
+{
+    "filename": "PowerIteration2.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\hspace*{1cm}\n\\begin{minipage}{0.8\\textwidth}\n\\begin{algorithm}[H]\n\\fvset{numbers=left}\n\\begin{Verbatim}\ndef iteration(A, m):\n    n = A.shape[1]\n    x = numpy.zeros(n)\n    x[0] = 1\t\n    for k in range(m):\n         x = A @ x\n         x = x / numpy.linalg.norm(x)\n    return x\n\\end{Verbatim}\n\\caption{Unknown Python code}\n\\end{algorithm}\n\n\\end{minipage}\n\\begin{enumerate}\n\t\\item Please describe what each line of the given Python code does (please do not write into the code).\n\t\\item Which algorithm is implemented? \n\t\\item What is the purpose of this algorithm?\n\\end{enumerate}\n\n",
+    "solution": "{\\color{solution}\n\\begin{enumerate} \\footnotesize\n\t\\item \n\t\\begin{align*}\n\t\\textcolor{exampoints}{\\left(1P\\right)}~&1~ \\text{function declaration with input}~ A~\\text{and}~n\\\\\n\t\\textcolor{exampoints}{\\left(1P\\right)}~&2~\\text{set}~d:=~\\text{number of columns of}~A\\\\\n\t\\textcolor{exampoints}{\\left(1P\\right)}~&3~\\text{set}~x:=(0,\\dots,0)^T\\in\\mathbb{R}^d\\\\\n\t\\textcolor{exampoints}{\\left(1P\\right)}~&4~\\text{set}~x_1=1\\\\\n\t\\textcolor{exampoints}{\\left(1P\\right)}~&5~\\text{for-loop from}~k=0~\\text{to}~k=n-1\\\\\n\t\\textcolor{exampoints}{\\left(1P\\right)}~&6~\\text{update}~x~\\text{by}~Ax\\\\\n\t\\textcolor{exampoints}{\\left(1P\\right)}~&7~\\text{update}~x~\\text{by}~\\frac{x}{\\|x\\|_2}\\\\\n\t\\textcolor{exampoints}{\\left(1P\\right)}~&8~\\text{return the value of}~x~\\text{after}~m~\\text{iteration steps}\n\t\\end{align*}\n\t\\item $\\textcolor{exampoints}{(1P)}~\\text{ Power iteration/method}$\n\t\\item $\t\\textcolor{exampoints}{(1P)}~ \\text{Compute eigenvector of}~A~\\text{corresponding to in magnitude largest eigenvalue}$\n%\t\\item \n%\t\\begin{align*}\n%\t\\textcolor{exampoints}{(1P)}~&\\text{ line 8}\\\\\n%\t\\textcolor{exampoints}{(2P)}~&\\text{Because: largest eigenvalue of column stochastic matrix is 1,}\\\\\n%\t&\\text{thus the normalization step is obsolete in this case}\n%\t\\end{align*}\n\\end{enumerate}\n}",
+    "id": ""
+}

@@ -1,0 +1,24 @@
+ \textbf{Markdown-Tabellen} (Anwendung: \texttt{**kwargs})\\
+ Mit Markdown können wir leicht \href{https://www.tablesgenerator.com/markdown_tables}{Tabellen} zeichnen. 
+\begin{enumerate}
+\item Schreiben Sie eine Python-Funktion
+\verb|mdTable(**columns)|, die beliebig viele Schlüsselwortargumente entgegennimmt. Die Schlüssel--Wert Paare sollen Tabellenspalten wie folgt definieren: Schlüssel=Spaltenüberschrift, Wert=Python-Liste mit Spalteneinträgen. Damit ist **columns ein Dictionary dessen Werte Listen sind. Bauen Sie nun daraus einen String \texttt{mdTab} der eine Markdown--Tabelle mit diesen Spalten enthält. 
+\item Testen Sie die Funktion mit der Eingabe
+\begin{lstlisting}[language=Python]
+mdTab = mdTable(computationTime = [0.1, 1.0, 10.0], 
+                precision = [1.e-2, 2.34e-3, 8.98e-5], 
+                algorithm = ["A", "B", "C"])
+\end{lstlisting}
+und geben Sie die Ausgabe von \texttt{print(mdTab)} in eine Markdown-Zelle ein.
+
+\item Testen Sie die Funktion mit der Eingabe
+\begin{lstlisting}[language=Python]
+mdTab = mdTable(computationTime = [0.1, 1.0, 10.0], 
+                someValue = [1.e-2, 2.34e-3], 
+                algorithm = ["A", "B", "C"])
+\end{lstlisting}
+und geben Sie die Ausgabe von \texttt{print(mdTab)} in eine Markdown-Zelle ein.
+
+\item Bonus*: Erweitern Sie die Parameter--Schnittstelle um ein Positionsargument \texttt{filename} (Datentyp \texttt{string}) und speichern Sie den String \texttt{mdTab} zusätzlich in eine Textdatei \texttt{filename.md}.\\ 
+\textit{Hinweis:} Sie benötigen dazu ein \href{https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files}{Dateiobjekt}, welches Sie leicht mit der eingebauten Funktion \texttt{open()} erstellen. Dann können Sie die Methode \texttt{.write()} zum schreiben verwenden und die Methode \texttt{.close()}, um die Datei zu speichern und zu schließen.
+\end{enumerate}

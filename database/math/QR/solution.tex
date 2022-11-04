@@ -1,0 +1,21 @@
+{\color{solution}
+%$A=\begin{pmatrix}3&4\\2&7\end{pmatrix}$
+Let $a_i$ denote the $i$-th column of $A$.
+\begin{enumerate}
+	\item 
+	Compute QR-decomposition via Gram-Schmidt:
+	\begin{align*}
+	\tilde{q}_1~&:=a_1 =\begin{pmatrix}3\\2\end{pmatrix}\\
+	r_{11}~&:=\|\tilde{q}_1\|=\sqrt{13}\\
+	q_1~&:=\frac{1}{\sqrt{13}}\begin{pmatrix}3\\2\end{pmatrix}\\
+	r_{12}~&:=a_2^Tq_1 = (4,7)\begin{pmatrix}3\\2\end{pmatrix}\frac{1}{\sqrt{13}}=\frac{1}{\sqrt{13}}26=2\sqrt{13}\\
+	\tilde{q}_2~&:=a_2-r_{12}q_1=\begin{pmatrix}4\\7\end{pmatrix}-2\sqrt{13}\frac{1}{\sqrt{13}}\begin{pmatrix}3\\2\end{pmatrix}=\begin{pmatrix}-2\\3\end{pmatrix}\\
+	r_{22}~&:=\|\tilde{q}_2\|=\sqrt{4+9}=\sqrt{13}\\
+	q_2~&:=\frac{1}{\sqrt{13}}\begin{pmatrix}-2\\3\end{pmatrix}\\
+	\Rightarrow~~&
+	Q=\frac{1}{\sqrt{13}}\begin{pmatrix}3&-2\\2&3\end{pmatrix}~~\textcolor{exampoints}{},~~
+	R=\begin{pmatrix}\sqrt{13}&2\sqrt{13}\\0&\sqrt{13}\end{pmatrix}=\sqrt{13}\begin{pmatrix}1&2\\0&1\end{pmatrix}~~\textcolor{exampoints}{}
+	\end{align*}
+	\item Test:$$QR=\frac{1}{\sqrt{13}}\begin{pmatrix}3&-2\\2&3\end{pmatrix}\sqrt{13}\begin{pmatrix}1&2\\0&1\end{pmatrix}=\begin{pmatrix}3&4\\2&7\end{pmatrix}=A~~\checkmark~~\textcolor{exampoints}{}$$
+\end{enumerate}
+}

@@ -1,0 +1,76 @@
+% !TeX spellcheck = en_US
+{\color{solution}
+\begin{enumerate}
+	\item 
+	By applying the matrix-matrix product definition we multiply the matrix $\mathbf{1}$  with each column in $\tilde{\mathbf{1}}$ (here, a column is just the number $1$). We obtain
+	\begin{align*}
+\mathbf{1}\tilde{\mathbf{1}}  = \begin{pmatrix}1\\1\\1\end{pmatrix} \cdot (1~1~1) =	\left( 	1\cdot  \begin{pmatrix}1\\1\\1\end{pmatrix} 	1\cdot  \begin{pmatrix}1\\1\\1\end{pmatrix} 	1\cdot  \begin{pmatrix}1\\1\\1\end{pmatrix}\right) = A.
+	\end{align*}
+	\item 
+	Since $a_1 = a_2 = a_3=\mathbf{1}$, we have 
+	$$
+	0 = A x = a_1x_1 + a_2x_2 +a_3x_3 = a_1 (x_1+x_2+x_3) \Leftrightarrow x_1+x_2+x_3 = 0.
+	$$
+	Choose, e.g., $x= \begin{pmatrix}
+	-1\\1\\0
+	\end{pmatrix}$ and $y= \begin{pmatrix}
+	-1\\0\\1
+	\end{pmatrix}.$
+	\item 
+	By definition of the image we have
+	\begin{align*}
+	\text{Im}(A)
+	&=\text{span}(a_1,a_2,a_3)\\
+	&=\{\lambda_1\mathbf{1}+\lambda_2\mathbf{1}+\lambda_3\mathbf{1}\colon \lambda_i \in \mathbb{R} \}\\
+	&=\{\lambda \mathbf{1}\colon \lambda \in \mathbb{R} \} \\
+	&=\text{span}(\mathbf{1}).
+	\end{align*} 
+	Since $\mathbf{1} \neq 0$, we have that $\{\mathbf{1}\}$ is a basis of length $1$ for $\text{Im}(A)$. In particular we find
+	% $\dim\text{Im}(A)=1$.\\
+	%Now to the rank of the matrix $A$. Since $a_1 = a_2 = a_3 = \mathbf{1} \neq 0$, we have 
+	$$\text{rank}(A) := \dim\text{Im}(A) = 1.$$ 
+	(Note that two equal vectors $x = y$ are linearly dependent and that a single nonzero vector $x \neq 0$ is linearly independent.)
+	\item 
+	From 2. we already know 
+	\begin{align*}
+	 \text{ker}(A) := \{x\in\mathbb{R}^3\colon Ax = 0 \} &= \{x\in\mathbb{R}^3\colon x_1+x_2+x_3 = 0 \} \\
+	 &=  \{x\in\mathbb{R}^3\colon x_1=-(x_2+x_3) \}   \\
+	 &  = \left \lbrace \begin{pmatrix}
+	 - x_2-x_3 \\ x_2\\x_3 
+	 \end{pmatrix}\colon x_2, x_3 \in \mathbb{R} \right\rbrace \\
+	 &  = \left \lbrace 
+	 x_2\begin{pmatrix}
+	-1\\1\\0
+	\end{pmatrix} 
+	+x_3\begin{pmatrix}
+	-1\\0\\1
+	\end{pmatrix} 
+	\colon x_2, x_3 \in \mathbb{R} \right\rbrace \\
+	&= \text{span}\left\lbrace 	  \begin{pmatrix}
+	-1\\1\\0
+	\end{pmatrix} 
+	,\begin{pmatrix}
+	-1\\0\\1
+	\end{pmatrix} \right\rbrace.
+	\end{align*}  
+~\\ 
+	Since $b_1 := \begin{pmatrix}-1\\1\\0\end{pmatrix} $ and $b_2 := \begin{pmatrix}-1\\0\\1\end{pmatrix} $ are linearly independent (in fact, one can show $[b_1, b_2]x = 0$ implies  $x = 0$), they form a basis of $\ker(A)$ and thus we have $\text{dim}\left(\text{ker}(A)\right) = 2$.
+\end{enumerate}
+%\textbf{Remark:}\\
+%%Since 
+%%$$
+%%\text{Im}(A) := \text{span}\{a_1, a_2, a_3\}  =\text{span}\{a_1\}  
+%%$$
+%%and $a_1 \neq 0$, we have 
+%%$$
+%%\text{dim}(\text{Im}(A)) = 1. 
+%%$$
+%In general, for a matrix $A \in \mathbb{F}^{m \times n}$, one can show that 
+%$$
+%\text{rank}(A) = \text{dim}(\text{Im}(A))
+%$$ 
+%and the well-known \textbf{dimension formula}
+%$$
+%n = \text{dim}(\text{Im}(A))  + \text{dim}(\text{ker}(A)). 
+%$$
+}

@@ -1,0 +1,12 @@
+{
+    "filename": "propertiesFloats.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Gleitkommazahlen sind rational und enthalten Ganzzahlen}\\\\\n Es seien $b\\geq 2$ eine Basis, $N\\in \\N$ eine Mantissenl\u00e4nge und $e_{\\text{min}}, e_{\\text{max}} \\in \\Z$ der Exponentenwertebereich. Zeigen Sie, dass f\u00fcr die dadurch definierte Menge von Gleitkommazahlen $\\F := \\F(N,b,e_{\\text{min}}, e_{\\text{max}})$ folgendes gilt:\n \\begin{enumerate}\n \t\\item Gleitkommazahlen sind rational: $\\F \\subset \\Q$.\n \t\\item Die ganzen Zahlen au\u00dfer Null innerhalb des Wertebereichs sind enthalten: $\\left([-\\texttt{OFL}, \\texttt{OFL}] \\cap \\Z\\setminus\\{0\\}\\right)\\subset \\F$, wobei \\texttt{OFL} das Maximum der Menge $\\F$ (\\textit{Overflow-Level}) bezeichnet.\n \\end{enumerate}",
+    "solution": "\\textbf{Python Implementierung von \\texttt{int} und \\texttt{float}}\\\\\nWir haben gelernt das ganze Zahlen typischer als Zweierkomplementzahlen (h\u00e4ufig als \\texttt{long} mit 64Bits) und Gleitkommazahlen gem\u00e4\u00df des IEEE 754 Standards in \\textit{double precision} mit 64Bits implementiert werden. Finden Sie heraus wie Python die Basisdatentypen \\texttt{int} und \\texttt{float} intern implementiert und erkl\u00e4ren Sie dies in einem Mini-Vortrag."
+}

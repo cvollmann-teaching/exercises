@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progHighScores.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Sortierte Punkteliste erweitern mit Erhalt der Ordnung}\n\\begin{enumerate}\n\t\\item Schreiben Sie eine Funktion \\verb|insertScore(score, scoreList)|, die einer absteigend sortierten Liste \\verb|scoreList| derart eine weitere Zahl \\verb|score| hinzuf\u00fcgt, sodass die Liste weiterhin absteigend sortiert bleibt. Die Liste soll keine Duplikate enthalten. Die Funktion soll \\textit{keinen} R\u00fcckgabewert haben.\n\t\\item Schreiben Sie eine weitere Python-Funktion \\texttt{testInsertScore()}, um Ihr Programm zu testen.\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progHighScores_solution.py}"
+}

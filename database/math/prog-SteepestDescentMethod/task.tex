@@ -1,0 +1,70 @@
+\section{Appetizer: Gradient, Steepest Descent and Conjugate Gradient Method}
+{\color{navy} \textbf{Background}\\
+	Let $A \in \Rnn$ be symmetric and positive definite (spd). Then $A$ is in particular invertible, so that the
+	linear system
+	$Ax = b$
+	has a unique solution $x^* \in \Rn$  for all $b \in \Rn$  . Let us relate this linear system to an optimization problem.
+	For this purpose we define for a fixed spd matrix $A$ and fixed right-hand side $b$ the function
+	$$f:=f_{A,b} : \Rn  \to \R, x  \to \tfrac{1}{2} x^T Ax - b^T x.$$
+	Then one can show the equivalence
+	$$Ax^* = b ~~~\iff~~~	x^* = \arg \min_{x\in\Rn} f (x).	$$
+	In words, $x^*$ solves the linear system on the left-hand side if and only if $x^*$ is the unique minimizer of the
+	functional $f$. In fact, you will learn in the next semester that the condition $Ax^* = b$ is the necessary first-order optimality
+	condition:
+	$$0 = \nabla f (x) = Ax - b.$$
+	Due to the convexity of $f$ this condition is also sufficient.
+%	The vector $\nabla f (x)$ is called the gradient of $f$ at $x$ and can be considered the first-order derivative of $f$ (if $n = 1$, then this is precisely $f' (x)$ which we know from high school).
+	Consequently, solving linear systems which involve spd matrices is equivalent to solving the associated
+	optimization problem above, i.e., minimizing the function $f (x) = \tfrac{1}{2} x^T Ax - b^T x$. Thus, in this context iterative methods
+	for linear systems, such as the Richardson iteration, can also be interpreted as optimization algorithms.
+	Let us consider the (relaxed) Richardson iteration for $Ax = b$, i.e.,
+	$x_{k+1} = (I - \theta A)x_{k} + \theta b$.
+	After some minor manipulations and making use of $\nabla f (x_{k} ) = Ax_{k} - b$ we arrive at the equivalent
+	formulation
+    $$x_{k+1} = x_{k} - \theta\nabla f (x_{k} ).$$
+	The latter is what is called a gradient method. A step from $x_{k}$ into (an appropriately scaled) direction of the gradient
+	$\nabla f (x_{k} )$ yields a decrease in the objective function $f$ , i.e., $f (x_{k+1} ) \leq  f (x_{k}$ ). Along the Richardson/
+	Gradient method the scaling (also called step size) $\theta$ is fixed. However, one could also choose a different
+	$\theta_k$  in each iteration step. This gives the more general version
+\begin{equation}\label{steepest_descent_method}
+	x_{k+1} = x_{k} - \theta_k  \nabla f (x_{k} ).
+\end{equation}
+	The well known method of steepest descent is given by choosing
+\begin{equation} \label{steepest_descent_stepsize}
+	\theta_k  = \frac{r_k^\top r_k}{ r_k^\top   Ar_k  },
+\end{equation}
+where $r_k : = Ax_{k} - b$ is the $k$-th residual. This choice can be shown to be optimal in terms of convergence
+	speed. Even general, one can think of using a different preconditioner $N_k$ in each iteration step -- this will later correspond to Newton-type optimization algorithms.
+}
+~\\~\\
+\textbf{Task}\\
+Consider the following setting: 
+	$$A = 			\begin{bmatrix}
+	2&0\\
+	0&10
+	\end{bmatrix}, ~~b = 			\begin{bmatrix}
+	0\\
+	0
+	\end{bmatrix}, ~~x_0 = \begin{bmatrix}
+	4\\
+	1.4
+	\end{bmatrix}.$$
+Convince yourself that $A$ is spd. Determine the minimal and maximal eigenvalue of $A$, i.e., $\lambda_{\text{min}}$ and $\lambda_{\text{max}}$, respectively. What is the solution to $Ax=b$? Now extend your code (in particular \verb|iter_solve()|) from previous sheets:
+	\begin{enumerate}
+		\item Implement the \textbf{steepest descent method} \eqref{steepest_descent_method} by choosing the stepsize $\theta_k$ from \eqref{steepest_descent_stepsize} in each iteration step.
+		\item Find a way to apply the \href{https://en.wikipedia.org/wiki/Conjugate_gradient_method#Example_code_in_MATLAB_/_GNU_Octave}{\textbf{conjugate gradient method}} to solve a system $Ax=b$, where $A$ is spd.\\
+		\textit{Hint:} You can either implement it on your own  or find a SciPy routine (for the latter: you can collect all iterates $x_k$ by using the callback interface).
+		\item \textbf{Test:} Solve the above problem with the following routines:
+		\begin{enumerate}
+			\item Richardson method with $\theta = \frac{2}{\lambda_{\text{max}}}$
+			\item Richardson method with $\theta = 0.9 \cdot \frac{2}{\lambda_{\text{max}}}$
+			\item Richardson method with optimal $\theta = \frac{2}{\lambda_{\text{min}}+\lambda_{\text{max}}}$
+			\item Steepest descent method
+			\item conjugate gradient method
+		\end{enumerate}
+		Generate the following two plots:
+		\begin{itemize}
+			\item[1.] Plot the iterates $x_k$ for all the runs into the same 2d plot (use different colors).
+			\item[2.] Plot the function values $f(x_k) = \frac{1}{2} x_k^TAx_k - b^Tx_k$ for each iterate and all runs into a second plot (use different colors).
+		\end{itemize}
+	\end{enumerate}

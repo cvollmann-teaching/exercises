@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progMaximum_exam.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Exam",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\lstinputlisting{prog-progMaximum_exam.py}\n",
+    "solution": "\\begin{enumerate}\n\t\\item Die Funktion berechnet das Maximum einer Kollektion T (zB Liste oder Tupel).\n\t\\item $k \\in \\{1,\\ldots, n-1\\}$\n\t\\item \\texttt{10: > 11}\n\t\\\\\\texttt{11: > 10}\n\\end{enumerate}"
+}

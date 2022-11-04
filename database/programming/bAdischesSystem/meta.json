@@ -1,0 +1,12 @@
+{
+    "filename": "bAdischesSystem.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Das b-adische Stellenwertsystem}\n\\begin{enumerate}\n\t\\item Es sei b $\\geq$ 2 eine Basis und $N \\geq 1$. Bestimmen Sie die kleinste und die gr\u00f6\u00dfte nat\u00fcrliche Zahl (inklusive 0), die Sie im b-adischen Stellenwertsystem als $(a_{N-1} a_{N-2} ...a_1 a_0)_b$, $a_i \\in \\lbrace 0, \\dots, b-1\\rbrace$, darstellen k\u00f6nnen.\n\t\\item Stellen Sie die Dezimalzahl \\textbf{26} im Dual-, Oktal- und Hexadezimalsystem dar.\n\\end{enumerate}\n\\textit{Hinweis:} Teleskopsumme",
+    "solution": "\\begin{enumerate}\n\t\\item \\begin{align*}\n\t&z_{min} = (0\\dots0) = 0 \\\\\n\t&z_{max} = (b-1\\dots b-1) = \n\t\\sum_{j=0}^{N-1}(b-1)b^j =\n\t\t\\sum_{j=1}^{N} b^j - \\sum_{j=0}^{N-1} b^j  =  b^N - 1 \n\t\\end{align*}\n\t\n\t\\item $26 = (11010)_2$ \\\\\n\t $26 = (32)_8$\\\\\n\t $26 = (1A)_{16}$\n\\end{enumerate}"
+}

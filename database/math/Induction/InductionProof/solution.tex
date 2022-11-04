@@ -1,0 +1,34 @@
+{\color{solution}
+\begin{enumerate}
+	\item \textbf{Induction Basis} $(n=0)$\\
+	\begin{align*}
+	\sum_{k=0}^{0}(2k+1) = 1 = (0+1)^2.
+	\end{align*}
+	Hence, \textit{induction hypothesis} can be used.\\
+	\textbf{Induction Step} $(n \mapsto n+1)$\\
+	\begin{align*}
+	&\sum_{k=0}^{n+1}(2k+1)  = (2(n+1) + 1) + \sum_{k=0}^{n}(2k+1) 
+	= (2(n+1) + 1) + (n+1)^2 = \\
+	&=2n + 2 + 1 + n^2 + 2n + 1 = n^2 + 4n + 4 = (n+2)^2\\
+	&&\hfill \square
+	\end{align*}
+	\item \textbf{Induction Basis } $(n=0)$\\
+	\begin{align*}
+	\sum_{k=0}^{0} \binom{n}{k} = \binom{0}{0} = 1 = 2^0.
+	\end{align*}	
+	\textbf{Induction Step} $(n \mapsto n+1)$\\
+	\begin{align*}
+	&\sum_{k=0}^{n+1} \binom{n+1}{k} = \sum_{k=0}^{n+1} \left[\binom{n}{k+1} + \binom{n}{k}\right] =\\
+	&= \frac{n!}{k!(n-k)!} + \frac{n!}{(k+1)!(n-(k+1))!} = \frac{n!(k+1) + n!(n-k)}{(k+1)!(n-k)!}\\
+	&=\frac{n! + n!n}{(k+1)!(n-k)!} = \frac{(n+1)!}{(k+1)!(n+1-(k+1))!} = \binom{n+1}{k+1}.
+	\end{align*}
+	\item \textbf{Induction Basis } $(n=0)$\\
+	$\sum_{k=0}^{0} q^k = 1  = \frac{q^{1} - 1}{q -1}.	$\\
+	%
+	\textbf{Induction Step} $(n \mapsto n+1)$\\
+	\begin{align*}
+	&\sum_{k=0}^{n+1} q^k  = \frac{q^{n+2} - 1}{q -1} +  \sum_{k=0}^{n} q^k  = q^{n+1} + \frac{q^{n+1} - 1}{q -1}=
+	\frac{q^{n+2} - 1}{q -1} .
+	\end{align*}
+\end{enumerate}
+}

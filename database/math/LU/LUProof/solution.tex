@@ -1,0 +1,14 @@
+{
+\color{solution}
+We find
+ \begin{align*}
+ P_{ik_i} L_j
+  &=  P_{ik_i}\left(I + \ell_je_j^\top \right)\\
+  &=  P_{ik_i} +  P_{ik_i}\ell_je_j^\top \\
+  &=  P_{ik_i} +  P_{ik_i}\ell_je_j^\top {\color{cyan}P_{ik_i}^\top P_{ik_i} }\\
+  &= (I +  P_{ik_i}\ell_je_j^\top  P_{ik_i}^\top) P_{ik_i} \\
+  &= (I +  P_{ik_i}\ell_j{\color{cyan} (P_{ik_i}e_j)^\top}) P_{ik_i} .\\
+  &= (I +  P_{ik_i}\ell_j{\color{cyan}e_j^\top}) P_{ik_i} .
+ \end{align*}
+ Since $j~{\color{red}<} ~i \leq k_i$ we find that $P_{ik_i}e_j=e_j$, since only zeroes are swapped.
+}

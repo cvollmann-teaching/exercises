@@ -1,0 +1,12 @@
+{
+    "filename": "MachEPS.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Mantissenl\u00e4nge und relative Maschinengenauigkeit \\texttt{macheps}}\n\\begin{enumerate}\n\t\\item Gegeben seien $z = \\pm m \\cdot2^e,~ e \\in \\lbrace e_{\\text{min}}, \\dots, e_{\\text{max}}\\rbrace$ mit $m = (1\\textbf{. }a_{-1}~a_{-2}~a_{-3} \\dots)_2$.\n\tZudem sei $\\varepsilon > 0$ gegeben. Angenommen Sie wollen $z$ als bin\u00e4re Gleitkommazahl $\\overline{z}=fl(z)$ mit Mantissenl\u00e4nge $N$ darstellen, wobei $fl$ gem\u00e4\u00df \\textit{roundest-to-nearest} rundet. Wie gro\u00df m\u00fcssen Sie $N$ w\u00e4hlen, sodass f\u00fcr den relativen Fehler \n\t\\begin{align*}\n\t\\frac{|z - \\overline{z}|}{|z|} < \\varepsilon\n\t\\end{align*}\n\tgilt? Berechnen Sie $N$ beispielhaft f\u00fcr $10^{-7}$ und $10^{-16}$.\n\t\n\t\\item Schreiben Sie ein Python-Programm, dass die Maschinengenauigkeit ermittelt, indem es einen Wert $\\varepsilon$ so lange halbiert, bis\n\t$1 + \\varepsilon > \\varepsilon$ als Falsch gewertet wird. Geben Sie diese Zahl an.\n\\end{enumerate}",
+    "solution": "Vorlesung\n\n\\begin{align*}\n&\\frac{|z - \\overline{z}|}{|z|} \\leq \\left( \\frac{1}{2}\\right)^N < \\varepsilon \\\\\n& \\Leftrightarrow N < \\frac{\\log(\\varepsilon)}{\\log(\\frac{1}{2})}\n\\end{align*}\n\n\\begin{verbatim}\n>>> eps = 1\n>>> while 1+eps > 1:\n...     eps /= 2\n>>> eps\n1.1102230246251565e-16\n\\end{verbatim}"
+}

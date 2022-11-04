@@ -1,0 +1,13 @@
+{
+    "filename": "SVD_invertibility.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Singular Values",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{The SVD and the Rank of a Matrix}\nLet $A \\in \\mathbb{R}^{n\\times n}$ with SVD $A= U\\Sigma V^T$ and define $\\text{rank}(A) :=$ ``number of positive singular values''. Show that $A$ is invertible $\\iff$ $\\text{rank}(A) = n$.\n \n",
+    "solution": "{\n\\color{solution}\n\\begin{align*}\n&\\text{rank}(A)=n\\ \\ \\Leftrightarrow\\ \\ \\sigma_1,\\dots,\\sigma_n\\neq 0\\\\\n& \\Leftrightarrow\\ \\ \\Sigma \n= \\begin{pmatrix}\\sigma_1& &0\\\\ &\\ddots& \\\\0& &\\sigma_n\\end{pmatrix} \\ \\text{is invertible with}\\  \\Sigma^{-1} \n= \\begin{pmatrix}\\frac{1}{\\sigma_1}& &0\\\\ &\\ddots& \\\\0& &\\frac{1}{\\sigma_n}\\end{pmatrix}\\\\\n& \\Leftrightarrow A=U\\Sigma V^T\\  \\text{invertible with}\\ A^{-1}=(U\\Sigma V^T)^{-1} = V\\Sigma^{-1}U^T.\n\\end{align*}\n\t\n}",
+    "id": ""
+}

@@ -1,0 +1,27 @@
+\section{Minimum Norm Least Squares Solution: Example}
+
+
+Let $b \in \mathbb{R}^m$ and $A \in \mathbb{R}^{m \times n}$.
+Assume you are given the least squares problem 
+$$
+\min\limits_{x \in \mathbb{R}^n} \| Ax-b \|_2^2.
+$$
+\begin{enumerate}
+	\item Which equation does a solution $\hat{x}$ of the above least squares problem solve? Give formula and name of the equation.
+	\item Assume you are given the following data
+	\begin{center}
+		\begin{tabular}{l|cc}
+			z&-1&1\\
+			\hline
+			y&2&-1
+		\end{tabular}
+	\end{center}
+ which you want to explain by a model $f:\mathbb{R} \to \mathbb{R}$ of the form 
+	$$f_c(z) = c_0 + c_1z + c_2z^2.$$
+	Solve the least squares problem
+	$$
+	\min\limits_{c \in \mathbb{R}^3} \sum_{i=1}^2 (f_c(z_i) - y_i)^2
+	$$
+	to determine appropriate coefficients $(c_0, c_1, c_2)$. If there are infinitely many solutions, pick the one with minimal norm.\\~\\
+	\textit{Hint:} Characterize the solution set $\hat{S}$ and derive a formula for the norm of a solution. Then use the fact, that the minimum (or maximum) of a quadratic function $p\colon\mathbb{R} \to \mathbb{R}$, $p(s)= a_0+a_1s+a_2s^2$ can be found by setting the first derivative to zero, i.e., $0=p'(s)=a_1+2a_2 s$.
+\end{enumerate} 

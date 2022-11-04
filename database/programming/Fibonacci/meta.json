@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progFibonacci.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Fibonacci Zahlen}\\\\\nDie \\hyperref{https://de.wikipedia.org/wiki/Fibonacci-Folge}{}{}{Fibonacci--Folge} ist durch die Rekursion\n\\begin{align*}\n\tx_{n+1} = x_n + x_{n-1},\n\\end{align*}\ndefiniert, wobei $x_0 = 0$, and $x_1 = 1$. \n\\begin{enumerate}\n\t\\item Schreiben Sie eine Python Funktion \\texttt{FibSeq(n)}, welche die ersten $n$ Fibonacci-Zahlen berechnet und als Liste ausgibt.\n\\end{enumerate}\n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progFibonacci_solution.py}"
+}

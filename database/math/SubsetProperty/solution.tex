@@ -1,0 +1,43 @@
+{\color{solution}
+\begin{itemize}
+		\item (i) $\Rightarrow$ (ii)\\
+		$A \cap B \subset A$ (No need for assumptions.)
+		\begin{align*}
+			&x \in A \cap B\\
+			\Rightarrow&x \in A \land x \in B\\
+			\Rightarrow&x \in A
+		\end{align*}
+		$A\subset A  \cap B $
+		\begin{align*}
+		&A \subset B\\
+		\Rightarrow&x \in A \Rightarrow x \in B \\
+		\Rightarrow&x \in A \Rightarrow x \in A \land x \in B\\
+		\Rightarrow&A\subset A  \cap B 
+		\end{align*}
+%		
+		\item (ii) $\Rightarrow$ (iii)\\
+		$B \subset A \cup B $ (Again, no need for assumptions.) 
+		\begin{align*}
+		 &x\in B\\
+		\Rightarrow&x \in A \lor x \in B \\
+		\Rightarrow&x \in A\cup B
+		\end{align*}
+		$A \cup B \subset B$\\
+		\begin{align*}
+			&x \in A \cup B\\
+			\Rightarrow&x \in A \lor x \in B\\
+			\Rightarrow&(x \in A \land x \in B) \lor x \in B ~~~(\text{since by ii):}~A\subset A\cap B)\\
+%			\Rightarrow&(x \in A \lor x\in B) \land x \in B,~~~(\text{by distributive property})\\
+			\Rightarrow&x \in (A\cap B)\cup B\\
+			\Rightarrow& x \in B
+		\end{align*}
+%		
+		\item (iii) $\Rightarrow$ (i)\\
+		\begin{align*}
+			&x \in A \\
+			\Rightarrow& x \in A \lor x \in B\\
+			\Rightarrow& x \in A \cup B  \\
+			\Rightarrow& x \in B,~~~(\text{since by iii):}~A\cup B \subset B )
+		\end{align*}
+	\end{itemize}
+}

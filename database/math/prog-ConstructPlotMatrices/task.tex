@@ -1,0 +1,25 @@
+\textbf{NumPy and Matplotlib II}
+
+In this exercise you need to make use of the Python packages \verb|numpy| and \verb|matplotlib|.
+\begin{enumerate}
+\item Construct an identity matrix \texttt{I} of dimension 100x100 as \verb|numpy.ndarray|.
+\item Construct a banded matrix \texttt{A} of the form 
+\begin{align*}
+				A = 	\frac{100^2}{4 \pi^2} \begin{bmatrix}
+						-2&1 &0 &0&\dots&0&0\\
+				 1&-2&1 &0&\dots&0&0\\
+				 0&1&-2 &1&\dots&0&0\\
+				 0&0&1 &-2&\dots&0&0\\
+				 \dots &\dots   &\dots  & \dots&\dots&\dots &\dots\\
+				 0& 0&0 &0&\dots&-2&1\\
+				 0& 0&0 &0&\dots&1&-2     
+					\end{bmatrix} 
+\end{align*}
+of dimension 100x100 as \verb|numpy.ndarray|.
+\item Plot both matrices with the function \verb|imshow()| of the package \verb|matplotlib.pyplot|. 
+\item Construct a vector $z$ with the \verb|linspace()| function of the \verb|numpy| package. It should contain a grid of 102 values between 0 and $2\pi$. 
+\item Use Python's \textit{slicing} capabilities to copy all except from the first and the last value of $z$ into another vector $x$.
+\item Calculate $y = \sin(x)$ and the matrix vector product $d = Ay$ using \verb|numpy.sin()| and \verb|numpy.dot()|.
+\item Plot y and $d$ into the same plot using \verb|plot()| from the \verb|matplotlib.pyplot| package.
+\end{enumerate}
+\textit{Hint:} You might need to use \verb|matplotlib.pyplot.show()| in order to guarantee that the notebook shows some output.

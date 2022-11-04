@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progHorner.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Das Horner-Schema}\n\\begin{enumerate}\n\t\\item Implementieren Sie eine Funktion \\verb|horner(z, a)|, die ein Polynom\n$$\n\tP(z) = \\sum_{k=0}^{n-1} z^k a_k\n$$\nmit Koeffizienten $(a_k)$ an der Stelle $z$ nach dem Horner-Schema auswertet.\n\t\\item Testen Sie Ihre Funktion.\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progHorner_solution.py}"
+}

@@ -1,0 +1,32 @@
+{ \color{solution}
+\begin{enumerate}
+	\item \begin{align*} 
+	Ax=b\ \  &\overset{\textcolor{blue}{A=QR}}{\Leftrightarrow}\ \ QRx=b\\
+	&\overset{\textcolor{blue}{\cdot Q^T}}{\Leftrightarrow}\ \ Rx = Q^Tb = \hat{b}
+	\end{align*}\\
+	\underline{Recipe:}\\ \fbox{\parbox[c][2cm][c]{5cm}{\begin{align*} &\text{a)  Compute}\ \ \  \hat{b}=Q^Tb\\
+			&\text{b)  Solve}\ \ \ Rx = \hat{b}\\\end{align*}}}
+	\item 
+	\begin{enumerate}
+		\item 
+		\begin{align*}
+		\hat{b} = Q^Tb = \begin{pmatrix}\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}&0\\ \frac{1}{\sqrt{6}}&-\frac{1}{\sqrt{6}}&\frac{2}{\sqrt{6}}\\-\frac{1}{\sqrt{3}}&\frac{1}{\sqrt{3}}&\frac{1}{\sqrt{3}}\end{pmatrix}\begin{pmatrix}1\\1\\1\end{pmatrix}=\begin{pmatrix}\frac{2}{\sqrt{2}}&\frac{2}{\sqrt{6}}&\frac{1}{\sqrt{3}}\end{pmatrix}
+		\end{align*}
+		\item \begin{align*}
+		\textcolor{violet}{\begin{matrix}(\text{I})\\(\text{II})\\(\text{III})\end{matrix}} \begin{pmatrix}\frac{2}{\sqrt{2}}&\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\0&\frac{3}{\sqrt{6}}&\frac{1}{\sqrt{6}}\\0&0&\frac{2}{\sqrt{3}}\end{pmatrix}\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}=\begin{pmatrix}\frac{2}{\sqrt{2}}\\\frac{2}{\sqrt{6}}\\\frac{1}{\sqrt{3}}\end{pmatrix}
+		\end{align*}
+		\begin{align*}
+		&\textcolor{violet}{(\text{III})}~~\Rightarrow~~ x_3=\frac{1}{2}\\
+		&\textcolor{violet}{(\text{II})}~~\frac{3}{\sqrt{6}}x_2 +\frac{1}{\sqrt{6}}x_1 = \frac{2}{\sqrt{6}}\\
+		&\Rightarrow~~x_2 = \frac{\sqrt{6}}{3}\left(\frac{2}{\sqrt{6}}-\frac{1}{2\sqrt{6}}\right) = \frac{\sqrt{6}}{\sqrt{6}}\frac{1,5}{3} = \frac{1}{2}\\
+		&\textcolor{violet}{(\text{I})}~~x_1\frac{2}{\sqrt{2}}+x_2\frac{1}{\sqrt{2}}+x_3\frac{1}{\sqrt{2}} = \frac{2}{\sqrt{2}}\\
+		&\Rightarrow~~x_1 = \frac{\sqrt{2}}{2}\left(\frac{2}{\sqrt{2}}-\frac{1}{\sqrt{2}}\right) = \frac{1}{2}
+		\end{align*}
+		\begin{align*}
+		\Rightarrow~~x=\frac{1}{2}
+		\begin{pmatrix}1\\1\\1\end{pmatrix}
+		\end{align*}
+	\end{enumerate}
+	
+\end{enumerate}
+}

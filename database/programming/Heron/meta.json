@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progHeron.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Heron's Algorithmus/ Babylonisches Wurzelziehen}\\\\\nBerechnen Sie f\u00fcr eine beliebige nichtnegative Zahl $a\\ge 0$ die Wurzel $\\sqrt{a}$ bis auf einen (relativen) Fehler von $10^{-10}$ nach der folgenden iterativen Methode:\n$$ x_{n+1}=\\frac{1}{2} \\left(\\frac{x_n^2+a}{x_n}\\right) \\nonumber.$$ \n\\begin{enumerate}\n\t\\item Schreiben Sie daf\u00fcr eine Python Funktion \\texttt{heron(a, x0, tol)}.\n\t\\item W\u00e4hlen Sie verschiedene Anfangswerte $x_0$ und beobachten Sie das Konvergenzverhalten, indem Sie zum Beispiel die Fehler $|x_n-\\sqrt{a}|$ in einer Liste abspeichern.\n\t\\item Erweitern Sie die Funktionsschnittstelle um einen Parameter \\texttt{maxiter} (\\texttt{heron(a, x0, tol, maxiter)}). Brechen Sie (zus\u00e4tzlich zum Fehlertoleranzkriterium) die Iteration ab, sobald die Anzahl der Schleifendurchl\u00e4ufe den Wert \\texttt{maxiter} erreicht hat.\n\\end{enumerate}\n\n\\textit{Hinweis:} Benutzen Sie die built-in Funktion \\texttt{abs()} und den Python-Wert \\texttt{a ** 0.5} zur Fehlermessung. \n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progHeron_solution.py}"
+}

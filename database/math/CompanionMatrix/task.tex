@@ -1,0 +1,28 @@
+\section{Analysing an Algorithm}
+%\begin{algorithm}
+%	\fvset{numbers=left}
+%	\begin{Verbatim}
+%	def r(coeffs):\\
+%	~~~~coeffs = np.array(coeffs[:-1])
+%	n = len(coeffs)
+%	A = np.eye(n, k = -1)
+%	A[:,-1] = -coeffs
+%	lam, v = np.linalg.eig(A)
+%	return lam
+%	\end{Verbatim}
+%\caption{Unknown Python code}
+%\end{algorithm}
+def r(coeffs):\\
+\textcolor{white}{dddd}coeffs = np.array(coeffs[:-1])\\
+\textcolor{white}{dddd}n = len(coeffs)\\
+\textcolor{white}{dddd}A = np.eye(n, k = -1)\\
+\textcolor{white}{dddd}A[:,-1] = -coeffs\\
+\textcolor{white}{dddd}lam, v = np.linalg.eig(A)\\
+\textcolor{white}{dddd}return lam\\
+%	Please answer the following questions.
+\begin{enumerate}
+	\item Which algorithm is implemented in the function above? What role does the parameter \verb|coeffs| play?
+	\item Which value \verb|lam| will the function return at \verb|coeffs = [-1,0,1]|? (No proof needed)
+	\item What would the function return at \verb|coeffs = [-1,0,-1]|? Can you give a suggestion for improvement, in order to make
+	the function more robust to bad input data? 
+\end{enumerate}

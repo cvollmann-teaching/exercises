@@ -1,0 +1,13 @@
+{
+    "filename": "PropertySkewSymmetric.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Property of a skew-symmetric Matrix}\n\\label{ex:skewsymm}\nA matrix $C \\in \\mathbb{R}^{n \\times n}$ is called \\textit{skew-symmetric} if\n\\begin{align*}\nC^\\top = -C.\n\\end{align*}\nPlease show that for a real-valued skew-symmetric matrix $C \\in \\mathbb{R}^{n\\times n}$ it holds\n\\begin{align*}\nx^\\top C x = 0\n\\end{align*}\nfor all $x \\in \\mathbb{R}^n$ (i.e., a vector $x$ is always mapped to a perpendicular vector $Cx$).",
+    "solution": "{\\color{solution}\nLet $C\\in\\mathbb{R}^{n\\times n}$, be a skew-symmetric matrix, i.e. $C^T = -C$.\\\\Now show, that $x^TCx=0$ holds.\n\\begin{align*}\n\\text{\\underline{Proof:}}&~x\\in\\mathbb{R}^n,\\\\\n&x^TCx=(x^TCx)^T=x^TC^Tx=-x^TCx\\\\\n&\\Rightarrow~x^TCx=0~~(r\\in\\mathbb{R},r=-r\\Rightarrow r=0)\n\\end{align*}\n}",
+    "id": ""
+}

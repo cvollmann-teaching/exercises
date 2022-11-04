@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progPowerSet.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Bin\u00e4rzahlen und die Potenzmenge}\n\\begin{enumerate}\n\t\\item Schreiben Sie eine Python-Funktion \\texttt{toBinary(k)}, welche die Bin\u00e4r-Ziffern einer nat\u00fcrlichen Zahl $k$ in Form einer Liste zur\u00fcckgibt.\n\t\\item Schreiben Sie eine Python-Funktion \\texttt{powerSet(inputList)}, welche die Potenzmenge einer Liste \\verb|inputList| als Liste von Listen zur\u00fcckgibt.\n\\end{enumerate}\n\\textbf{Beispiel}\\\\\n\\texttt{powerSet([1,2,3])}\\\\\n\\verb|>>> [[], [1], [2], [2, 1], [3], [3, 1], [3, 2], [3, 2, 1]]|\\\\\n~\\\\\n\\textit{Hinweis:} Die Potenzmenge von \\verb|inputList| hat $2^m$ Elemente f\u00fcr $m=$\\verb|len(inputList)|. Versuchen Sie einen Weg zu finden die Auswahl der Teilmengen \u00fcber Bin\u00e4r-Ziffern zu steuern.",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progPowerSet_solution.py}"
+}

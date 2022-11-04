@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progPseudo2.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Versuchen Sie den folgenden Pseudo-Code zu deuten. Was gibt er aus?\n\\begin{verbatim}\n\tEingabe der Zahlen-Tripeln A = (a1, a2, a3) und B = (b1, b2, b3)\n\t\n\tsolange i in [0,9):\n\t   falls A[i modulo 3] gleich B[i ganzzahldivision 3]:\n\t      Ausgabe: \"A \", i modulo 3, \" und B \", i ganzzahldivision 3 \n\\end{verbatim}\n\t",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progPseudo2_solution.py}"
+}

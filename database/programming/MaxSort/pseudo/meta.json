@@ -1,0 +1,12 @@
+{
+    "filename": "pseudoCode-progMaxSort.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\begin{enumerate}\n\t\\item Schreiben sie einen Pseudocode, der testet, ob eine gegebene Tupel von Zahlen $(a_0, \\dots, a_{n-1})$ absteigend (also beginnend mit dem gr\u00f6\u00dften Wert) sortiert ist.\n\t\\item Nehmen Sie an, sie h\u00e4tten das Programm aus der vorigen Aufgabe zur Bestimmung des Maximums zur Verf\u00fcgung, sodass es ihnen den Wert und die Stelle\n\tdes maximalen Elements in einer gegebenen Tupel liefert, i.e.\n\t\n\t\\begin{verb}\n\t\ta_n, n = Maximum(Tupel).\n\t\\end{verb}\n\n\tSchreibe Sie einen Pseudocode, der dieses Programm nutzt, um ein Tupel zu sortieren.\n\t\n\t\\item Wie oft m\u00fcssen Sie die Tupel durchlaufen?\n\\end{enumerate}",
+    "solution": "\\begin{enumerate}\n\\item \\begin{verbatim}\nEingabe Tupel der L\u00e4nge n\n\nWert = Tupel[0]\nF\u00fcr alle i in [1, n):\n    Falls Wert < Tupel[i]:\n       Ausgabe: Das Tupel ist nicht absteigend sortiert.\n       Ende\n    Wert =  Tupel[i]\nAusgabe: Das Tupel ist absteigend sortiert.\nEnde\n\\end{verbatim}\n\t\n\\item \\begin{verbatim}\nEingabe Tupel1 der L\u00e4nge n\nLeeres Tupel2 der L\u00e4nge n anlegen\n\nSolange Tupel1 nicht leer ist:\n   a_n, n = Maximum(Tupel1)\n   L\u00f6sche Element n aus Tupel1\n   F\u00fcge Wert a_n am Ende von Tupel2 hinzu\t\nAusgabe: Tupel2\n\\end{verbatim}\n\t\n\t\\item Maximum l\u00e4uft in der Iteration $k$ ein Tupel der L\u00e4nge $k$ ab. Das machen wir f\u00fcr Tupel der L\u00e4nge $n, n-1, ..., 1$. Damit erhalten wir\n\t$n(n+1)/2$ durchl\u00e4ufe. \n\\end{enumerate}"
+}

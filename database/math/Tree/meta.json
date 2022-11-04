@@ -1,0 +1,13 @@
+{
+    "filename": "Tree.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Height of a tree}\nLet $a,b,c \\in \\mathbb{R}^2$ be vectors as illustrated in the figure below. We know from the lecture that the angle $\\alpha$ between two vectors $a,c$ is defined by\n\\begin{align*}\n\\cos(\\alpha) = \\frac{a^\\top c}{\\| a\\|_2 \\|c \\|_2}.\n\\end{align*}\nUse this equality to compute the height $\\| b \\|_2$ of the tree in the figure below. The angle $\\alpha := 36.87^{\\circ}$ and the distance to the tree $ a := (4, 0)^\\top$ are given.\\\\\n%{\\centering \\includegraphics[scale=.6,trim={8cm 15cm 2cm 2cm}, clip]{Aufgaben/4_Sheet_Cosine}}\n",
+    "solution": "{\\color{solution}\n\\begin{align*}\n&a = (4,0), b = (0, h), c = (4, h)\\\\\n&\\cos(\\alpha) = \\frac{a^\\top c}{\\|a \\| \\| c\\|}\\\\\n&\\Rightarrow \\| c\\| = \\frac{4}{\\cos(\\alpha)}\\\\\n&\\Rightarrow  \\| c\\| = 5\\\\\n&\\Rightarrow 25 = \\| c \\|^2 = \\|a\\|^2 + \\| b\\|^2 = 16 + h^2\\\\\n&\\Rightarrow h = 3\n\\end{align*}\n}",
+    "id": ""
+}

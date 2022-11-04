@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progElimination.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Gauss-Elimination}\n\\begin{enumerate}\n\t\\item F\u00fchren Sie den ersten Schritt der Gauss-Elimination ohne Pivoting f\u00fcr die Matrix \n\\begin{align*}\n\tA = \\begin{bmatrix}\n\t10^{-9} & 1 \\\\\n\t1 & 10^{-9}\n\t\\end{bmatrix}\n\\end{align*}\nin Ihrem Computer durch. \n\\item Vergleichen Sie das Ergebnis mit einer Elimination auf dem Papier. Was f\u00e4llt ihnen auf? Was w\u00e4re die L\u00f6sung von $Ax = b$ f\u00fcr\n$b = (1, 10^{-9})^\\top$ in Ihrem Computer?\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progElimination_solution.py}"
+}

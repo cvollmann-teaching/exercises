@@ -1,0 +1,13 @@
+{
+    "filename": "SolutionSets.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Solution Sets}\nPlease indicate the solution set of the following inequalities. \n\\begin{enumerate}\n\t\\item $\\frac{3-x}{2} < 5$\n\t\\item $3 - (x+1)^2 \\geq 2 + \\frac{2}{3}x$\n\t\\item $5(x + 3(1-x)+2) \\geq 7$\n\t\\item $x+2 \\geq -\\frac{1}{x}$\n\\end{enumerate} \n",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item $\\mathbb{L} = \\{x | -7< x \\}$\n\t\\item $\\mathbb{L} = \\{x | -\\frac{8}{3} \\leq x \\leq 0 \\}$\n\t\\item $\\mathbb{L} = \\{x | x \\leq - \\frac{9}{5} \\}$\n\t\\item $\\mathbb{L} = \\{x | x  =-1 \\lor x > 0 \\}$\n\\end{enumerate}\n}",
+    "id": ""
+}

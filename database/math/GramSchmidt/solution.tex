@@ -1,0 +1,27 @@
+{\color{solution}
+\begin{enumerate}
+	\item $Q=\begin{pmatrix}|& &|\\q_1&\dots&q_n\\|& &|\end{pmatrix}~
+	\text{orthogonal}~~\Leftrightarrow~~Q^TQ=I~~\Leftrightarrow~~q_i^Tq_j=\delta_{ij}$
+	\begin{enumerate}
+		\item $\|q_i\|=\lVert\frac{\tilde{q_i}}{\|\tilde{q_i}\|}\rVert=\frac{\|\tilde{q_i}\|}{\|\tilde{q_i}\|}=1~~\forall i$\\
+		$\Rightarrow$ diagonal of $Q^TQ$ contains only 1's.
+		\item 
+		\textbf{Induction Basis} $(k=1)~\{q_1\}$ trivially orthogonal system\\
+		\textbf{Induction Step} $(k \mapsto k+1)$\\
+		Assume $\{q_1,\dots,q_k\}$ are pairwise orthogonal and let
+		$$
+		\tilde{q}_{k+1}:=a_{k+1}-\sum_{l=1}^{k}r_{lk+1}q_l~~\text{and}~~q_{k+1}:=\frac{1}{\tilde{q}_{k+1}}{\|\tilde{q}_{k+1}\|}.
+		$$ 
+		Now let $j\in\{1,\dots,k\}$, then
+		\begin{align*}
+		\textcolor{red}{q_j}^Tq_{k+1}&=\left[\textcolor{red}{q_j}^Ta_{k+1}-\sum_{l=1}^{k}r_{lk+1}\underbrace{\textcolor{red}{q_j}^Tq_l}_{\textcolor{violet}{=\delta_{jl}~\text{by induction assumption}}}\right]\frac{1}{\|\tilde{q}_{k+1}\|}\\
+		&=[q_j^Ta_{k+1}-\underbrace{r_{jk+1}}_{\textcolor{blue}{=q_j^Ta_{k+1}}}]\frac{1}{\|\tilde{q}_{k+1}\|}=0
+		\end{align*}
+	\end{enumerate}
+	\item Show hint: For all $k$ we have:
+	\begin{align*}
+	Qr_k&=\begin{pmatrix}|& &|\\q_1&\dots&q_n\\|& &|\end{pmatrix}\begin{pmatrix}r_{1k}\\\vdots\\r_{kk}\\0\\\vdots\\0\end{pmatrix}=\sum_{l=1}^{k}r_{lk}q_l=\underbrace{r_{kk}q_k}_{\textcolor{blue}{=\tilde{q_k}=a_k-\sum_{l=1}^{k-1}r_{lk}q_l}}+\sum_{l=1}^{\textcolor{red}{k-1}}r_{lk}q_l\\
+	&=a_k-\sum_{l=1}^{k-1}r_{lk}q_l+\sum_{l=1}^{k-1}r_{lk}q_l=a_k
+	\end{align*}
+\end{enumerate}
+}

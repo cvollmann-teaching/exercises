@@ -1,0 +1,13 @@
+{
+    "filename": "projection-least-squares.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Projections and Least Squares}\n\nLet $a,b \\in \\mathbb{R}^n\\setminus \\{0\\}$ be two nonzero vectors. Consider the $1$-dimensional optimization task\n$$\\min_{c \\in \\mathbb{R}} \\frac{1}{2} \\|ca - b\\|_2^2 =: f(c),$$ \nwhere $\\|x\\|_2:= \\left(\\sum_{i=1}^n x_i^2\\right)^{\\frac{1}{2}}$ denotes the Euclidean norm of a vector $x \\in \\mathbb{R}^n$.\nDetermine the parameter $c\\in \\mathbb{R}$ which minimizes $f$. Compare your results to the projection of $b$ onto $a$, i.e., $\\text{proj}_a(b):=\\frac{a^\\top b}{\\|a\\|_2}\\frac{a}{\\|a\\|_2}$. \\\\\n\n\\textit{Hint:} As in high-school, compute the derivative $f'$ of $f$ with respect to $c$ and solve the equation $f'(c)=0$.\n",
+    "solution": "{\n\\color{solution}\nFirst we note that\n$$f(c)= \\frac{1}{2} \\|ca - b\\|_2^2 =\\frac{1}{2} \\left(c^2 a^\\top a - 2c a^\\top b - b^\\top b\\right)\n$$\nThus, for the derivative with respect to the scalar $c$, we find\n$$ f'(c) = c a^Ta - a^Tb.$$\nSince $a\\neq 0$ and therefore $a^\\top a \\neq 0$, we find \n$$f'(\\hat{c}) = 0 ~~\\Leftrightarrow~~\\hat{c} = \\frac{a^Tb}{a^Ta}. $$\nBy convexity of $f$ we can conclude that $\\hat{c}$ is a minimizer (you will learn this in the course ``Numerical Optimization'').\n\n~\\\\\n\\textbf{Remark:} We will later identity the equation $c a^Ta - a^Tb=0$ as the \\textbf{normal equation}. The vector on the line $\\text{span}(a)$ closest to $b$ in terms of the Euclidean norm is given by \n$$\\hat{c} a = \\frac{a^Tb}{a^Ta} a =\\frac{a^Tb}{\\|a\\|_2}\\frac{a}{\\|a\\|_2} = \\text{proj}_a(b). $$\n}",
+    "id": ""
+}

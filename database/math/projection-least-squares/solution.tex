@@ -1,0 +1,15 @@
+{
+\color{solution}
+First we note that
+$$f(c)= \frac{1}{2} \|ca - b\|_2^2 =\frac{1}{2} \left(c^2 a^\top a - 2c a^\top b - b^\top b\right)
+$$
+Thus, for the derivative with respect to the scalar $c$, we find
+$$ f'(c) = c a^Ta - a^Tb.$$
+Since $a\neq 0$ and therefore $a^\top a \neq 0$, we find 
+$$f'(\hat{c}) = 0 ~~\Leftrightarrow~~\hat{c} = \frac{a^Tb}{a^Ta}. $$
+By convexity of $f$ we can conclude that $\hat{c}$ is a minimizer (you will learn this in the course ``Numerical Optimization'').
+
+~\\
+\textbf{Remark:} We will later identity the equation $c a^Ta - a^Tb=0$ as the \textbf{normal equation}. The vector on the line $\text{span}(a)$ closest to $b$ in terms of the Euclidean norm is given by 
+$$\hat{c} a = \frac{a^Tb}{a^Ta} a =\frac{a^Tb}{\|a\|_2}\frac{a}{\|a\|_2} = \text{proj}_a(b). $$
+}

@@ -1,0 +1,13 @@
+{
+    "filename": "LeastSquares_1.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Let $b \\in \\mathbb{R}^m$ and $A \\in \\mathbb{R}^{m\\times n}$.\nAssume you are given the least squares problem \n$$\n\\min\\limits_{x \\in \\mathbb{R}^n } \\| Ax - b \\|_2^2.\n$$\n\\begin{enumerate}\n\t\\item Which equation does a solution $\\hat{x}$ of the above least squares problem solve? Give formula and name of the equation.\n\t\\item Assume you are given the following data\n\t\\begin{center}\n\t\\begin{tabular}{|l|c|c|c|c|c|c||c|c|}\\hline\n\tz&-3&-1&0&1&3\\\\ \n\t\\hline\n\ty&-3&-1,5&0&2,5&4\\\\\n\t\\hline\n\\end{tabular}.\n\t\\end{center}\n\tSolve the curve fitting problem\n\t$$\n\t\\min\\limits_{c_0, c_1 \\in \\mathbb{R}} \\sum_{i=1}^5 (c_0 + c_1z_i - y_i)^2,\n\t$$\n\ti.e., determine the minimizing parameters $c_0$ and $c_1$.\n\\end{enumerate}\n\n ",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item \\textcolor{exampoints}{(1+1P)}: $\\hat{x}$ solves the normal equation: $A^TA\\hat{x}=A^Ty$\n\t\\item In this case: \n\t$$\\textcolor{exampoints}{(2P):}~~~A=\\begin{pmatrix}1&-3\\\\1&-1\\\\1&0\\\\1&1\\\\1&3\\end{pmatrix},~~$$\n\t\\begin{align*}\n\t\\textcolor{exampoints}{(2P):}~~A^TA&=\\begin{pmatrix}5&0\\\\0&20\\end{pmatrix}~~,\\\\\n\t\\textcolor{exampoints}{(2P):}~~A^Ty&=\\begin{pmatrix}1&1&1&1&1\\\\-3&-1&0&1&3\\end{pmatrix}\n\t\\begin{pmatrix}-3\\\\-1,5\\\\0\\\\2,5\\\\4\\end{pmatrix}\n\t=\\begin{pmatrix}2\\\\25\\end{pmatrix}\n\t\\end{align*}\n\tNormal equation: $$\\begin{pmatrix}5&0\\\\0&20\\end{pmatrix}\n\t\\begin{pmatrix}c_0\\\\c_1\\end{pmatrix}\n\t=\\begin{pmatrix}2\\\\25\\end{pmatrix}\n\t~~\\Leftrightarrow~~c_0=\\frac{2}{5}=0,4,~c_1=\\frac{25}{20}=1,25$$\\\\\n\t$\\Rightarrow~~\\textcolor{exampoints}{(1+1P):}~~~\\hat{x}=\n\t\\begin{pmatrix}0,40\\\\1,25\\end{pmatrix}$,~~~$c_0=0.40,~~ c_1=1.25$\n\\end{enumerate}\n}",
+    "id": ""
+}

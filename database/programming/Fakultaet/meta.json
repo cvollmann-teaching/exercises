@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progFaculty.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Fakult\u00e4t}\n\\begin{enumerate}\n\t\\item Schreiben Sie eine Python-Funktion zur Berechnung der Fakult\u00e4t $n!$ einer positiven ganzen Zahl. Gehen Sie nach dem Prinzip der iterativen Programmierung vor.\n\t\\item Implementieren Sie Ihre Funktion rekursiv.\n\t\\item Schreiben Sie ein Programm, das solange eine ganze Zahl $n$ einliest bis $n$ positiv ist und dann den Wert der Fakult\u00e4t $n!$ berechnet und ausgibt. Bei ung\u00fcltiger Eingabe weisen Sie den Benutzer darauf hin, dass nur positive ganze Zahlen erlaubt sind. F\u00fcgen Sie die Option hinzu das Spiel bei Eingabe von \\texttt{0} zu beenden.\n\\end{enumerate}\n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progFaculty_solution.py}"
+}

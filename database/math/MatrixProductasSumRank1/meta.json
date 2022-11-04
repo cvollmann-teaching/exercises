@@ -1,0 +1,13 @@
+{
+    "filename": "MatrixProductasSumRank1.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Matrix Product as Sum of rank-1 Matrices}\n\\begin{enumerate}\n\t\\item Let $A \\in \\mathbb{R}^{m \\times k}$ and $B \\in \\mathbb{R}^{k \\times n}$. Show that \n$$A \\cdot B \n= \\sum_{i=1}^k a_i b_i^\\top\n= \\sum_{i=1}^k \n\\begin{pmatrix}\na_{1i}\\\\\\vdots\\\\a_{mi}\n\\end{pmatrix}\\cdot\\begin{pmatrix}\nb_{i1}&\\ldots&b_{in}\n\\end{pmatrix}, $$\nwhere $a_i\\in \\mathbb{R}^{m\\times 1}$ denotes the $i$-th \\textit{column} of $A$ and $b_i^\\top\\in \\mathbb{R}^{1 \\times n}$ denotes the $i$-th \\textit{row} of $B$.\n\\item Construct a few examples with actual numbers.\n\\end{enumerate}\n\\textit{Remark:} Also see p. 11 in Gilbert Strang's ``Linear Algebra and Learning from Data''.",
+    "solution": "{\\color{solution}\nNote that by definition of the matrix product we have that the entry at $(\\mu,\\nu)$ of $AB$ is given by\n$$(AB)_{\\mu \\nu} = \\sum_{i=1}^k a_{\\mu i} b_{i\\nu}. $$\nAgain, by definition of the matrix product, for the $i$-th column $a_i = (a_{1 i},\\ldots,a_{mi})^\\top \\in \\mathbb{R}^{m \\times 1}$ and $i$-th row $b_i^\\top = (b_{i1 },\\ldots, b_{in })  \\in \\mathbb{R}^{1 \\times n}$, we find\n$$(a_ib_i^\\top)_{\\mu \\nu} = \\sum_{j=1}^1 (a_i)_{\\mu j} (b_i^\\top)_{j\\nu}=(a_i)_{\\mu 1} (b_i^\\top)_{1\\nu} = a_{\\mu i}b_{i \\nu}.$$\nThus \n\\begin{align*}\n\\left(\\sum_{i=1}^k a_i b_i^\\top\\right)_{\\mu \\nu}\n = \\sum_{i=1}^k\\left( a_i b_i^\\top\\right)_{\\mu \\nu} \n = \\sum_{i=1}^k a_{\\mu i}b_{i \\nu} = (AB)_{\\mu \\nu}.\n\\end{align*}\n\n}\n",
+    "id": ""
+}

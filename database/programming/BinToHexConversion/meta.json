@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progBinToHex.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Umwandlung: Bin\u00e4r zu Oktal (und Hexadezimal)}\\\\\nAus der Vorlesung wissen wir, dass f\u00fcr die Umrechnung einer Zahl $x \\in \\mathbb{N}$ von Bin\u00e4rdarstellung\n(mit Ziffern $a_k$) in Oktaldarstellung (mit Ziffern $c_k$) gilt, dass\n\n$$\nx = \\sum_{k=0}^{N-1} a_k 2^k = \\sum_{k=0}^{M-1} c_k 8^k,\n$$\nwobei\n$$\nc_k := \\sum_{l=0}^{2} a_{3k+l}2^l ~~~\\text{und}~~~M := \\left\\lceil{\\frac{N}{3}} \\right\\rceil.\n$$\n\n\n\n\\begin{enumerate}\n\t\\item Schreiben Sie eine Python-Funktion \\verb|binToOct(a)|, die entsprechend der obigen Formel\n\teine Bin\u00e4rzahl \\texttt{a} in eine Oktalzahl umwandelt. Implementieren Sie die Ein- und Ausgabe der Funktion als Strings, welche die entsprechenden Ziffern beinhalten und mit dem richtigen Literalpr\u00e4fix beginnen. Zum Beispiel \\texttt{\"0b1001\"} f\u00fcr die Bin\u00e4rzahl $(1001)_2$ oder \\texttt{\"0o11\"} f\u00fcr die Oktalzahl $(11)_8$.\n\t\\item Schreiben Sie eine Python-Funktion \\verb|binToHex(a)|, die den entsprechenden Zusammenhang f\u00fcr Hexadezimalzahlen ausnutzt.\n\t\\item Testen Sie Ihre Funktionen.\n\\end{enumerate}\n\\textit{Hinweis:} Sie k\u00f6nnen die obere Gau\u00df-Klammer (``aufrunden'') $\\left\\lceil{\\frac{N}{3}} \\right\\rceil$ direkt durch eine Ganzzahldivision \\verb|N//3 +1| bestimmen.",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progBinToHex_solution.py}"
+}

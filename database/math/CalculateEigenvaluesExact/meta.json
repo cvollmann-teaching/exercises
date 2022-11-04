@@ -1,0 +1,13 @@
+{
+    "filename": "CalculateEigenvaluesExact.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Eigenvalues",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Calculate Eigenvalues Exact}\n{\\color{red} choose better numbers next time}\\\\\nLet \n\\begin{align*}\nA_1 = \\begin{pmatrix}\n0&1\\\\\n-1&0\n\\end{pmatrix},\n\\hspace{.5cm}\nA_2 = \\begin{pmatrix}\n-0.1&-1\\\\\n-1&100\n\\end{pmatrix}.\n\\end{align*}\n\\begin{enumerate}\n\t\\item Set up the characteristic polynomials $p_i$ of the matrices $A_i$ for $i=1,2$ and compute their eigenvalues.\n\t\\item Determine an eigenvector to the (in magnitude) largest eigenvalue of the matrix $A_2$ by solving the system\n\t\\begin{align*}\n\t(A_2 - \\lambda I)x  = 0\n\t\\end{align*}\n\tusing the $LU$-decomposition. \n\t\\item Determine $\\text{rank}_{\\vartheta}(A_2)$ for $\\vartheta = 10^{-1}, 0$.\n\\end{enumerate}\n\\textit{Hint: }Try to calculate with exact values (i.e., with fractions), since rounding errors can strongly affect the solution in (ii).",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item \\begin{itemize}\n\t\t\\item $p_1(\\lambda) = -1+\\lambda^2~~\\Rightarrow~~\\lambda_{1/2} =\\pm i$\n\t\t\\item $p_2(\\lambda)=\\underbrace{-11}_{\\textcolor{blue}{q}}+\\underbrace{99,9}_{\\textcolor{blue}{p}}\\lambda +\\lambda^2$\\\\ $\\Rightarrow~~\\lambda_{1/2}=-\\frac{999}{20}\\pm\\sqrt{\\frac{999^2}{20^2}+\\frac{20^2}{20^2}11}=\\frac{-999\\pm\\sqrt{1002401}}{20}\\\\\\approx\\lambda_1=-100,01,~\\lambda_2=-0,10999$\n\t\\end{itemize}\n\t\\item \\begin{align*} (A_2-\\lambda_1 I)&=\\begin{pmatrix} -0,1&-1\\\\-1&100\\end{pmatrix}-\\begin{pmatrix}100,01&0\\\\0&100,01\\end{pmatrix}\\\\&=\\begin{pmatrix}-100,11&-1\\\\-1&-0,01\\end{pmatrix}~~~\\rightsquigarrow~~~\\begin{pmatrix}-100,11&-1\\\\0&0\\end{pmatrix}\\\\&\\Rightarrow~~-100,11x_1-x_2=0~~\\Rightarrow~~x_2=-100,11x_1\\\\&\\Rightarrow~~v\\in\\left\\lbrace s\\begin{pmatrix}1\\\\-100,11\\end{pmatrix}:~s\\in\\mathbb{R}\\right\\rbrace\\end{align*}\n\t\\item $\\text{rank}_{0,1}(A_2) =|\\{\\lambda\\in\\sigma(A_2):|\\lambda|>0,1\\}|=2$\\\\$\\text{rank}_0(A_2)=2$\n\\end{enumerate}\n}",
+    "id": ""
+}

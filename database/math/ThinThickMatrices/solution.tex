@@ -1,0 +1,85 @@
+{\color{solution}
+Let us recall the dimension formula here
+\begin{align*}
+n &= \text{rank}(A) + \text{nullity}(A),\\
+m &= \text{rank}(A^\top) + \text{nullity}(A^\top).\\
+\end{align*}
+\begin{enumerate}
+	\item
+	We have
+	$$\{0\}^\bot = \{x \in \Rn: x^\top v = 0~~ \forall v \in \{0\}\} = \{x \in \Rn: x^\top 0 = 0 \} = \Rn  $$
+	and
+	$$(\Rn)^\bot = \{x \in \Rn: x^\top y = 0~~ \forall y \in \Rn\}= \{x \in \Rn:  \ker(x^\top) = \{0\}\} = \{0\}.  $$
+
+
+%   \item \textit{Give an example for a matrix $A \in \Rmn$ with $n < m$ and $\text{rank}(A) < m$.}\\
+~\\~
+[Not part of the exercise:]~\\ Together with $(U^\bot)^\bot=U$ this gives in general
+\begin{align*}
+\Rm = \text{im}(A) =\ker(A^\top)^\bot &\iff  \ker(A^\top) = \{0\},~~~\text{or}\\
+\text{rank}(A) = m &\iff  \text{nullity}(A^\top) = 0,~~~\text{or}  \\
+A ~~\text{surjective} &\iff A^\top ~~ \text{injective}.
+\end{align*}
+Analogously for the transpose
+\begin{align*}
+ \Rn = \text{im}(A^\top) =\ker(A)^\bot &\iff  \ker(A) = \{0\},~~~\text{or}\\
+ \text{rank}(A^\top) = n &\iff  \text{nullity}(A) = 0,~~~\text{or}  \\
+ A^\top ~~\text{surjective} &\iff A ~~ \text{injective}.
+\end{align*}
+	\item 
+	Example: $$ C = \begin{pmatrix}1&0\\0&1\\0&0\end{pmatrix}.$$
+	\begin{enumerate}
+		\item 		By dimension formula we know $$m \geq \dim(\text{im}(C))=\text{rank}(C) = n - \text{nullity}(C) = n. $$
+		\begin{center}
+			 Only square or thin matrices can be injective!
+		\end{center}
+		\item 		Since  $\text{nullity}(C)=0$ we know $\ker(C) = \{0\}$ and thus the $n$ columns of $C$ are independent (in fact, only the zero combination gives the zero vector).		
+		\item 		No (because $f_C$ injective). Recall the proof: Assume yes, then $Cx_1=b = Cx_2 \iff C(x_1-x_2) = 0 $, where $x_1 -x_2 \neq 0$ due to $x_1\neq x_2$. This contradicts the fact that $\ker(C) = \{0\}$.
+		 \begin{center}
+			 Independent columns assure that a solution to $Cx = b$ is unique (if it exists).
+		\end{center}
+				\item Since $\ker(C^\top C) = \ker(C) = \{0\}$, we have that the $(n\times n)$-matrix $C^\top C$ is invertible.
+	\end{enumerate}
+    
+    	\item     Example: Take for two nonzero vectors $u \in \Rm, v \in \Rn$ with $n>m > 1$ the outer product
+    $$A := uv^\top, $$
+    so that each column is a scaling of $u$ and thus $\text{rank}(A) =1 < m$.
+    \begin{center}
+    	 Simply many columns are not enough for surjectivity! \\We need independence to get a ``larger'' subspace.
+    \end{center}
+	\item 	Example: $R := C^\top.$
+	\begin{enumerate}
+		\item 	From above recall: $\text{rank}(R) = m \iff  \text{nullity}(R^\top) = 0$. Now by dimension formula we get 
+				$$n \geq \dim(\text{im}(R^\top))=\text{rank}(R^\top) = m - \text{nullity}(R^\top) = m. $$
+		\begin{center}
+			 Only square or fat matrices can be surjective!
+		\end{center}
+		\item 	Again, by $\text{nullity}(R^\top) = 0$, they are independent.
+		\item 	Since $\ker(RR^\top )=\ker(R^\top)  = \{0\}$, it's invertible.
+		\item  	Yes, since $\text{im}(R) = \Rm$, any $b \in \Rm$ is of the form $Rx = b$ for some $x \in \Rn$.
+				 \begin{center}
+			 Independent rows assure that a solution to $Rx = b$ exists.
+		\end{center}
+	\end{enumerate}
+		\item 
+	\begin{enumerate}
+	\item 	By dimension formula 
+	$$\text{nullity}(A) = n -  \text{rank}(A) = 0,$$
+	Then using from above $\text{rank}(A^\top) = n \iff  \text{nullity}(A) = 0$, we find
+	$\text{rank}(A^\top) = n,$
+	and therefore also
+	$$\text{nullity}(A^\top) = n -  \text{rank}(A^\top) = 0.$$
+%	\item \textit{What do we know about the order relation between $m$ and $n$?}\\
+%	By the findings above we can conclude $m=n$.
+	
+	\item Since $\ker(A) =\{0\} =\ker(A^\top)$ the $n$ rows and the $n$ columns are independent.
+	\item Yes, because from above we know: Independent rows give existence and independent columns uniqueness.
+	
+\end{enumerate}
+ \item  Take $A=C$ with $C$ from above. Then $$\text{rank}(A) = 2 = \text{rank}(A^\top).$$ However 
+ $$\text{nullity}(C) = 0 \neq 1 =\text{nullity}(C^\top) .$$
+     \begin{center}
+  We will learn below:\\	 Always $ \text{rank}(A) = \text{rank}(A^\top),$\\ but a similar result is not true in general for $\text{nullity}(A)$.
+ \end{center}
+\end{enumerate}
+}

@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progRefInst.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Instanzen und Referenzen}\n\\begin{enumerate}\n\t\\item Erzeugen Sie zwei Referenzen auf dieselbe Instanz eines Wertes vom Typ \\verb|int|. Pr\u00fcfen Sie, ob die Referenzen auf dieselbe Instanz zeigen.\n\t\\item Erzeugen Sie zwei verschiedene Instanzen desselben Werts von verschiedenem Typ zB \\verb|int| und \\verb|float|. Pr\u00fcfen sie, ob die Instanzen verschieden sind.\n\t\\item Erzeugen Sie zwei verschiedene Instanzen desselben Werts vom Typ \\verb|int|. Pr\u00fcfen sie, ob die Instanzen verschieden sind.\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progRefInst_solution.py}"
+}

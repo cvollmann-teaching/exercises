@@ -1,0 +1,13 @@
+{
+    "filename": "DifferentiableImpliesContinuous.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Derivatives",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "~\\\\\n{\\large \\color{red}All points of this sheet are bonus points!}\n\\section{Differentiable implies Continuous}\nLet $D\\subset \\mathbb{R}^n$, $x_0\\in D$ with $B_\\varepsilon(x_0) \\subset D$ for some $\\varepsilon >0$. Let $f\\colon D \\to \\mathbb{R}$ be (Frech\u00e9t-) differentiable at $x_0$. Show that $f$ is continuous at $x_0$.",
+    "solution": "{\n\\color{solution}\n\t\\includegraphics[width=0.9\\linewidth]{../../../../rep/exercises/derivatives/diffImpliesCont}\n\n\n\n}\n",
+    "id": ""
+}

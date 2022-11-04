@@ -1,0 +1,21 @@
+{\color{solution}
+Let $A\in\mathbb{F}^{n\times n}$.
+\begin{enumerate}
+	\item 
+	Let $A\in GL_n(\mathbb{F})$ and $\lambda\in\sigma(A)$ (with eigenvector $v\neq 0$).\\
+	To show, that $\lambda\neq 0$ holds, we assume $\lambda = 0$.
+	$\Rightarrow~~Av=\lambda v=0~~\Rightarrow~~v=A^{-1}\cdot 0=0$. 
+	Here we see the contradiction.\\
+	Now we proof $\frac{1}{\lambda}\in\sigma(A^{-1})$:\\
+	$Av~~\stackrel{\textcolor{blue}{A\in GL_n(\mathbb{F})}}{\Leftrightarrow}~~ v = \lambda A^{-1}v~~\stackrel{\textcolor{blue}{\lambda\neq 0}}{\Leftrightarrow}~~\frac{1}{\lambda}v=A^{-1}v~~\Leftrightarrow~~\frac{1}{\lambda}\in\sigma(A^{-1})~~\textcolor{blue}{(\text{with the same eigenvector}~v).}$
+	\item 
+	Let $\alpha\in\mathbb{C}$.\\$((A-\alpha I)-(\lambda -\alpha)I)v=(A-\lambda I)v\stackrel{\textcolor{blue}{\lambda\in\sigma(A)}}{=}0~~\checkmark$\\$\textcolor{blue}{\Rightarrow~~(\lambda-\alpha)~\text{eigenvalue of}~(A-\alpha I)~\text{with the same eigenvector}~v}$
+	\item 
+	\begin{align*} 
+	Av=\lambda v~~&\Leftrightarrow~~Q^TAv=Q^T\lambda v\\
+	&\Leftrightarrow~~Q^TA\underbrace{QQ^T}_{\textcolor{blue}{=I}}v=\lambda Q^T \underbrace{QQ^T}_{\textcolor{blue}{=I}}v\\
+	&\Leftrightarrow~~Q^TAQ(Q^Tv)=\lambda(Q^Tv)\\
+	&\Leftrightarrow~~\lambda~\text{is eigenvalue of}~Q^TAQ~\text{with eigenvector}~Q^Tv.
+	\end{align*}
+\end{enumerate}
+}

@@ -1,0 +1,10 @@
+\section{Frobenius Norm, Trace and Singular Values}
+Recall that the Frobenius norm of a matrix $A  \in \mathbb{R}^{m \times n}$ is defined by 
+$$\|A\|_F := \sqrt{\sum_{i=1}^m \sum_{j=1}^n a_{ij}^2} $$ and the trace of a matrix $B \in \mathbb{R}^{n \times n}$ by
+$$ \text{tr}(B) = \sum_{i=1}^n b_{ii}.$$
+\begin{enumerate}
+	\item Show that for a matrix $A  \in \mathbb{R}^{m \times n}$ we have $$\|A\|_F^2 = \text{tr}(A^TA).$$
+	\item Show that the trace is symmetric, i.e., for $A,B \in \mathbb{R}^{m \times n}$ we find $$\text{tr}(A^\top B)=  \text{tr}(B^\top A ) = \text{tr}(BA^\top ) .$$
+	{\color{navy}\textit{Remark:} $\mathbb{R}^{m \times n} \times \mathbb{R}^{m \times n} \to \mathbb{R}, (A,B) \mapsto \text{tr}(B^\top A)$ defines an inner product on $\mathbb{R}^{m \times n}$ and the Frobenius norm $\|A\|_F  = \sqrt{\text{tr}(A^TA)}$ denotes the corresponding norm. For example, Cauchy-Schwarz inequality holds.}
+	\item Use these results and the singular value decomposition to show that the Frobenius norm of a matrix $A \in \mathbb{R}^{m \times n}$ can be expressed in terms of its singular values, i.e., $$\|A\|_F^2 = \sum_{i=1}^{\min(m,n)} \sigma_i^2 ~~~\left(= \sum_{i=1}^{r} \sigma_i^2 = \|\Sigma\|^2_F\right).$$
+\end{enumerate}

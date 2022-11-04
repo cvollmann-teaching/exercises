@@ -1,0 +1,13 @@
+{
+    "filename": "LinearIterations_ConvSpeed.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Systems, Splitting Methods",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Convergence Speed of Linear Iterations}\nLet $M \\in \\mathbb{R}^{n \\times n}$ be \\textit{symmetric} with $\\rho(M) < 1$, let $N \\in \\mathbb{R}^{n \\times n}$ and $x_0, b \\in \\mathbb{R}^n$. \nConsider the fixed point iteration \n$$\nx_{k+1} = Mx_k + Nb \n$$ \nand show the following convergence result \n$$\n\\|x_k - x^*\\|_2  \\leq \\rho(M)^k \\|x_0 - x^*\\|_2  ,\n$$\nwhere $x^*$ is the associated fixed point.\nThus, the smaller the spectral radius, the faster does the method converge.\\\\\n[0.1cm]\n\\textit{Hint:} For symmetric matrices $M\\in \\mathbb{R}^{n \\times n}$ you can use $\\|Mx\\|_2 \\leq \\rho(M) \\|x\\|_2$ for all $x\\in \\mathbb{R}^n$.\t\n\n\n",
+    "solution": "{\\color{solution}\nSince $\\rho(M)<1$, the iteration converges to the fixed point $x^* =Mx^*+Nb$. We use this representation in the formulas. We find\n\\begin{align*}\n \\ \\|{x^k-x^*}\\|_2 = \\|{Mx^{k-1}+Nb-(Mx^*+Nb)}\\|_2 = \\|{M(x^{k-1}-x^*)}\\|_2\n\\stackrel{\\textcolor{blue}{[\\text{Hint}]}}{\\leq}\\ \\ \\rho(M)\\underbrace{\\|{x^{k-1}-x^*}\\|_2}_{\\textcolor{blue}{\\leq\\rho(M)\\|{x^{k-2}-x^*}\\|}}.\n\\end{align*}\nBy inserting the iteration instruction repeatedly we ultimately arrive at\n$$\\|{x^k-x^*}\\|_2\\leq \\rho(M)^k\\|{x^0-x^*}\\|_2. $$\n}\n\n",
+    "id": ""
+}

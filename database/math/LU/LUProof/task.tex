@@ -1,0 +1,7 @@
+% !TeX spellcheck = en_US
+\textbf{Proof for LU decomposition (with row pivoting)}
+
+Let $m\in\mathbb{N}$.  As above, let $P_{ik_i} \in \mathbb{R}^{m \times m}$ be the permutation matrix which results from interchanging the $i$-th and $k_i$-th column ($k_i \geq i$) of the identity matrix in $\mathbb{R}^{m \times m}$. Further for $\ell_j := (0,\ldots,0,\ell_{j+1,j},\ldots,\ell_{m,j})^\top\in\mathbb{R}^m$ and the $j$-th unit vector $e_j\in\mathbb{R}^m$, let $L_j := I + \ell_je_j^\top \in \mathbb{R}^{m\times m}$.
+Then show that for all $1 \leq j< i \leq k_i\leq m$ we have
+$$P_{ik_i} L_j = \widehat{L}_j P_{ik_i}$$
+where $\widehat{L}_j :=  I + (P_{ik_i}\ell_j)e_j^\top$.

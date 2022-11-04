@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progMarkdownTableHeadlines.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": " \\textbf{Markdown-Tabellen} (Anwendung: \\texttt{**kwargs})\\\\\n Mit Markdown k\u00f6nnen wir leicht \\href{https://www.tablesgenerator.com/markdown_tables}{Tabellen} zeichnen. \n\\begin{enumerate}\n\\item Schreiben Sie eine Python-Funktion\n\\verb|mdTable(**columns)|, die beliebig viele Schl\u00fcsselwortargumente entgegennimmt. Die Schl\u00fcssel--Wert Paare sollen Tabellenspalten wie folgt definieren: Schl\u00fcssel=Spalten\u00fcberschrift, Wert=Python-Liste mit Spalteneintr\u00e4gen. Damit ist **columns ein Dictionary dessen Werte Listen sind. Bauen Sie nun daraus einen String \\texttt{mdTab} der eine Markdown--Tabelle mit diesen Spalten enth\u00e4lt. \n\\item Testen Sie die Funktion mit der Eingabe\n\\begin{lstlisting}[language=Python]\nmdTab = mdTable(computationTime = [0.1, 1.0, 10.0], \n                precision = [1.e-2, 2.34e-3, 8.98e-5], \n                algorithm = [\"A\", \"B\", \"C\"])\n\\end{lstlisting}\nund geben Sie die Ausgabe von \\texttt{print(mdTab)} in eine Markdown-Zelle ein.\n\n\\item Testen Sie die Funktion mit der Eingabe\n\\begin{lstlisting}[language=Python]\nmdTab = mdTable(computationTime = [0.1, 1.0, 10.0], \n                someValue = [1.e-2, 2.34e-3], \n                algorithm = [\"A\", \"B\", \"C\"])\n\\end{lstlisting}\nund geben Sie die Ausgabe von \\texttt{print(mdTab)} in eine Markdown-Zelle ein.\n\n\\item Bonus*: Erweitern Sie die Parameter--Schnittstelle um ein Positionsargument \\texttt{filename} (Datentyp \\texttt{string}) und speichern Sie den String \\texttt{mdTab} zus\u00e4tzlich in eine Textdatei \\texttt{filename.md}.\\\\ \n\\textit{Hinweis:} Sie ben\u00f6tigen dazu ein \\href{https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files}{Dateiobjekt}, welches Sie leicht mit der eingebauten Funktion \\texttt{open()} erstellen. Dann k\u00f6nnen Sie die Methode \\texttt{.write()} zum schreiben verwenden und die Methode \\texttt{.close()}, um die Datei zu speichern und zu schlie\u00dfen.\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progMarkdownTableHeadlines_solution.py}"
+}

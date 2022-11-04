@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progTimeIPython.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\begin{enumerate}\n\t\\item Schreiben Sie ein \\textit{Hello World} Programm in ein Python File \\verb|sourceCode.py| und kompilieren Sie es mit dem Shell-Befehl\n\t\\begin{verbatim}\n\t\tpython -m py_compile sourceCode.py\n\t\\end{verbatim}\n\tMachen Sie das Ergebnis ausf\u00fchrbar, zB mit dem Shell-Befehl $$\\verb|chmod +x sourceCode.pyc|$$ und f\u00fchren Sie es aus mit $$\\verb|./sourceCode.pyc|.$$\n\t\\item Pr\u00e4sentieren Sie kurz den Magical Command \\href{https://ipython.readthedocs.io/en/stable/interactive/magics.html}{\\%time} f\u00fcr IPython Konsolen.\n\t\n% DAS IST UNSINN UND GEHT NCITH WIRKLICH ... !\n%\t\\item Messen Sie die ben\u00f6tigte Zeit f\u00fcr die Ausf\u00fchrung eines Python Programms (zB Fibonacci) und erkl\u00e4ren Sie den Unterschied in den Wallclock Zeiten zwischen dem\n%\tersten und dem zweiten Durchlauf nach einem Neustart der IPython Konsole.\n\\end{enumerate}\n\\textit{Hinweis: } Bei mir ist es vorgekommen, dass die \\verb|sourceCode.pyc| im Unterverzeichnis \\verb|__pycache__| gelandet ist.",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progTimeIPython_solution.py}"
+}

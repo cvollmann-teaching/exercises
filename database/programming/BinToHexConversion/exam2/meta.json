@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progBinToHex2_exam.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Exam",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\lstinputlisting{prog-progBinToHex2_exam.py}\n",
+    "solution": "\\begin{enumerate}\n\t\\item Umwandlung von Bin\u00e4r- zu Hexadezimaldarstellung.\n\t\\item -- Die Eingabe \\verb|binChars| wird in einen String umgewandelt.\\\\\n\t-- Dann wird Reihenfolge der Zeichen invertiert.\n\t\\item Ganzzahlige Division\n\t\\item -- Addiert jeweils die Werte auf der rechten Seite auf den Wert der entsprechenden Instanz, auf die die Referenz von links zeigt.\\\\\n\t  -- Dabei wird jeweils eine neue Instanz erzeugt (da Datentyp \\texttt{str, int})\n\t\\item \\texttt{N=1, k=0, i=0, i=1}\n\\end{enumerate}"
+}

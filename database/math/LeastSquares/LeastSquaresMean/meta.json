@@ -1,0 +1,13 @@
+{
+    "filename": "LeastSquaresMean.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{\\normalsize Linear Least Squares}\n\nWe are given a sample of size $m$ of measurements $(z_i,y_i)\\in\\mathbb{R}^2$ for $i=1,\\dots,m$. \nDetermine the minimizer $c_0$ of the problem\n\\begin{align*}\n\\min \\limits_{c_0\\in\\mathbb{R}} \\sum_{i=1}^m (c_0 - y_i)^2.\n\\end{align*}\n\\textit{Hint: } This is the simple case where our assumed model is a constant function, i.e., $f(z_i) \\equiv c_0$. Set up the design matrix $A$ and solve the normal equation.",
+    "solution": "{\\color{solution}\nModel: $f(x)=c_0$, with measurements $(z_i,y_i),~i=1,\\dots,m$.\\\\\nWith the design matrix $A=\\begin{pmatrix}1\\\\\\vdots\\\\1\\end{pmatrix}\\in\\mathbb{R}^{m\\times 1}=\\mathbb{R}^m$ and $b = \\begin{pmatrix}y_1\\\\\\vdots\\\\y_m\\end{pmatrix}\\in\\mathbb{R}^m$, we find\n$$\\min_{c_0\\in\\mathbb{R}}\\sum_{i=1}^{m}(c_0-y_i)^2=\\min_{c_0\\in\\mathbb{R}}\\|A\\cdot c_0-b\\|_2^2.$$\\\\\nWe have\n$$\nA^TA=\\sum_{i=1}^{m}1=m ~~~\\text{and}~~~A^Tb =\\sum_{i=1}^{m}y_i.\n$$ \nThus by solving the normal equation we find\n\\begin{align*}\nA^TAc_0=A^Tb~~\\Leftrightarrow~~m\\cdot c_0=\\sum_{i=1}^{m}y_i\n~~\\Leftrightarrow~~c_0=\\frac{1}{m}\\sum_{i=1}^{m}y_i.\n\\end{align*}\nWith other words, the best constant fit in the least squares sense is the average of the data.\n}",
+    "id": ""
+}

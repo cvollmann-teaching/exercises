@@ -1,0 +1,30 @@
+\textbf{Inverse Power Method}
+
+ \label{ex:inversepowertheory}
+Let $A \in \mathbb{R}^{n \times n}$ be a matrix with eigenvalues $\lambda_j$ for $j \in  \{1,\dots,n\}$ with the property
+\begin{align*}
+|\lambda_n| \geq \dots \geq |\lambda_{i+1}|  > |\lambda_i| > |\lambda_{i-1}| \geq \dots \geq |\lambda_1|. 
+\end{align*}
+Let $\hat{\lambda} \approx \lambda_i$ be a \textit{good guess} for the eigenvalue $\lambda_i$, which means
+\begin{align}
+0 < |\lambda_i - \hat{\lambda} | < |\lambda_j -  \hat{\lambda} | ~~\forall~ i \neq j.
+\end{align}
+Or in other words, $\hat{\lambda}$ is closer to $\lambda_i$ (in absolute terms) than any other eigenvalue.\\
+Let us define $$B := (A - \hat{\lambda} I). $$
+
+\begin{enumerate}
+	\item Show that $(\lambda_i - \hat{\lambda})^{-1}$  is (in magnitude) the largest eigenvalue of the matrix $B^{-1}$.
+	
+%	\textit{Hint: } Use results from Sheet 5, Exercise 31.
+	\item Let $x^0 \in \mathbb{R}^n$. With respect to $A$, the iteration
+	\begin{align}
+	x^{k+1} := \frac{B^{-1} x^k}{\|B^{-1} x^k\|} \label{inv_powerit}
+	\end{align}
+	for $k \geq 0$ is called \textit{inverse power iteration}. Under which condition on $x^0$ does this iteration converge and what is the limit?
+	
+	\textit{Hint:} Apply the theorem about the power method from the lecture.
+%	\item Why is the \textit{inverse power iteration} computationally more expensive than the \textit{power iteration}? What could help 
+%	to drastically reduce the required computational effort?
+%	
+%	\textit{Hint: } Sheet 3, Exercise 21 (iii) deals with a similar problem.
+\end{enumerate}

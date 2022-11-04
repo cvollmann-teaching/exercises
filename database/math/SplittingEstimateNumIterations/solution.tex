@@ -1,0 +1,65 @@
+{
+\color{solution}
+Since $A$ is symmetric we can exploit the estimate $$\|x_k-x\|_2 \leq \rho(M)^k\|x_0-x\|_2,$$ where $\rho(M)$ denotes the spectral radius of the iteration matrix.
+Thus we want to find $m \in \mathbb{N}$ such that for all $k \geq m$, we have
+$$\rho(M)^k \leq \varepsilon. $$
+Applying logarithm we find that 
+$$m =\frac{ \text{log}(\varepsilon)}{ \text{log}(\rho(M))}. $$
+Therefore let us compute the spectral radius for this case and each method. Consider the splitting $A = L + D + U$.\\~\\
+\textbf{Richardson:}\\
+Here we have
+\begin{align*}
+	M_R = I - A = \begin{pmatrix}
+		-2&1\\1&-2
+	\end{pmatrix}.
+\end{align*}
+Thus 
+$$0 = \text{det}( M_R-\lambda I) = (2+\lambda)^2 - 1 $$
+gives $\lambda \in \{-1, -3\}$, so that $\rho(M_R) = 3$. Therefore Richardson without relaxation does not converge!\\~\\
+\textbf{Jacobi:}\\
+Here we have
+\begin{align*}
+	M_J = I - D^{-1}A 
+	= I-\begin{pmatrix}
+		\tfrac{1}{3}&0\\0&\tfrac{1}{3}
+	\end{pmatrix}
+	\begin{pmatrix}
+		3&-1\\-1&3
+	\end{pmatrix}
+=
+\begin{pmatrix}
+	0&\tfrac{1}{3}\\\tfrac{1}{3}&0
+\end{pmatrix}.
+\end{align*}
+Thus 
+$$0 = \text{det}( M_J-\lambda I) = \lambda^2 - \tfrac{1}{9}$$
+gives $\lambda \in \{-\tfrac{1}{3}, \tfrac{1}{3}\}$, so that $\rho(M_J) = \tfrac{1}{3}$. Therefore Jacobi without relaxation does converge and 
+$$m =\frac{ \text{log}(\varepsilon)}{ \text{log}(\tfrac{1}{3})}\approx 13. $$
+\textbf{Gauß-Seidel:}\\
+Here we have
+\begin{align*}
+	M_G = I - (D+L)^{-1}A
+\end{align*}
+where 
+$$(D+L)^{-1} = \begin{pmatrix}
+\tfrac{1}{3}&0\\\tfrac{1}{9}&\tfrac{1}{3}
+\end{pmatrix}  $$
+so that
+\begin{align*}
+	M_G 
+	= I-\begin{pmatrix}
+		\tfrac{1}{3}&0\\\tfrac{1}{9}&\tfrac{1}{3}
+	\end{pmatrix}
+	\begin{pmatrix}
+		3&-1\\-1&3
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		0&\tfrac{1}{3}\\0&\tfrac{1}{9}
+	\end{pmatrix}.
+\end{align*}
+Thus 
+$$0 = \text{det}(M_G -\lambda I) = -\lambda (\tfrac{1}{9}-\lambda)$$
+gives $\lambda \in \{0, \tfrac{1}{9}\}$, so that $\rho(M_G) = \tfrac{1}{9}$. Therefore Gauß-Seidel without relaxation does converge and 
+$$m =\frac{ \text{log}(\varepsilon)}{ \text{log}(\tfrac{1}{9})}\approx 7. $$
+}

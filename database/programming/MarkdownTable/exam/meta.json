@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progMarkdownTable_exam.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Exam",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\lstinputlisting{prog-progMarkdownTable_exam.py}\n",
+    "solution": "% !TeX spellcheck = de_AT_frami\n\\begin{enumerate}\n\t\\item 19:\\\\\n\t\\texttt{| }\\\\\n\t\t\\texttt{|-}\\\\~\\\\\n\t\t20:\\\\\n\t\t\\texttt{| | }\\\\\n\t\t\\texttt{|-|-}\\\\\n\t\t\\texttt{| | }\\\\\n\t\\item Zum Beispiel:\n\t\\\\-- In Zeile 12: ~~~\\texttt{row\\_string += '|'},~~ \\texttt{line\\_string += '|'} \n\\end{enumerate}"
+}

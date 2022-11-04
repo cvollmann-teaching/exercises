@@ -1,0 +1,13 @@
+{
+    "filename": "SVD_Rank1matrix.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Singular Values",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{\\normalsize The SVD of Rank-1-Matrices}\n\nLet $u\\in \\mathbb{R}^m \\setminus \\{0\\}$ and $v \\in \\mathbb{R}^n \\setminus \\{0\\}$ be nonzero vectors and define $A := uv^T$. Find a reduced SVD of $A$ and shortly explain why $\\text{rank}(A)=1$.",
+    "solution": "{\\color{solution}\n\\textit{We will in all detail derive the full and reduced SVD by following our recipe (your answer may be shorter!):\t}~\\\\~\\\\\nWe have $$A^TA=\\|u\\|^2vv^T.$$\nFollowing the recipe for computing the SVD of $A$ we determine the eigenpairs of $A^TA$. We find\n$$A^TAv=\\|u\\|^2\\|v\\|^2v,$$\nwhich implies that $v$ is an eigenvector to the positive (note: $u,v \\neq 0$) eigenvalue $\\|u\\|^2\\|v\\|^2$.\n\\begin{itemize}\n\t\\item \n\tSince $A^TA$ is symmetric we know all eigenvectors are mutually orthogonal.\n\t\\item \n\tHowever, any vector $\\textcolor{red}{x}$ orthogonal to $\\textcolor{cyan}{v}$ is eigenvector to the eigenvalue $\\textcolor{violet}{0}$, since $$A^TA\\textcolor{red}{x}=\\|u\\|^2\\textcolor{cyan}{v}\\underbrace{\\textcolor{cyan}{v}^Tx}_{\\textcolor{blue}{=0}}=\\textcolor{violet}{0}\\cdot\\textcolor{red}{x}.$$\n\tTherefore the eigenvalues of $A^TA$ are given by\n\t$$\\lambda_1=\\|u\\|^2\\|v\\|^2,~\\lambda_2=\\dots=\\lambda_n=\\textcolor{violet}{0},$$\n\twith precisely $r=1$ positive one ($\\textcolor{red}{\\Rightarrow\\text{rank}(A)=1}$).\n\tThus we find the singular values and right-singular vector by\n\t$$v_1:=\\frac{v}{\\|v\\|},~\\sigma_1=\\|u\\|\\|v\\|>0.$$\n\t\tExtend $v_1$ to the orthogonal matrix $V=\\begin{pmatrix}|& \\\\v_1&\\dots\\\\|& \\end{pmatrix}\\in\\mathbb{R}^{n\\times n}$ with orthonormal columns, where $v_2,\\ldots,v_n \\in \\ker(A)$.\n\t\tAlso set $$\\Sigma = \\text{diag}(\\sigma_1,0,\\ldots, 0) \\in \\R^{m \\times n}.$$\n\t\\item \n\tFollowing the recipe, the corresponding left-singular vector is given by  \n\t$$u_1 :=\\frac{Av_1}{\\sigma_1}=\\frac{1}{\\|u\\|\\|v\\|}uv^T\\frac{v}{\\|v\\|}=\\frac{u}{\\|u\\|}\\underbrace{\\frac{v^Tv}{\\|v\\|^2}}_{\\textcolor{blue}{=1}}=\\frac{u}{\\|u\\|}.$$\n\tExtend $u_1$ to the orthogonal matrix $U=\\begin{pmatrix}|& \\\\u_1&\\dots\\\\|& \\end{pmatrix}\\in\\mathbb{R}^{m\\times m}$ with orthonormal columns, where $u_2,\\ldots,u_m \\in \\ker(A^T)$.\n\t\\item All in all we then obtain the full and reduced (as sum of rank-$1$ matrices) SVD\n\t$$\n\t\\Rightarrow~~A= U\\Sigma V^T = \\|u\\|\\|v\\|u_1v_1^T.\n\t$$\n\\end{itemize}\n\n}",
+    "id": ""
+}

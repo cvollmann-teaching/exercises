@@ -1,0 +1,13 @@
+{
+    "filename": "exam-ImageKernelSubspace.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "%\\section{The Subspaces Kernel and Image}\nLet $A\\in \\mathbb{R}^{m \\times n}$. Show that $\\ker (A)$ and $\\text{Im} (A)$ are subspaces of $\\mathbb{R}^n$ and $\\mathbb{R}^m$, respectively.",
+    "solution": "{\\color{solution}\n\n\t\\underline{To show:}\n\t\\begin{enumerate}\n\t\t\\item $\\text{ker}(A)\\subset\\mathbb{F}^n$ subspace\n\t\t\\item $\\text{Im}(A)\\subset\\mathbb{F}^m$ subspace\n\t\\end{enumerate}\n\t\\underline{Proof:}\n\t\\begin{enumerate}\n\t\t\\item \\begin{enumerate}\n\t\t\t\\item $A\\cdot0=0\\in\\text{ker}(A)$, thus nonempty\n\t\t\t\\item For $i=1,2$ let $\\lambda_i\\in\\mathbb{F},~v_i\\in\\text{ker}(A),~\\text{then by linearity}~\n\t\t\tA(\\lambda_1v_1+ \\lambda_2v_2)\n\t\t\t=\\lambda_1\\underbrace{Av_1}_{\\textcolor{blue}{=0}}+\\lambda_2\\underbrace{Av_2}_{\\textcolor{blue}{=0}}=0\\\\\n\t\t\t\\Rightarrow~~\\lambda_1v_1+ \\lambda_2v_2\\in\\text{ker}(A)$\n\t\t\\end{enumerate}\n\t\t\\item \\begin{enumerate}\n\t\t\t\\item $A\\cdot0=0\\in\\text{Im}(A)$, thus nonempty\n\t\t\t\\item For $i=1,2$ let $\\lambda_i\\in\\mathbb{F},~w_i\\in\\text{Im}(A)$, then\n\t\t\t\\begin{align*}\n\t\t\t~~&\\exists v_1,v_2\\in \\mathbb{F}^n:~w_1=Av_1,~w_2=Av_2\\\\\n\t\t\t\\Rightarrow~~&\\lambda_1 w_1+ \\lambda_2 w_2=\\lambda_1 Av_1+\\lambda_2Av_2=A(\\lambda_1 v_1+\\lambda_2 v_2)\\\\\n\t\t\t\\Rightarrow~~&\\lambda_1 w_1+ \\lambda_2w_2\\in\\text{Im}(A)\n\t\t\t\\end{align*}\n\t\t\\end{enumerate}\n\\end{enumerate}\n}",
+    "id": ""
+}

@@ -1,0 +1,13 @@
+{
+    "filename": "RidgeRegressionMatrix.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Least Squares Problems",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{\\normalsize Properties of $A^TA + \\delta I$}\n\nLet $A \\in  \\mathbb{R}^{m \\times n}$ be any matrix. Please show that\n$A^TA + \\delta I$ is  symmetric and positive definite for all $\\delta >0$. Why is $A^TA + \\delta I$ invertible for all $\\delta >0$?",
+    "solution": "{\n\\color{solution}\nSymmetry (Recall: A matrix $B$ is called symmetric, if $B^T=B$ holds). Here we find\\\\\n\t$$(A^TA +\\delta I)^T \\ \\ =\\ \\ (A^TA)^T+\\delta I^T\\ \\ =\\ \\ A^TA+\\delta I.$$\nPositivity (Recall: A matrix $B$ is called positive definite, if $x^TBx> 0$ holds $\\forall x\\in\\mathbb{R}^n\\setminus\\{0\\}$). Here we find\\\\\n\t$$x^T(A^TA+\\delta I)x\\ \\ =\\ \\ \\underbrace{x^T(A^TA)x}_{ \\textcolor{blue}{\\geq 0\\text{(Ex. 2.2)}}}+\\underbrace{\\delta}_{\\textcolor{blue}{>0}}\\underbrace{x^Tx}_{\\textcolor{blue}{>0}}\\ \\ >\\ \\ 0\\ \\ \\text{for all}~ x\\in\\mathbb{R}^n\\setminus\\{0\\}.$$\nThus, since $A^TA+\\delta I$ is symmetric and positive definite for $\\delta > 0$, it is invertible (see previous exercises).\n}",
+    "id": ""
+}

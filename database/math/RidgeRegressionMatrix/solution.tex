@@ -1,0 +1,8 @@
+{
+\color{solution}
+Symmetry (Recall: A matrix $B$ is called symmetric, if $B^T=B$ holds). Here we find\\
+	$$(A^TA +\delta I)^T \ \ =\ \ (A^TA)^T+\delta I^T\ \ =\ \ A^TA+\delta I.$$
+Positivity (Recall: A matrix $B$ is called positive definite, if $x^TBx> 0$ holds $\forall x\in\mathbb{R}^n\setminus\{0\}$). Here we find\\
+	$$x^T(A^TA+\delta I)x\ \ =\ \ \underbrace{x^T(A^TA)x}_{ \textcolor{blue}{\geq 0\text{(Ex. 2.2)}}}+\underbrace{\delta}_{\textcolor{blue}{>0}}\underbrace{x^Tx}_{\textcolor{blue}{>0}}\ \ >\ \ 0\ \ \text{for all}~ x\in\mathbb{R}^n\setminus\{0\}.$$
+Thus, since $A^TA+\delta I$ is symmetric and positive definite for $\delta > 0$, it is invertible (see previous exercises).
+}

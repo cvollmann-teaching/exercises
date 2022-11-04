@@ -1,0 +1,16 @@
+\textbf{Steepest Descent Method}
+Consider the following setting: 
+	$$A = 			\begin{bmatrix}
+	2&0\\
+	0&10
+	\end{bmatrix}, ~~b = 			\begin{bmatrix}
+	0\\
+	0
+	\end{bmatrix}, ~~x_0 = \begin{bmatrix}
+	4\\
+	1.4
+	\end{bmatrix}.$$
+	\begin{itemize}
+		\item[i)] Show that $A$ is spd and determine $\rho(M_\theta)$ and $\hat{\theta}$ from the previous exercise. What is the solution $x^* = A^{-1}b$ here?
+		\item[ii)] Recycle your code from Sheet 8 (see \verb|iter_solve()|) and run the Richardson iteration for the above setting; once with the optimal $\hat{\theta}$ and once with a $\theta$ which is almost too large to gaurantee convergence. Extent your code to the \textit{method of steepest descent} \eqref{steepest_descent_method} by choosing the stepsize $\theta_k$ from \eqref{steepest_descent_stepsize} in each iteration step and apply it to the above setting. Plot the iterates $x_k$ for all the three runs into the same 2d plot (use three different colors).\\ Also, plot the function values $f(x_k) = \frac{1}{2} x_k^TAx_k - b^Tx_k$ for each iterate of the three runs into a second plot (use three different colors).
+	\end{itemize}

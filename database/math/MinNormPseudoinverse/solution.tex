@@ -1,0 +1,100 @@
+{\color{solution}
+	\textbf{(1) Special Case: Diagonal matrix}\\~\\
+	Let us start with the simple case: $A\in \Rmn $ diagonal
+	\begin{align*}
+	A&=\begin{pmatrix}
+	a_{11}&~&~&~&~&0\\
+	~&\ddots&~&~&~&~\\
+	~&~&a_{rr}&~&~&~\\
+	~&~&~&0&~&~\\
+	~&~&~&~&\ddots&~\\
+	0&~&~&~&~&0
+	\end{pmatrix}\in\mathbb{R}^{m\times n},~a_{ii}\neq 0,~~~A^TA=\begin{pmatrix}
+	a_{11}^2&~&~&~&~&0\\
+	~&\ddots&~&~&~&~\\
+	~&~&a_{rr}^2&~&~&~\\
+	~&~&~&0&~&~\\
+	~&~&~&~&\ddots&~\\
+	0&~&~&~&~&0
+	\end{pmatrix}\in\mathbb{R}^{n\times n}
+	\end{align*}
+	\small
+	\underline{Normal equation:}
+	\begin{align*}
+	A^TAx=A^Tb=\begin{pmatrix}
+	a_{11}b_1\\\vdots\\a_{rr}b_r\\0\\\vdots\\0
+	\end{pmatrix}~~
+	~~~~~	\Leftrightarrow~~~~~~~\begin{matrix}
+	a_{11}^2x_1=a_{11}b_1\\
+	\vdots\\
+	a_{rr}^2x_r=a_{rr}b_r\\
+	0\cdot x_i=0\\
+	{(i> r)}
+	\end{matrix}~~
+	~~~~~	\Leftarrow~~\begin{matrix}
+	x_1=\frac{b_1}{a_{11}}\\
+	\vdots\\
+	x_r=\frac{b_r}{a_{rr}}\\
+	x_{r+1}=0\\
+	\vdots\\
+	x_n=0
+	\end{matrix}\\
+	\Rightarrow~~x^+=\begin{pmatrix}
+	\frac{1}{a_{11}}b_1\\
+	\vdots\\
+	\frac{1}{a_{rr}}b_r\\
+	0\\
+	\vdots\\
+	\end{pmatrix}
+	0=A^+b,~~~A^+=\begin{pmatrix}
+	\frac{1}{a_{11}}&~&~&~&~&0\\
+	~&\ddots&~&~&~&~\\
+	~&~&\frac{1}{a_{rr}}&~&~&~\\
+	~&~&~&0&~&~\\
+	~&~&~&~&\ddots&~\\
+	0&~&~&~&~&0
+	\end{pmatrix}\in\mathbb{R}^{n\times m}
+	\end{align*}
+	{\color{cyan}\textbf{Note:} The $x_i$ for $i>r$ can be chosen arbitrarily, but setting them to zero gives the smallest vector.}
+	
+~\\
+	\textbf{(2) General Case}\\~\\
+By using the SVD $A =U\Sigma V^\top$ we find
+$$
+A^TA=(U\Sigma V^T)^TU\Sigma V^T=V\Sigma^T\Sigma V^T,
+$$
+so that the normal equation reads as
+\begin{align*}
+(\ast)~~~~A^TAx=A^Tb~~&\Leftrightarrow~~V\Sigma^T\Sigma (V^Tx)=V\Sigma^T(U^Tb)\\
+&\stackrel{V^T\cdot |}{\Leftrightarrow}~~
+\underbrace{\Sigma^T\Sigma (V^Tx)=\Sigma^T(U^Tb)}_{(\text{normal equation for} (\Sigma,~U^Tb) )}~~~(\sharp)
+\end{align*}
+Consequently, $x$ solves $(\ast)$ if and only if $y:=V^Tx$ solves $(\sharp)$. Since $V$ is orthogonal both solutions have the same norm, more precisely,
+$$\|x\|_2^2 = x^\top x = x^\top(V^\top V)x = \|Vx\|_2^2=\|y\|_2^2.$$
+For diagonal matrices we have shown that $y^+=\Sigma^+U^Tb$ is the smallest solution of $(\sharp)$. Thus, $x^+ := Vy^+ = \Sigma^+U^Tb$ is the smallest solution of  $(\ast)$, i.e., the minimum norm least squares solution.\\~\\
+\textbf{All in all:} Since orthogonal matrices (here $U$ and $V$) are not only invertible but also isometric and the SVD $A=U\Sigma V^\top$ always exists, we could rely on the result for diagonal matrices (here $\Sigma$).
+
+
+%is the minimum norm least squares solution of ``$\Sigma \overline{x}\cong\overline{b}$''. We now show that we can interchange variable transformation and computing minimum norm least squares solution, because $V$ is orthogonal.
+%\begin{align*}
+%(*)~~\begin{matrix}
+%\min_{\overline{x}\in\mathbb{R}^n}\|\overline{x}\|_2^2\\
+%\text{s.t.}~\Sigma^T\Sigma\overline{x}=\Sigma^T\overline{b}
+%\end{matrix}~~&=~~
+%\begin{matrix}
+%\min_{x\in\mathbb{R}^n}\|V^Tx\|_2^2\\
+%\text{s.t.}~\Sigma^T\Sigma V^Tx=\Sigma^TU^Tb
+%\end{matrix}\\
+%&=~~\begin{matrix}
+%\min_{x\in\mathbb{R}^n}\|x\|_2^2\\
+%\text{s.t.}~V\Sigma^T\Sigma V^Tx=V\Sigma^TU^Tb
+%\end{matrix}\\
+%&=~~\begin{matrix}
+%\min_{x\in\mathbb{R}^n}\|x\|_2^2\\
+%\text{s.t.}~A^TAx=A^Tb
+%\end{matrix}~~(\sharp)
+%\end{align*}
+%Thus: $\overline{x}^+$ minimizes $(*)$ among all $\{\overline{x}=V^Tx:~x\in\mathbb{R}^n\}~~\Leftrightarrow~~x^+:=V\overline{x}^+$ minimizes $(\sharp)$ among all $x\in\mathbb{R}^n$
+%$\Rightarrow~~x^+=V\overline{x}^+=V\Sigma^+U^Tb=A^+b$
+
+}

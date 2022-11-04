@@ -1,0 +1,13 @@
+{
+    "filename": "DeterminantsCompute.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Determinant",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = en_US\n\\textbf{Compute Determinants}\n\nCompute the determinants of the following matrices and check whether they are invertible.\n\\begin{align*}\nA=\\begin{pmatrix}\n1&\\pi&2&12\\\\\n0&\\frac{1}{5}&\\frac{1}{\\sqrt{2}}&17\\\\\n0&0&5&\\frac{1}{3}\\\\\n0&0&0&4\n\\end{pmatrix},\\hspace{1cm}\nB=\\begin{pmatrix}\n5&3\\\\\n1&-2\n\\end{pmatrix},\\hspace{1cm}\nC=\\begin{pmatrix}\n0&\\frac{1}{2}&2\\\\\n-\\frac{1}{2}&0&7\\\\\n-2&-7&0\n\\end{pmatrix}.\n\\end{align*}",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item det$(A)~\\stackrel{\\textcolor{blue}{[A~\\text{is upper triangular}]}}{=}~1\\cdot\\frac{1}{5}\\cdot5\\cdot4~=~4$\n\t\\item \n\tdet$(B)~=~5\\cdot(-2)-3\\cdot1~=~-13$\n\t\\item \n\t\\begin{align*}\n\t\\text{det}(C)=\\text{det}(\\begin{pmatrix}\n\t0&\\frac{1}{2}&2\\\\\n\t-\\frac{1}{2}&0&7\\\\\n\t-2&-7&0\n\t\\end{pmatrix})~\\stackrel{\\textcolor{blue}{[\\text{Sarrus' Rule}]}}{=}~&\n\t(0\\cdot 0\\cdot 0)\n\t+\\left(\\frac{1}{2}\\cdot 7\\cdot (-2)\\right)\n\t+\\left(2\\cdot \\left(-\\frac{1}{2}\\right)\\cdot (-7)\\right)\\\\\n\t&\n\t-(-2\\cdot 0\\cdot 2)\n\t-(-7\\cdot 7\\cdot 0)\n\t-\\left(0\\cdot \\left(-\\frac{1}{2}\\right)\\cdot \\frac{1}{2}\\right)~=~0\n\t\\end{align*}\n\\end{enumerate}\n}",
+    "id": ""
+}

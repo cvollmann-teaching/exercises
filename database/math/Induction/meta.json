@@ -1,0 +1,13 @@
+{
+    "filename": "Induction.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Show by induction that for any $n \\in \\mathbb{N}$ it holds that\n$$\n\t\\sum_{k=0}^n \\left(2k+1\\right) = (n+1)^2.\n$$",
+    "solution": "{\\color{solution}\n\\underline{Show:}\n$\\sum_{k=0}^{n}(2k+1) =(n+1)^2$\\\\\n\\underline{Proof:}\\\\\n\\textbf{Induction Basis } $(n=0)$\n$$\n2\\cdot0+1=1=(0+1)^2~~\\checkmark~~\\textcolor{exampoints}{(2P)}\n$$\n\\textbf{Induction Step} $(n \\mapsto n+1)$\n\\begin{align*}\n&\\sum_{k=0}^{n+1}(2k+1)=2(n+1)+1+\\sum_{k=0}^{n}(2k+1)\\stackrel{\\textcolor{blue}{\\text{[I.A.]}}\\textcolor{exampoints}{(2P)}}{=} 2(n+1)+1+(n+1)^2\\\\\n=&2n+2+1+n^2+2n+1=((n+1)+1)^2~~\\checkmark~~\\textcolor{exampoints}{(4P)}\n\\end{align*}\n}",
+    "id": ""
+}

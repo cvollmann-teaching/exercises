@@ -1,0 +1,13 @@
+{
+    "filename": "SubsetProperty.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Subset Property}\nPlease show that the following assertions are equivalent.\n\t\\begin{enumerate}\n\t\t\\item $A \\subset B$\n\t\t\\item $A \\cap B = A$\n\t\t\\item $A \\cup B = B$\n\t\\end{enumerate}\n\t\\textit{Hint: }It suffices to show $(i) \\Rightarrow (ii) \\Rightarrow (iii) \\Rightarrow (i)$.",
+    "solution": "{\\color{solution}\n\\begin{itemize}\n\t\t\\item (i) $\\Rightarrow$ (ii)\\\\\n\t\t$A \\cap B \\subset A$ (No need for assumptions.)\n\t\t\\begin{align*}\n\t\t\t&x \\in A \\cap B\\\\\n\t\t\t\\Rightarrow&x \\in A \\land x \\in B\\\\\n\t\t\t\\Rightarrow&x \\in A\n\t\t\\end{align*}\n\t\t$A\\subset A  \\cap B $\n\t\t\\begin{align*}\n\t\t&A \\subset B\\\\\n\t\t\\Rightarrow&x \\in A \\Rightarrow x \\in B \\\\\n\t\t\\Rightarrow&x \\in A \\Rightarrow x \\in A \\land x \\in B\\\\\n\t\t\\Rightarrow&A\\subset A  \\cap B \n\t\t\\end{align*}\n%\t\t\n\t\t\\item (ii) $\\Rightarrow$ (iii)\\\\\n\t\t$B \\subset A \\cup B $ (Again, no need for assumptions.) \n\t\t\\begin{align*}\n\t\t &x\\in B\\\\\n\t\t\\Rightarrow&x \\in A \\lor x \\in B \\\\\n\t\t\\Rightarrow&x \\in A\\cup B\n\t\t\\end{align*}\n\t\t$A \\cup B \\subset B$\\\\\n\t\t\\begin{align*}\n\t\t\t&x \\in A \\cup B\\\\\n\t\t\t\\Rightarrow&x \\in A \\lor x \\in B\\\\\n\t\t\t\\Rightarrow&(x \\in A \\land x \\in B) \\lor x \\in B ~~~(\\text{since by ii):}~A\\subset A\\cap B)\\\\\n%\t\t\t\\Rightarrow&(x \\in A \\lor x\\in B) \\land x \\in B,~~~(\\text{by distributive property})\\\\\n\t\t\t\\Rightarrow&x \\in (A\\cap B)\\cup B\\\\\n\t\t\t\\Rightarrow& x \\in B\n\t\t\\end{align*}\n%\t\t\n\t\t\\item (iii) $\\Rightarrow$ (i)\\\\\n\t\t\\begin{align*}\n\t\t\t&x \\in A \\\\\n\t\t\t\\Rightarrow& x \\in A \\lor x \\in B\\\\\n\t\t\t\\Rightarrow& x \\in A \\cup B  \\\\\n\t\t\t\\Rightarrow& x \\in B,~~~(\\text{since by iii):}~A\\cup B \\subset B )\n\t\t\\end{align*}\n\t\\end{itemize}\n}",
+    "id": ""
+}

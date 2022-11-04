@@ -1,0 +1,37 @@
+{\color{solution}
+\begin{enumerate}
+	\item 
+	$A$ upper triangular $\textcolor{exampoints}{(1P)}$ $\textcolor{blue}{(\Rightarrow~\sigma(A)=~\text{diag}(A))}$
+	\begin{align*}
+	&\Rightarrow~~\text{det}(A-\lambda I)=(\pi-\lambda)(4-\lambda)(1-\lambda)\left(\frac{1}{2}-\lambda\right)\\
+	&\Rightarrow~~\sigma(A)=\{\pi,4,1,\frac{1}{2}\}~~\textcolor{exampoints}{(2P)}
+	\end{align*}
+	\item \begin{align*}
+	&0\stackrel{!}{=}~\text{det}(B-\lambda I)
+	=~\text{det}\begin{pmatrix}-\lambda&0&0\\1&-\lambda&-9\\0&1&6-\lambda\end{pmatrix}\textcolor{blue}{\begin{matrix}-\lambda&0\\1&-\lambda\\0&1\end{matrix}}~~\textcolor{exampoints}{(1P)}~~\stackrel{\textcolor{blue}{\text{[Sarrus]}}}{=}
+	\lambda^2(6-\lambda)-9\lambda\\
+	\Leftrightarrow~~&0
+	=\lambda(\lambda(6-\lambda)-9)
+	=\lambda(-\lambda^2+6\lambda-9)
+	=-\lambda(\lambda-3)^2~~\textcolor{exampoints}{(1P)}\\
+	\Leftrightarrow~~&\lambda 
+	= 0~\text{or}~\lambda
+	=3~(\sigma(B)=\{0,3\})~~\textcolor{exampoints}{(1P)}
+	\end{align*}
+	\item $p(x)=x^3+\underbrace{(-6)}_{\textcolor{exampoints}{=c_2}}x^2+\underbrace{9}_{\textcolor{exampoints}{=c_1}}x+\underbrace{0}_{\textcolor{exampoints}{=c_0}}$\\
+	companion matrix $=~C_p~=\begin{pmatrix}0&0&0\\1&0&-9\\0&1&6\end{pmatrix} = B$, see 2. $\textcolor{exampoints}{(3P)}$
+	\item 
+	\begin{align*}
+	D-\lambda I=\begin{pmatrix}\sqrt{2}-\lambda&\pi\\0&1-\lambda\end{pmatrix}~~\textcolor{exampoints}{(1P)}~~&\Rightarrow~~0
+	=\text{det}(D-\lambda I)
+	=(\sqrt{2}-\lambda)(1-\lambda)~~\textcolor{exampoints}{(1P)}\\
+	&\Rightarrow~~\sigma(D)=\{\sqrt{2},1\}~~\textcolor{exampoints}{(1P)}
+	\end{align*}
+	\item 
+	\begin{align*}
+	E-\lambda I=\begin{pmatrix}-\lambda&0&0\\1&(1-\lambda)&3\\2&0&(1-\lambda)\end{pmatrix}\textcolor{blue}{\begin{matrix}-\lambda&0\\1&(1-\lambda)\\2&0\end{matrix}}~~\textcolor{exampoints}{(1P)}~~&\Rightarrow~~0
+	=\text{det}(E-\lambda I)
+	=\lambda(1-\lambda)^2~~\textcolor{exampoints}{(1P)}\\&\Rightarrow~~\sigma(E)=\{0,1\}~~\textcolor{exampoints}{(1P)}
+	\end{align*}
+\end{enumerate}
+}

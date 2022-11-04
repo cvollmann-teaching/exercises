@@ -1,0 +1,14 @@
+\section{Gershgorin Disks}
+Let $A \in \mathbb{C} ^{n \times n }$ be a matrix with entries $a_{ij}$ for $i,j = 1,\dots,n$. Let
+%\begin{align*}
+$	R_i := \sum_{j \neq i} |a_{ij}|$
+%\end{align*}
+be the sum of the absolute values of the non-diagonal entries in the $i$-th row. Moreover, let
+\begin{align*}
+D(a_{ii}, R_i) := \lbrace z \in \mathbb{C}\,|\, \|z - a_{ii}\| \leq R_i \rbrace
+\end{align*}
+be the disk of radius $R_i$ and centre $a_{ii}$ in $\mathbb{C}$.
+Prove the following theorem.
+~\\
+~\\
+\textbf{Theorem:} Every eigenvalue of $A$ lies within at least one of the Gershgorin disks $D(a_{ii}, R_i)$, i.e., $\forall~\lambda\in\sigma(A)~\exists~i\in\{1,\dots,n\}:~~\lambda\in D(a_{ii}, R_i)$.

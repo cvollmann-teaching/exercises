@@ -1,0 +1,27 @@
+\textbf{Arnoldi and Lanczos Iteration}\\
+Let $A\in \text{GL}_n(\mathbb{R})$ and $b\in\mathbb{R}^n\setminus \{0\}$. Then consider the Arnoldi iteration as sketched below (\ref{arnoldi}) to produce an orthonormal basis $q_1,\ldots, q_r$ of the $r$-th Krylov subspace $K_r(A,b)$ with $r \leq \max_{s\leq n} \text{dim}(K_s(A,b))$. Further let $Q_r := [q_1,\ldots, q_{r}] \in \mathbb{R}^{n \times r}$ and $H_r := Q_r^TAQ_r \in \mathbb{R}^{r\times r}$.
+\begin{enumerate}
+	\item In the $j$-th step: Assume $q_1,\ldots, q_{j}$ have been computed according to the Arnoldi iteration \ref{arnoldi} and assume that $q_1,\ldots, q_{j-1}$ are mutually orthonormal. Show that $q_j$ is orthogonal to all $q_1,\ldots, q_{j-1}$.
+	\item Derive an expression for the $(\ell,k)$-th entries of $H_r$ and find these numbers in the Arnoldi iteration. What structure does $H_r$ have?
+	\item Now assume $A$ is symmetric. How does $H_r$ look in this case? How can you simplify the Arnoldi iteration?
+	\item What can you say about the eigenvalues of $H_n$ and $A$? Explain your answer.
+\end{enumerate}
+
+~\\
+\begin{algorithm}
+		\textbf{INPUT:} $A\in GL_n(\mathbb{R})$, $b \in \mathbb{R}^n$, $r\leq n$\\
+	\textbf{OUTPUT:} orthonormal basis $q_1,\ldots, q_r$ of the $r$-th Krylov subspace $K_r(A,b)$\\~\\
+	$q_1 := \frac{b}{\|b\|_2}$\\
+	\For{$j = 2,...,r$}{
+$\widehat{q}_j := Aq_{j-1} - \sum_{\ell = 1}^{j-1} q_\ell^\top(Aq_{j-1})  \cdot q_\ell$\\
+		\If{$ \|\widehat{q}_j\|_2= 0$}{
+			break
+			
+		}
+	$q_j := \frac{\widehat{q}_j}{ \|\widehat{q}_j\|_2}$
+		
+	}
+
+\caption{Arnoldi Iteration}
+\label{arnoldi}
+\end{algorithm}	

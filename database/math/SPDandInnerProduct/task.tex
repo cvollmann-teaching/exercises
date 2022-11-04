@@ -1,0 +1,37 @@
+\section{The Inner Product and SPD Matrices}
+{\color{navy} A mapping $(\cdot,\cdot)\colon \mathbb{R}^n\times \mathbb{R}^n \to \mathbb{R}$ is called \textbf{inner product} or \textbf{symmetric bilinear form} on $\mathbb{R}^n$ if it satisfies
+\begin{itemize}
+	\item[i)] $\forall x,y \in \mathbb{R}^n: ~(x,y) = (y,x)$ \hspace{3.6cm} (symmetric)
+	\item[ii)] $\forall x,y_1,y_2 \in \mathbb{R}^n: ~(x,y_1+y_2) = (x,y_1)+(x,y_2)$
+	\item[] $\forall x,y \in \mathbb{R}^n, r \in \mathbb{R}: ~ (x,r\cdot y)=r\cdot(x,y)$ \hspace{1.8cm} (linear in its second argument)
+	\item[iii)]$\forall x \in \mathbb{R}^n\backslash\{0\}: ~ (x,x) > 0$\hspace{3.9cm}  (positive definite)
+\end{itemize}
+All such inner products $(\cdot,\cdot)$  can be written as 
+$$(x,y) = x^T A y $$
+for a \textbf{symmetric} (i.e., $A = A^T$) and \textbf{positive definite} (i.e., $x^\top Ax>0$ for all $x\neq 0$) matrix $A$.
+~\\
+In the lecture we mainly consider the \textit{standard inner product} $$(\cdot,\cdot)_2\colon \mathbb{R}^n\times \mathbb{R}^n \to \mathbb{R},~ (x,y) \mapsto x^TI_ny=\sum_{i=1}^n x_i y_i$$ which corresponds to the symmetric and positive definite matrix $I_n$ (identity matrix).
+}
+
+%Let $A \in \R^{n\times n}$. 
+%\begin{itemize}
+%\item[(i)] $A$ is called \textbf{symmetric}, if $A = A^T$.
+%\item[(ii)] $A$ is called \textbf{positive definite}, if .
+%\end{itemize}
+%
+%Then $x^TAy$ defines an inner product
+
+
+
+%Show that
+
+
+~\\
+\textbf{Tasks:}
+\begin{enumerate}
+	\item Find an example $A \in \mathbb{R}^{2 \times 2}$ which is symmetric and positive definite.
+	\item Draw the set $\{ Ax\colon \|x\|_2 = 1\}$.
+\end{enumerate}
+
+
+

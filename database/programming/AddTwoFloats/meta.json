@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progAddInt.tex",
+    "title": "Sicherstellung des richtigen Formats",
+    "subtitle": "",
+    "coding": "Python",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Sicherstellung des richtigen Formats (\\texttt{float()})}\n\\begin{enumerate}\n\t\\item Schreiben Sie eine Funktion \\verb|add(a, b)|, die zwei Eingabewerte \\verb|a,b| entgegennimmt und addiert. Dabei sollen die Eingabewerte zun\u00e4chst\n\tmit der Funktion \\verb|float()|  umgewandelt werden.\n\t\\item Testen Sie als Input \\verb|a=\"2.0\", b=\"3.1\"| und \\verb|a=3, b=3|.\n\t\\item Testen Sie als Input der Funktion \\verb|a=\"2,3\", b=\"b\"|. Was ist der Vorteil der Nutzung von \\verb|float()| neben der Umwandlung?\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progAddInt_solution.py}"
+}

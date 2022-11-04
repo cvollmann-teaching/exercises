@@ -1,0 +1,24 @@
+% !TeX spellcheck = en_US
+% with square in the model!
+Let $A \in \mathbb{R}^{m\times n}$ and $b \in \mathbb{R}^m$.
+Assume you are given the least squares problem 
+$$
+\min\limits_{x \in \mathbb{R}^n } \| Ax - b \|_2^2.
+$$
+\begin{enumerate}
+	\item Which equation does a solution $\hat{x}$ of the above least squares problem solve?
+	\item Assume you are given the following data
+	\begin{center}
+		\begin{tabular}{|l|c|c|c|c|c|c||c|c|}\hline
+			z&-2&-1&0&1&2\\ 
+			\hline
+			y&3&-1&0&1&4\\
+			\hline
+		\end{tabular}.
+	\end{center}
+	Solve the curve fitting problem
+	$$
+	\min\limits_{c_0, c_1 \in \mathbb{R}} \sum_{i=1}^5 (c_0 + c_1z_i^2 - y_i)^2,
+	$$
+	i.e., determine the minimizing parameters $c_0$ and $c_1$.
+\end{enumerate}

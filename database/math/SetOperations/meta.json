@@ -1,0 +1,13 @@
+{
+    "filename": "SetOperations.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Set Operations}\n\tLet $M = \\lbrace \\alpha, 3, \\gamma\\rbrace,~ N = \\lbrace \\square, \\gamma, \\star, \\circ \\rbrace$ and $K = \\lbrace \\alpha, \\lbrace \\alpha \\rbrace, M \\rbrace$. Please indicate the sets \\begin{enumerate}\n\t\t\\item $M \\cap N$,\n\t\t\\item $M \\cap K$,\n\t\t\\item $\\mathcal{P}(M) \\cap K$,\n\t\t\\item $M \\setminus K$ and\n\t\t\\item $N \\cup K$.\n\t\\end{enumerate}",
+    "solution": "{\\color{solution}\n\t\\begin{enumerate}\n\t\t\\item $M \\cap N = \\{ \\gamma\\}$\n\t\t\\item $M \\cap K = \\{\\alpha \\}$\n\t\t\\item $\\mathcal{P} \\cap K = \\{ \\{\\alpha\\}, M\\}$\n\t\t\\item $M \\setminus K = \\{3,\\gamma\\}$\n\t\t\\item $N\\cup K = \\{ \\square, \\gamma, \\star , \\circ, \\alpha, \\{\\alpha\\}, M\\}$ \n\t\\end{enumerate}\n}",
+    "id": ""
+}

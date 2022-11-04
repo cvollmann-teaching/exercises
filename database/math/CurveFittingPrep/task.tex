@@ -1,0 +1,30 @@
+\textbf{Curve Fitting}\\
+Assume you were given the following data:
+\begin{center}
+	\begin{tabular}{l|c c c}
+	z&-1&0&1\\
+	\hline
+	y&-1&3&1
+\end{tabular}
+\end{center}
+
+~\\
+\begin{enumerate}
+	\item \textbf{Polynomial Interpolation:}\\
+	Find coefficients $c_i \in \mathbb{R}$ for the following parabola (polynomial of degree $2$)
+	$$f(z) = c_0 + c_1z + c_2z^2,$$
+	such that $f(z_i) = y_i$ for all three measurements $i=1,2,3$ from the table above. Therefore, set up and solve a linear system of the form $Ax = b$, where $x=(c_0, c_1, c_2)$. Draw the measurements and the parabola into one plot.
+	~\\~\\
+	\item \textbf{Univariate Linear Regression:}\\
+	Now assume a linear model of the form	
+	$$f(z) = c_0 + c_1z.$$
+	Consider $x = (c_0, c_1)$. Determine a matrix $A$ and a vector $b$, such that
+	$$\sum_{i=1}^3 (f(z_i) - y_i)^2 = \|Ax-b\|_2^2. $$
+	Solve the least squares problem
+		\begin{align*}
+	\min \limits_{x \in \mathbb{R}^2} \|Ax-b\|_2^2,
+	\end{align*}
+	to determine the coefficients $x = (c_0, c_1)$ by solving the \textit{normal equation} (explanation follows later in the lecture)
+	$$A^TAx = A^Tb. $$
+	Draw the measurements and the straight line into one plot.
+\end{enumerate}

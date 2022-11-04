@@ -1,0 +1,13 @@
+{
+    "filename": "SymmetricDifference.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Symmetric Difference}\nLet $X$ be a set and $A,B \\subset X$ be two subsets of $X$. The symmetric difference of $A$ and $B$ is then defined by\n\t\\begin{align*}\n\tA \\Delta B := (A \\cap {B}^c) \\cup (B \\cap {A}^c).\n\t\\end{align*}\n\tPlease show that \n\t\\begin{align*}\n\tA \\Delta B = (A \\cup B) \\cap {(A \\cap B)^c}.\n\t\\end{align*}\n\\textit{Hint: }Use the De Morgan's rule and exploit the following distributive laws:\n$$A \\cap (B\\cup C) = (A\\cap B) \\cup (A \\cap C)~~~\\text{and}~~~A \\cup (B\\cap C) = (A\\cup B) \\cap (A \\cup C) .$$\n",
+    "solution": "{\\color{solution}\n\\begin{align*}\n&(A \\cap  {B^c}) \\cup (B \\cap  {A^c}) \\\\\n=& ((A \\cap  {B^c}) \\cup B) \\cap ( (A \\cap  {B^c}) \\cup  {A^c})\\\\\n=& \\underbrace{((A \\cup B) \\cap ( {B^c} \\cup B))}_{A \\cup B} \\cap \n\\underbrace{( (A \\cup   {A^c}) \\cap ( {B^c} \\cup  {A^c}))}_{ {B^c} \\cup  {A^c}}\\\\\n=& (A \\cup B) \\cap ( {B^c} \\cup {A^c})\\\\\n=& (A \\cup B) \\cap  {(A \\cap B)^c}\n\\end{align*}\n}",
+    "id": ""
+}

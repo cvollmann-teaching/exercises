@@ -1,0 +1,13 @@
+{
+    "filename": "prog-Numpy.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "SciPy Stack, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{\\normalsize NumPy and Matplotlib I}\n\n\\begin{enumerate}\n\\item Have a look at the first chapter of the scipy-lectures: \\url{https://scipy-lectures.org/} (namely, '1. Getting started with Python for science')\n\\item Play around with the numpy functions: \\verb|arange|, \\verb|linspace|, \\verb|ones|, \\verb|zeros|, \\verb|eye|, \\verb|diag|, \\verb|tile|, \\verb|repeat| and \\verb|reshape|.\n\n\\item Generate the following matrices:\n\\begin{enumerate}\n     \\item  Identity matrix \n     \\item  Zero matrix\n     \\item  A diagonal matrix $\\left(D \\in \\mathbb{F}^{m\\times n} ~\\text{is called diagonal, if}~ d_{ij}=0 ~\\forall i\\neq j \\right)$\n     \\item  Example matrix $$\n    \\left(\\begin{array}{rrrr}                                \n    1 &  1& 1 & 1\\\\                                               \n    1 &  1& 1 & 1\\\\                                              \n    1 &  1 &  1 & 2   \\\\ \n    1 &  6 &  1 & 1\n    \\end{array}\\right) \\nonumber\n    $$\n     \\item  Example matrix\n    $$\n    \\left(\\begin{array}{rrrrr}                                \n    0 &  0& 0 & 0&0\\\\                                               \n    2 &  0& 0 & 0&0\\\\                                              \n    0 &  3& 0 & 0&0\\\\ \n    0 &  0& 4 & 0&0\\\\ \n    0 &  0& 0 & 5&0\\\\ \n    0 &  0& 0 & 0&6\n    \\end{array}\\right) \\nonumber\n    $$\n    \\item  Example matrix \n    $$\n    \\left(\\begin{array}{rrrrrr}                                \n    4 &  3& 4 &3&4&3\\\\                                               \n    2 &  1& 2 & 1&2&1\\\\                                              \n    4 &  3& 4 & 3&4&3\\\\   \n    2 &  1& 2 & 1&2&1\n    \\end{array}\\right) \\nonumber\n    $$\n     \\item  Example matrix \n    $$\n    \\left(\\begin{array}{rrr}                                \n    1  &6 &11\\\\                                               \n    2  &7 &12\\\\                                              \n    3  &8 &13\\\\   \n    4  &9 &14\\\\\n    5& 10 &15\n    \\end{array}\\right) \\nonumber\n    $$\n \\end{enumerate}   \n\\item Apply the functions \\verb|len()| and \\verb|numpy.shape()| to these arrays. How do the values relate? What does the attribute \\verb|ndim| tell us?\n\n\\item Use \\verb|matplotlib.pyplot.imshow()| to visualize the matrices.\n\\end{enumerate}\n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-Numpy_solution.py}\n",
+    "id": ""
+}

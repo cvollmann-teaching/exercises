@@ -1,0 +1,29 @@
+{
+\color{solution}
+	If all vectors $v_i$ are zero, the situation is trivial. Thus, we assume that at least one of the $v_i$ is nonzero.
+	Use all vectors $v_i$ as columns of the matrix $V=[v_1,\ldots, v_{n+1}]\in\R^{n\times(n+1)}$. Then build the REF (cf.~theorem \ref{REF}) of $V$, i.e., construct $P,L,U$ with $L\cdot U=P\cdot V$. 
+	Then $U$ is of the form
+	$$
+	U=\begin{pmatrix}	
+	u_{1,1}&\ldots&u_{1,n}&u_{1,n+1}\\
+	       & \ddots&\vdots&\vdots \\
+	       &       &u_{n,n}&u_{n,n+1}
+	\end{pmatrix}
+	$$
+	Thus, the equation $\sum_{i=1}^{n+1}\alpha_iv_i=0$ is equivalent to $U[\alpha_1,\ldots,\alpha_{n+1}]^\top=0$. We can choose a permutation of columns $Q$ such that we have for $\tilde{U}:=UQ$
+	$$
+	\tilde{U}=\begin{pmatrix}
+	\tilde{u}_{1,1}&\ldots&\tilde{u}_{1,\ell}&\ldots & \tilde{u}_{1,n}&\tilde{u}_{1,n+1}\\
+	& \ddots&\vdots&\vdots \\
+	&       &\tilde{u}_{\ell,\ell}&\ldots &\tilde{u}_{\ell,n}&\tilde{u}_{\ell,n+1}\\
+	0    &  \ldots &   0      & \ldots & 0 & 0\\
+	\vdots &       & \vdots &          &\vdots&\vdots\\
+	0    &  \ldots &   0      & \ldots & 0 & 0\\
+	\end{pmatrix}\ , \quad \tilde{u}_{1,1},\ldots ,\tilde{u}_{\ell,\ell}\neq 0
+	$$ and we can choose the coefficients $\tilde{\alpha}_i$ in the following manner
+	\[
+	\tilde{\alpha}_{n+1},\ldots,\tilde{\alpha}_{\ell+1}\neq 0\text{ arbitrary, }\ \tilde{\alpha}_i=-\frac{1}{\tilde{u}_{ii}}\sum_{k=i+1}^{n+1}\tilde{u}_{i,k}\tilde{\alpha}_{k}\text{ for }i=\ell,\ldots ,1\text{~~and then }\alpha:=Q\tilde{\alpha}
+	\]
+
+
+}

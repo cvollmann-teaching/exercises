@@ -1,0 +1,13 @@
+{
+    "filename": "EigenvalueCharacteristics.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Eigenvalues",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Eigenvalue Characteristics}\nWe denote the identity matrix of $\\mathbb{F}^{n \\times n}$ by $I$. Let $A \\in \\mathbb{F}^{n\\times n}$ be a matrix. Some value $\\lambda \\in \\mathbb{C}$ \nis called eigenvalue of $A$, if there is a vector $v \\neq {0}$ in $\\mathbb{F}^{n}$ such that\n\\begin{align*}\n(A - \\lambda I)v = {0},\n\\end{align*}  \nwhere ${0} \\in \\mathbb{F}^{n}$ denotes the zero vector. Use the above definition to prove the following assertions.\n\\begin{enumerate}\n\t\\item If $A$ is invertible, then for all eigenvalues $\\lambda$ of $A$ we have $\\lambda \\neq 0$ and $\\frac{1}{\\lambda}$ is an eigenvalue of $A^{-1}$.\n\t\\item If $\\lambda$ is an eigenvalue of $A$, then $(\\lambda - \\alpha)$ is an eigenvalue of $(A - \\alpha I)$ for any $\\alpha \\in \\mathbb{C}$.\n\t\\item If $\\lambda$ is an eigenvalue of $A$, then $\\lambda$ is also an eigenvalue of $Q^\\top A Q$ for any orthogonal matrix $Q \\in \\mathbb{F}^{n \\times n}$.\n\\end{enumerate}",
+    "solution": "{\\color{solution}\nLet $A\\in\\mathbb{F}^{n\\times n}$.\n\\begin{enumerate}\n\t\\item \n\tLet $A\\in GL_n(\\mathbb{F})$ and $\\lambda\\in\\sigma(A)$ (with eigenvector $v\\neq 0$).\\\\\n\tTo show, that $\\lambda\\neq 0$ holds, we assume $\\lambda = 0$.\n\t$\\Rightarrow~~Av=\\lambda v=0~~\\Rightarrow~~v=A^{-1}\\cdot 0=0$. \n\tHere we see the contradiction.\\\\\n\tNow we proof $\\frac{1}{\\lambda}\\in\\sigma(A^{-1})$:\\\\\n\t$Av~~\\stackrel{\\textcolor{blue}{A\\in GL_n(\\mathbb{F})}}{\\Leftrightarrow}~~ v = \\lambda A^{-1}v~~\\stackrel{\\textcolor{blue}{\\lambda\\neq 0}}{\\Leftrightarrow}~~\\frac{1}{\\lambda}v=A^{-1}v~~\\Leftrightarrow~~\\frac{1}{\\lambda}\\in\\sigma(A^{-1})~~\\textcolor{blue}{(\\text{with the same eigenvector}~v).}$\n\t\\item \n\tLet $\\alpha\\in\\mathbb{C}$.\\\\$((A-\\alpha I)-(\\lambda -\\alpha)I)v=(A-\\lambda I)v\\stackrel{\\textcolor{blue}{\\lambda\\in\\sigma(A)}}{=}0~~\\checkmark$\\\\$\\textcolor{blue}{\\Rightarrow~~(\\lambda-\\alpha)~\\text{eigenvalue of}~(A-\\alpha I)~\\text{with the same eigenvector}~v}$\n\t\\item \n\t\\begin{align*} \n\tAv=\\lambda v~~&\\Leftrightarrow~~Q^TAv=Q^T\\lambda v\\\\\n\t&\\Leftrightarrow~~Q^TA\\underbrace{QQ^T}_{\\textcolor{blue}{=I}}v=\\lambda Q^T \\underbrace{QQ^T}_{\\textcolor{blue}{=I}}v\\\\\n\t&\\Leftrightarrow~~Q^TAQ(Q^Tv)=\\lambda(Q^Tv)\\\\\n\t&\\Leftrightarrow~~\\lambda~\\text{is eigenvalue of}~Q^TAQ~\\text{with eigenvector}~Q^Tv.\n\t\\end{align*}\n\\end{enumerate}\n}",
+    "id": ""
+}

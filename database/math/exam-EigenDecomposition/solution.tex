@@ -1,0 +1,39 @@
+{\color{solution}
+First note that A is \underline{symmetric} $(A=A^T)$. So Theorem 3.3 implies the existence of an orthogonal matrix $Q$ and a diagonal matrix $\Lambda$, with $A=Q\Lambda Q^T$, which we will now determine.
+\begin{enumerate}
+	\item Eigenvalues:\\
+	$0= \text{det}(A-\lambda I) = \text{det}\left(\begin{pmatrix}2-\lambda&3\\3&2-\lambda\end{pmatrix}\right) = (2-\lambda)^2-9$\\
+	$\Leftrightarrow~~(2-\lambda)^2 = 9~~ \Leftrightarrow~~2-\lambda = \pm 3~~ \Leftrightarrow~~\lambda = 2\pm 3~~ (\lambda_1:=5, \lambda_2:=-1)$\\
+	Set $$\Lambda:=\text{diag}(\lambda_1,\lambda_2)=\begin{pmatrix}5&0\\0&-1\end{pmatrix}.$$
+	\item Eigenvectors:\\
+	\begin{enumerate}
+		\item[\textcolor{red}{1)}] 
+		Determine an eigenvector corresponding to $\lambda_{\textcolor{red}{1}}=r$.
+		\begin{align*}
+		(A-\lambda_1 I)v^{\textcolor{red}{1}}=0 &\Leftrightarrow \begin{pmatrix}-3&3\\3&-3\end{pmatrix}\begin{pmatrix}v_1^{\textcolor{red}{1}}\\v_2^{\textcolor{red}{1}}\end{pmatrix}=0\\
+		&\Leftrightarrow -3v_1^{\textcolor{red}{1}}+3v_2^{\textcolor{red}{1}} =0\\
+		&\Leftrightarrow v_1^{\textcolor{red}{1}} = v_2^{\textcolor{red}{1}}
+		\end{align*}
+		Choose, e.g., $v^{\textcolor{red}{1}} = \begin{pmatrix}1\\1\end{pmatrix}$.
+		\item[\textcolor{red}{2)}] 
+		Determine an eigenvector corresponding to $\lambda_{\textcolor{red}{2}}=r$.
+		\begin{align*}
+		(A-\lambda_2 I)v^{\textcolor{red}{2}}=0 &\Leftrightarrow \begin{pmatrix}3&3\\3&3\end{pmatrix}\begin{pmatrix}v_1^{\textcolor{red}{2}}\\v_2^{\textcolor{red}{2}}\end{pmatrix}=0\\
+		&\Leftrightarrow 3v_1^{\textcolor{red}{2}}+3v_2^{\textcolor{red}{2}} =0\\
+		&\Leftrightarrow v_1^{\textcolor{red}{2}} =- v_2^{\textcolor{red}{2}}
+		\end{align*}
+		Choose, e.g., $v^{\textcolor{red}{2}} = \begin{pmatrix}1\\-1\end{pmatrix}$.
+	\end{enumerate}
+	\item Normalize eigenvectors to define $Q$:\\
+	$\tilde{v}_1:=\frac{v_1}{\| v_1\|}=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}, \tilde{v}_2:=\frac{v_2}{\| v_2\|}=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}$\\
+	Set $Q:=[\tilde{v}_1, \tilde{v}_2] = \frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}$.\\
+	We find that $A$ is orthogonal, more precisely, $$Q^TQ =\frac{1}{\sqrt{2}}\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}\begin{pmatrix}1&1\\1&-1\end{pmatrix}=\frac{1}{2}\begin{pmatrix}2&0\\0&2\end{pmatrix} = I.$$
+	\item 
+	\underline{Test:} 
+	\begin{align*} 
+	Q\Lambda Q^T &=\frac{1}{\sqrt{2}}\begin{pmatrix} 1&1\\1&-1\end{pmatrix}\underbrace{\begin{pmatrix}5&0\\0&-1\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}}_{\textcolor{blue}{=\frac{1}{\sqrt{2}}\begin{pmatrix}5&5\\-1&1\end{pmatrix}}}\\
+	&=\frac{1}{2}\underbrace{\begin{pmatrix}1&1\\1&-1\end{pmatrix}\begin{pmatrix}5&5\\-1&1\end{pmatrix}}_{\textcolor{blue}{=\begin{pmatrix}4&6\\6&4\end{pmatrix}}}\\
+	&=A~~(\checkmark)
+	\end{align*}
+\end{enumerate}
+}

@@ -1,0 +1,13 @@
+{
+    "filename": "LinearDependence.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Linear Dependence}\n\nGive an example where a nontrivial combination of three nonzero vectors $a_i$ in $\\mathbb{R}^4$ is the zero vector (nontrivial means that not all scaling coefficients are zero). Write your example in the form $Ax = 0$. \n",
+    "solution": "{\n\\color{solution}\nTake for example \n$$\nA := [a_1, a_2, a_3] := \\begin{pmatrix}\n\t  1 & 0 &1\\\\\n\t  1 & 0 &1\\\\\n\t  0 & 1 &1\\\\\n\t  0 & 1 &1 \\\\\n\\end{pmatrix}\n~~~\\text{and}~~~\nx := \\begin{pmatrix}\n1\\\\1\\\\-1\n\\end{pmatrix}.\n$$\nConstruction recipe: We take two random vectors $x, y$ and form a simple linear combination $x+y$. We know these vectors are linearly dependent, so that we can take those as columns for the example matrix, i.e.,\n$$x + y - (x+y) = 0 ~~~\\text{gives}~~~[x, y, (x+y)] \\begin{pmatrix}\n1\\\\1\\\\-1\n\\end{pmatrix} = 0.$$\n}\n",
+    "id": ""
+}

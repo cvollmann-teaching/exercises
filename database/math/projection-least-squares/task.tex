@@ -1,0 +1,10 @@
+\textbf{Projections and Least Squares}
+
+Let $a,b \in \mathbb{R}^n\setminus \{0\}$ be two nonzero vectors. Consider the $1$-dimensional optimization task
+$$\min_{c \in \mathbb{R}} \frac{1}{2} \|ca - b\|_2^2 =: f(c),$$ 
+where $\|x\|_2:= \left(\sum_{i=1}^n x_i^2\right)^{\frac{1}{2}}$ denotes the Euclidean norm of a vector $x \in \mathbb{R}^n$.
+\begin{enumerate}
+	\item Determine the parameter $c\in \mathbb{R}$ which minimizes $f$.\\
+	\textit{Hint: As in high-school, compute the derivative $f'$ of $f$ with respect to $c$ and solve the equation $f'(c)=0$.}
+	\item  Compare your results to the projection of $b$ onto $a$, i.e., $\text{proj}_a(b):=\frac{a^\top b}{\|a\|_2}\frac{a}{\|a\|_2}$. 
+\end{enumerate}

@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progIntersectLists.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Schnittmenge zweier Listen (ohne Datentyp \\texttt{set})}\n\\begin{enumerate}\n\t\\item Schreiben Sie eine Fuktion \\verb|intersection(a,b)|, die zwei Listen \\verb|a, b| entgegennimmt und eine weitere Liste zur\u00fcckgibt, die nur die Elemente enth\u00e4lt, die in beiden Listen enthalten sind (ohne Duplikate). Stellen Sie sicher, dass Ihr Programm mit zwei Listen unterschiedlicher Gr\u00f6\u00dfe arbeiten kann.\n%\\textit{Hinweis:} Sie k\u00f6nnen die Methode \\texttt{sort()} zum Sortieren einer Liste verwenden.\n\\item Bonus: Erkundigen Sie sich \u00fcber den Datentyp \\texttt{set}. Wie l\u00e4sst sich dieser Datentyp f\u00fcr die obige Aufgabe verwenden?\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progIntersectLists_solution.py}"
+}

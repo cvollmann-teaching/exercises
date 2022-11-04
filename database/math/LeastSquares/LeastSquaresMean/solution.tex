@@ -1,0 +1,15 @@
+{\color{solution}
+Model: $f(x)=c_0$, with measurements $(z_i,y_i),~i=1,\dots,m$.\\
+With the design matrix $A=\begin{pmatrix}1\\\vdots\\1\end{pmatrix}\in\mathbb{R}^{m\times 1}=\mathbb{R}^m$ and $b = \begin{pmatrix}y_1\\\vdots\\y_m\end{pmatrix}\in\mathbb{R}^m$, we find
+$$\min_{c_0\in\mathbb{R}}\sum_{i=1}^{m}(c_0-y_i)^2=\min_{c_0\in\mathbb{R}}\|A\cdot c_0-b\|_2^2.$$\\
+We have
+$$
+A^TA=\sum_{i=1}^{m}1=m ~~~\text{and}~~~A^Tb =\sum_{i=1}^{m}y_i.
+$$ 
+Thus by solving the normal equation we find
+\begin{align*}
+A^TAc_0=A^Tb~~\Leftrightarrow~~m\cdot c_0=\sum_{i=1}^{m}y_i
+~~\Leftrightarrow~~c_0=\frac{1}{m}\sum_{i=1}^{m}y_i.
+\end{align*}
+With other words, the best constant fit in the least squares sense is the average of the data.
+}

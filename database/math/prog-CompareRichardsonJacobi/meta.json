@@ -1,0 +1,13 @@
+{
+    "filename": "prog-CompareRichardsonJacobi.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Systems, Splitting Methods, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Compare Richardson and Jacobi}\n\\vspace{-0.5cm}\n\t\\begin{enumerate}\n\t\t\\item \tImplement a function \\verb|iter_solve()| which takes as arguments a matrix $A \\in \\mathbb{R}^{n \\times n}$, a vector $b \\in \\mathbb{R}^ {n}$ and a parameter $\\theta$,\n\t\tand returns an approximate solution of the problem $Ax = b$ after performing $m \\in \\mathbb{N}$ steps of the \\textit{Richardson}-iteration.\n\t\t\\item Add the \\textit{Jacobi}-iteration by adding an additional input \\verb|method| to your function so that the user can choose between the solvers.\n\t\t\\item Test your two solvers for some invertible matrix $A\\in \\mathbb{R}^{3 \\times 3}$, some $b\\in \\mathbb{R}^3$ and $m = 50$. In both cases, plot the distance $\\| x^k - x^*\\|$ to the solution $x^*$ (of \\verb|numpy.linalg.solve()|) for each iterate $k=1,\\dots,m$.\n\t\\end{enumerate}\n\t\\textit{Hint: } Of course, it can happen that the algorithm does not converge. Use small values for $\\theta$ in (i) and matrices with large values\n\ton the diagonal (compared to its other entries) in (ii). This will assure that $\\rho(I-NA)<1$. ",
+    "solution": "\\lstinputlisting[numbers=none]{prog-CompareRichardsonJacobi_solution.py}\n",
+    "id": ""
+}

@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progDezToAny.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Umwandlung: Dezimal nach Beliebig}\\\\\nSchreiben Sie eine Funktion \\verb|dezToAny(d, basis)|, die\neine Zahl \\verb|d| und eine Basis \\verb|basis| als Integer entgegennimmt und die\nKoeffizienten \\verb|a| der Darstellung der Zahl in der Basis als String zur\u00fcckgibt. Es gen\u00fcgt hierbei, wenn Zahlensysteme bis einschlie\u00dflich der Basis 16 erlaubt sind.\\\\\n\n\\textbf{Beispiel} \\\\\n\\verb|a = 15|, \\verb|basis = 16| \\\\\n\\verb|>>> dezToAny(a, basis) = 'f'|",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progDezToAny_solution.py}"
+}

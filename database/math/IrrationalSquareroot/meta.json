@@ -1,0 +1,13 @@
+{
+    "filename": "IrrationalSquareroot.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Irrational $\\sqrt{2}$}\n\tPlease show that $\\sqrt{2}$ is not a rational number.",
+    "solution": "{\\color{solution}\n\t\\textbf{Proof} We prove the assumption by contradiction.\n\tLet us assume $\\sqrt{2} \\in \\mathbb{Q}.$ Therefore there are $a,b \\in \\mathbb{N}$ such that $a,b$ are relatively prime (i.e. their greatest common divisor is 1) and\n\t$\\sqrt{2} = \\frac{b}{a}$. \\\\\n%\t\n\tWe see that $2a^2  = b^2$ which implies that $b^2$, and therefore $b$, are even. That means there is a $c \\in \\mathbb{N}$ such that $b = 2c$. This implies that\n\t$2a^2 = 4 c^2$ which tells us that $a^2 = 2 c^2$. Hence, $a^2$ and therefore $a$ are even. That contradicts the assumption that $a,b$ are relatively prime. Therefore $\\sqrt{2}$ is not an element of $\\mathbb{Q}$.\n\t\\hfill $\\square$\n}",
+    "id": ""
+}

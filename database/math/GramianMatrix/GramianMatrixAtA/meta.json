@@ -1,0 +1,13 @@
+{
+    "filename": "GramianMatrixAtA.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% formerly: \"theory_2\"\nLet $A \\in  \\mathbb{R}^{m \\times n}$ be any matrix. Please show:\n\\begin{enumerate}\n\t\\item $A^TA$ is symmetric.\n\t\\item $A^TA$ is positive semi-definite.\n\t\\item $\\ker(A) = \\ker(A^TA)$.\t\\\\\n\t\\textit{Hint:} Show mutual subset relation.\n\\end{enumerate}\n\n",
+    "solution": "{\n\\color{solution}\n\\begin{enumerate}\n\t\\item   \\textcolor{red}{(2P)}\n\t$(A^TA)^T \\ \\ =\\ \\ A^T(A^T)^T\\ \\ =\\ \\ A^TA$\n\t\\item  \\textcolor{red}{(2P)}\n\t$x^T(A^TA)x\\ \\ =\\ \\ (Ax)^TAx\\ \\ =\\ \\ \\|{Ax}\\|_2^2\\ \\ \\geq\\ \\ 0\\ \\ \\forall x\\in\\mathbb{R}^n$\n\t\\item \n\tWe show mutual subset relation:\n\t\\begin{itemize}\n\t\t\\item  \\textcolor{red}{(1P)}\n\t\t\\underline{\"$\\text{ker}(A)\\subseteq \\text{ker}(A^TA)$\":}\\\\\n\t\tLet $x\\in \\text{ker}(A) \\stackrel{\\textcolor{blue}{\\text{Def.}\\ \\text{ker}(A)}}{\\Rightarrow}Ax=0\\Rightarrow A^TAx=0\\stackrel{\\textcolor{blue}{\\text{Def.}\\ \\text{ker}(A^TA)}}{\\Rightarrow}x\\in \\text{ker}(A^TA)$.\n\t\t\\item \\textcolor{red}{(1P)} \\underline{\"$\\text{ker}(A^TA)\\subseteq \\text{ker}(A)$\":}\\\\\n\t\tLet $x\\in \\text{ker}(A^TA) \\stackrel{\\textcolor{blue}{\\text{Def.}}}{\\Rightarrow}A^TAx=0\\Rightarrow \\underbrace{x^TA^TAx}_{\\textcolor{blue}{=\\|{Ax}\\|_2^2}}=0 \\stackrel{\\textcolor{blue}{\\text{norm} \\|{\\cdot}\\|_2^2\\ \\text{is definite}}}{\\Rightarrow}Ax=0 \\stackrel{\\textcolor{blue}{\\text{Def.}}}{\\Rightarrow}x\\in \\text{ker}(A)$.\n\t\\end{itemize}\n\\end{enumerate}\n}",
+    "id": ""
+}

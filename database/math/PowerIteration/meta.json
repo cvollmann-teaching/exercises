@@ -1,0 +1,13 @@
+{
+    "filename": "PowerIteration.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\begin{algorithm}\n\t\\fvset{numbers=left}\n\t\\begin{Verbatim}\n\tdef iteration(A, n):\n\t  d = A.shape[1]\n\t  x = np.zeros(d)\n\t  x[0] = 1\n\t\n\t  for k in range(n):\n\t    x = A@x\n\t    x = x/np.linalg.norm(x)\n\t  return x\n\t\\end{Verbatim}\n\t\\caption{Unknown Python code}\n\\end{algorithm}\n\t\\begin{enumerate}\n\t\t\\item Please describe what each line of the code does (please do not write into the pseudocode).\n\t\t\\item Which algorithm is implemented, and what is its purpose?\n\t\t\\item Assume the matrix \\verb|A| is column stochastic. Which line of the algorithm could be omitted and why?\n\t\\end{enumerate}\n\n",
+    "solution": "\\begin{algorithm}\n\t\\fvset{numbers=left}\n\t\\begin{Verbatim}\n\tdef iteration(A, n):\n\t  d = A.shape[1]\n\t  x = np.zeros(d)\n\t  x[0] = 1\n\t\n\t  for k in range(n):\n\t    x = A@x\n\t    x = x/np.linalg.norm(x)\n\t  return x\n\t\\end{Verbatim}\n\t\\caption{Unknown Python code}\n\\end{algorithm}\n\t\\begin{enumerate}\n\t\t\\item Please describe what each line of the code does (please do not write into the pseudocode).\n\t\t\\item Which algorithm is implemented, and what is its purpose?\n\t\t\\item Assume the matrix \\verb|A| is column stochastic. Which line of the algorithm could be omitted and why?\n\t\\end{enumerate}\n\n",
+    "id": ""
+}

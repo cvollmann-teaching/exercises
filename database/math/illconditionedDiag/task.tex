@@ -1,0 +1,18 @@
+\textbf{\normalsize An ill-conditioned Diagonal Matrix}
+
+For $n \in \N$ consider the diagonal matrix
+$$D_n = \text{diag}\left(1,\frac{1}{2},\ldots, \frac{1}{n}\right) = \begin{pmatrix}
+1 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots &  \frac{1}{n}
+\end{pmatrix} \in \Rnn.$$
+Tasks:
+\begin{enumerate}
+	\item Is $D_n$ invertible? Explain your answer.
+	\item For a given $b \in \R^n$, determine the corresponding $x_b \in \R^n$, such that $D_nx_b = b$. Is $x_b$ uniquely defined? Explain your answer.
+%	\item Assume that the $n$-th component of $b$ is given by $b_n = 1$ and that your machine works with a precision $\delta = 10^{-8}$ (roughly \textit{single precision}). Determine the minimal dimension $n_\delta$ at which your computer would consider $x_n$ as being zero, i.e., $n_\delta := \min\{n\in \N: |x_n| < \delta\}$.
+	\item Determine the spectrum $\sigma(D_n)$ of $D_n$.
+	\item Find a singular value decomposition of $D_n$.
+	\item What is the condition number $\text{cond}_2(D_n)$ of $D_n$?	Determine $\lim_{n\to \infty}\text{cond}_2(D_n)$. 
+	\item Let us assume $b \in \R^n$ is the true right-hand side and $\tilde{b}$ would be our measured right-hand side, which is prone to some error. For simplicity let us assume $\tilde{b} = b + \varepsilon e$ for some fixed small $\varepsilon > 0$ and $e=(1,\ldots,1)^T \in \Rn$ (i.e., each component of $b$ is equally perturbed by $\varepsilon$). Consider the difference $\Delta x := x_b - x_{\tilde{b}}$ and estimate the relative error $\frac{\|\Delta x\|}{\|x\|}$. What happens for large $n$?
+\end{enumerate}

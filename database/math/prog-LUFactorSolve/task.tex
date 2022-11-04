@@ -1,0 +1,33 @@
+\section{Solving (Square) Linear System using $LU$ decomposition: Factor and Solve}
+Let $A \in \mathbb{R}^{n\times n}$. Then there exists an invertible lower triangular matrix $L\in \mathbb{R}^{n\times n}$ with $1$'s on the diagonals, a matrix $U\in \mathbb{R}^{n\times n}$ in row echelon form and a permutation matrix $P\in \mathbb{R}^{n\times n}$, such that $$PA = LU. $$
+
+\textbf{Tasks:}
+\begin{enumerate}
+	\item \textbf{Factorization:} Implement a function \verb|factor_lu(A)| which computes the $LU$ decomposition of a matrix $A \in \mathbb{R}^{n\times n}$. It shall output two \verb|numpdy.ndarray|`s of shape \verb|(n,n)|. One is \verb|lu| which on the lower triangular part (excluding the diagonal) contains the information of $L$ and on the upper triangular part (including the diagonal) contains the information for $U$. The other is \verb|piv| which is the permutation matrix $P$.
+
+	\textit{Hints: } 
+	\begin{itemize}
+		\item You can recycle previous codes.
+	\end{itemize}
+	
+
+	\item \textbf{Solving:} Implement a function \verb|solve_lu(Lu, P, b)| which takes as input the \verb|numpy.ndarray|'s \verb|Lu| and \verb|P| computed by \verb|factor_lu(A)| as well as a vector $b \in \mathbb{R}^{n}$. It shall then apply the three-stage solving procedure presented in the lecture and output the solution $x$ of $Ax=b$.
+	
+	
+	\textit{Hints: } 
+	\begin{itemize}
+		\item Recall the solving procedure:
+	  \begin{itemize}
+			\normalsize
+			\item[1)] permute right hand side $\bar{b}=Pb$
+			\item[2)] solve lower triangular system $Lz=\bar{b}$ for $z$
+			\item[3)] solve upper triangular system $Ux=z$ for $x$
+		\end{itemize}
+		\item For steps 2) and 3) you can use your function \verb|solve_tri(A, b, lower)| from Ex. 2.
+	\end{itemize}
+
+	\item \textbf{Test} your routine on an example.
+\end{enumerate}
+
+
+

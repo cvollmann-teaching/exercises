@@ -1,0 +1,13 @@
+{
+    "filename": "orthogonal-projection.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Least Squares Problems",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{\\normalsize Orthogonal Projection}\n\nProve the following statement: Let $V \\subset \\R^m$ be a linear subspace and $b \\in \\Rm$. Then \n\t\t$$\\widehat{z}= \\arg\\min_{z\\in V} \\|z-b\\|_2^2 ~~~\\Leftrightarrow~~~ \\widehat{z}-b \\in V^\\bot := \\{w\\in \\Rn\\colon w^\\top v = 0 ~~ \\forall v\\in V\\}.  $$\n\\textit{Hint:} You can use: For all $x,y\\in \\R^m$: $\\|x+y\\|_2^2 = \\|x\\|_2^2 + \\|y\\|_2^2~\\Leftrightarrow~x^\\top y = 0$.",
+    "solution": "{\n\\color{solution}\nWe use the hint with $x = \\widehat{z}-b$ and $y:=z-\\widehat{z}$ for some $z\\in V$ (note that $(z-\\widehat{z})\\in V ~\\forall z \\in V$, since $\\widehat{z}\\in V$ and $V$ subspace). More precisely, for a $\\widehat{z} \\in V$ we find\n\\begin{align*}\n \\widehat{z}-b \\in V^\\bot &~~~\\Leftrightarrow\\forall z \\in V: (\\widehat{z}-b)^\\top z=0\\\\\n  &~~~\\Leftrightarrow \\forall z\\in V: (\\widehat{z}-b)^\\top (z-\\widehat{z})=0\\\\\n &~~~\\Leftrightarrow \\forall z \\in V:\\|z-b\\|_2^2 = \\|\\widehat{z}-b\\|_2^2 +  \\| \\widehat{z}-z\\|_2^2\\\\\n &~~~\\Leftrightarrow \\forall z \\in V: \\|\\widehat{z}-b\\|_2^2\\leq \\|z-b\\|_2^2\\\\\n &~~~\\Leftrightarrow  \\widehat{z}= \\arg\\min_{z\\in V} \\|z-b\\|_2^2 .\n\\end{align*}\n}",
+    "id": ""
+}

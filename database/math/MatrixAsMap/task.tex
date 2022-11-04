@@ -1,0 +1,21 @@
+% !TeX spellcheck = en_US
+\textbf{A matrix as a Linear Function}
+
+Let $A \in \mathbb{F}^{m\times n}$ be a matrix. Then consider the mapping $f_A\colon \mathbb{F}^{n} \to \mathbb{F}^{m}, x \mapsto Ax$.
+\begin{enumerate}
+\item Show that
+$$f_A(\lambda x+y) = \lambda f_A(x) + f_A(y), \nonumber$$
+for all $x,y \in \mathbb{F}^{n} $ and $\lambda \in \mathbb{F}$.
+
+\textit{Hint:} A vector is a matrix with just one column, so you can make use of the computation rules for matrices given in the lecture notes.  
+
+\textit{Remark:} Functions satisfying this property are called \textbf{linear}.  
+
+\item Use this fact to show the following equivalence:
+\begin{align*}
+\text{ker}(A):=\{x \in \mathbb{F}^n\colon Ax=0 \}  = \{0\}~~~\Leftrightarrow  ~~~~& f_A(x) = f_A(y) ~\text{implies}~ x=y,~ \\
+&(\text{i.e.},~f_A ~~\text{is an injective mapping}).
+\end{align*}
+\textit{Hint:} Split up the equality $\Leftrightarrow $ into  $\Rightarrow $ and $\Leftarrow$ and prove each of them separately.
+\end{enumerate}
+

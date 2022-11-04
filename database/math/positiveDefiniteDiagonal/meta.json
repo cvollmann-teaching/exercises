@@ -1,0 +1,13 @@
+{
+    "filename": "positiveDefiniteDiagonal.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Let $A \\in \\mathbb{R}^{n \\times n}$ be a positive definite matrix. Show that the diagonal entries are strictly positive, i.e.,  $a_{ii} > 0$ for all $1\\leq i\\leq n$.\\\\\n",
+    "solution": "{\n\\color{solution}\nConsider the unit vectors $e_i = (0,\\ldots, 1, \\ldots, 0)^\\top \\in \\mathbb{R}^n$. Then\n$$0 < e_i^\\top A e_i = a_ii. $$\n}\n",
+    "id": ""
+}

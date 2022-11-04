@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progCallbackFunction.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{\\href{https://de.wikipedia.org/wiki/R\\%C3\\%BCckruffunktion}{Callback Funktion} und \\texttt{**kwargs}}\n\\begin{enumerate}\n\t\\item Implementieren Sie den unten angegebenen Code. T\u00e4tigen Sie die Aufrufe \\texttt{algorithm(1)} und \\texttt{algorithm(1, callback=callback)}. Was passiert? F\u00fcgen Sie Docstrings hinzu, die kurz das Verhalten der Funktionen \\texttt{algorithm} und \\texttt{callback} erkl\u00e4ren.\n\t\\item Nun soll die Funktion \\verb|callback()| nur dann etwas ausgeben, wenn \\verb|xstart| gr\u00f6\u00dfer als ein gewisser \\verb|threshold| ist. F\u00fcgen Sie diese Eigenschaft und das Schl\u00fcsselwortargument \\verb|threshold| der Funktion \\verb|callback()| hinzu. Ver\u00e4ndern Sie dabei die \u00e4u\u00dfere Funktion \\verb|algorithm()| nicht! Welche Parameter \u00fcbergeben Sie an \\verb|algorithm()|, wenn Sie nur Iterierte gr\u00f6\u00dfer als \\texttt{threshold=1.6} gedruckt bekommen m\u00f6chten?\n\t\n\t\\textit{Hinweis:} Verwenden Sie einen optionalen Parameter: \\verb|callback(xstart, threshold=0.0)|.\n\t\\item Erl\u00e4utern Sie, welchen praktischen Vorteil \\verb|**kwargs| in verschachtelten Funktionsauswertungen haben kann.\n\\end{enumerate}\n\n\\begin{lstlisting}[language=Python]\nfrom random import random\n\ndef algorithm(xstart, callback=None, **kwargs):\n   for _ in range(10):\n      if callback:\n         callback(xstart, **kwargs)\n      xstart += random() - 0.5  # der Aufruf random() generiert eine Zufallszahl in [0,1]\n   return xstart\n\ndef callback(xstart):\n   print(xstart)\n\\end{lstlisting}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progCallbackFunction_solution.py}"
+}

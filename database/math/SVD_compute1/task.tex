@@ -1,0 +1,24 @@
+\textbf{\normalsize Compute the SVD}
+
+	Consider the matrix
+	$$A = \begin{pmatrix}
+	3 &0\\4&5
+	\end{pmatrix}.$$
+	\begin{itemize}
+		\item[i)] Compute its SVD $A = U\Sigma V^T$.
+		\item[ii)] Write $A$ as a sum of rank-1 matrices.
+		\item[iii)] Is $A$ invertible?
+	\end{itemize}
+
+\textit{Hint:} For i) follow this recipe:
+\begin{enumerate}
+	\color{navy}
+	\item Compute the eigenvalues $\lambda_i$ with eigenvectors $v_i$ of $A^TA$. Index the eigenvalues so that $\lambda_1 \geq \cdots \geq \lambda_r > 0$, where $r := $``number of positive eigenvalues''. Normalize the eigenvectors $v_i$. 
+	\vspace{-0.2cm}\item For $i =1,\ldots, r$: Set $\sigma_i := \sqrt{\lambda_i}$ and $u_i := \frac{1}{\sigma_i} Av_i$.\\ ~[Until here we will already have the reduced SVD]
+		\vspace{-0.2cm}\item Extend the bases: 
+		\vspace{-0.2cm}\begin{itemize}
+\item If $r < n$: Find orthonormal $v_{r+1}, \ldots, v_n \in \ker(A)$ by solving $A v_i = 0$ and orthogonalizing.
+	\vspace{-0.2cm}\item If $r < m$: Find orthonormal $u_{r+1}, \ldots, u_m \in \ker(A^T)$ by solving $A^Tu_i = 0$ and orthogonalizing.
+				  
+\end{itemize}
+\end{enumerate}

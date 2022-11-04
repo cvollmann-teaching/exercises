@@ -1,0 +1,17 @@
+\textbf{Half Precision: \texttt{s10e5}}\\
+Betrachten Sie die binären Gleitkommazahlen gemäß der Parameter \texttt{s10e5}.
+\begin{enumerate}
+	\item Ermitteln Sie den Verschiebewert $B$ (\texttt{BIAS}) für den Exponenten gemäß des IEEE-754 Standards, sowie den Exponentenwertebereich $e_{\text{min}}$ und $e_{\text{max}}$.
+	\item Mit vielen Bits wird eine Gleitkommazahl hier gespeichert? Erklären Sie die Bedeutung der einzelnen Bits und wie daraus die Gleitkommazahl gebildet wird.
+	\item Bestimmen Sie die relative Maschinengenauigkeit \texttt{macheps}.
+	\item Geben Sie die Bitmuster mit zugehörigem (ungefähren) Zahlenwert an:
+	\begin{enumerate}
+		\item Signed zero und signed infinity:  $\pm 0$, $\pm \infty$
+		\item Kleinste und größte positive normale Zahl
+		\item Kleinste und größte positive denormalisierte Zahl (\textit{subnormals})
+		\item Kleinste und größte positive Nichtzahl (\texttt{NaN})
+		\item \texttt{0011110000000001}
+		\item $\texttt{fl}(-4)$
+		\item $\texttt{fl}(\frac{2}{3})$, wobei $\frac{2}{3} = (0.\overline{10})_2=(0.10101010\ldots)_2$
+	\end{enumerate}
+\end{enumerate}

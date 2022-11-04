@@ -1,0 +1,17 @@
+\section{Inverse Power Iteration}
+Implement a function \verb|inv_power_iteration()| which takes a matrix $A$, an initial guess $\hat{\lambda} \in \mathbb{C}$ and maximum iteration number  $n \in \mathbb{N}$ as arguments
+	and returns the $n$-th iterate $x_n$ of the inverse power iteration \eqref{inv_powerit}.
+	
+%	\begin{align*}
+%		&(A - \lambh I) y_{k+1} = x^k\\
+%		&x_{k+1} = \frac{y_{k+1}}{\| y_{k+1} \|}
+%	\end{align*}
+%	for $k \in 1, \dots, n-1$. 
+	Make your algorithm more efficient with the considerations of Exercise \ref{ex:inversepowertheory} (iii).
+	Test your function on
+	\begin{align*}
+		A = \begin{bmatrix}
+			1&1\\
+			1&1
+		\end{bmatrix},~ \hat{\lambda} = 1.9  ~\textrm{ and }~ n = 10.
+	\end{align*}

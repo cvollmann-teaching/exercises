@@ -1,0 +1,13 @@
+{
+    "filename": "LeastSquares_5.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = en_US\n% with square in the model!\nLet $A \\in \\mathbb{R}^{m\\times n}$ and $b \\in \\mathbb{R}^m$.\nAssume you are given the least squares problem \n$$\n\\min\\limits_{x \\in \\mathbb{R}^n } \\| Ax - b \\|_2^2.\n$$\n\\begin{enumerate}\n\t\\item Which equation does a solution $\\hat{x}$ of the above least squares problem solve?\n\t\\item Assume you are given the following data\n\t\\begin{center}\n\t\t\\begin{tabular}{|l|c|c|c|c|c|c||c|c|}\\hline\n\t\t\tz&-2&-1&0&1&2\\\\ \n\t\t\t\\hline\n\t\t\ty&3&-1&0&1&4\\\\\n\t\t\t\\hline\n\t\t\\end{tabular}.\n\t\\end{center}\n\tSolve the curve fitting problem\n\t$$\n\t\\min\\limits_{c_0, c_1 \\in \\mathbb{R}} \\sum_{i=1}^5 (c_0 + c_1z_i^2 - y_i)^2,\n\t$$\n\ti.e., determine the minimizing parameters $c_0$ and $c_1$.\n\\end{enumerate}\n",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item $\\hat{x}$ solves the normal equation $\\textcolor{exampoints}{(1P)}$: $A^TA\\hat{x}\\stackrel{\\textcolor{exampoints}{(1P)}}{=}A^Ty$\n\t\\item In this case: $A=\n\t\\begin{pmatrix}\n\t1&4\\\\\n\t1&1\\\\\n\t1&0\\\\\n\t1&1\\\\\n\t1&4\n\t\\end{pmatrix}~~\\textcolor{exampoints}{(2P)}$,\n\t\\begin{align*}\n\tA^TA&=\\begin{pmatrix}5&10\\\\10&34\\end{pmatrix}~~\\textcolor{exampoints}{(2P)},\\\\\n\tA^Ty&=\\begin{pmatrix}1&1&1&1&1\\\\4&1&0&1&4\\end{pmatrix}\n\t\\begin{pmatrix}-1\\\\0\\\\0\\\\2\\\\9\\end{pmatrix}\n\t=\\begin{pmatrix}7\\\\28\\end{pmatrix}~~\\textcolor{exampoints}{(2P)}\n\t\\end{align*}\n\tNormal equation: \n\t$$\\begin{pmatrix}5&10\\\\10&34\\end{pmatrix}\\begin{pmatrix}c_0\\\\c_1\\end{pmatrix}\n\t=\\begin{pmatrix}7\\\\28\\end{pmatrix}$$\n\tGaussian elimination yields\n\t$$\\begin{pmatrix}5&10\\\\0&14\\end{pmatrix}\\begin{pmatrix}c_0\\\\c_1\\end{pmatrix}\n=\\begin{pmatrix}7\\\\14\\end{pmatrix}$$\n\t\n\t$$\\Leftrightarrow~~c_0=-\\tfrac{2}{3},~c_1=1~~\\textcolor{exampoints}{(1+1P)}$$\n\t$\\Rightarrow~~\\hat{x}=\\begin{pmatrix}-\\tfrac{2}{3}\\\\1\\end{pmatrix}$\n\\end{enumerate}\n}",
+    "id": ""
+}

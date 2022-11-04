@@ -1,0 +1,13 @@
+{
+    "filename": "eigenvaluesTriangularMatrix.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% formerly: \"theory\"\nPlease show that the eigenvalues of an upper triangular matrix $A \\in \\mathbb{R}^{n \\times n}$ are given on its diagonal.\\\\%, i.e., that \n%$\\det (A - \\lambda I)=0$ for all $\\lambda \\in \\textrm{diag}(A)$.\\\\\n\n\n\n ",
+    "solution": "{\\color{solution}\n\\underline{Show:} $A\\in\\mathbb{R}^{n\\times n}$ upper triangular $\\Rightarrow~~\\sigma(A)=\\{a_{11},\\dots,a_{nn}\\}$\\\\\n\\underline{Proof:}\n\\begin{align*}\n\\lambda\\in\\sigma(A)~~&\\Leftrightarrow~~\\text{det}(A-\\lambda I)=0~~\\textcolor{exampoints}{(1P)}\\\\\n&\\Leftrightarrow~~\\prod_{i=1}^{n}(a_{ii}-\\lambda)=0~~\\textcolor{exampoints}{(1P)}\\\\\n&\\left[\\uparrow~\\text{since}~A-\\lambda I=:U~\\text{is upper triangular and det}(U)=\\prod_{i=1}^{n}u_{ii}\\right]~~\\textcolor{exampoints}{(1P)}\n\\end{align*}\nNow we show $\\text{det}(U)=\\prod_{i=1}^{n}u_{ii}$:\n\\begin{align*}\n\\text{det}(U)&=u_{11}\\cdot\\underbrace{\\text{det}(U_1)}_{\\textcolor{blue}{=u_{22}\\cdot\\text{det}(U_2)}}\\\\\n\\textcolor{exampoints}{(3P)}~~~&~\\vdots\\\\\n&=\\prod_{i=1}^{n}u_{ii}\n\\end{align*}\n\\begin{flushright}$\\square$\\end{flushright}\n}",
+    "id": ""
+}

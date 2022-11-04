@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progRot13.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Rot13: Eine Caesar-Verschl\u00fcsselung}\\\\\nDas \\href{https://de.wikipedia.org/wiki/ROT13}{Rot13} Verfahren ist eine Vertauschungsmethode f\u00fcr Buchstaben. Dabei wird jeder Buchstabe um 13 stellen weiter ger\u00fcckt (z.B. \\verb|A --> N|).\n\n\\begin{enumerate}\n\t\\item Schreiben sie eine Python-Funktion \\verb|GRKG = Rot13(TEXT)|, die einen string \\texttt{TEXT} entgegennimmt, der nur Gro\u00dfbuchstaben (ohne Umlaute) enth\u00e4lt und darin jeden Buchstaben um 13 Stellen verschiebt.\n\t\\item Testen Sie Ihre Funktion an mehreren Beispielen.\n\t\\item Was passiert, wenn der Text erneut in die Funktion eingegeben wird? Welcher Eigenschaft einer Permutation entspricht das?\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progRot13_solution.py}"
+}

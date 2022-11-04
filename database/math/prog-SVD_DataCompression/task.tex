@@ -1,0 +1,13 @@
+\textbf{\normalsize Using the SVD for Image Compression}
+
+Use the code snippet below to transform an image of your choice (extension \verb|.png| or \verb|.jpg|) into gray scale and to load it as an array $A \in \mathbb{R}^{m \times n}$ into Python.
+\begin{enumerate}
+	\item Find a \verb|scipy| routine to compute the SVD $U\Sigma V^T = A$.
+	\item Plot the singular values.
+	\item For several $1 \leq k \leq \text{rank}(A)$:
+	\begin{enumerate}
+		\item Compute the \textit{truncated SVD}: Use only the first $k$ columns of $U$, the first $k$ singular values $\sigma_1, \ldots, \sigma_k$ from $\Sigma$ and the first $k$ rows of $V^T$ to reconstruct $A$ and plot the resulting image $A_k$ using \verb|plt.imshow(A_k, cmap='gray')|.
+		\item For each $k$, compute the total number of floats that need to be stored for the truncated SVD $A_k$ and compare it to the total number of floats that need to be stored for the full image $A$.
+	\end{enumerate} 
+\end{enumerate}
+\lstinputlisting[firstline =9,lastline=15]{solution.py}

@@ -1,0 +1,28 @@
+\begin{enumerate}
+\item \begin{verbatim}
+Eingabe Tupel der Länge n
+
+Wert = Tupel[0]
+Für alle i in [1, n):
+    Falls Wert < Tupel[i]:
+       Ausgabe: Das Tupel ist nicht absteigend sortiert.
+       Ende
+    Wert =  Tupel[i]
+Ausgabe: Das Tupel ist absteigend sortiert.
+Ende
+\end{verbatim}
+	
+\item \begin{verbatim}
+Eingabe Tupel1 der Länge n
+Leeres Tupel2 der Länge n anlegen
+
+Solange Tupel1 nicht leer ist:
+   a_n, n = Maximum(Tupel1)
+   Lösche Element n aus Tupel1
+   Füge Wert a_n am Ende von Tupel2 hinzu	
+Ausgabe: Tupel2
+\end{verbatim}
+	
+	\item Maximum läuft in der Iteration $k$ ein Tupel der Länge $k$ ab. Das machen wir für Tupel der Länge $n, n-1, ..., 1$. Damit erhalten wir
+	$n(n+1)/2$ durchläufe. 
+\end{enumerate}

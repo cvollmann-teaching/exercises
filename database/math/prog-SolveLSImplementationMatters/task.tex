@@ -1,0 +1,48 @@
+% !TeX spellcheck = en_US
+\textbf{Implementation Matters}
+
+In order to solve the problem $Ax = b$, there are plenty of algorithms available. In this exercise we invoke several SciPy routines to solve linear systems numerically. Thereby, we will learn that different algorithms, or even different implementations of the same algorithm, can have a huge effect on the efficiency.\\
+
+Consider the following test example:
+The matrix $A \in \mathbb{R}^{n \times n}$ with constant diagonals given by 
+$$A = \begin{pmatrix}
+2 & -1 		& 0  &\cdots & 0\\
+-1 & 2 		& -1  &\ddots &  \vdots\\
+0 & \ddots  		&\ddots   	 &\ddots  & 0 \\
+\vdots    & \ddots  		&-1  	 &2 & -1\\
+0 & \cdots 	&  0  &-1 & 2\\
+\end{pmatrix} \in \mathbb{R}^{n \times n}$$
+and the right-hand side vector $$b = (1,0,\cdots,0,1)^\top \in \mathbb{R}^n.$$
+In this case we know that the unique\footnote{One can show that the matrix $A$ is invertible.} solution $x^*=A^{-1}b$ is given by
+$$x^* = (1,1,\cdots,1)^\top \in \mathbb{R}^n.$$
+
+Implement the following options to solve the problem $Ax=b$ (i.e., given $A$ and $b$ from above, find a numerical solution $\tilde{x}$ such that $A\tilde{x}\approx b$):
+
+
+\begin{enumerate}
+
+
+\item Dense: Work with $A$ as dense \texttt{numpy.ndarray}.
+\begin{enumerate}
+	\item The forbidden way: Find a SciPy function to compute a numerical inverse and apply it to $b$ to obtain $\tilde{x}$.
+	\item The default way: Find a general solver for linear systems.
+	\item Structure exploiting solver I: Find a way to inform this general solver about the fact that $A$ is \textit{positive definite}.\footnote{We'll learn about this property later.} 
+	\item Structure exploiting solver II: Find another solver which exploits the fact, that $A$ has constant diagonals.
+\end{enumerate}
+\item Sparse: Exploit the sparsity of the matrix and work with $A$ as  \texttt{scipy.sparse.csr\_matrix}.
+\begin{enumerate}
+	\item The forbidden way: Find a SciPy function to compute the inverse of a sparse matrix and apply it to $b$ to obtain $\tilde{x}$.
+	\item The default way: Find a general solver for sparse linear systems.
+	\item Structure exploiting solver: Find a function that implements the \textit{conjugate gradient (cg)} method to solve the system iteratively. Play with the optional parameter \texttt{<maxiter>} to restrict the number of iterations. What do you observe?
+\end{enumerate}
+
+\end{enumerate}
+
+Run your code for different dimensions $n$ (especially large $n\geq 10^5$) and:
+\begin{enumerate}
+	\item measure the time needed for each of your solving routine,
+	\item and find a SciPy function to compute the error $\frac{1}{n} \|\tilde{x}-x^*\|_2$  for each solving routine.
+\end{enumerate}
+
+
+\textit{Remark: For now, it is not important to understand how the algorithms work. We'll learn more about them throughout this course. Here, you learn to find appropriate SciPy functions which solve your problem and to serve the interfaces of these functions.}

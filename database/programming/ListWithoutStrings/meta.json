@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progListWithoutStrings.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Schreiben Sie eine Funktion, die eine Liste nichtnegativer integer Werte und Strings entgegennimmt und eine neue Liste ohne Strings zur\u00fcckgibt. Die Funktion soll mit einem \\verb|print(\"Fehler: Flascher Wert\")| abbrechen, wenn sich ein negativer integer Wert oder ein falscher Datentyp in der Liste befindet. Die urspr\u00fcngliche Liste soll nicht ver\u00e4ndert werden.",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progListWithoutStrings_solution.py}"
+}

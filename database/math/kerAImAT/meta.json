@@ -1,0 +1,13 @@
+{
+    "filename": "kerAImAT.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = en_US\n\\textbf{The Four Fundamental Subspaces}\n\n\\begin{enumerate}\n\t\\item Let $A \\in \\Rmn$. Show that $$\\forall y \\in \\im(A), x\\in \\ker(A^T)\\colon y^Tx = 0 $$\nand $$\\forall y \\in \\im(A^T), x\\in \\ker(A)\\colon y^Tx = 0 .$$\n\\item Illuminate these findings on an example.\n\\end{enumerate}\n{\\color{navy}\\textit{Remark:} \nWe say that $\\ker(A^T)$ is the \\textbf{orthogonal complement} of $\\im(A)$ and write\n$$\\ker(A^T)^\\bot = \\im(A)~~~\\text{or}~~~\\ker(A^T) ~\\bot  ~ \\im(A)~~~\\text{or}~~~\\ker(A^T) = \\im(A)^\\bot.$$\nAnalogously $\\ker(A)$ is the orthogonal complement of $\\im(A^T)$ and we write\n$$\\ker(A)^\\bot = \\im(A^T)~~~\\text{or}~~~\\ker(A) ~\\bot  ~ \\im(A^T)~~~\\text{or}~~~\\ker(A) = \\im(A^T)^\\bot.$$}",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item Let $y = Av \\in \\im(A)$ and $x \\in \\ker(A^T)$. Then $$y^Tx = (Av)^Tx = v^TA^Tx = v^T(A^Tx)= 0.$$ \nApply this to $C = A^T$ to show the other results.\n\\item  \t\tLet us consider\n$$A = \\begin{pmatrix}1&2\\\\3&6\\end{pmatrix}\t,~~~~A^\\top= \\begin{pmatrix}1&3\\\\2&6\\end{pmatrix}.$$\n\tThen we find\\\\\n\t\\begin{minipage}[t]{0.48\\textwidth} \\small\n\t\t\\begin{align*}\n\t\t\\im(A) &= \\text{span} \\begin{pmatrix}1\\\\3\\end{pmatrix}\\\\\n\t\t\\ker(A) &= \\{x\\in\\R^2: Ax = 0\\}\\\\\n\t\t&= \\{x\\in\\R^2:  x_1\\begin{pmatrix}1\\\\3\\end{pmatrix} +  x_2\\begin{pmatrix}2\\\\6\\end{pmatrix} = 0\\} \\\\\n\t\t&= \\{x\\in\\R^2: 1x_1 + 2x_2 = 0\\} \\\\\n\t\t&= \\{x\\in\\R^2: x_1 = - 2x_2\\} \\\\\n\t\t&= \\spann \\begin{pmatrix}-2\\\\1\\end{pmatrix}\n\t\t\\end{align*}\n\t\\end{minipage}\n\t\\begin{minipage}[t]{0.48\\textwidth} \\small\n\t\t\\begin{align*}\n\t\t\\im(A^\\top) &= \\spann \\begin{pmatrix}1\\\\2\\end{pmatrix}\\\\\n\t\t\\ker(A^\\top) &= \\{x\\in\\R^2: Ax = 0\\}\\\\\n\t\t&= \\{x\\in\\R^2: 1x_1 + 3x_2 = 0\\}\\\\\n\t\t&= \\{x\\in\\R^2:  x_1 = - 3x_2 \\}\\\\\n\t\t&= \\spann \\begin{pmatrix}-3\\\\1\\end{pmatrix}\n\t\t\\end{align*}\n\t\\end{minipage}\n\t~\\\\\n\t\\includegraphics[width=0.9\\linewidth]{../../rep/media/ex-bigPicture-LA}\n\\end{enumerate}\n}\n",
+    "id": ""
+}

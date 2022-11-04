@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progSteinScherePapier.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Schere Stein Papier}\\\\\nSchreiben Sie ein Python-Programm, dass gegen den Nutzer Schere (0) Stein (1) Papier (2) spielt. Das Programm soll in einer \\verb|while| Schleife auf eine Eingabe des Nutzers warten, bis dieser \\verb|\"End\"| eingibt. Die Eingabe des Nutzers erfolgt \u00fcber die Funktion \\verb|wert = input(message)|. Nutzen Sie die Funktion \\verb|random.shuffle()| (um diese nutzen zu k\u00f6nnen, schreiben Sie \\verb|import random| in die oberste Zeile Ihres Codes) angewendet auf die Liste \\verb|Handzeichen = [0, 1, 2]|.\n%, der eine zuf\u00e4llige Zahl zwischen 0 und 1 erzeugt und die \\verb|modulo|-operation.",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progSteinScherePapier_solution.py}"
+}

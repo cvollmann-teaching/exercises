@@ -1,0 +1,13 @@
+{
+    "filename": "Repetition.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Repetition}\n\\begin{enumerate}\n\t\\item What is the definition of \\textit{injective}, \\textit{surjective}\n\tand \\textit{bijective}?\n\t\\item Let $A \\in \\F ^{n \\times n}$ be a matrix. How is invertibility \n\tof a matrix defined?\n\t\\item What does the theorem about the $LU-$decomposition of a matrix say?\n\t\\item Why is it better to solve the system $Ax = b$ instead of\n\tcomputing $A^{-1}$ and then $A^{-1}b$?\n\t\\item What is the definition of a norm?\n\t\\item How is positive definiteness of a matrix $A \\in \\R^{n \\times n}$ defined?\n\t\\item Give a definition of an Eigenvalue of $A \\in \\F^{n \\times n}$.\n\t\\item How does the eigendecomposition of a symmetric matrix look like?\n\t\\item What is the normal equation?\n\t\\item What is the singular value decomposition?\n\\end{enumerate}",
+    "solution": "{\\color{solution}\n\n}",
+    "id": ""
+}

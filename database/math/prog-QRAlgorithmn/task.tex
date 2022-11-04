@@ -1,0 +1,44 @@
+%\textbf{The $QR$ Algorithm}
+%
+%auf bild anwenden und einfach mal diagonal(Ainf) nehmen sortieren und mal probieren wie die recovery ist?
+%~\\
+The \textbf{$QR$-Algorithm} is an eigenvalue algorithm. Thus, it is used to compute eigenvalues and eigenvectors of a matrix $A \in \mathbb{R}^{n\times n}$. It produces a sequence of matrices $\left(A_{k}\right)_{k\in\mathbb{N}}$. All $A_k$ are similar to $A$ and thus have the same eigenvalues. The iteration is defined as follows:\\
+\begin{minipage}{0.3\textwidth}
+	~
+\end{minipage}
+\begin{minipage}[c]{0.6\textwidth}
+	\vspace{0.2cm}
+	\begin{tabbing}
+		\qquad \= \qquad \= \qquad \kill
+		$A_0=A \in \mathbb{R}^{n\times n}$\\
+		\textbf{for} $k=0,\ldots ,\infty$\ : \\[0.3em]
+		\> $Q_{k+1}R_{k+1}:=A_{k}$ ~~~{\small ($QR$ decomposition)} \\[0.3em]
+		\> $A_{k+1}:=R_{k+1}Q_{k+1}$ 
+	\end{tabbing}	 
+\end{minipage}
+~\\~\\
+If the absolute values of the eigenvalues of $A$ are distinct, one can show that $A_\infty :=\lim_{k\to\infty} A_k$ is a diagonal matrix. In this case, the eigenvalues of $A$ are the diagonal elements of $A_\infty$.
+ 
+~\\
+\textbf{Task:}
+\begin{enumerate}
+	\item Implement the QR eigenvalue algorithm as a function \verb|eig(A,m)|. The function shall take as input a matrix $A\in \mathbb{R}^{n\times n}$ and a maximum iteration number $m\in\mathbb{N}$. It shall return the diagonal of the last iterate $A_m$. For the $QR$ decomposition you can use the Gram-Schmidt algorithm from previous sheets which we have implemented as a function \verb|QR(A)| or an appropriate Python routine. \\~\\
+	\textit{Hint: } You can access the diagonal of a \verb|numpy.array| by \verb|A.diagonal()|.
+	\item Test your algorithm on a random matrix $A\in \mathbb{R}^{n\times n}$. In order to generate such a random matrix use the following code snippet:\\[2pt]
+		\verb|def A_gen(n): |\\
+        \textcolor{white}{~~~~}\verb|from numpy as np|\\
+        \textcolor{white}{~~~~}\verb|from scipy.linalg import qr|\\
+        \textcolor{white}{~~~~}\verb|A = np.random.rand(n,n)|\\
+		\textcolor{white}{~~~~}\verb|Q, R = qr(A)|\\
+		\textcolor{white}{~~~~}\verb|Lambda = np.diag(np.arange(1,n+1))|\\
+		\textcolor{white}{~~~~}\verb|A = Q @ (Lambda @ Q.T)|\\
+		\verb|return A|
+	\item Find a routine in \texttt{Scipy} to compute the eigenvalues and -vectors of a matrix. Test the routine on multiple examples, especially for higher dimensions. Compare to your algorithm.
+	
+\end{enumerate}
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+{
+    "filename": "PythonIntFloat.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Python Implementierung von \\texttt{int} und \\texttt{float}}\\\\\nWir haben gelernt das ganze Zahlen typischerweise als Zweierkomplementzahlen (h\u00e4ufig als \\texttt{long} mit 64Bits) und Gleitkommazahlen gem\u00e4\u00df des IEEE--754 Standards in \\textit{double precision} mit 64Bits implementiert werden. Finden Sie heraus wie Python die Basisdatentypen \\texttt{int} und \\texttt{float} intern implementiert und erkl\u00e4ren Sie dies in einem Mini-Vortrag.",
+    "solution": ""
+}

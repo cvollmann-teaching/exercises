@@ -1,0 +1,54 @@
+\textbf{\normalsize NumPy and Matplotlib I}
+
+\begin{enumerate}
+\item Have a look at the first chapter of the scipy-lectures: \url{https://scipy-lectures.org/} (namely, '1. Getting started with Python for science')
+\item Play around with the numpy functions: \verb|arange|, \verb|linspace|, \verb|ones|, \verb|zeros|, \verb|eye|, \verb|diag|, \verb|tile|, \verb|repeat| and \verb|reshape|.
+
+\item Generate the following matrices:
+\begin{enumerate}
+     \item  Identity matrix 
+     \item  Zero matrix
+     \item  A diagonal matrix $\left(D \in \mathbb{F}^{m\times n} ~\text{is called diagonal, if}~ d_{ij}=0 ~\forall i\neq j \right)$
+     \item  Example matrix $$
+    \left(\begin{array}{rrrr}                                
+    1 &  1& 1 & 1\\                                               
+    1 &  1& 1 & 1\\                                              
+    1 &  1 &  1 & 2   \\ 
+    1 &  6 &  1 & 1
+    \end{array}\right) \nonumber
+    $$
+     \item  Example matrix
+    $$
+    \left(\begin{array}{rrrrr}                                
+    0 &  0& 0 & 0&0\\                                               
+    2 &  0& 0 & 0&0\\                                              
+    0 &  3& 0 & 0&0\\ 
+    0 &  0& 4 & 0&0\\ 
+    0 &  0& 0 & 5&0\\ 
+    0 &  0& 0 & 0&6
+    \end{array}\right) \nonumber
+    $$
+    \item  Example matrix 
+    $$
+    \left(\begin{array}{rrrrrr}                                
+    4 &  3& 4 &3&4&3\\                                               
+    2 &  1& 2 & 1&2&1\\                                              
+    4 &  3& 4 & 3&4&3\\   
+    2 &  1& 2 & 1&2&1
+    \end{array}\right) \nonumber
+    $$
+     \item  Example matrix 
+    $$
+    \left(\begin{array}{rrr}                                
+    1  &6 &11\\                                               
+    2  &7 &12\\                                              
+    3  &8 &13\\   
+    4  &9 &14\\
+    5& 10 &15
+    \end{array}\right) \nonumber
+    $$
+ \end{enumerate}   
+\item Apply the functions \verb|len()| and \verb|numpy.shape()| to these arrays. How do the values relate? What does the attribute \verb|ndim| tell us?
+
+\item Use \verb|matplotlib.pyplot.imshow()| to visualize the matrices.
+\end{enumerate}

@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progInvPermutationPython.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Permutation}\n\\begin{enumerate}\n\t\\item Gegeben sei eine Liste von $n$ Zahlen \\verb|perm| $=[a_0, a_2, \\dots, a_{n-1}]$ mit der Eigenschaft, dass sie genau die Zahlen $0, 1, 2, \\dots, n-1$ in beliebiger Reihenfolge enh\u00e4lt. Diese Liste k\u00f6nnte eine \\hyperref{https://de.wikipedia.org/wiki/Permutation#Definition}{}{}{Permutation} darstellen. Schreiben Sie eine Python-Funktion \\verb|transpose(perm)|, die eine Liste zur\u00fcckgibt, in der f\u00fcr alle $i = 1,\\dots,n$ anstatt der Zahl $a_i$ an der Stelle $i$ die Zahl $i$ an der Stelle $a_i$ liegt. \n\t\\item Implementieren Sie einen Test f\u00fcr ihren Algorithmus.\n\\end{enumerate}\n\n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progInvPermutationPython_solution.py}"
+}

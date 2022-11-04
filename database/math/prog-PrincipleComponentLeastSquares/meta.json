@@ -1,0 +1,13 @@
+{
+    "filename": "prog-PrincipleComponentLeastSquares.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Singular Values, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{\\normalsize Least Squares and \\textit{Total} Least Squares (Principal Components)}\n\n\\begin{enumerate}\n\t\\item  Use the function \\verb|np.random.multivariate_normal()| to create samples $(z_i,y_i) \\in \\mathbb{R}^2$ for $i = 1,\\dots, 100$ from a 2-dimensional multivariate normal distribution\n\twith mean $\\mu := (0,0)$ and covariance $$\\Sigma := \\begin{bmatrix}\n\t1&0.7\\\\\n\t0.7&1\n\t\\end{bmatrix}.$$\n\t\\item Solve the least squares problem\n\t\t\\begin{align*}\n\t\t\t\\min \\limits_{c \\in \\mathbb{R}} \\sum_{i=1}^{100} ( c z_i - y_i )^2\n\t\t\\end{align*}\n\t\tand plot the model $f(z)=cz$ and the data points into one plot.\n%\t\\item Make a principle component analysis of the data $v_i := (z_i,y_i)^\\top \\in \\mathbb{R}^2$ (note $m=2$ and $n=100$) and plot the first principle component into the same plot.\n\\item Now consider the $2\\times100$ matrix $A = [v_1,\\cdots, v_n]$ with columns $v_i := (z_i,y_i)^\\top \\in \\mathbb{R}^2$ and compute an SVD $A=U\\Sigma V^\\top$ of it. Draw the lines through the vectors $u_1$ and $u_2$ into the same plot. These are the principal components that explain most of the variance.~\\\\\n\\input{info-PrincipleComponentLeastSquares}\n\\end{enumerate}\n\n%\n%\\textit{Remark:} You can use appropriate Python packages to solve the least squares problem and the computation of the SVD.\n%{\\color{navy}\n%\\textit{Remark:}\\\\\n%A linear regression problem \n%$$\n%\\min \\limits_{c\\in \\mathbb{R}} \\| Zc- Y \\|^2\n%$$\n%can be reformulated as the constrained optimization problem \n%\\begin{align*}\n%&\\min \\limits_{r, c\\in \\mathbb{R}} \\| r\\|^2 \\\\\n%s.t.& ~~\n%r = Zc - Y.\n%\\end{align*}\n%If we also want to encounter errors in the measurements we arrive at the problem \n%\\begin{align*}\n%&\\min \\limits_{r, s, c\\in \\mathbb{R}} \\| \\begin{pmatrix}\n%r\\\\s\n%\\end{pmatrix} \\|^2 \\\\\n%s.t.& ~~\n%(Z + s)c = Y + r.\n%\\end{align*}\n%This problem is called the total \\textit{least squares problem}. One can show that the solution of this problem is the low-rank approximation which we yield from cropping the singular value decomposition. See for details:\n%\\url{https://eprints.soton.ac.uk/263855/1/tls_overview.pdf}\n%}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-PrincipleComponentLeastSquares_solution.py}\n",
+    "id": ""
+}

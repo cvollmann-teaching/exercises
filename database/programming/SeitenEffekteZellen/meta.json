@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progSeitenEffekteZellen.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "F\u00fchren sie in Ihrem IPython Notebook alle drei der unten gelisteten Zellen aus. Sie bekommen beim ersten Durchlauf nat\u00fcrlich einen Fehler. Beim Zweiten nicht mehr. Was l\u00e4uft schief? Wie k\u00f6nnen Sie das Problem, des ausbleibenden Fehlers beheben?\n\\begin{center}\n\t%trim=left bottom right top\n\t\\includegraphics[scale=.9, trim={3cm 10cm 13cm 7cm}, clip]{prog-progSeitenEffekteZellen.pdf}\n\\end{center}\n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progSeitenEffekteZellen_solution.py}"
+}

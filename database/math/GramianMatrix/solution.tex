@@ -1,0 +1,48 @@
+{
+\color{solution}
+\begin{enumerate}
+	\item 
+	\textit{Recall: A matrix $B$ is called symmetric, if $B^T=B$ holds.}\\
+	Here, we find
+	$$(A^TA)^T \ \ =\ \ A^T(A^T)^T\ \ =\ \ A^TA.$$
+	and
+	$$(AA^T)^T \ \ =\ \ (A^T)^TA^T\ \ =\ \ AA^T.$$
+	\item 
+	\textit{Recall: A matrix $B$ is called positive semi-definite, if $x^TBx\geq 0$ holds $\forall x\in\mathbb{R}^n$.}\\
+	Here we find
+	$$x^T(A^TA)x\ \ =\ \ (Ax)^TAx\ \ =\ \ \|{Ax}\|_2^2\ \ \geq\ \ 0\ \ \forall x\in\mathbb{R}^n.$$
+%	and
+%	$$x^T(AA^T)x\ \ =\ \ (A^Tx)^TA^Tx\ \ =\ \ \|{A^Tx}\|_2^2\ \ \geq\ \ 0\ \ \forall x\in\mathbb{R}^n.$$
+Next define $C:=A^T$ and apply the latter result to $C$; note that $C^TC = AA^T$.
+	\item We show mutual subset relation:\\
+	$\underline{\textbf{``$\subset$'':}}$ We first show that all positive eigenvalues of $A^TA$ are positive eigenvalues of $AA^T$:\\
+		Let $\lambda>0$ be an eigenvalue of $A^TA$ with eigenvector $v\neq 0$, then we find
+		$$A^TAv=\lambda v~~\stackrel{A\cdot|}{\Rightarrow}~~AA^T(Av)=\lambda(Av).$$
+		In addition we find that $Av \neq 0$, since 
+		$$\|Av\|_2^2 = v^TA^TAv = \lambda v^Tv = \underbrace{\lambda}_{>0}\underbrace{\|v\|_2^2}_{>0} >0.$$
+		Thus we can conclude that $\lambda$ is an eigenvalue of $AA^T$ with eigenvector $Av=:u\neq 0$.\\~\\
+	$\underline{\textbf{``$\supset$'':}}$ Next, we show that all positive eigenvalues of $AA^T$ are also positive eigenvalues of $A^TA$:\\
+		Let $\lambda>0$ be an eigenvalue of $AA^T$ with eigenvector $u\neq 0$, then we find
+		$$AA^Tu=\lambda u~~\stackrel{A^T\cdot|}{\Rightarrow}~~A^TA(A^Tu)=\lambda(A^Tu).$$
+		In addition we find that $A^Tu \neq 0$, since 
+		$$\|A^Tu\|_2^2 = u^T\underbrace{AA^Tu}_{\lambda u} = \underbrace{\lambda}_{>0}\underbrace{\|u\|_2^2}_{>0} >0.$$
+		Thus we can conclude that $\lambda$ is an eigenvalue of $A^TA$ with eigenvector $A^Tu=:v\neq 0$.
+	\item 
+	We show mutual subset relation:\\
+	\textbf{(a)} $\ker(A) = \ker(A^TA)$:\\[0.2cm]
+		\underline{``$\text{ker}(A)\subseteq \text{ker}(A^TA)$'':}\\
+		Let $x\in \text{ker}(A) \stackrel{\textcolor{blue}{\text{Def.}\ \text{ker}(A)}}{\Rightarrow}Ax=0\Rightarrow A^TAx=0\stackrel{\textcolor{blue}{\text{Def.}\ \text{ker}(A^TA)}}{\Rightarrow}x\in \text{ker}(A^TA)$.\\~\\
+		\underline{``$\text{ker}(A^TA)\subseteq \text{ker}(A)$'':}\\
+		Let $x\in \text{ker}(A^TA) \stackrel{\textcolor{blue}{\text{Def.}}}{\Rightarrow}A^TAx=0\Rightarrow \underbrace{x^TA^TAx}_{\textcolor{blue}{=\|{Ax}\|_2^2}}=0 \stackrel{\textcolor{blue}{\text{norm} \|{\cdot}\|_2^2\ \text{is definite}}}{\Rightarrow}Ax=0 \stackrel{\textcolor{blue}{\text{Def.}}}{\Rightarrow}x\in \text{ker}(A)$.\\~\\
+ \textbf{(b)} $\ker(A^T) = \ker(AA^T)$:\\[0.2cm]
+		Define $C:=A^T$ and apply result (a) to $C$; note that $C^TC = AA^T$.
+	\item For example:
+	\begin{enumerate}
+		\item[i)] 
+		Let $A$ have independent columns (``full column rank'').\\
+		This is equivalent to $\underbrace{\text{ker}(A)}_{\textcolor{blue}{=\text{ker}(A^TA)}}=\{0\}$, thus also the columns of $A^TA$ are independent, which implies that $A^TA$ is invertible.
+		\item[ii)] Let 	$A^TA$ be positive definite.\\
+		Then its eigenvalues are strictly positive. Since $A^TA$ is symmetric we can use its eigendecomposition to conclude that $A^TA$ is invertible.
+	\end{enumerate}
+\end{enumerate}
+}

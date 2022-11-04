@@ -1,0 +1,13 @@
+{
+    "filename": "GeneralLeastSquare.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Least Squares Problems",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{General Least Square}\nLet $c_0, c_1, \\dots, c_n \\in \\mathbb{R}$ be unknown coefficients.\nWe are given a sample of size $s$ of measurements $(z_i, y_i)$ where $z_i\\in\\mathbb{R}^d$ and $y_i\\in\\mathbb{R}$ for $i=1,\\dots,s$. Furthermore let\n$f_1, \\dots, f_n$ be functions $f_k:\\mathbb{R}^d \\rightarrow \\mathbb{R}$ for $k = 1,\\dots,n$. \nWe assume that the relation between $z$ and $y$ is of the form\n\\begin{align*}\n\\sum_{k=1}^n c_0 + f_k(z)c_k \\approx y.\n\\end{align*}\nPlease set up the design matrix of the problem\n\\begin{align*}\n\\min \\limits_{c_0, c_1, \\dots, c_n} \\sum_{i=1}^s \\left( \\sum_{k=1}^n c_0 + f_k(z_i)c_k - y_i\\right)^2.\n\\end{align*}",
+    "solution": "{\\color{solution}\n\\begin{itemize}\n\t\\item \n\tGiven: $s$ measurements $(z_i,y_i),~i=1,\\dots,s$\n\t\\item \n\tModel: $f(z):=\\sum_{k=1}^{n}c_0+f_k(z)c_k\\approx y$\n\t\\item \n\tUnknown coefficients: $x:=(c_0, c_1,\\dots,c_n)\\in\\mathbb{R}^{n+1}$\n\t\\item \n\tLQ-formulation:\n\t\\begin{align*}\n\ti=1:~~&\\sum_{k=1}^{n}c_0+f_k(z_1)c_k = f(z_1) \\stackrel{!}{=}y_1\\\\\n\t\\vdots\\\\\n\ti=s:~~&\\sum_{k=1}^{n}c_0+f_k(z_s)c_k = f(z_s)\\stackrel{!}{=}y_s\\\\\n\t\\Leftrightarrow~~&\\underbrace{\\begin{pmatrix}1&f_1(z_1)&\\cdots&f_n(z_1)\\\\\\vdots&\\vdots&\\ddots&\\vdots\\\\1&f_1(z_s)&\\cdots&f_n(z_s)\\end{pmatrix}}_{\\textcolor{blue}{=:A}}\\underbrace{\\begin{pmatrix}c_0\\\\c_1\\\\\\vdots\\\\c_n\\end{pmatrix}}_{\\textcolor{blue}{=:x}}=\\underbrace{\\begin{pmatrix}y_1\\\\\\vdots\\\\y_s\\end{pmatrix}}_{\\textcolor{blue}{=:b}}\\\\\\Leftrightarrow~~&Ax=b\n\t\\end{align*}\n\tThus $\\hat{\\alpha}$ is LQ solution if it minimizes \n\t$$\n\t\\min_{x\\in\\mathbb{R}^{n+1}}\\|Ax-b\\|_2^2.\n\t$$\n\tWe find:\n\t\\begin{align*}\n\t\\|Ax-b\\|_2^2 &=\\sum_{i=1}^{s}[Ax-b]_i^2 =\\sum_{i=1}^{s}(f(z_i)-y_i)^2\\\\\n\t&=\\sum_{i=1}^{s}\\underbrace{\\left(\\sum_{k=1}^{n}c_0+f_k(z_i)-y_i\\right)^2}_{\\textcolor{blue}{\\in\\mathbb{R}~(\\text{note: for}~r\\in\\mathbb{R}:~r^2=\\|r\\|_2^2)}}^2\n\t\\end{align*}\n\\end{itemize}\n}",
+    "id": ""
+}

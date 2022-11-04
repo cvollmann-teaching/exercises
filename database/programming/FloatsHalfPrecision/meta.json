@@ -1,0 +1,12 @@
+{
+    "filename": "floatsHalfPrecision.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Half Precision: \\texttt{s10e5}}\\\\\nBetrachten Sie die bin\u00e4ren Gleitkommazahlen gem\u00e4\u00df der Parameter \\texttt{s10e5}.\n\\begin{enumerate}\n\t\\item Ermitteln Sie den Verschiebewert $B$ (\\texttt{BIAS}) f\u00fcr den Exponenten gem\u00e4\u00df des IEEE-754 Standards, sowie den Exponentenwertebereich $e_{\\text{min}}$ und $e_{\\text{max}}$.\n\t\\item Mit vielen Bits wird eine Gleitkommazahl hier gespeichert? Erkl\u00e4ren Sie die Bedeutung der einzelnen Bits und wie daraus die Gleitkommazahl gebildet wird.\n\t\\item Bestimmen Sie die relative Maschinengenauigkeit \\texttt{macheps}.\n\t\\item Geben Sie die Bitmuster mit zugeh\u00f6rigem (ungef\u00e4hren) Zahlenwert an:\n\t\\begin{enumerate}\n\t\t\\item Signed zero und signed infinity:  $\\pm 0$, $\\pm \\infty$\n\t\t\\item Kleinste und gr\u00f6\u00dfte positive normale Zahl\n\t\t\\item Kleinste und gr\u00f6\u00dfte positive denormalisierte Zahl (\\textit{subnormals})\n\t\t\\item Kleinste und gr\u00f6\u00dfte positive Nichtzahl (\\texttt{NaN})\n\t\t\\item \\texttt{0011110000000001}\n\t\t\\item $\\texttt{fl}(-4)$\n\t\t\\item $\\texttt{fl}(\\frac{2}{3})$, wobei $\\frac{2}{3} = (0.\\overline{10})_2=(0.10101010\\ldots)_2$\n\t\\end{enumerate}\n\\end{enumerate}",
+    "solution": "\\textbf{Gleitkommazahlen sind rational und enthalten Ganzzahlen}\\\\\n Es seien $b\\geq 2$ eine Basis, $N\\in \\mathbb{N}$ eine Mantissenl\u00e4nge und $e_{\\text{min}}, e_{\\text{max}} \\in \\mathbb{Z}$ der Exponentenwertebereich. Zeigen Sie, dass f\u00fcr die dadurch definierte Menge von Gleitkommazahlen $\\mathbb{F} := \\mathbb{F}(N,b,e_{\\text{min}}, e_{\\text{max}})$ folgendes gilt:\n \\begin{enumerate}\n \t\\item Gleitkommazahlen sind rational: $\\mathbb{F} \\subset \\mathbb{Q}$.\n \t\\item Die ganzen Zahlen au\u00dfer Null innerhalb des Wertebereichs sind enthalten: $\\left([-\\texttt{OFL}, \\texttt{OFL}] \\cap \\mathbb{Z}\\setminus\\{0\\}\\right)\\subset \\mathbb{F}$, wobei \\texttt{OFL} das Maximum der Menge $\\mathbb{F}$ bezeichent (\\textit{Overflow-Level}) bezeichnet.\n \\end{enumerate}"
+}

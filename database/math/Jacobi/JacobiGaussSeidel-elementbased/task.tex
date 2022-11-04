@@ -1,0 +1,32 @@
+\section{Weighted Jacobi, Gauß--Seidel and Sucessive Over--Relaxation}
+\textbf{\color{solution}*9 Bonus points*}\\Let $A\in \Rnn$ be a matrix with nonzero diagonal entries $a_{ii}\neq 0$ and consider the splitting $A=L+D+U$ into lower triangular, diagonal and upper triangular part of $A$. Also recall that splitting methods are of the form
+$$x^{k+1} = (I-NA)x^k + Nb, $$
+where the significant matrix $M:=I-NA$ is called iteration matrix.\\
+
+Show the following:
+\begin{enumerate}
+	\item \textbf{Weighted Jacobi:} $N=\theta D^{-1}$
+	\begin{itemize}
+		\item For the iteration matrix we find
+		$$M_{Jac} := I-\theta D^{-1}A = (1-\theta)I - \theta D^{-1}(L+U) $$
+		\item The $i$-the component of $x^{k+1}=(I-NA)x^k + Nb$ is given by
+		$$x^{k+1}_i = (1-\theta)x_i^k +  \frac{\theta}{a_{ii}}\left( b_i - \sum_{j\neq i} \,a_{ij} \, x_j^{k+1}\right).$$
+	\end{itemize} 
+	\item \textbf{Gauß--Seidel:} $N=(L+D)^{-1}$
+		\begin{itemize}
+		\item For the iteration matrix we find
+		$$M_{GS} := I- (L+D)^{-1}A =-(L+D)^{-1}U$$
+		\item The $i$-the component of $x^{k+1}=(I-NA)x^k + Nb$ is given by
+		$$x^{k+1}_i =  \frac{1}{a_{ii}}\left( b_i - \sum\limits^{i-1}_{j=1} \,a_{ij} \, x_j^{k+1} -  \sum\limits^n_{j = i+1} \, a_{ij} \, x^k_j  \right).$$
+	\end{itemize} 
+	\item \textbf{Sucessive Over--Relaxation (variant of Gauß-Seidel):}  $N=\theta\cdot(\theta L+D)^{-1}$
+		\begin{itemize}
+	\item For the iteration matrix we find
+	$$M_{SOR} :=I-\theta( \theta L+D )^{-1}A=(\theta L +D)^{-1} ((1-\theta)D-\theta U).$$
+		\item  The $i$-the component of $x^{k+1}=(I-NA)x^k + Nb$ is given by
+	$$ x^{k+1}_i = (1-\theta)x_i^k+   \frac{\theta}{a_{ii}}\left( b_i - \sum\limits^{i-1}_{j=1} \,a_{ij} \, x_j^{k+1} -  \sum\limits^n_{j = i+1} \, a_{ij} \, x^k_j  \right).$$
+	\end{itemize}
+{\color{navy}\textit{Remark:} We observe that SOR for $\theta = 1$ is Gauß--Seidel and otherwise is a combination of the previous step $x^k$ and the Gauß-Seidel update. For spd matrices it allows for $\theta > 1$ which is why it is called over--relaxation.}
+\end{enumerate}
+\textit{Hint:} For 2. and 3. cast the formulas into the form $x^{k+1}=T^{-1}w$ for some lower triangular matrix $T$ and some vector $w$ and then use forward substitution.\\~\\
+%{\color{navy}\textit{Note:} If we use a relaxation parameter $\theta\neq 1$, we see in both methods that the new iterate is a combination of the old iterate $(1-\theta)x^k$ and a new term $\theta\left(\cdots\right)$. For $\theta = 1$ it is solely the new term. For $\theta \in (0,1)$ it is a convex combination.}

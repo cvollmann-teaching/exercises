@@ -1,0 +1,13 @@
+{
+    "filename": "CompanionMatrix.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Eigenvalues",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Analysing an Algorithm}\n%\\begin{algorithm}\n%\t\\fvset{numbers=left}\n%\t\\begin{Verbatim}\n%\tdef r(coeffs):\\\\\n%\t~~~~coeffs = np.array(coeffs[:-1])\n%\tn = len(coeffs)\n%\tA = np.eye(n, k = -1)\n%\tA[:,-1] = -coeffs\n%\tlam, v = np.linalg.eig(A)\n%\treturn lam\n%\t\\end{Verbatim}\n%\\caption{Unknown Python code}\n%\\end{algorithm}\ndef r(coeffs):\\\\\n\\textcolor{white}{dddd}coeffs = np.array(coeffs[:-1])\\\\\n\\textcolor{white}{dddd}n = len(coeffs)\\\\\n\\textcolor{white}{dddd}A = np.eye(n, k = -1)\\\\\n\\textcolor{white}{dddd}A[:,-1] = -coeffs\\\\\n\\textcolor{white}{dddd}lam, v = np.linalg.eig(A)\\\\\n\\textcolor{white}{dddd}return lam\\\\\n%\tPlease answer the following questions.\n\\begin{enumerate}\n\t\\item Which algorithm is implemented in the function above? What role does the parameter \\verb|coeffs| play?\n\t\\item Which value \\verb|lam| will the function return at \\verb|coeffs = [-1,0,1]|? (No proof needed)\n\t\\item What would the function return at \\verb|coeffs = [-1,0,-1]|? Can you give a suggestion for improvement, in order to make\n\tthe function more robust to bad input data? \n\\end{enumerate}",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item \"coeffs\" are the coefficients of a polynomial and the function $r$ finds the roots of the polynomial.\n\t\\item The corresponding polynomial is $x^2-1$. Hence lam$=1,-1$.\n\t\\item In case of $[-1,0,1]$ we get the same answer. The case of non-normed polynomials should be handled.\n\\end{enumerate}\n}",
+    "id": ""
+}

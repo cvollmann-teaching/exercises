@@ -1,0 +1,13 @@
+{
+    "filename": "TransposeMatRules.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "{\\color{navy}\n\t\n\\textbf{\\large Computation Rules for Matrices II}\\\\\n\nLet $A\\in\\mathbb{R}^{m\\times r}$ and $B\\in\\mathbb{R}^{r\\times m}$. Then\n\\begin{itemize}\n    \\item[i)] $(A^\\top)^\\top =A$,\n    \\item[ii)] $(AB)^\\top=B^\\top A^\\top$ ,\n    \\item[iii)] $(A+B)^\\top= A^\\top + B^\\top$ ,\n    \\item[iv)] for $A\\in GL(n,\\mathbb{R})$ we have $(A^{\\top})^{-1}=(A^{-1})^{\\top}$.\n\\end{itemize}\n}",
+    "solution": "\\begin{align*}\n&C := A \\cdot B, C := [c_{ij}]_{ij}, c_{ij} = \\sum\\limits_{k=1}^n a_{ik}b_{kj}, A^T = [a^\\prime_{ij}]_{ij}, B^T = [b^\\prime_{ij}]_{ij},\\\\\n&[C]_{ij} = C_{ij} = \\sum\\limits_{k=1}^n a_{jk}b_{ki} = \\sum\\limits_{k=1}^n a^\\prime_{kj}b^\\prime_{ik} = \\sum\\limits_{k=1}^n b^\\prime_{ik}a^\\prime_{kj} = [B^T A^T]_{ji} \\Rightarrow C^T = B^T A^T\\\\\n&A \\in GL(n, \\mathbb{F}), A^{-1}A = I_n \\;\\; \\Rightarrow \\;\\; \\underbrace{(A^{-1}A)^T}_{A^T (A^{-1})^T} = I_n^T = I_n\\\\\n&\\Rightarrow (A^{-1})^T = (A^T)^{-1}, \\text{because Inverse is unique}\n\\end{align*}\n",
+    "id": ""
+}

@@ -1,0 +1,13 @@
+{
+    "filename": "ComputeEigenvalues_1.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Compute the eigenvalues of the following matrices.\n\n\\begin{enumerate}\n\\item \n\t$$\n\tA = \\begin{pmatrix}\n\t1&2\\\\\n\t2&1\n\t\\end{pmatrix}\n\t$$\n%\n\\item\n$$\nB = \\begin{pmatrix}\n\t0&0&0\\\\\n\t1&1&3\\\\\n\t2&0&1\n\t\\end{pmatrix}\n$$\n%\n\\item \n$$C=\n\\begin{pmatrix}\n\\pi& 0& 0& 0 &0\\\\\n1 & -7&  0& 0 &0\\\\\n2 & 0& i  & 0 &0\\\\\n3 & 0& 8  & 0 & 0\\\\\n4 & 7& 9& 0& \\frac{1}{2}\n\\end{pmatrix}\n$$\n\\end{enumerate}\n ",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item \n\t\\begin{align*}\n\tA-\\lambda I=\\begin{pmatrix}\\sqrt{2}-\\lambda&\\pi\\\\0&1-\\lambda\\end{pmatrix}~~\\textcolor{exampoints}{(1P)}~~&\\Rightarrow~~0\n\t=\\text{det}(D-\\lambda I)\n\t=(\\sqrt{2}-\\lambda)(1-\\lambda)~~\\textcolor{exampoints}{(1P)}\\\\\n\t&\\Rightarrow~~\\sigma(A)=\\{\\sqrt{2},1\\}~~\\textcolor{exampoints}{(2P)}\n\t\\end{align*}\n\t---\\\\\n\tAlternatively: Argue via triangular matrix \\textcolor{exampoints}{(2P)}\n\t~\\\\\n\t\\item \n\t\\begin{align*}\n\tB-\\lambda I=&\\begin{pmatrix}-\\lambda&0&0\\\\1&(1-\\lambda)&3\\\\2&0&(1-\\lambda)\\end{pmatrix}\\textcolor{blue}{\\begin{matrix}-\\lambda&0\\\\1&(1-\\lambda)\\\\2&0\\end{matrix}}~~\\textcolor{exampoints}{(1P)}~~\\\\\n\t\t&\\\\\n\t&\\Rightarrow~~0\n\t=\\text{det}(E-\\lambda I)\n\t=-\\lambda(1-\\lambda)^2~~\\textcolor{exampoints}{(1P)}\\\\\n\t&\\Rightarrow~~\\sigma(B)=\\{0,1\\}~~\\textcolor{exampoints}{(2P)}\n\t\\end{align*}\n\\end{enumerate}\n}",
+    "id": ""
+}

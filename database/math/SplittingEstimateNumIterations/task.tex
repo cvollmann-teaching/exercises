@@ -1,0 +1,9 @@
+\section{Estimate Number of Iterations}
+Consider the linear system $Ax=b$ with
+$$A=\begin{pmatrix}
+3&-1\\-1&3
+\end{pmatrix}.$$
+
+Assume you want to solve this system with the Richardson, Jacobi and Gauß-Seidel method, respectively, without relaxation ($\theta = 1$). Estimate the number $m$ of iterations that are needed for each method (if convergent) to reduce the error by a factor of $\varepsilon=10^{-6}$, i.e.,
+	$$\|x_k-x\|_2 \leq \varepsilon\|x_0-x\|_2.$$
+	\textit{Hint: }Use the error estimate from previous exercises. You can later numerically verify your results.

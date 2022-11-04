@@ -1,0 +1,77 @@
+{
+\color{solution}
+$$
+A=\begin{pmatrix}3&0\\4&5\end{pmatrix},\ \ A^TA=\begin{pmatrix}25&20\\20&25\end{pmatrix}
+$$
+\begin{enumerate}
+	\item[i)]
+	\underline{COMPUTE SVD:}
+	\begin{enumerate}
+		\item[1.]
+		Compute $\sigma(A^TA)$ and corresponding eigenvectors.
+		\begin{itemize}
+			\item 
+			Eigenvalues:
+			\begin{align*}
+			&0\stackrel{!}{=} \text{det}(A^TA-\lambda I)= \text{det}\begin{pmatrix}25-\lambda&20\\20&25-\lambda\end{pmatrix}=(25-\lambda)^2-400\\
+			&\Leftrightarrow\ \ 25-\lambda= \pm\sqrt{400}=\pm20\\
+			&\Leftrightarrow\ \ \lambda_1=45,\ \ \lambda_2=5.
+			\end{align*}
+			\item 
+			Eigenvectors $v_1$ and $v_2$ are solutions of $(A^TA-\lambda_i I)v_i=0$.
+			\begin{enumerate}
+				\item[a)]
+				\begin{align*}
+				&(A^TA-\lambda_1 I)=\begin{pmatrix}-20&20\\20&-20\end{pmatrix}\\
+				&\left(
+				\begin{tabular}{cc|c} -20&20&0\\20&-20&0\end{tabular}
+				\right)\rightsquigarrow 
+				\left(
+				\begin{tabular}{cc|c} -20&20&0\\0&0&0\end{tabular}
+				\right)\\
+				&\Rightarrow\ \  -x_1+x_2=0\ \ \Rightarrow\ \ x_1=x_2
+				\end{align*}
+				$\Rightarrow\ \ v_1\in\{s\begin{pmatrix}1\\1\end{pmatrix}:s\in\mathbb{R}\}$\\
+				Choose $s=\frac{1}{\sqrt{2}}$ and $v_1 =\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}$.
+				\item[b)] 
+				\begin{align*}
+				&(A^TA-\lambda_2 I)=\begin{pmatrix}20&20\\20&20\end{pmatrix}\\
+				&\left(
+				\begin{tabular}{cc|c} 20&20&0\\20&20&0\end{tabular}
+				\right)
+				\rightsquigarrow \left(
+				\begin{tabular}{cc|c} 20&20&0\\0&0&0\end{tabular}
+				\right)\\&
+				\Rightarrow\ \  x_1+x_2=0\ \ \Rightarrow\ \ x_1=-x_2.
+				\end{align*}
+				$\Rightarrow\ \ v_2\in\{s\begin{pmatrix}-1\\1\end{pmatrix}:s\in\mathbb{R}\}$\\
+				Choose $s=\frac{1}{\sqrt{2}}$ and $v_2 =\frac{1}{\sqrt{2}}\begin{pmatrix}-1\\1\end{pmatrix}$.
+			\end{enumerate}
+		\end{itemize}
+		\item[2.]
+		Set $\sigma_1:=\sqrt{45}=3\sqrt{5}$, $\sigma_2:=\sqrt{5}$.
+		~\\ 
+		Compute $u_i$:
+		\begin{align*}
+		&u_1=\frac{1}{\sigma_1}Av_1
+		=\frac{1}{3\sqrt{5}}\frac{1}{\sqrt{2}}\begin{pmatrix}3&0\\4&5\end{pmatrix}\begin{pmatrix}1\\1\end{pmatrix}
+		=\frac{1}{3\sqrt{1}}\begin{pmatrix}3\\9\end{pmatrix}=\frac{1}{\sqrt{10}}\begin{pmatrix}1\\3\end{pmatrix},\\
+		&u_2=\frac{1}{\sigma_2}Av_2
+		=\frac{1}{\sqrt{5}}\frac{1}{\sqrt{2}}\begin{pmatrix}3&0\\4&5\end{pmatrix}\begin{pmatrix}-1\\1\end{pmatrix}
+		=\frac{1}{\sqrt{10}}\begin{pmatrix}-3\\1\end{pmatrix}.
+		\end{align*}
+		\item[3.]
+		Since $2=r = m=n$, we are done.
+	\end{enumerate}
+	\item[ii)]
+	\underline{A as sum of rank-1 matrices:}
+	\begin{align*} 
+	A &=\sigma_1u_1v_1^T + \sigma_2u_2v_2^T
+	=\underbrace{\frac{3\sqrt{5}}{\sqrt{10}\sqrt{2}}}_{\textcolor{blue}{\frac{3}{2}}}\begin{pmatrix}1\\3\end{pmatrix}(1\ 1)+\underbrace{\frac{\sqrt{5}}{\sqrt{10}\sqrt{2}}}_{\textcolor{blue}{\frac{1}{2}}}\begin{pmatrix}-3\\1\end{pmatrix}(-1\ 1)\\
+	&=\frac{3}{2}\begin{pmatrix}1&1\\3&3\end{pmatrix}+\frac{1}{2}\begin{pmatrix}3&-3\\-1&1\end{pmatrix}.
+	\end{align*}
+	\item[iii)]
+	\underline{A invertible?}\\
+	Yes, since $\sigma_1\neq 0\neq\sigma_2$ and thus $\Sigma$ is invertible implying that the product $U\Sigma V^T=A$ is invertible with inverse $A^{-1}=V\Sigma^{-1}U^T$.
+\end{enumerate}
+}

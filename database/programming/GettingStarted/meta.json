@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progGettingStarted.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\begin{enumerate}\n\t\\item \u00d6ffnen sie ein Juypter Notebook und f\u00fchren sie den Befehl\n\t\\begin{verbatim}\n\t\tprint(\"Hello World\")\n\t\\end{verbatim}\n\taus.\n\t\\item F\u00fcgen Sie mit dem \\verb|+|-Button eine weitere Zelle hinzu und f\u00fchren sie die Befehle\n\t\\begin{verbatim}\n\t\timport sys\n\t\tprint(\"Python Version\")\n\t\tprint(sys.version)\n\t\\end{verbatim}\n\taus.\n\t\\item Erstellen Sie eine neue Zelle. \u00c4ndern Sie die Zelle zum Typ \\verb|Raw| und f\u00fcllen Sie ihn testweise mit einem beliebigen Pseudocode.\n\t\\item  Erstellen Sie eine neue Zelle. \u00c4ndern Sie die Zelle zum Typ \\verb|Markdown| und versuchen Sie die Formel\n\t$$\n\t\t\\sum_{i=1}^n i = n(n+1)/2\n\t$$\n\thervorzubringen.\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progGettingStarted_solution.py}"
+}

@@ -1,0 +1,13 @@
+{
+    "filename": "ComplexNumbers.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "{\n\\section{Complex Numbers}\nLet $i$ be the imaginary unit, i.e., $i^2 = -1$.\nPlease cast the following complex numbers into the format $z=x + iy$.\n\\begin{enumerate}\n\t\\item $(4+ 5i)(4 - 5i)$\n\t\\item $\\frac{2+3i}{4 + 5i}$\n\t\\item $\\sqrt{16b} + \\sqrt{3a - 12a}$\n\\end{enumerate}\n}",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item $(4+5i)(4-5i) = 4^2-(5i)^2 = 16+25 = 41$\n\t\\item $\\frac{2+3i}{4+5i} = \\frac{(2+3i)(4-5i)}{41}=\\frac{8-10i+12i-15i^2}{41} =\\frac{23+2i}{41}$\n\t\\item $\\sqrt{16b}+\\sqrt{3a-12a}=4\\sqrt{b}+\\sqrt{-9a} =4\\sqrt{b}+i3\\sqrt{a}$\n\\end{enumerate}\n}",
+    "id": ""
+}

@@ -1,0 +1,13 @@
+{
+    "filename": "Injectivity.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Result for Injective Funtions}\nLet $f: X \\rightarrow Y$ be an injective function and $A,B \\subset X$. Please show that\n\\begin{align*}\nf(A) \\cap f(B) = f(A \\cap B).\n\\end{align*}\n\\textit{Hint:} Split up the equality ``$=$'' into the parts ``$\\subset$'' and  ``$\\supset$''. One direction is straightforward the other one requires, that $f$ is injective.",
+    "solution": "{\\color{solution}\n\\begin{itemize}\n\t\\item \n\t\\underline{$f(A \\cap B) \\subset f(A) \\cap f(B)$:}\\\\\n\tWe have\n\t$$\n\tf(A \\cap B) = f(A \\cap B) \\cap f(B \\cap A) \\subset f(A) \\cap f(B).\n\t$$\n\t\\item \n\t\\underline{$f(A) \\cap f(B) \\subset f(A \\cap B) $:}\\\\\n\tLet $y \\in f(A) \\cap f(B),\\\\\n\t\\Rightarrow~~\\exists~x_a\\in A,x_b\\in B:~f(x_a)=y=f(x_b)$.\\\\~\\\\\n\tSince $f$ is injective, we find $x_a=x_b$\\\\\n\t$\\Rightarrow~~x_a,x_b\\in A\\cap B\\\\\n\t\\Rightarrow~~y\\in f(A\\cap B)$.\\\\\n\\end{itemize}\n}",
+    "id": ""
+}

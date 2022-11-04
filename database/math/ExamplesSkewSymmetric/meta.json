@@ -1,0 +1,13 @@
+{
+    "filename": "ExamplesSkewSymmetric.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Examples for (skew-)symmetric Matrices}\nGive examples for symmetric and skew-symmetric (exercise \\ref{ex:skewsymm}) matrices $A \\in \\mathbb{R}^{2 \\times 2}$ and discuss their geometric behavior.",
+    "solution": "{\\color{solution}\n\n}",
+    "id": ""
+}

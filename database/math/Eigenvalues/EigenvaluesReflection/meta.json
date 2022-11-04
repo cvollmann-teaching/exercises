@@ -1,0 +1,13 @@
+{
+    "filename": "EigenvaluesReflection.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = en_US\n%\nLet $$Q := \\begin{pmatrix}\n0 &-1&0\\\\\n1 & 0 &0\\\\\n0 & 0 & 1\n\\end{pmatrix} .$$\n\\begin{enumerate}\n\t\\item What can you say about the columns of $Q$? Justify your answer rigorously.\n\t\\item Compute the determinant of $Q$ and the eigenvalues of $Q$.\n\t\\item Interpret the function $\\mathbb{R}^3 \\to \\mathbb{R}^3, x \\mapsto Qx$ geometrically.\n\\end{enumerate}\n",
+    "solution": "{\n\\color{solution}\n\\begin{enumerate}\n\t\\item \n\t\\begin{itemize}\n\t\t\\item \n\t\torthonormal columns $\\Rightarrow$ $Q$ is orthogonal, i.e., $Q^TQ = QQ^T = I$\n\t\t\\item \n\t\t$Q$ is invertible, $Q^{-1}=Q^T$\n\t\\end{itemize}\n\t\\item \n\t\\begin{itemize}\n\t\t\\item \n\t\tDeterminant (by Sarrus Rule): $\\text{det}(Q) \\stackrel{\\textcolor{blue}{[Sarrus]}}{=} 0+0+0-0-0-(-1) = 1$\\\\\n\t\t\\textcolor{blue}{(\\underline{Recall:} For any orthogonal matrix $Q$ we have $|\\text{det}(Q)| = 1$)}\n\t\t\\item \n\t\tSimilarly we find the eigenvalues:\n\t\t\\begin{align*} \n\t\t0 \\stackrel{!}{=} \\text{det}(q-\\lambda I)& \\stackrel{\\textcolor{blue}{(Sarrus)}}{=} (-\\lambda)\\cdot(-\\lambda)\\cdot(1-\\lambda) + (1-\\lambda) = (1-\\lambda)(\\lambda^2+1)\\\\\n\t\t&\\Leftrightarrow (1-\\lambda)=0\\ \\text{or}\\ (\\lambda^2+1)=0\\Leftrightarrow \\lambda=1\\ \\text{or}\\ \\lambda = \\pm i\n\t\t\\end{align*}\n\t\tThus: The spectrum of $Q$ is given by $\\sigma(Q)=\\{1,i,-i\\}$\n\t\\end{itemize}\n\t\\item \n\tQ is a rotation of $90^o$ around the $x_3$-axis:\n\t\\begin{align*} \n\t& Q = Q_{\\alpha = \\frac{\\pi}{2}} \n\t= \\begin{pmatrix} cos(\\alpha)&-sin(\\alpha)&0\\\\sin(\\alpha)&cos(\\alpha)&0\\\\0&0&1\\end{pmatrix}\\\\\n\t&Q\\begin{pmatrix}x_1\\\\x_2\\\\x_3\\end{pmatrix} \n\t= \\begin{pmatrix}\\textcolor{blue}{-x_2}\\\\\\textcolor{blue}{x_1}\\\\\\textcolor{red}{x_3}\\end{pmatrix}\n\t\\end{align*}\n\tWe can see, that $Q$ $\\textcolor{blue}{\\text{switches}~x_1~\\text{and}~x_2~\\text{with a sign change for}~x_2}$ and $\\textcolor{red}{x_3~\\text{remains the same}}.$\n\\end{enumerate}\n\n}",
+    "id": ""
+}

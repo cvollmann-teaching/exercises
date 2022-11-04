@@ -1,0 +1,13 @@
+{
+    "filename": "LUProof.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = en_US\n\\textbf{Proof for LU decomposition (with row pivoting)}\n\nLet $m\\in\\mathbb{N}$.  As above, let $P_{ik_i} \\in \\mathbb{R}^{m \\times m}$ be the permutation matrix which results from interchanging the $i$-th and $k_i$-th column ($k_i \\geq i$) of the identity matrix in $\\mathbb{R}^{m \\times m}$. Further for $\\ell_j := (0,\\ldots,0,\\ell_{j+1,j},\\ldots,\\ell_{m,j})^\\top\\in\\mathbb{R}^m$ and the $j$-th unit vector $e_j\\in\\mathbb{R}^m$, let $L_j := I + \\ell_je_j^\\top \\in \\mathbb{R}^{m\\times m}$.\nThen show that for all $1 \\leq j< i \\leq k_i\\leq m$ we have\n$$P_{ik_i} L_j = \\widehat{L}_j P_{ik_i}$$\nwhere $\\widehat{L}_j :=  I + (P_{ik_i}\\ell_j)e_j^\\top$.",
+    "solution": "{\n\\color{solution}\nWe find\n \\begin{align*}\n P_{ik_i} L_j\n  &=  P_{ik_i}\\left(I + \\ell_je_j^\\top \\right)\\\\\n  &=  P_{ik_i} +  P_{ik_i}\\ell_je_j^\\top \\\\\n  &=  P_{ik_i} +  P_{ik_i}\\ell_je_j^\\top {\\color{cyan}P_{ik_i}^\\top P_{ik_i} }\\\\\n  &= (I +  P_{ik_i}\\ell_je_j^\\top  P_{ik_i}^\\top) P_{ik_i} \\\\\n  &= (I +  P_{ik_i}\\ell_j{\\color{cyan} (P_{ik_i}e_j)^\\top}) P_{ik_i} .\\\\\n  &= (I +  P_{ik_i}\\ell_j{\\color{cyan}e_j^\\top}) P_{ik_i} .\n \\end{align*}\n Since $j~{\\color{red}<} ~i \\leq k_i$ we find that $P_{ik_i}e_j=e_j$, since only zeroes are swapped.\n}\n",
+    "id": ""
+}

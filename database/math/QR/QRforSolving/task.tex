@@ -1,0 +1,31 @@
+\section{Solving Linear Systems using the $QR$ Decomposition}
+Let $A \in \mathbb{R}^{n \times n}$ and $b\in\mathbb{R}^{n}$ be given. Assume you already have the $QR$ decomposition of $A$, i.e., an orthogonal matrix $Q$ and an upper triangular matrix $R$, so that $A = QR$. Further assume that $R$ has \textit{nonzero} diagonal elements (i.e., $r_{ii}\neq 0$).
+\begin{enumerate}
+	\item How can you use the $QR$ decomposition $A = QR$ for solving a linear system of the form
+	$$Ax = b~~ ?$$
+%	\textit{Hint:} Use the fact that the inverse of a  orthogonal matrices $Q$ is given by $Q^{-1} = Q^T$ and Exercise 2.  
+	\item Use your idea from 1. to solve the system $Ax = b$ where
+	$$A: =
+	\begin{pmatrix}
+		1 & 1 & 0 \\
+	    1 & 0 & 1 \\
+		0 & 1 & 1 \\
+	\end{pmatrix} = QR,~~ \text{with}~~~
+	Q=
+	\begin{pmatrix}
+	\frac{1}{\sqrt{2}} &\frac{1}{\sqrt{6}} & -\frac{1}{\sqrt{3}} \\
+	\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{6}} & \frac{1}{\sqrt{3}}\\
+	0 & \frac{2}{\sqrt{6}} & \frac{1}{\sqrt{3}} \\
+	\end{pmatrix},~
+	R =
+	\begin{pmatrix}
+	\frac{2}{\sqrt{2}} & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+	0 & \frac{3}{\sqrt{6}} & \frac{1}{\sqrt{6}} \\
+	0 & 0 & \frac{2}{\sqrt{3}} \\
+	\end{pmatrix}~~\text{and}~
+	~b := \begin{pmatrix}
+	1 \\ 1\\1
+\end{pmatrix} .	$$
+~\\
+\textit{Remark:} The square root terms will cancel out nicely while solving for $x$.
+\end{enumerate}

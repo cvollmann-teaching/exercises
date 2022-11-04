@@ -1,0 +1,12 @@
+\section{General Least Square}
+Let $c_0, c_1, \dots, c_n \in \mathbb{R}$ be unknown coefficients.
+We are given a sample of size $s$ of measurements $(z_i, y_i)$ where $z_i\in\mathbb{R}^d$ and $y_i\in\mathbb{R}$ for $i=1,\dots,s$. Furthermore let
+$f_1, \dots, f_n$ be functions $f_k:\mathbb{R}^d \rightarrow \mathbb{R}$ for $k = 1,\dots,n$. 
+We assume that the relation between $z$ and $y$ is of the form
+\begin{align*}
+\sum_{k=1}^n c_0 + f_k(z)c_k \approx y.
+\end{align*}
+Please set up the design matrix of the problem
+\begin{align*}
+\min \limits_{c_0, c_1, \dots, c_n} \sum_{i=1}^s \left( \sum_{k=1}^n c_0 + f_k(z_i)c_k - y_i\right)^2.
+\end{align*}

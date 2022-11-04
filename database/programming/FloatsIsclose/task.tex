@@ -1,0 +1,23 @@
+Es seien $r_{tol} = 10^{-5}$ und $a_{tol} = 10^{-8}$. Wir bezeichnen mit \verb|isclose(a, b)| eine Funktion die prüft, ob 
+die Zahlen $a$ und $b$ nahe beieinander sind, genauer ob
+$$
+ |a-b| \leq (a_{tol} + r_{tol} |b|).
+$$
+Im Folgenden wollen wir nun die Funktion \verb|isclose(a, b)| implementieren. Implementieren Sie dazu die unten angegebenen Funktionen und setzen Sie sie zusammen.
+\begin{enumerate}
+\item Die Funktion \verb|sign(x)| gibt für eine Zahl $x$ den Wert
+$$
+	\textnormal{sign}(x) =
+	\begin{cases}
+		1: &\textrm{ falls } x > 0 \\
+		0: &\textrm{ falls } x = 0 \\
+		-1: &\textrm{ sonst }
+	\end{cases}
+$$
+zurück. Implementieren Sie \verb|test_sign()| und \verb|sign(x)|.
+\item Die Funktion \verb|absolute(x)| gibt den Betrag $|x|$ einer Zahl $x$ zurück. Implementieren Sie  \verb|test_absolute()| und \verb|absolute(x)|.
+\item Implementieren sie \verb|test_isclose()| und \verb|isclose(a, b)|.
+\end{enumerate}
+
+\textbf{Hintergrund} Computer können die meisten Zahlen nicht exakt abspeichern. Es ergibt für $x,y \in \mathbb{R}$ i.d.R. keinen Sinn
+im Computer $x=y$ zu überprüfen.  \\

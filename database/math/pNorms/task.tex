@@ -1,0 +1,23 @@
+\textbf{The $p$-Norm}
+
+{\color{navy}
+A mapping $\|\cdot\|: \mathbb{R}^n  \to [0,+\infty)$ is called \textbf{norm} on $\mathbb{R}^n$ if it satisfies the three properties
+\begin{itemize}
+\item[i)] $\|x\|=0\ \Rightarrow x=0$ \hspace{3cm}\textit{(positive definite/ point separating)}
+\item[ii)] $\|r\cdot x\|=|r|\cdot \|x\|\, ,\ \forall x\in\mathbb{R}^n, r\in\mathbb{R}$ \hspace{0.43cm}\textit{(absolutely homogeneous)}
+\item[iii)] $\|x+y\|\le \|x\|+\|y\|, \ \forall x,y\in\mathbb{R}^n$ \hspace{0.44cm}\textit{(subadditive/ triangle inequality)}
+\end{itemize}
+The most common example is given by the \textbf{$p$-norm} for $p \in [1,+\infty)$, defined by
+$$\|x\|_p := \left(\sum_{i=1}^n |x_i|^p\right)^\frac{1}{p}\nonumber$$
+and the \textbf{supremum (or maximum) norm} defined by
+$$\|x\|_\infty := \max_{i= 1,\ldots, n} |x_i|.\nonumber$$
+\textit{Remark:} For a fixed $x\in\mathbb{R}^n$ one can show $\lim_{p \to \infty} \|x\|_p = \|x\|_\infty$.\\
+}
+~\\
+\textbf{Tasks:}\\
+\begin{enumerate}
+\item Draw the sets $\{x \in \mathbb{R}^2: \|x\|_p = 1 \}$ for $p = 1,2,\infty.$
+\item Show that the Euclidean norm $\|\cdot\|_2: \mathbb{R}^n  \to [0,+\infty),~ x \mapsto \sqrt{\sum_{i=1}^n x_i^2} = \sqrt{x^\top x}$ satisfies i)-iii).\\
+\textit{Hint: } For iii) use the Cauchy-Schwarz inequality from the lecture and show $\|x+y\|^2 \leq (\|y\|_2 + \|x\|_2)^2$ and also use  $|a+b| \leq |a| + |b|$ for $a,b\in\mathbb{R}$ (i.e., the triangle inequality is true on $\mathbb{R}^1$).
+
+\end{enumerate}

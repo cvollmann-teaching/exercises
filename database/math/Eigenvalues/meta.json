@@ -1,0 +1,13 @@
+{
+    "filename": "Eigenvalues.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Let $A \\in \\mathbb{F}^{n \\times n}$ be invertible and $\\lambda$ some eigenvalue of $A$.\n\\begin{enumerate}\n\t\\item Please show that $\\lambda \\neq 0$.\n\t\\item Please show that $\\frac{1}{\\lambda}$ is an Eigenvalue of $A^{-1}$.\n\\end{enumerate}",
+    "solution": "{\\color{solution}\nLet $(\\lambda,v)$ be eigenvalue-eigenvector-pair of A.\\\\\n$\\Leftrightarrow ~~Av=\\lambda v~~\\Leftrightarrow~~BAv=\\lambda Bv~~\\Leftrightarrow~~BA\\underbrace{B^{-1}\\textcolor{red}{B}}_{\\textcolor{blue}{=I}}\\textcolor{red}{v}=\\lambda\\textcolor{red}{Bv}$\\\\\n$\\Leftrightarrow~~(\\lambda,Bv)$ is eigenvalue-eigenvector-pair of $B$.\n}",
+    "id": ""
+}

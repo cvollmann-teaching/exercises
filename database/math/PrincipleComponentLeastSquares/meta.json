@@ -1,0 +1,13 @@
+{
+    "filename": "PrincipleComponentLeastSquares.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Principle Component and Least Squares}\n\\begin{enumerate}\n\t\\item  Use the function \\verb|np.random.multivariate_normal()| to create samples $(x_i,y_i) \\in \\mathbb{R}^2$ for $i = 1,\\dots, 100$ from a 2-dimensional multivariate normal distribution\n\twith mean $\\mu := (0,0)$ and covariance $$\\Sigma := \\begin{bmatrix}\n\t1&0.7\\\\\n\t0.7&1\n\t\\end{bmatrix}.$$\n\t\\item Solve the least squares problem\n\t\t\\begin{align*}\n\t\t\t\\min \\limits_{a} \\sum_{i=1}^{100} ( ax_i - y_i )^2\n\t\t\\end{align*}\n\t\tand plot the solution and the data points.\n\t\\item Make a principle component analysis of the data $v_i := (x_i,y_i) \\in \\mathbb{R}^2$ (note $m=2$ and $n=100$) and plot the first principle component into the plot of (ii).\n\\end{enumerate}",
+    "solution": "",
+    "id": ""
+}

@@ -1,0 +1,12 @@
+{
+    "filename": "progSpeicherplatz.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Speicherplatz f\u00fcr Matrizen}\\\\\nGegeben sei eine Matrix $A \\in \\R^{n \\times n}$. \n\\begin{enumerate}\n\t\\item Wie viel Speicherplatz in Bytes brauchen Sie, wenn Sie jeden Matrixeintrag als \\textit{float double precision} speichern?\n\t\\item Angenommen Ihr Computer hat 8 GB Arbeitsspeicher. Ab welcher Matrixdimension $n$ wird dieser Arbeitsspeicher \u00fcberschritten sein?\n\t\\item Angenommen die Matrix $A$ w\u00e4re tridiagonal. Wie viel Speicherplatz in Bytes brauchen Sie, wenn Sie die Matrix im CSR Format speichern? Gehen Sie der Einfachheit halber weiter davon aus, dass jede zu speichernde Zahl als float double precision gespeichert wird. Ab welcher Matrixdimension $n$ wird ein Arbeitsspeicher von 8 GB \u00fcberschritten sein?\n\\end{enumerate}\n\n\\textit{Hinweis }: 1 GB = $10^6$ Byte, 1 Byte = 8 Bits",
+    "solution": "1 Zahl in double = 64 Bit = 8 Byte \n$\\Rightarrow$ A Bytes = $n^2$8 Byte = $n^210^{-6}$ GB\n\n\nA Bytes $>$ 8 GB $\\Leftrightarrow$ $n^2 10 ^{-6} > 1 \\Leftrightarrow n>10^3$ \n"
+}

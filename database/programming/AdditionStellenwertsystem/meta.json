@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progAddBasis.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Addition in einem festen Stellenwertsystem}\\\\\nSchreiben Sie eine Funktion \\verb|add(a, b, basis)|, welche die entsprechenden Ziffern zweier Zahlen \\verb|a, b| als String in der Basis \\verb|basis| entgegennimmt, diese\naddiert und dann die entsprechenden Ziffern als String wieder ausgibt. Es gen\u00fcgt dabei, wenn die Zahlensysteme bis einschlie\u00dflich dem Hexadezimalsystem addiert werden k\u00f6nnen.\\\\\n\n\\textbf{Beispiel} \\\\\n\\verb|a = 'e', b = 'f'|, \\verb|basis = 16| \\\\\n\\verb|>> add(a, b, basis) = '1d'|",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progAddBasis_solution.py}"
+}

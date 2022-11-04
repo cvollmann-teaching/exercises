@@ -1,0 +1,13 @@
+{
+    "filename": "GramianMatrixShort.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Properties of $A^TA$ and $AA^T$}\nLet $A \\in  \\mathbb{R}^{m \\times n}$ be any matrix. Please show:\n\\begin{enumerate}\n\t\\item number example\n\t\\item Name two sufficient conditions for the invertibility of $A^TA$ and $AA^T$.\n\\end{enumerate}\n",
+    "solution": "{\n\\color{solution}\n\\begin{enumerate}\n\t\\item For example:\n\t\\begin{enumerate}\n\t\t\\item[i)] \n\t\tLet $A$ have independent columns (\"full column rank\").\\\\\n\t\tThis is equivalent to $\\underbrace{\\text{ker}(A)}_{\\textcolor{blue}{=\\text{ker}(A^TA)}}=\\{0\\}$, thus also the columns of $A^TA$ are independent, which implies that $A^TA$ is invertible.\n\t\t\\item[ii)] Let \t$A^TA$ be positive definite.\\\\\n\t\tThen its eigenvalues are strictly positive. Since $A^TA$ is symmetric we can use its eigendecomposition to conclude that $A^TA$ is invertible.\n\t\\end{enumerate}\n\\end{enumerate}\n}",
+    "id": ""
+}

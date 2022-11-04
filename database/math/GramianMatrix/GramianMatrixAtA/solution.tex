@@ -1,0 +1,18 @@
+{
+\color{solution}
+\begin{enumerate}
+	\item   \textcolor{red}{(2P)}
+	$(A^TA)^T \ \ =\ \ A^T(A^T)^T\ \ =\ \ A^TA$
+	\item  \textcolor{red}{(2P)}
+	$x^T(A^TA)x\ \ =\ \ (Ax)^TAx\ \ =\ \ \|{Ax}\|_2^2\ \ \geq\ \ 0\ \ \forall x\in\mathbb{R}^n$
+	\item 
+	We show mutual subset relation:
+	\begin{itemize}
+		\item  \textcolor{red}{(1P)}
+		\underline{"$\text{ker}(A)\subseteq \text{ker}(A^TA)$":}\\
+		Let $x\in \text{ker}(A) \stackrel{\textcolor{blue}{\text{Def.}\ \text{ker}(A)}}{\Rightarrow}Ax=0\Rightarrow A^TAx=0\stackrel{\textcolor{blue}{\text{Def.}\ \text{ker}(A^TA)}}{\Rightarrow}x\in \text{ker}(A^TA)$.
+		\item \textcolor{red}{(1P)} \underline{"$\text{ker}(A^TA)\subseteq \text{ker}(A)$":}\\
+		Let $x\in \text{ker}(A^TA) \stackrel{\textcolor{blue}{\text{Def.}}}{\Rightarrow}A^TAx=0\Rightarrow \underbrace{x^TA^TAx}_{\textcolor{blue}{=\|{Ax}\|_2^2}}=0 \stackrel{\textcolor{blue}{\text{norm} \|{\cdot}\|_2^2\ \text{is definite}}}{\Rightarrow}Ax=0 \stackrel{\textcolor{blue}{\text{Def.}}}{\Rightarrow}x\in \text{ker}(A)$.
+	\end{itemize}
+\end{enumerate}
+}

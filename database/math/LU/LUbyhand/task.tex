@@ -1,0 +1,65 @@
+% !TeX spellcheck = en_US
+\textbf{Solving Linear Systems using $LU$ Decomposition}
+%\textit{\color{red} More info during next class (May 18).}
+
+Consider the following linear systems.
+\begin{enumerate}
+	\item 		\begin{align*}
+	&2 x_1 + x_2 + 3x_3 = -3\\
+	&x_1 - x_2 - x_3 = 4\\
+	&3x_1 - 2x_2 + 2x_3 = 5
+	\end{align*}
+	\item \begin{align*}
+	&x_1 + 2 x_2 + 2x_3  = 1\\
+	&2x_1 + x_3 = 3\\
+	&3x_1 + 2x_2 + 3x_3 = 4
+	\end{align*}
+	\item \begin{align*}
+			&x_1 +  x_2 + 2x_3  = 2\\
+			&1x_1 -x_2 = 0\\
+			&2x_1 + 2x_3 = 1
+\end{align*}
+\end{enumerate}
+Cast them into the form $Ax = b$ and compute the $LU$-decomposition of $A$ by \underline{rigorously} applying Algorithm \ref{LUwithRowPiv} (i.e., use the pivot element determined in Line \ref{pivot}):
+\begin{itemize}
+	\item  Find the matrices $L$, $U$ and $P$ such that $PA=LU$.
+	\item Then determine the solution set $S:= \{x\in \mathbb{R}^n:Ax =b  \}$.
+\end{itemize}
+\textit{Hint: } System 2. does not have a \textit{unique} solution (but infinitely many). Determine the set of vectors $x\in \R^3$ for which the linear system 2. is valid.
+\begin{center}
+	\hspace*{3cm}\begin{algorithm}
+		\textbf{INPUT:} $A\in \mathbb{R}^{n \times n}$ (and $b \in \mathbb{R}^n$)\\
+		\textbf{OUTPUT:} LU decomposition $PA = LU$ (and if  $Ax = b$ is uniquely solvable the solution $x\in \mathbb{R}^n$)\\~\\
+		{\color{gray}\texttt{\# \textbf{FACTORIZATION}}}\\
+		initialize \texttt{piv = [1,2,...,n]}\\
+		\For{$j = 1,...,n-1$}{
+			{\color{gray}\texttt{\#  \textbf{Find the j-th pivot}}}\\
+			$k_j := \arg \max_{k\geq j} |a_{kj}|$ \label{pivot}\\
+			\If{$a_{k_jj}\neq 0$}{
+				{\color{gray}\texttt{\# \textbf{Swap rows}}}\\
+				A[$k_j$,:] $\leftrightarrow$ A[j,:]\\
+				{\color{gray}\texttt{\#  by hand we also transform b on the fly}}\\
+				b[$k_j$] $\leftrightarrow$ b[j]\\
+				\texttt{piv}[$k_j$] $\leftrightarrow$ \texttt{piv}[j]\\
+				{\color{gray}\texttt{\# \textbf{Elimination}}}\\
+				\For{$k = j+1,\dots,n$}{
+					$\ell_{kj} := a_{kj} / a_{jj}$\\
+					$a_{kj} = \ell_{kj}$\\
+					
+					\For{$i = j+1,\ldots, n$}{
+						$a_{ki} = a_{ki} - \ell_{kj} a_{ji}$\\
+						
+					}
+				  {\color{gray}\texttt{\#  by hand we also transform b on the fly}}\\
+					($b_{k} = b_{k} - \ell_{kj} b_{j}$)
+				}
+			}
+			
+		}
+			~\\
+			{\color{gray}\texttt{\# \textbf{SOLVE}}}\\
+			$\ldots$\\
+		\caption{In-place Gaussian Elimination with Row Pivoting: Factor and Solve}
+		\label{LUwithRowPiv}
+	\end{algorithm}	
+\end{center}

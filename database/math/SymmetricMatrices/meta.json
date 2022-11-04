@@ -1,0 +1,13 @@
+{
+    "filename": "SymmetricMatrices.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Symmetric Matrices}\n\tWhich of the following three matrices is symmetric?\n\\begin{enumerate}\n\t\\item$A=\\begin{pmatrix}\n\t0&0&1&2\\\\\n\t0&0&3&4\\\\\n\t1&2&0&0\\\\\n\t3&4&0&0\n\t\\end{pmatrix}$\n\t\\item $B=\\begin{pmatrix}\n\t1&2&0&0\\\\\n\t3&4&0&0\\\\\n\t0&0&4&2\\\\\n\t0&0&3&1\n\t\\end{pmatrix}$\n\t\\item $C=\\begin{pmatrix}\n\t0&0&1&2\\\\\n\t0&0&3&4\\\\\n\t1&3&0&0\\\\\n\t2&4&0&0\n\t\\end{pmatrix}$\n\\end{enumerate}",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item $A$ is not symmetric.\n\t\\item $B$ is not symmetric.\n\t\\item $C$ is symmetric.\n\\end{enumerate}\n}",
+    "id": ""
+}

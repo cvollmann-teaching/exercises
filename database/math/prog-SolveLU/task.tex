@@ -1,0 +1,45 @@
+% !TeX spellcheck = en_US
+\textbf{Solve with LU decomposition [Direct method]}
+%\textit{\color{red} More info during next class (May 18).}
+\begin{enumerate}
+	\item Implement a routine \texttt{lu,piv = lu\_factor(A)} which computes the $LU$ decomposition $PA = LU$ (by applying Gaussian elimination with row pivoting; see Algorithm \ref{LUwithRowPiv}) for a given matrix $A \in \mathbb{R}^{n\times n}$ and another routine \texttt{lu\_solve((lu, piv), b)} which takes the output of \texttt{lu\_factor(A)} and returns the solution $x$ of $Ax=b$ for some $b\in \mathbb{R}^{n}$ (in case the system admits an \textit{unique} solution).
+	\begin{itemize}
+		\item Store $L$ and $U$ in one array \texttt{lu} and the permutation $P$ as sparse representation in an array \texttt{piv}.
+		\item If the system $Ax=b$ admits an unique solution then compute it by using your routine \texttt{solve\_tri} from previous exercises or an appropriate SciPy routine. If the system is not uniquely solvable, check whether the system has infinitely many or no solution and give the user a respective note.
+		\item \textit{Hint:} With the numpy routines \texttt{numpy.triu} and \texttt{numpy.tril} you can extract the factors $L$ and $U$ from the array \texttt{lu}. Also observe that we expect $A$ to be of square format (for simplicity).		
+	\end{itemize}
+\item Test your routine at least on the systems which you were asked to solve by hand previously. Verify that $PA = LU$ and potentially $Ax = b$. For this purpose you can use \texttt{numpy.allclose()}. %Note that you might obtain different factors $P,L,U$ depending on your choice of pivots, but the solution $x$ should be the same if the system admits an unique solution.
+\item Find SciPy routines to perform the factorization and solution steps and compare to your routine.
+\end{enumerate}
+
+
+\begin{center}
+	~~~~~\begin{algorithm}
+		\textbf{INPUT:} $A\in \mathbb{R}^{n \times n}$\\
+		\textbf{OUTPUT:} LU decomposition $PA = LU$\\~\\
+		{\color{gray}\texttt{\# \textbf{FACTORIZATION}}}\\
+		initialize \texttt{piv = [1,2,...,n]}\\
+		\For{$j = 1,...,n-1$}{
+			{\color{gray}\texttt{\#  \textbf{Find the j-th pivot pivot}}}\\
+			$k_j := \arg \max_{k\geq j} |a_{kj}|$ \\
+			\If{$a_{k_jj}\neq 0$}{
+				{\color{gray}\texttt{\# \textbf{Swap rows}}}\\
+				A[$k_j$,:] $\leftrightarrow$ A[j,:]\\
+				\texttt{piv}[$k_j$] $\leftrightarrow$ \texttt{piv}[j]\\
+				{\color{gray}\texttt{\# \textbf{Elimination}}}\\
+				\For{$k = j+1,\dots,n$}{
+					$\ell_{kj} := a_{kj} / a_{jj}$\\
+					$a_{kj} = \ell_{kj}$\\
+					
+					\For{$i = j+1,\ldots, n$}{
+						$a_{ki} = a_{ki} - \ell_{kj} a_{ji}$\\
+						
+					}
+				}
+			}
+			
+		}
+		\caption{In-place Gaussian Elimination with Row Pivoting for implementing Factorization (same as above just without the $b$ vector.)}
+		\label{LUwithRowPiv}
+	\end{algorithm}	
+\end{center}

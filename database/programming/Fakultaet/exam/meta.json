@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progFakultaet_exam.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Exam",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\lstinputlisting{prog-progFakultaet_exam.py}\n",
+    "solution": "% !TeX spellcheck = de_AT_frami\n\\begin{enumerate}\n\t\\item Berechnung der Fakult\u00e4t von \\texttt{n}.\n\t\\item F\u00fcr nichtnegative ganze Zahlen.\n\t\\item\\texttt{7: > 1}\\\\\\texttt{8: > 4!=24}\n\t\\item \n\t-- Unendliche Rekursion da \\texttt{n=0} nie erreicht wird.\\\\ \n\t-- Fehlermeldung: Python Interpreter bricht dann nach der intern festgelegten maximalen Rekursionstiefe ab.\n\t\\item Beispiele:\\\\\n\t-- Fehleingabe abfangen und Abbruch, Beispiele:\\\\\n\t  *** \\texttt{if type(n) != int or n<0: return None/ 'Fehlerhafte Eingabe o.ae.'}\\\\\n\t  *** \\texttt{if type(n) == int and n>=0: <Code>}\n\\end{enumerate}"
+}

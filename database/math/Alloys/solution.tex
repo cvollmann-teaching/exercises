@@ -1,0 +1,38 @@
+{\color{solution}
+We want to find $M_4=x_1M_1+x_2M_2+x_3M_3$, so that $M_4=\begin{pmatrix}40\\50\\10\end{pmatrix}$:
+\begin{align*}
+&\left(
+\begin{array}{ccc|c} 20&70&50&40\\60&10&50&50\\20&20&0&10\end{array}
+\right)
+\textcolor{violet}{\begin{matrix}(\text{I})\\ (\text{II})\\ (\text{III})\end{matrix}}
+\textcolor{blue}{\begin{pmatrix}1\\2\\3\end{pmatrix}}\\
+\stackrel{\textcolor{violet}{(\text{II})'=(\text{II})-3(\text{I})}}{\rightsquigarrow}
+%
+&\left(
+\begin{array}{ccc|c} 20&70&50&40\\\textcolor{red}{3}&-200&-100&-70\\20&20&0&10\end{array}
+\right)
+\textcolor{violet}{\begin{matrix}(\text{I})\\ (\text{II})'\\ (\text{III})\end{matrix}}
+\textcolor{blue}{\begin{pmatrix}1\\2\\3\end{pmatrix}}\\
+\stackrel{\textcolor{violet}{(\text{III})'=(\text{III})-(\text{I})}}{\rightsquigarrow}
+%
+&\left(
+\begin{array}{ccc|c} 20&70&50&40\\\textcolor{red}{3}&-200&-100&-70\\\textcolor{red}{1}&-50&-50&-30\end{array}
+\right)
+\textcolor{violet}{\begin{matrix}(\text{I})\\ (\text{II})'\\ (\text{III})'\end{matrix}}
+\textcolor{blue}{\begin{pmatrix}1\\2\\3\end{pmatrix}}\\
+\stackrel{\textcolor{violet}{(\text{III})''=(\text{III})'-\frac{50}{200}(\text{II})'}}{\rightsquigarrow}
+%
+&\left(
+\begin{array}{ccc|c} 20&70&50&40\\\textcolor{red}{3}&-200&-100&-70\\\textcolor{red}{1}&\textcolor{red}{\frac{1}{4}}&-25&-12,5\end{array}
+\right)
+\textcolor{violet}{\begin{matrix}(\text{I})\\ (\text{II})'\\ (\text{III})''\end{matrix}}
+\textcolor{blue}{\begin{pmatrix}2\\3\\1\end{pmatrix}}\\
+%
+&\textcolor{violet}{\text{(III)}''}~~\Rightarrow~~-25x_3=-12,5~~\Rightarrow~~x_3 =\frac{1}{2}\\
+%
+&\textcolor{violet}{\text{(II)}'}~~\Rightarrow~~-200x_2-100(\frac{1}{2})=-70~~\Rightarrow~~x_2=-\frac{1}{200}(-70+50)=0.1\\
+%
+&\textcolor{violet}{\text{(I)}}~~\Rightarrow~~20x_1+70\cdot0,1+50\frac{1}{2}=40~~\Rightarrow~~x_1=\frac{1}{20}8=0,4
+\end{align*}
+Answer:Yes!, $x=\begin{pmatrix}0,4\\0,1\\0,5\end{pmatrix}$
+}

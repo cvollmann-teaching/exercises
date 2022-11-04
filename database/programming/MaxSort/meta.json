@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progMaxSortPython.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{SelectionSort (MaxSort)}\n\\begin{enumerate}\n\t\\item Schreiben sie eine Python-Funktion \\verb|isSorted(inputList)|, die testet, ob eine gegebene Liste von Zahlen $[a_0, \\dots, a_{n-1}]$ absteigend (also beginnend mit dem gr\u00f6\u00dften Wert) sortiert ist.\n\t\\item Schreibe Sie eine Python-Funktion \\verb|sort(inputList)|, die eine Liste mit Hilfe der Funktion \\texttt{maximum(inputList)} sortiert. Wie oft m\u00fcssen Sie die Liste durchlaufen?\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progMaxSortPython_solution.py}"
+}

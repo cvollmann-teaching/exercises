@@ -1,0 +1,112 @@
+{\color{navy}
+\textbf{An Application of Eigenvectors: The \textit{PageRank}}
+
+	\textbf{Aim:} To rank results of a web search engine (such as Google) according to the \textit{``importance''} of the web pages.\\
+	
+	\textbf{1998:} For this purpose, Larry Page and Sergei Brin developed the PageRank algorithm as the basis of the 
+	\raisebox{-0.25\baselineskip}{\includegraphics[width=1.2cm]{7_Google.png}} empire.\\ 
+	
+	\textbf{Assumption:} \textit{``important''} means more links from other (important) web pages.\\
+
+
+\textbf{ Idea:} 
+Let us think of the web as a directed graph, i.e., web pages are nodes and links from one page to another, i.e, from one node to another, are modeled as directed edges. For example a web structure consisting of 11 web pages could look as follows: 
+\begin{center}
+	\begin{minipage}[c]{0.5\textwidth}
+		%	Potential Web Structure:
+		\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=1.9cm,	semithick]
+		\tikzstyle{every state}=[fill=red,draw=none,text=white]	
+		\node[state,fill=blue] (A)                   {$1$};
+		\node[state,scale=2.2] (B)    [right of=A]               {$2$};
+		\node[state,fill=yellow,scale=1.8] (C)    [right of=B]    {\color{black}$3$};
+		\node[state,fill=green] (D)    [below of=A]               {\color{black}$4$};
+		\node[state,fill=brown] (E)    [below left of =C]               {$5$};
+		\node[state,fill=green] (F)    [below of=C]               {\color{black}$6$};
+		\node[state,fill=purple,scale=0.7] (G)    [below of=D]               {$7$};
+		\node[state,fill=purple,scale=0.7] (H)    [right of=G]               {$8$};
+		\node[state,fill=purple,scale=0.7] (I)    [right of=H]               {$9$};
+		\node[state,fill=purple,scale=0.7] (J)    [right of=I]               {$10$};
+		\node[state,fill=purple,scale=0.7] (K)    [right of=J]               {$11$};	
+		\path (B) edge [bend left=15pt]  (C)
+		(C) edge [bend left=15pt]  (B);
+		\path (D) edge   (A)
+		(D) edge   (B);
+		\path (E) edge   (D)
+		(E) edge (B);
+		\path (F) edge [bend left=20pt]  (E)
+		(E) edge [bend left]  (F)
+		(E) edge  (B);
+		\path (G) edge   (B)
+		(G) edge [bend left=5pt] (E);
+		\path (H) edge   (B)
+		(H) edge (E);
+		\path (I) edge   (B)
+		(I) edge [bend right=5pt](E);
+		\path (J) edge [bend right=5pt](E);
+		\path (K) edge [bend left=2pt](E);	
+		\end{tikzpicture}
+		
+	\end{minipage}
+\end{center}
+
+We now randomly place a random surfer according to the initial probability distribution $x^0 = (x^0_1, \ldots, x_n^0)$ on this graph. Here, $n$ (in the example above $n=11$) denotes the number of web pages and $x^0_i$ denotes the probability that the random surfer \textit{starts} at web page $i$. Further let $e := (1,\ldots,1)^T$, then the fact that $x^0$ is a probability distribution (i.e., probabilities sum up to $1$) translates into $e^Tx^0 =x^0_1+\ldots+x_n^0 =1$. Now we make the assumption that the random surfer moves...
+\begin{itemize}
+	\item[(1)] ...with probability $\alpha \in (0,1)$ according to the link structure (with equal preferences to outgoing links)
+	\item[(2)] ...with probability $(1-\alpha)$ he can teleport to a random page (with equal probability) to prevent stranding in deadlocks
+	\item[$\rightarrow$] Pages, where the random surfer is more likely to appear in the long run based on the web's structure are considered more important. 
+\end{itemize}
+
+These two movements can be described by multiplying the current probability distribution with the two following matrices:
+$$P_1={ 
+	\left(  \begin{tabular}{cccccccccccc}
+	~ & 1    & 2   & 3    & 4    & 5    & 6 & 7     & 8   & 9  & 10   & 11    \\
+	1 & 1    &~     &  ~   & 1/2  &    ~ & ~ & ~     &  ~  &  ~   & ~ &    ~  \\
+	2 & ~    & ~    &  1   & 1/2  & 1/3  &   & 1/2   & 1/2 & 1/2 &   &    \\
+	3 & ~    & 1    &  ~   &      &      &   &       &     &     &   &    \\
+	4 & ~    &  ~   & ~    &      &  1/3 &   &       &     &     &   &  \\  
+	5 & ~    &  ~   & ~    &      &      & 1 & 1/2   & 1/2 & 1/2 & 1 & 1 \\  
+	6 & ~    &  ~   &  ~   &      & 1/3  &   &       &     &     &   &  \\  
+	7 & ~    & ~    &  ~   &      &      &   &       &     &     &   &  \\  
+	8 &~     & ~    &  ~   &      &      &   &       &     &     &   &  \\  
+	9 & ~    &  ~   &  ~   &      &      &   &       &     &     &   &  \\  
+	10 & ~    &  ~   & ~    &      &      &   &       &     &     &   &  \\  
+	11 & ~    &  ~   & ~    &      &      &   &       &     &     &   &     
+	\end{tabular} \right)
+},
+~~~~P_2 := \frac{1}{n}ee^T= \left(\frac{1}{n}\right)_{ij}$$
+More precisely,
+\begin{itemize}
+	\item[(1)] \textbf{Link structure:} $P_1$ is the probability matrix (column stochastic) defined by\\
+	$P_1^{ij}:=$  Probability that random surfer moves from page $j$ to page $i$ defined by the link structure
+	\item[(2)] \textbf{Jumps:}  $P_2$ is the probability matrix (column stochastic) defined by\\
+	$P_2^{ij} := \frac{1}{n}$= Probability that random surfer jumps from page $j$ to page $i$
+\end{itemize}
+The movement of the random surfer is then completely defined by the probability matrix 
+$$P = \alpha P_1 + (1-\alpha)P_2 .$$
+This matrix is also known as the \textit{\textbf{Google Matrix}}. For the next time instances we therefore obtain
+\begin{align*}
+x^1 &=  \alpha P_1 x^0 + (1-\alpha) P_2 x^0 = Px^0  \\
+x^2 &=  \alpha P_1 x^1 + (1-\alpha) P_2 x^1 = Px^1 \\[0.1cm]
+x^{k+1} &=  \alpha P_1 x^k + (1-\alpha) P_2 x^k = Px^k = P^{k+1}x^0 \\[0.1cm]
+x^* &=  \lim_{k\to \infty} x^k =: \textbf{\textit{PageRank}} 
+\end{align*} 
+\textbf{Observations:}
+\begin{itemize}
+	\item One can easily show that $P_1$, $P_2$ and thus $P$ are column stochastic (i.e., $e^TP = e^T$)
+	\item Consequently, since $x^0$ is a probability distribution (i.e., $e^Tx^0 = 1$), also $e^Tx^k = 1$ for all $k$ and $e^Tx^*=1$
+\end{itemize}
+
+\textbf{Question:} \\
+Does this sequence $\{x^k\}_{k \in \N}$ of vectors converge (to a steady state)? More precisely, is there a $x^* = \lim_{k\to \infty} x^k= \lim_{k\to \infty} P^kx^0$, so that
+\begin{equation} \label{eq:PageRank_eigprob}
+Px^* = 1 x^* .
+\end{equation}
+\begin{itemize}
+	\item[$\rightarrow$] With other words, is there an \textit{\textbf{eigenvector}} $x^*$ to the \textit{\textbf{eigenvalue}} $1$ of the matrix $P$?
+	\item[$\rightarrow$]\textit{\textbf{Eigenvalue algorithms}} are developed to solve such problems. One of them is the \textit{\textbf{Power iteration}}, which, applied to the eigenvalue problem above, produces precisely the sequence
+	$$x^k = P^k x^0.$$
+\end{itemize}
+Intuitively, in the limit most of the ``mass'' would be located at web pages that have many incoming links and would therefore be ranked as being more important. In fact, the $i$-th component of $x^*$ is called the \textit{PageRank} of the web page $i$.\\~\\
+Remark: \textit{Perron Theorem}\\
+A positive damping factor $\alpha>0$ is also technically necessary as it assures that the matrix $P$ has only strictly positive coefficients. The Perron Theorem then sates that its largest eigenvalue is strictly larger than all other eigenvalues (in magnitude). Thus the convergence of the Power method is guaranteed. Since the matrix is column stochastic one can further show that the largest eigenvalue is $1$.
+}

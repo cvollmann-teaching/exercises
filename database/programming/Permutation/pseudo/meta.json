@@ -1,0 +1,12 @@
+{
+    "filename": "pseudoCode-progInvPermutation.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Permutation}\n\\begin{enumerate}\n\t\\item Gegeben sei ein Tupel von $n$ Zahlen $(a_0, a_2, \\dots, a_{n-1})$ mit der Eigenschaft, dass genau die Zahlen $0, 1, 2, \\dots, n-1$ in beliebiger Reihenfolge enthalten sind. Dieses Tupel k\u00f6nnte eine \\hyperref{https://de.wikipedia.org/wiki/Permutation#Definition}{}{}{Permutation} darstellen.\tSchreiben Sie eine Funktion, die das obige Tupel als Eingabe erh\u00e4lt und ein Tupel ausgibt, in der anstatt der Zahl $a_i$ an der Stelle $i$ die Zahl $i$ an der Stelle $a_i$ liegt (also die Permutation invertiert). \n\t\\item \u00dcberlegen Sie sich einen Test f\u00fcr Ihren Algorithmus.\\\\\n\t\\textit{Hinweis:} Tests k\u00f6nnen mitunter Beispiele sein, bei denen wir das korrekte Ergebnis kennen, oder logische Tests.\n\\end{enumerate}\n\n",
+    "solution": "\\lstinputlisting[numbers=none]{pseudoCode-progInvPermutation_solution.py}"
+}

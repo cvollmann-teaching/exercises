@@ -1,0 +1,22 @@
+{\color{solution}
+\underline{Recall:}
+\begin{align*}
+\text{det}(A)~&=\sum_{j=1}^{n}(-1)^{i+j}a_{ij}\text{det}(A_{ij})~~~(i\in\{1,\dots,n\},~\text{fixed})\\
+\text{det}(a)~&:=a
+\end{align*}
+Now consider $n=3$ and let us fix $i=1$. We indicate the submatrices $A_{ij}$ by colors:
+\begin{align*}
+j=1:~~&\begin{pmatrix}\textcolor{orange}{a_{11}}&a_{12}&a_{13}\\a_{21}&\textcolor{orange}{a_{22}}&\textcolor{orange}{a_{23}}\\a_{31}&\textcolor{orange}{a_{32}}&\textcolor{orange}{a_{33}}\end{pmatrix}\\
+j=2:~~&\begin{pmatrix}a_{11}&\textcolor{cyan}{a_{12}}&a_{13}\\\textcolor{cyan}{a_{21}}&a_{22}&\textcolor{cyan}{a_{23}}\\\textcolor{cyan}{a_{31}}&a_{32}&\textcolor{cyan}{a_{33}}\end{pmatrix}\\
+j=3:~~&\begin{pmatrix}a_{11}&a_{12}&\textcolor{violet}{a_{13}}\\\textcolor{violet}{a_{21}}&\textcolor{violet}{a_{22}}&a_{23}\\\textcolor{violet}{a_{31}}&\textcolor{violet}{a_{32}}&a_{33}\end{pmatrix}
+\end{align*}
+By Laplace formula we obtain
+\begin{align*}
+\text{det}(A)~&=\underbrace{(-1)^{1+1}}_{\textcolor{blue}{=1}}\textcolor{orange}{a_{11}}\text{det}(\textcolor{orange}{A_{11}})+\underbrace{(-1)^{1+2}}_{\textcolor{blue}{=-1}}\textcolor{cyan}{a_{12}}\text{det}(\textcolor{cyan}{A_{12}})+\underbrace{(-1)^{1+3}}_{\textcolor{blue}{=1}}\textcolor{violet}{a_{13}}\text{det}(\textcolor{violet}{A_{13}})\\
+&=a_{11}(a_{22}a_{33}-a_{23}a_{32})-a_{12}(a_{21}a_{33}-a_{31}a_{23})+  a_{12}(a_{21}a_{32}-a_{31}a_{22})\\
+&=a_{11}a_{22}a_{33}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33}+ a_{12}a_{31}a_{23}+a_{13}a_{21}a_{32}-a_{13}a_{31}a_{22}.
+\end{align*}
+Note that we have exploited also the Laplace formula for $2\times 2$ matrices.
+For the example matrix this yields
+det$(A)=2-2=0$, so that we can conclude that the columns are linearly dependent.
+}

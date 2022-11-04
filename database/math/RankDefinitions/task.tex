@@ -1,0 +1,18 @@
+\textbf{\normalsize Equivalent Definitions of the Matrix Rank}
+
+%{\color{red} The following exercise is not mandatory (no (bonus) points¸), but will be discussed during the next exercise class.}\\~\\
+Let $A \in \mathbb{R}^{m \times n}$, then show that the following statements are equivalent:
+\begin{itemize}
+	\item[i)] The maximum number of linearly independent columns of $A$ is $r$.
+	\item[ii)] The dimension of the image of $A$ is $r$, i.e., $\dim(\im(A)) = r$.
+	\item[iii)] The number of positive singular values of $A$ is $r$.
+\end{itemize}
+\textit{Hint:} You can use the SVD $A=U\Sigma V^\top$ and Lemma 2.29.\\~\\
+{\color{navy}As a consequence (since $A^\top = V\Sigma^\top U^\top$), we find 
+$$\rank(A) = r=\rank(A^\top),  $$
+so that the dimension formulas for $A$ and $A^\top$ read as
+\begin{align*}
+n &= \rank(A) + \text{nullity}(A)= \rank(A^\top) + \text{nullity}(A),\\
+m &= \rank(A^\top) + \text{nullity}(A^\top)=\rank(A) + \text{nullity}(A^\top).\\
+\end{align*}
+}

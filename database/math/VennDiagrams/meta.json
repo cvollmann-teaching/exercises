@@ -1,0 +1,13 @@
+{
+    "filename": "VennDiagrams.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Math Basics",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{VennDiagrams}\nPlease draw Venn-Diagrams which illustrate the following statements.\n\t\\begin{enumerate}\n\t\t\\item (Commutative property)\\\\\n\t\t$A\\cup B  = B \\cup A$ \\\\  $A\\cap B  = B \\cap A$ \n\t\t\\item (Associative property)\\\\\n\t\t$(A\\cup B) \\cup C  = A \\cup (B \\cup C)$ \\\\  $(A\\cap B) \\cap C  = A \\cap (B \\cap C)$ \n\t\t\\item (Distributive property)\\\\\n\t\t$(A \\cup B) \\cap C = (A\\cap C) \\cup (B \\cap C)$ \\\\\n\t\t$(A \\cap B) \\cup C = (A\\cup C) \\cap (B \\cup C)$\n\t\\end{enumerate}",
+    "solution": "{\\color{solution}\n\n}",
+    "id": ""
+}

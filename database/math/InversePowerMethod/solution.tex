@@ -1,0 +1,32 @@
+{\color{solution}
+$\textcolor{blue}{\text{\underline{The message here is:}}}$~
+Under the assumption of having a ``good'' guess for $\lambda_i$, we find the ``exact'' eigenvector (and -value) with the help of the \textit{inverse power iteration}. However note that it is computationally more expensive, because you have to solve a linear system in each iteration.\\
+\\
+We have $A\in\mathbb{R}^{n\times n}$ with eigenvalues $|\lambda_n|\geq\dots\geq|\lambda_{i+1}|>|\lambda_i|>|\lambda_{i-1}|\geq\dots\geq|\lambda_1|$ and corresponding eigenvectors $v_j \neq 0$. Also we have $\hat{\lambda}\approx\lambda_i$ so that $$0<|\lambda_i-\hat{\lambda}|<|\lambda_j-\hat{\lambda}|~~\forall~i\neq j~\textcolor{blue}{(*)}.$$
+Now define $B:=(A-\hat{\lambda}I)$.
+\begin{enumerate}
+	\item 
+	We show, that $(\lambda_i -\hat{\lambda})^{-1}$ is the largest eigenvalue of $B^{-1}$.
+	\begin{itemize}
+		\item [(i)] 
+		For all $j$ we have that $(\lambda_j-\hat{\lambda})$ is an eigenvalue of $B$ to the same eigenvector $v_j$ (previous sheets).
+		\item [(ii)] Also $B$ is invertible, otherwise there would exist $v\neq 0$, so that $Bv=0$, which would imply $\hat{\lambda}$ eigenvalue of $A$, which would contradict the assumption: $|\lambda_j-\hat{\lambda}|>0~\forall j~~\Rightarrow~~|\lambda_j-\hat{\lambda}|\neq 0~\forall j$. Thus $\frac{1}{\lambda_j-\hat{\lambda}}$ is an eigenvalue of $B^{-1}$ for all $j$ to the same  eigenvector $v_j$ (see previous sheets).\\ By $\textcolor{blue}{(*)}$ we then find that $$\frac{1}{|\lambda_i-\hat{\lambda}|}>\frac{1}{|\lambda_j-\hat{\lambda}|}~\forall j ~~\textcolor{violet}{(\sharp)}.$$
+	\end{itemize}
+	\item 
+	Let $v_1$ be an eigenvector to the eigenvalue $(\lambda_i-\hat{\lambda})^{-1}$, and $x^0$ an orthogonal initial guess, i.e., $(x^0,v_1)\neq 0$, then due to $\textcolor{violet}{(\sharp)}$ we find by the theorem about the power method that
+	$$
+	\frac{B^{-1}x^k}{\|B^{-1}x^k\|}\rightarrow v_1.
+	$$
+	\underline{Note:} $v_1$ is eigenvector of
+	\begin{itemize}
+		\item 
+		...$A$ to the eigenvalue $\lambda_i$.
+		\item 
+		...$B=A-\hat{\lambda}_iI$ to the eigenvalue $\lambda_i-\hat{\lambda}$.
+		\item 
+		...$B^{-1}=(A-\hat{\lambda}_iI)^{-1}$ to the eigenvalue $(\lambda_i-\hat{\lambda})^{-1}$.
+	\end{itemize}
+%	\item 
+%	It is computationally more expensive, because you have to solve a linear system in each iteration.
+\end{enumerate}
+}

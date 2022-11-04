@@ -1,0 +1,22 @@
+{
+\color{solution}
+\begin{enumerate}
+	\item First note that $\ell_je_j^\top$ is a lower triangular matrix with zeroes on its diagonal because $\ell_{i,j} = 0$ for $i\leq j$. Therefore $L_j$ is a lower triangular matrix with ones on its diagonal and thus invertible (note, e.g., that $\text{det}(L_j) = 1 \neq 0$). 
+	\item Since the inverse matrix is unique it is sufficient to show that $L_j (I - \ell_je_j^\top ) = I$. By inserting the definition we find that
+	\begin{align*}
+	L_j (I - \ell_je_j^\top )  & = (I + \ell_je_j^\top ) (I - \ell_je_j^\top )\\
+	&=I + \ell_je_j^\top  - \ell_je_j^\top - \ell_je_j^\top \ell_je_j^\top \\
+	&=I - \ell_j{\color{cyan}(e_j^\top \ell_j)}e_j^\top \\
+	&=I,
+	\end{align*}
+	where we have exploited $e_j^\top \ell_j= 0$ which follows from $\ell_{j,j} = 0$.
+	\item We insert definitions and compute the products. First,
+		\begin{align*}
+	L_i L_j  & = (I + \ell_ie_i^\top ) (I + \ell_je_j^\top )\\
+	&=I + \ell_ie_i^\top  + \ell_je_j^\top+ \ell_ie_i^\top \ell_je_j^\top \\
+	&=I + \ell_ie_i^\top  + \ell_je_j^\top+ \ell_i{\color{cyan}(e_i^\top \ell_j)}e_j^\top \\
+	&=I + \ell_ie_i^\top  + \ell_je_j^\top,
+	\end{align*}
+	where we have exploited $e_i^\top \ell_j=0$, which follows from $\ell_{i,j} = 0$ for all $i \leq j$. The second statement follows along the same lines.
+\end{enumerate}
+}

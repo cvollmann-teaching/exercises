@@ -1,0 +1,54 @@
+{\color{navy}
+	~\\
+	\textbf{Some Background}\\
+A column in $A$ contains the measured features (e.g., age and height) for a particular sample (e.g., a person) and a row contains all measured values for a particular feature. Thus, let $a_i \in \Rn$ denote a row of $A$, then by assuming that the mean $a_i^\top \mathbf{1}$ is zero (without loss of generality, otherwise center the data) for all features, we have
+$$\frac{1}{n-1}a_i^\top a_j = \begin{cases}
+\text{``statistical variance in feature $i$''} & i=j\\
+\text{``statistical covariance between feature $i$ and $j$''} & i\neq j.\\
+\end{cases}$$
+Furthermore we observe that the matrix $$\frac{1}{n-1} AA^\top = \frac{1}{n-1}\left(a_i^\top a_j\right)_{ij} $$ contains these covariances (it is therefore often called \textit{sample covariance matrix}) and using the SVD $A=U\Sigma V^\top$ we find
+$$
+\frac{1}{n-1}AA^T=\frac{1}{n-1}U\begin{pmatrix}
+\sigma_1^2&~&0\\~&\ddots&~\\0&~&\sigma_r^2
+\end{pmatrix}U^T=\frac{1}{n-1}\sum_{i=1}^r \sigma_i^2u_iu_i^T.
+$$
+The first few summands explain most of $\frac{1}{n-1}AA^T$, i.e., the sample covariance matrix, and the singular vectors $u_1,\dots,u_r$ are called principal components.\\~\\
+Geometrically we have the following interpretation:
+$$
+A=\begin{matrix}
+m~\text{feats}&\underrightarrow{n~\text{samples}}\\
+\downarrow&\begin{pmatrix}
+|&~&|&~&|\\
+a_1&\cdots&a_i&\cdots&a_n\\
+|&~&|&~&|
+\end{pmatrix}
+\end{matrix}
+=U\textcolor{red}{\Sigma V^T}
+=\underbrace{\begin{pmatrix}
+	|&~&|\\u_1&\cdots&u_m\\|&~&|
+	\end{pmatrix}}_{\text{orthonormal basis}}
+\underbrace{\textcolor{red}{(\Sigma V^T)}}_{\text{coordinates of}~a_i~\text{in terms of this basis}}
+$$
+Thus, each sample $a_i\in\mathbb{R}^m$ is a linear combination of $u_1,\dots,u_m$ with coefficients $(\Sigma V^T)_i$.\\~\\
+Relation to ``total least squares'': The least squares problem 
+$$
+\min \limits_{x\in \mathbb{R}} \| Ax-b \|^2,
+$$
+where we want to minimize the error in the \textit{dependent} variables,
+can be reformulated as the constrained optimization problem 
+\begin{align*}
+&\min \limits_{r, x\in \mathbb{R}} \| r\|^2 \\
+s.t.& ~~
+r = Ax-b.
+\end{align*}
+If we also want to encounter errors in the \textit{independent} variables we arrive at the problem 
+\begin{align*}
+&\min \limits_{r, s, x\in \mathbb{R}} \| \begin{pmatrix}
+r\\s
+\end{pmatrix} \|^2 \\
+s.t.& ~~
+(A + s)x = b + r.
+\end{align*}
+This problem is called the total \textit{least squares problem} and errors on both dependent and independent variables are considered. One can show that the solution of this problem is the low-rank approximation which we yield from cropping the singular value decomposition. See for details:
+\url{https://eprints.soton.ac.uk/263855/1/tls_overview.pdf}
+}

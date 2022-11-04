@@ -1,0 +1,13 @@
+{
+    "filename": "HeronAsNewton.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Heron's Method as Newton's Method}\nConsider the function $f\\colon \\mathbb{R}\\to\\mathbb{R},~f(x):= x^2 -a$ for some nonnegative number $a\\geq 0$.  Apply Newton's method to the nonlinear system $f(x)=0$ (root finding problem). Compare the resulting iterative scheme to Heron's algorithm from earlier sheets.\n",
+    "solution": "{\n\\color{solution}\n\n\t\\includegraphics[width=0.95\\linewidth]{../../../../rep/exercises/nonlinear-systems/heron}\n\n\n}\n",
+    "id": ""
+}

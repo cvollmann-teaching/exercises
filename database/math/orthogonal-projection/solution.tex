@@ -1,0 +1,11 @@
+{
+\color{solution}
+We use the hint with $x = \widehat{z}-b$ and $y:=z-\widehat{z}$ for some $z\in V$ (note that $(z-\widehat{z})\in V ~\forall z \in V$, since $\widehat{z}\in V$ and $V$ subspace). More precisely, for a $\widehat{z} \in V$ we find
+\begin{align*}
+ \widehat{z}-b \in V^\bot &~~~\Leftrightarrow\forall z \in V: (\widehat{z}-b)^\top z=0\\
+  &~~~\Leftrightarrow \forall z\in V: (\widehat{z}-b)^\top (z-\widehat{z})=0\\
+ &~~~\Leftrightarrow \forall z \in V:\|z-b\|_2^2 = \|\widehat{z}-b\|_2^2 +  \| \widehat{z}-z\|_2^2\\
+ &~~~\Leftrightarrow \forall z \in V: \|\widehat{z}-b\|_2^2\leq \|z-b\|_2^2\\
+ &~~~\Leftrightarrow  \widehat{z}= \arg\min_{z\in V} \|z-b\|_2^2 .
+\end{align*}
+}

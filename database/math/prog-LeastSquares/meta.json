@@ -1,0 +1,13 @@
+{
+    "filename": "prog-LeastSquares.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Least Squares Problems, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Least Squares}\n\\begin{table}[h]\n\t\\centering\n\t\\begin{tabular}{l|c c c c c c}\n\t\tx&0&1&2&2.5&3&4\\\\\n\t\t\\hline\n\t\ty&0.15&1&0.84&0&-0.2&-0.96\n\t\\end{tabular}\n\t\\caption{This table contains a dataset of pairs $(x_i, y_i)$ for $i = 1,\\dots,6$ which is used in exercise \\ref{ex:lstsq} and \\ref{ex:proglstsq}.}\n\t\\label{tab:data}\n\\end{table}\n\\label{ex:proglstsq}\nLet the data points $(x_i, y_i)$ for $i=1,\\dots,6$ be given as in Table \\ref{tab:data}.\n\\begin{enumerate}\n\t\\item Solve the least squares problem of Exercise \\ref{ex:lstsq} in Python using the \\verb|lstsq()| function of \n\t\\verb|scipy.linalg| as presented in the lecture.\n\t\\item Plot the data points and the fitted line.\n\t\\item You are given the additional information that the data stems from a sine-function of the form $ \\sin(x)a + b \\approx y$, i.e. the adjusted problem then is of the form\n\t\\begin{align*}\n\t\\min \\limits_{a,b} \\sum_{i=1}^6 ( \\sin(x_i)a + b - y_i)^2.\n\t\\end{align*}\n\tSolve the adjusted problem with the \\verb|lstsq()| function.\n\t\\item Plot the data points and the fitted curve.\n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-LeastSquares_solution.py}\n",
+    "id": ""
+}

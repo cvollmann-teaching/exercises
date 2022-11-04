@@ -1,0 +1,13 @@
+{
+    "filename": "prog-cholesky.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Systems, Factor and Solve, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "% !TeX spellcheck = en_US\n\\textbf{The Cholesky Decomposition for SPD Matrices}\n%\\textit{\\color{red} More info during next class (May 18).}\n%\tFor symmetric and positive definite (spd) matrices $A\\in \\Rnn$ one can obtain the following improvement over the $LU$-decomposition:\n%$$A=LL^T,$$\n%where $L\\in\\Rnn$ is a lower triangular matrix if posit(i.e., $U=L^T$).\n\n\\begin{enumerate}\n\t\\item Find SciPy routines to perform the Cholesky factorization and solution steps separately. Non-obligatory: Implement them on your own (algorithms can be found on Wikipedia).\n\t\\item Compare the performance of the Cholesky routines to the $LU$ routines from SciPy by testing them on large symmetric and positive definite matrices $A \\in \\Rnn$ (e.g., $A = B^TB + \\delta I$ for some random $B\\in \\Rnn$ and $\\delta >0$) and some (random) right-hand side $b \\in \\mathbb{R}^n$. \n\\end{enumerate}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-cholesky_solution.py}\n",
+    "id": ""
+}

@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progPseudo3.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Im folgenden Pseudo-Code wird eine Matrix beschrieben. Beschreiben Sie grob wie die Matrix aussehen w\u00fcrde.\n\\begin{verbatim}\n\tAnlegen einer Matrix A der gr\u00f6\u00dfe 10 x 10.\n\t\n\tsolange i in [0, 100):\n\t   i1 = i modulo 10\n\t   i2 = i ganzzahldivision 10\n\t   A[i1, i2] = 0.0\n\t\t\n\tA[0, 0] = -2.0\n\tA[0, 1] = 1.0\n\t\n\tsolange i in [1, 9):\n\t   A[i, i] = -2.0\n\t   A[i, i-1] = 1.0\n\t   A[i, i+1] = 1.0\n\t\t\n\tA[9,8] = 1.0\n\tA[9,9] = -2.0\n\\end{verbatim}\n",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progPseudo3_solution.py}"
+}

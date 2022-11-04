@@ -1,0 +1,27 @@
+% !TeX spellcheck = en_US
+\vspace*{-0.5cm}
+\begin{enumerate}
+	\item  Let $A\in\mathbb{R}^{n \times n}, b\in\mathbb{R}^n$ be given.	
+\begin{enumerate}%[i]
+	\item 	General linear iterations are of the form $x_{k+1} = (I-NA)x_k + Nb$ for some invertible matrix $N\in\mathbb{R}^{n \times n}$ and $x_0 \in\mathbb{R}^n$. Give a sufficient criteria for the convergence of the sequence $(x_k)_k$.
+		\item How is the Jacobi iteration without relaxation defined?
+		\item What is the purpose of the Jacobi iteration?
+	\end{enumerate}
+
+	\item Assume you want to solve the system $Ax = b$, where
+	$$A = \begin{pmatrix}
+	2&-1\\
+-1&2
+	\end{pmatrix}~~~\text{and}~~~b = \begin{pmatrix}
+	0\\0
+	\end{pmatrix} .$$
+ 
+\begin{enumerate}%[i]
+	\item Determine the iteration matrix $(I-NA)$ of the Jacobi iteration (without relaxation) in this example.
+	\item Perform $3$ iteration steps of the Jacobi iteration with initial guess $x_0 = \begin{pmatrix}
+	0\\1
+	\end{pmatrix}$, i.e., compute the iterates $x_1, x_2, x_3$. 
+	\item Does the Jacobi iteration converge here? Justify your answer.\\
+	(\textit{Hint: Look at task a.i again.})
+\end{enumerate}
+\end{enumerate}

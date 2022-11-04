@@ -1,0 +1,29 @@
+% !TeX spellcheck = en_US
+{ \color{solution}
+\begin{enumerate}
+	\item Let $x,y \in \mathbb{F}^{n} $ and $\lambda \in \mathbb{F}$. Then 
+	\begin{align*}
+	 f_A(\lambda x+y) = A(\lambda x + y) = A(\lambda x) + Ay = \lambda Ax + Ay = \lambda f_A(x) + f_A(y).
+	\end{align*} 
+	\item 
+	\begin{itemize}
+		\item[``$\Rightarrow$'']  
+		Let $\text{ker} (A)  = \{0\}$\\ 
+		(To show: $f_A ~~\text{is an injective mapping}$, i.e., $f_A(x) = f_A(y)$ implies $x = y$.)\\
+		Let $x,y\in \mathbb{F}^{n}$ with $f_A(x) = f_A(y)$, which implies by definition
+%		\begin{align*}
+		 $Ax = Ay $
+%		\end{align*} 
+		and thus by linearity $A(x-y) =0$.
+		Thus, since $\text{ker} (A)  = \{0\}$, we conclude $x-y = 0$.
+		\item[``$\Leftarrow$''] 
+		Let $f_A ~~\text{be an injective mapping}$, i.e., $f_A(x) = f_A(y)$ implies $x = y$.\\
+		(To show:: $Ax = 0 \Leftrightarrow x = 0$ (here ``$\Leftarrow$'' is obvious).)\\
+		Let $Ax=0$, then we find
+		$$
+		f_A(0) = A0 = 0 = Ax = f_A(x).
+		$$
+		Thus, since $f_A$ is assumed to be injective, $x = 0$ (take ``$y = 0$'').
+	\end{itemize}
+\end{enumerate}
+}

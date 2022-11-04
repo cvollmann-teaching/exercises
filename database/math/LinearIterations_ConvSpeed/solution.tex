@@ -1,0 +1,10 @@
+{\color{solution}
+Since $\rho(M)<1$, the iteration converges to the fixed point $x^* =Mx^*+Nb$. We use this representation in the formulas. We find
+\begin{align*}
+ \ \|{x^k-x^*}\|_2 = \|{Mx^{k-1}+Nb-(Mx^*+Nb)}\|_2 = \|{M(x^{k-1}-x^*)}\|_2
+\stackrel{\textcolor{blue}{[\text{Hint}]}}{\leq}\ \ \rho(M)\underbrace{\|{x^{k-1}-x^*}\|_2}_{\textcolor{blue}{\leq\rho(M)\|{x^{k-2}-x^*}\|}}.
+\end{align*}
+By inserting the iteration instruction repeatedly we ultimately arrive at
+$$\|{x^k-x^*}\|_2\leq \rho(M)^k\|{x^0-x^*}\|_2. $$
+}
+

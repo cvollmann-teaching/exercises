@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progSecondsToHours_exam.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Exam",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\lstinputlisting{prog-progSecondsToHours_exam.py}\n",
+    "solution": "\\begin{enumerate}\n\t\\item \\texttt{H=0, M=1, S=60}\n\t\\item  \\verb|1 % 60| = 1\n\t\\item nach Zeile 6:\\\\ \\hspace*{1cm}\\texttt{seconds = seconds \\% (60*60)}\\\\\n\tSonst M falsch\\\\~\\\\\n\tDann anstatt Zeile 8:\\\\ \\hspace*{1cm}\\texttt{S = seconds \\% 60}\\\\\n\tSonst S falsch\n\\end{enumerate}\n"
+}

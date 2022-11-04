@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progEuklidischerAlgorithmus.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Der ``moderne'' Euklidische Algorithmus}\n\\begin{enumerate}\n\t\\item Schreiben Sie eine Python-Funktion, die den gr\u00f6\u00dften gemeinsamen Teiler zweier Zahlen mit Hilfe des ``modernen'' Euklidischen Algorithmus (in der iterativen Variante) bestimmt.\n\t\\item Implementieren Sie die rekursive Variante des ``modernen'' Euklidischen Algorithmus.\n\t\\item Testen Sie Ihren Code.\n\\end{enumerate}\n%\n%Der Euklidische Algorithmus lautet:\n%\\begin{Verbatim}\n%wenn a = 0 dann\n%   Ergebnis = b\n%sonst\n%   solange b nicht gleich 0\n%      wenn a > b dann\n%         a := a - b\n%      sonst\n%         b := b - a\n%   Ergebnis = a\n%\\end{Verbatim}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progEuklidischerAlgorithmus_solution.py}"
+}

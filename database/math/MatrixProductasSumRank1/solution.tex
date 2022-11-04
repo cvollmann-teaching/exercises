@@ -1,0 +1,13 @@
+{\color{solution}
+Note that by definition of the matrix product we have that the entry at $(\mu,\nu)$ of $AB$ is given by
+$$(AB)_{\mu \nu} = \sum_{i=1}^k a_{\mu i} b_{i\nu}. $$
+Again, by definition of the matrix product, for the $i$-th column $a_i = (a_{1 i},\ldots,a_{mi})^\top \in \mathbb{R}^{m \times 1}$ and $i$-th row $b_i^\top = (b_{i1 },\ldots, b_{in })  \in \mathbb{R}^{1 \times n}$, we find
+$$(a_ib_i^\top)_{\mu \nu} = \sum_{j=1}^1 (a_i)_{\mu j} (b_i^\top)_{j\nu}=(a_i)_{\mu 1} (b_i^\top)_{1\nu} = a_{\mu i}b_{i \nu}.$$
+Thus 
+\begin{align*}
+\left(\sum_{i=1}^k a_i b_i^\top\right)_{\mu \nu}
+ = \sum_{i=1}^k\left( a_i b_i^\top\right)_{\mu \nu} 
+ = \sum_{i=1}^k a_{\mu i}b_{i \nu} = (AB)_{\mu \nu}.
+\end{align*}
+
+}

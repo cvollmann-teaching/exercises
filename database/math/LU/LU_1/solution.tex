@@ -1,0 +1,35 @@
+{\color{solution}
+\begin{align*}
+&\left(
+\begin{array}{ccc|c} 0&-2&1&-5\\2&2&0&6\\-2&-1,5&0&-5\end{array}
+\right)
+\textcolor{violet}{\begin{matrix}(\text{I})\\ (\text{II})\\ (\text{III})\end{matrix}}\textcolor{blue}{\begin{pmatrix}1\\2\\3\end{pmatrix}}\\
+\stackrel{\textcolor{violet}{(\text{III})\leftrightarrow(\text{I})}}{\rightsquigarrow}
+%
+&\left(
+\begin{array}{ccc|c} -2&-1,5&0&-5\\2&2&0&-6\\0&-2&1&-5\end{array}
+\right)
+\textcolor{violet}{\begin{matrix}(\text{I})\\ (\text{II})\\ (\text{III})\end{matrix}}\textcolor{blue}{\begin{pmatrix}3\\2\\1\end{pmatrix}}\\
+\stackrel{\textcolor{violet}{(\text{II})'=(\text{II})+(\text{I})}}{\rightsquigarrow}
+%
+&\left(
+\begin{array}{ccc|c} -2&-1,5&0&-5\\\textcolor{red}{-1}&0,5&0&1\\\textcolor{red}{0}&-2&1&-5\end{array}
+\right)
+\textcolor{violet}{\begin{matrix}(\text{I})\\ (\text{II})'\\ (\text{III})\end{matrix}}\textcolor{blue}{\begin{pmatrix}3\\2\\1\end{pmatrix}}\\
+\stackrel{\textcolor{violet}{(\text{III})'=(\text{III})+4(\text{II})}}{\rightsquigarrow}
+%
+&\left(
+\begin{array}{ccc|c} -2&-1,5&0&-5\\\textcolor{red}{-1}&0,5&0&1\\\textcolor{red}{0}&\textcolor{red}{-4}&1&-1\end{array}
+\right)
+\textcolor{violet}{\begin{matrix}(\text{I})\\ (\text{II})'\\ (\text{III})'\end{matrix}}\textcolor{blue}{\begin{pmatrix}3\\2\\1\end{pmatrix}}
+\end{align*}
+$$ 
+P = \begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix}~\textcolor{exampoints}{(1P)}~, L=\begin{pmatrix}1&0&0\\-1&1&0\\0&-4&1\end{pmatrix}~\textcolor{exampoints}{(3P)}~,
+U = \begin{pmatrix}-2&-1,5&0\\0&0,5&0\\0&0&1\end{pmatrix}~\textcolor{exampoints}{(3P)}~
+$$
+\begin{align*}
+x_3=-1~~&\Rightarrow~~0,5x_2=1~~\Rightarrow~~x_2=2\\
+&\Rightarrow~~-2x_1-1,5\cdot 2=-5~~\Rightarrow~~x_1=1\\
+&\Rightarrow~~x^*=\begin{pmatrix}1\\2\\-1\end{pmatrix}~~\textcolor{exampoints}{(1+1+1P)}
+\end{align*}
+}

@@ -1,0 +1,43 @@
+{\color{solution}
+			\begin{enumerate}
+			\item 			Suppose $BA = I$ and $AC = I$, then
+			$$B = BI =B(AC) = (BA)C=IC = C. $$~\\
+			\textit{In the next subtasks we verify that the suggested inverse, say $\widetilde{A}$, satisfies the determining requirement $A\widetilde{A}=A\widetilde{A}=I$.}
+			%
+			\item Let $B := A^{-1}$ and $\widetilde{B}:= A$, then by definition of the inverse for $A$ we find
+			$$B\widetilde{B} = A^{-1}A = I $$
+			and
+			$$\widetilde{B}B = AA^{-1} = I .$$
+			Thus $B^{-1} = ( A^{-1})^{-1} =\widetilde{B}= A$.
+			%
+			\item Let $C := AB$ and $\widetilde{C}:= B^{-1}  A^{-1}$, then by exploiting the rules for matrix computations we obtain
+			$$ C\widetilde{C} = (AB)B^{-1}  A^{-1} = A(BB^{-1})  A^{-1} = A\cdot I \cdot  A^{-1}=A A^{-1} = I$$
+			and similarly
+			$$ \widetilde{C}C =B^{-1}  A^{-1} (AB) = B^{-1}(A^{-1} A)B = B^{-1}\cdot I \cdot   B =B^{-1}  B = I.$$
+			Thus $C^{-1}= (AB)^{-1} = \widetilde{C}= B^{-1}  A^{-1}$.
+			%
+			\item We again split the proof for the equivalence (``$\Leftrightarrow$'', ``if and only if'') into two statements (``$\Rightarrow$'', ``$\Leftarrow$'').\\ 
+			 ``$\Leftarrow$'': First, let $d_i \neq 0$ for all $i$ (thus we can divide by $d_i$) and set 
+			$$
+			\widetilde{D}:=\text{diag}(d_1^{-1}, \ldots, d_n^{-1}) = 
+			 \begin{pmatrix}
+			d_1^{-1} & \cdots&0 \\
+			\vdots&\ddots&\vdots\\
+			0&\cdots&d_n^{-1}
+			\end{pmatrix}
+		\in\mathbb{F}^{n \times n}.
+			$$
+			 Then by definition of the matrix product we can quickly verify that
+			$$D\widetilde{D} = I ~~~\text{and}~~~ \widetilde{D}D = I,$$
+			implying $D^{-1}=\widetilde{D}$ in this case.\\
+			``$\Rightarrow$'': Proof by contradiction: Let $d_i = 0$ for at least one $i$. Then the $i$-th row (and column) of $D$ solely contains $0$ entries. Thus for any $\widetilde{D} \in \mathbb{F}^{n \times n}$ we have that the $i$-th row of $D\widetilde{D}$ is necessarily a zero row. Thus there cannot be a matrix $\widetilde{D}$ so that $D\widetilde{D} = I$. In particular, there cannot be a matrix $\widetilde{D}$ satisfying the requirements of the inverse matrix for $D$.~\\
+			
+			\textit{Alternatively:}\\
+			The invertibility statement also follows from:
+			\begin{align*}
+			D \in \text{GL}_n(\mathbb{F})~~\Leftrightarrow~~\det(D) = \prod_{i=1}^n d_{i} \neq 0 ~~\Leftrightarrow~~ \forall 1\leq i \leq n\colon d_i \neq 0
+			\end{align*}
+			Then with the first part above we can derive the explicit expression for the inverse $D^{-1}$.
+ \item Take for example $D=\text{diag}(1,2,\ldots,n)\in \mathbb{R}^{n \times n}$ for $n\in\mathbb{N}$, then $D^{-1}=\text{diag}(1,\tfrac{1}{2},\ldots,\tfrac{1}{n})$.
+		\end{enumerate}
+}

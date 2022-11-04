@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progAnyToDez.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "Python",
+    "mathFields": "Arithmetik, Zahlentheorie",
+    "tags": "Stellenwertsystem, Horner-Schema, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{Umwandlung: Beliebig nach Dezimal} (Horner)\\\\\nSchreiben Sie eine Funktion \\verb|anyToDez(a, basis)|, die Ziffern \\verb|a| als String, und eine Basis \\verb|basis| als Integer entgegennimmt und dann die entsprechende Zahl in der Dezimaldarstellung zur\u00fcckgibt. Nutzen Sie zur Auswertung des Polynoms das Horner-Schema. Es gen\u00fcgt hierbei, wenn Zahlensysteme bis einschlie\u00dflich der Basis 16 erlaubt sind.\\\\\n\n\\textbf{Beispiel} \\\\\n\\verb|a = 'f'|, \\verb|basis = 16| \\\\\n\\verb|>>> anyToDez(a, basis) = 15|",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progAnyToDez_solution.py}"
+}

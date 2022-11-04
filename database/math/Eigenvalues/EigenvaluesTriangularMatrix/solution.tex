@@ -1,0 +1,22 @@
+{\color{solution}
+\underline{Show:} 
+$\text{det}(A-\lambda I)=0~~\forall\lambda\in\text{diag}(A)=\{a_{11},\dots,a_{nn}\}$\\
+\underline{Proof:}\\
+Since $(A-\lambda I)$ is itself upper triangular it remains to show, that 
+$$
+\text{det}(U)=\prod_{i=1}^{n}u_{ii}
+$$ 
+for any upper triangular matrix.(Because then: $\text{det}(A-\lambda I)=\prod_{i=1}^{n}(a_ii-\lambda)$.)\\
+Consider:
+$$
+U=\begin{pmatrix}\textcolor{red}{u_{11}}& & & \\0&\textcolor{blue}{u_{22}}& & \\\vdots&0&\ddots& \\0&\cdots&0&\textcolor{blue}{u_{nn}}\end{pmatrix}
+$$
+Then by T.12.2: $\text{det}(U)=\text{det}([\textcolor{red}{u_{11}}])\text{det}\underbrace{\textcolor{blue}{\begin{pmatrix}u_{22}& & \\0&\ddots& \\0&0&u_{nn}\end{pmatrix}}}_{\textcolor{blue}{=:U_{11}}}$\\
+We can now apply the same idea to
+$$
+U_{11}=\begin{pmatrix}\textcolor{blue}{u_{22}}& & & \\0&\textcolor{orange}{u_{33}}& & \\\vdots&0&\ddots& \\0&\cdots&0&\textcolor{orange}{u_{nn}}\end{pmatrix}
+$$
+\begin{align*}
+\text{det}(U)&=\underbrace{\text{det}([\textcolor{red}{u_{11}}])}_{=u_{11}}\underbrace{\text{det}([\textcolor{blue}{u_{22}}])}_{=u_{22}}\text{det}\textcolor{orange}{\begin{pmatrix}u_{33}& & \\0&\ddots& \\0&0&u_{nn}\end{pmatrix}}\\&\vdots\\&=\prod_{i=1}^{n}u_{ii}
+\end{align*}
+}

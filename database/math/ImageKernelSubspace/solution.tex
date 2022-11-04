@@ -1,0 +1,36 @@
+% !TeX spellcheck = en_US
+{\color{solution}
+\begin{enumerate}
+	\item 	
+	\begin{enumerate}
+		\item 	\underline{To show:} $\text{ker}(A)\subset\mathbb{F}^n$ subspace 
+		\item[] 	\underline{Proof:}
+		\begin{enumerate}
+			\item $A\cdot0=0$, so that $0\in\text{ker}(A)$, thus $\text{ker}(A)\neq \emptyset$.
+			\item For $i=1,2$ let $\lambda_i\in\mathbb{F},~v_i\in\text{ker}(A),~\text{then by linearity}~
+			A(\lambda_1v_1+ \lambda_2v_2)
+			=\lambda_1\underbrace{Av_1}_{\textcolor{blue}{=0}}+\lambda_2\underbrace{Av_2}_{\textcolor{blue}{=0}}=0\\
+			\Rightarrow~~\lambda_1v_1+ \lambda_2v_2\in\text{ker}(A)$
+		\end{enumerate}
+		\item \underline{To show:} $\text{Im}(A)\subset\mathbb{F}^m$ subspace
+		\item[] 	\underline{Proof:}
+		\begin{enumerate}
+			\item $A\cdot0=0\in\text{Im}(A)$, thus nonempty.
+			\item For $i=1,2$ let $\lambda_i\in\mathbb{F},~w_i\in\text{Im}(A)$, then
+			\begin{align*}
+			~~&\exists v_1,v_2\in \mathbb{F}^n:~w_1=Av_1,~w_2=Av_2\\
+			\Rightarrow~~&\lambda_1 w_1+ \lambda_2 w_2=\lambda_1 Av_1+\lambda_2Av_2=A(\lambda_1 v_1+\lambda_2 v_2)\\
+			\Rightarrow~~&\lambda_1 w_1+ \lambda_2w_2\in\text{Im}(A)
+			\end{align*}
+		\end{enumerate}
+\end{enumerate}
+\item Examples:
+\begin{enumerate}
+	\item Consider the matrix composed of ones from the previous exercise.
+	\item Let $A = \begin{pmatrix}
+	1&1\\0&2
+	\end{pmatrix}$.
+	Then $Ax = 0$ implies $x=0$, so that $\text{ker}(A)=\{0\}$. In particular, the columns are linearly independent, so that they form a basis of $\mathbb{R}^2$, with other words: $\mathbb{R}^2 = \text{span}(a_1,a_2)=\text{Im}(A)$.
+\end{enumerate}
+\end{enumerate}
+}

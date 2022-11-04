@@ -1,0 +1,18 @@
+{\color{solution}
+\begin{enumerate}
+	\item \begin{align*}
+	\textcolor{exampoints}{(1P)}~&1~ \text{function declaration with input}~ A,b,m:=50\\
+	\textcolor{exampoints}{(1P)}~&2~\text{set}~n:=~\text{number of columns of}~A\\
+	\textcolor{exampoints}{(1P)}~&3~\text{set}~x=(0,\dots,0)^T\in\mathbb{R}^n\\
+	\textcolor{exampoints}{(1P)}~&4~\text{set}~N=(\frac{1}{a_{11}},\dots,\frac{1}{a_{nn}})^T~\text{(inverting diagonal elements)}\\
+	&5~/\\
+	\textcolor{exampoints}{(1P)}~&6~\text{for-loop from}~k=0~\text{to}~k=m-1\\
+	\textcolor{exampoints}{(1P)}~&7~\text{update}~x~\text{by}~x-D^{-1}(Ax-b),~D
+	=\begin{pmatrix}a_{11}& &0\\ &\ddots& \\0& &a_{nn}\end{pmatrix}\\
+	\textcolor{exampoints}{(1P)}~&8~\text{output value of}~x
+	\end{align*}
+	\item \begin{align*}\textcolor{exampoints}{(1P)}~&\text{ Jacobi iteration}\\
+	\textcolor{exampoints}{(1P)}~&\text{solve}~Ax=b~\text{iteratively}\\
+	\textcolor{exampoints}{(1P)}~&N~\text{is preconditioner}~(\text{with the ''hope''}~\rho(I-NA)<1)\end{align*}
+\end{enumerate}
+}

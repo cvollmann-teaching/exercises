@@ -1,0 +1,22 @@
+\textbf{\href{https://de.wikipedia.org/wiki/R\%C3\%BCckruffunktion}{Callback Funktion} und \texttt{**kwargs}}
+\begin{enumerate}
+	\item Implementieren Sie den unten angegebenen Code. Tätigen Sie die Aufrufe \texttt{algorithm(1)} und \texttt{algorithm(1, callback=callback)}. Was passiert? Fügen Sie Docstrings hinzu, die kurz das Verhalten der Funktionen \texttt{algorithm} und \texttt{callback} erklären.
+	\item Nun soll die Funktion \verb|callback()| nur dann etwas ausgeben, wenn \verb|xstart| größer als ein gewisser \verb|threshold| ist. Fügen Sie diese Eigenschaft und das Schlüsselwortargument \verb|threshold| der Funktion \verb|callback()| hinzu. Verändern Sie dabei die äußere Funktion \verb|algorithm()| nicht! Welche Parameter übergeben Sie an \verb|algorithm()|, wenn Sie nur Iterierte größer als \texttt{threshold=1.6} gedruckt bekommen möchten?
+	
+	\textit{Hinweis:} Verwenden Sie einen optionalen Parameter: \verb|callback(xstart, threshold=0.0)|.
+	\item Erläutern Sie, welchen praktischen Vorteil \verb|**kwargs| in verschachtelten Funktionsauswertungen haben kann.
+\end{enumerate}
+
+\begin{lstlisting}[language=Python]
+from random import random
+
+def algorithm(xstart, callback=None, **kwargs):
+   for _ in range(10):
+      if callback:
+         callback(xstart, **kwargs)
+      xstart += random() - 0.5  # der Aufruf random() generiert eine Zufallszahl in [0,1]
+   return xstart
+
+def callback(xstart):
+   print(xstart)
+\end{lstlisting}
