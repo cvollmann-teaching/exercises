@@ -1,0 +1,60 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{exercises_env}[2022/11/04 exercises environment]
+
+\RequirePackage{etoolbox}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows,automata}
+\newcommand{\karos}[2]{
+	\begin{tikzpicture}
+	\draw[step=0.5cm,color=gridgray] (0,0) grid (#1,#2);
+	\end{tikzpicture}
+}
+
+% BOOLEANS
+\newbool{solution}
+\newbool{inclass}
+\newbool{task-header}
+
+\newcounter{tasknum}
+%
+%{1 task.tex}{2 solution.tex}{3 tag (from sidecar json)}{4 points}{5 task-header (from sidecar json)}{6 solution}{7 inclass}
+\newcommand{\exercises}[7]{
+	% reset equation counter
+	\setcounter{equation}{0}
+	~\\
+	% --- task header  ---
+	\begin{minipage}{\textwidth}
+
+		% --- header ---
+		\setboolean{task-header}{#5}
+		\ifbool{task-header}{%
+			\refstepcounter{tasknum}%
+			{\color{gray}\hrule}~\\[2pt]
+			{\normalsize \noindent\textbf{Ex} \arabic{tasknum}~~{\color{gray} #3} \hfill #4~\\[-5pt]}
+			{\color{gray}\hrule}
+		}
+		{{\color{gray}\hrule}~\\[6pt]}
+	\end{minipage}
+	~\\
+	% --- task ---
+	\noindent
+	\import{#1}{task}
+	% --- solution ---
+	\setboolean{solution}{#6}
+	\ifbool{solution}{
+		\subsection*{\color{red}\sffamily\small Solution:}
+		\import{#2}{solution}
+		~\\
+	}{}
+	% --- inclass ---
+	\setboolean{inclass}{#7}
+	\ifbool{inclass}{
+
+	\karos{\textwidth}{\dimexpr\pagegoal-\pagetotal-\baselineskip\relax}
+	\newpage
+	\karos{18cm}{25.5cm}
+	\newpage
+	}{}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

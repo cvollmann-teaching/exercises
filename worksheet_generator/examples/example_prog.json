@@ -1,0 +1,34 @@
+{
+    "Programmierung": {
+        "exercises_database": "../database/programming",
+        "build_directory": "./examples/build",
+        "template": {
+            "filename": "./examples/templates/sheet.tex",
+            "symlink": false,
+            "newcommands": {
+                "LectureName": "Programmierung für Mathematiker",
+                "Lecturer": "Dr. Christian Vollmann",
+                "Tutor": "Manuel Klar",
+                "Semester": "Wintersemester 2022",
+                "SheetTitle": "Übungsaufgaben",
+                "Date": "",
+                "Place": ""
+            }
+        },
+        "table": true,
+        "exercises": {
+            "FloatsHalfPrecision": {"Points":  5},
+            "Permutation": {"Points":  5},
+            "Maximum": {"Points":  7},
+            "CallbackFunction": {"Points":  5},
+            "DezToAnyConversion": {"Points":  8},
+            "EuklidischerAlgorithmus": {"Points":  5},
+            "Fakultaet": {"Points":  2},
+            "MaxSort": {"Points":  5},
+            "Heron": {"Points":  5}
+        }
+    }
+}
+
+
+
