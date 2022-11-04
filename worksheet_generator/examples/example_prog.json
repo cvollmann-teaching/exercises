@@ -1,9 +1,9 @@
 {
-    "Programmierung": {
+    "01-sheet": {
         "exercises_database": "../database/programming",
-        "build_directory": "./examples/build",
+        "build_directory": "./examples/build/programming",
         "template": {
-            "filename": "./examples/templates/sheet.tex",
+            "filename": "./examples/templates/sheet-prog.tex",
             "symlink": false,
             "newcommands": {
                 "LectureName": "Programmierung für Mathematiker",
@@ -15,17 +15,32 @@
                 "Place": ""
             }
         },
-        "table": true,
+        "table": false,
         "exercises": {
-            "FloatsHalfPrecision": {"Points":  5},
-            "Permutation": {"Points":  5},
-            "Maximum": {"Points":  7},
-            "CallbackFunction": {"Points":  5},
-            "DezToAnyConversion": {"Points":  8},
-            "EuklidischerAlgorithmus": {"Points":  5},
-            "Fakultaet": {"Points":  2},
-            "MaxSort": {"Points":  5},
-            "Heron": {"Points":  5}
+            "FloatsHalfPrecision": {
+                "Points": "[1]"
+            },
+            "Permutation": {
+                "Points": "[2]"
+            },
+            "CallbackFunction": {
+                "Points": "[1]"
+            },
+            "DezToAnyConversion": {
+                "Points": "[2]"
+            },
+            "EuklidischerAlgorithmus": {
+                "Points": "[1]"
+            },
+            "Fakultaet": {
+                "Points": "[1]"
+            },
+            "MaxSort": {
+                "Points": "[1]"
+            },
+            "Heron": {
+                "Points": "[1]"
+            }
         }
     }
 }

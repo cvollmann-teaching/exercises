@@ -1,0 +1,64 @@
+{
+    "01-sheet": {
+        "exercises_database": "../database/math/",
+        "build_directory": "./examples/build/math",
+        "template": {
+            "filename": "./examples/templates/sheet.tex",
+            "symlink": false,
+            "newcommands": {
+                "LectureName": "Elements of Mathematics",
+                "Lecturer": "Dr. Christian Vollmann",
+                "Semester": "Winter Term 2022",
+                "SheetTitle": "Sheet 01",
+                "Date": "Due date: \\textbf{XXX}"
+            }
+        },
+        "table": true,
+        "exercises": {
+            "MatrixAsMap": {
+                "Points": 6
+            },
+            "ImageKernelSubspace": {
+                "Points": 6
+            },
+            "RankImageKernel": {
+                "Points": 12
+            },
+            "prog-matvec": {
+                "Points": 10
+            }
+        }
+    },
+    "02-sheet": {
+        "exercises_database": "../database/math/",
+        "build_directory": "./examples/build/math",
+        "template": {
+            "filename": "./examples/templates/sheet.tex",
+            "symlink": false,
+            "newcommands": {
+                "LectureName": "Elements of Mathematics",
+                "Lecturer": "Dr. Christian Vollmann",
+                "Semester": "Winter Term 2022",
+                "SheetTitle": "Sheet 01",
+                "Date": "Due date: \\textbf{XXX}"
+            }
+        },
+        "table": true,
+        "exercises": {
+            "MatrixProductasSumRank1": {
+                "Points": 6
+            },
+            "exam-inverse": {
+                "Points": 10
+            },
+            "projection-least-squares": {
+                "Points": 5
+            },
+            "prog-SolveLSImplementationMatters": {
+                "Points": 10
+            }
+        }
+    }
+}
+
+
