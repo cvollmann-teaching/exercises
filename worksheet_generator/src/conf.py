@@ -33,5 +33,5 @@ default_sheet_dict = {
             "tasknum": "",
             "table": False
         },
-    "tasks": {}
+    "exercises": {}
 }
