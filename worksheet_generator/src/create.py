@@ -1,14 +1,4 @@
 #!/usr/bin/env python3
-"""
-1. summary
-    one function for one component (table, tasks,...) of the sheet
-2. extended summary
-3. routine listings
-4. see also
-5. notes
-6. references
-7. examples
-"""
 
 from . import file_utils
 
