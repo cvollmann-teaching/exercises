@@ -135,3 +135,13 @@ or for an exercise, where the solution is just (Python) code:
 - some examples can be found in `worksheet_generator/examples`
 - copy them and adapt to your needs
 
+
+# To Do
+
+- data base editor, see [above](#database-editor)
+- data base
+  - clean up names
+  - set reasonable meta in sidecar files meta.json
+- docs
+- test
+- requirements

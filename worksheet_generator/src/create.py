@@ -76,7 +76,7 @@ def pdf(tex_filename_to_compile: str, working_directory: str, quiet = True) -> N
     os.system(command)
     return
 
-
+# TODO: only consider exercises with task-header and points
 def table(exercises_dict: dict, dest_abs_filename: str, table_switch: bool) -> None:
     """
 
