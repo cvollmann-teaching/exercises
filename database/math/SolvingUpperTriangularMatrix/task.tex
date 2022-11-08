@@ -1,12 +1,11 @@
 \textbf{Solving Linear Systems with Triangular Matrices: Forward/Backward Substitution}
-
-Let $U = (u_{ij})_{ij} \in \mathbb{R}^{n \times n}$ be an upper triangular matrix, i.e., $u_{ij} = 0$ for $i > j$, so that $U$ has the form
-	$$ U = \begin{pmatrix}
-u_{11} & u_{12} & \cdots & u_{1n} \\
-0& u_{22} & & \vdots \\
-\vdots & & \ddots & u_{n-1,n}\\
-0 & \cdots &0 & u_{nn}
-\end{pmatrix}.$$
+%, so that $U$ has the form
+%	$$ U = \begin{pmatrix}
+%u_{11} & u_{12} & \cdots & u_{1n} \\
+%0& u_{22} & & \vdots \\
+%\vdots & & \ddots & u_{n-1,n}\\
+%0 & \cdots &0 & u_{nn}
+%\end{pmatrix}.$$
 \begin{enumerate}
 	\item Solve the following linear system by hand:
 		$$\begin{pmatrix}
@@ -19,12 +18,15 @@ u_{11} & u_{12} & \cdots & u_{1n} \\
 		\begin{pmatrix}
 		3\\0\\1
 		\end{pmatrix}.$$
-		Do you observe an iterative pattern?\\
-		\textit{Hint:} Start with the last equation/row.
-	\item Let $b \in \mathbb{R}^n$ be a given vector. Then derive a general (iterative) formula to obtain $x \in \mathbb{R}^n $, which solves
-	$$Ux = b.$$
-	What requirements have to be put on the diagonal entries $u_{ii}$ of $U$, so that the system has a unique solution?\\
-	\textit{Hint:} Write out the system as
+%		Do you observe an iterative pattern?\\
+		\textit{Hint: Start with the last equation/row.}
+	\item Let $U = (u_{ij})_{ij} \in \mathbb{R}^{n \times n}$ be an upper triangular matrix, i.e., $u_{ij} = 0$ for $i > j$ and let $b \in \mathbb{R}^n$ be a given vector.
+	\begin{enumerate}
+		\item Derive a general (iterative) formula to obtain $x \in \mathbb{R}^n $, which solves
+		$Ux = b.$
+		\item 	What requirements have to be put on the diagonal entries $u_{ii}$ of $U$, so that the system has a unique solution?
+	\end{enumerate} 
+	\textit{Hint: Write out the system as
 	$$\begin{pmatrix}
 	u_{11} & u_{12} & \cdots & u_{1n} \\
 	0& u_{22} & & \vdots \\
@@ -35,8 +37,7 @@ u_{11} & u_{12} & \cdots & u_{1n} \\
 	\end{pmatrix} = \begin{pmatrix}
 	b_1 \\b_2\\\vdots\\ b_{n-1}\\b_n
 	\end{pmatrix}$$
-	and start with the last row to determine $x_n$. Then use $x_n$ to determine $x_{n-1}$ from the second but last row. Continue this procedure until you reach the first row to determine $x_1$ with the help of the previously determined values $x_2, \ldots, x_n$.
+	and start with the last row to determine $x_n$. Then use $x_n$ to determine $x_{n-1}$ from the second but last row. Continue this procedure until you reach the first row to determine $x_1$ with the help of the previously determined values $x_2, \ldots, x_n$.}
 		\item Find a similar formula for lower triangular matrices $L = (\ell_{ij})_{ij} \in \mathbb{R}^{n \times n}$, for which $\ell_{ij} = 0$ for $i < j$.
 \end{enumerate}
-~\\
 \textit{Remark:} A diagonal matrix is a special case of a triangular matrix.

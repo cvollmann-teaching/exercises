@@ -4,7 +4,7 @@
     "subtitle": "",
     "coding": "",
     "mathFields": "",
-    "tags": "Linear Algebra, Eigenvalues",
+    "tags": "Linear Algebra, Determinant",
     "relatedExercises": "",
     "solutionLength": "",
     "task": "\\textbf{Rule of Sarrus}\n\nDerive the \\textit{Rule of Sarrus} for the determinant of a $(3 \\times 3)$-matrix by using the Laplace formula from the lecture with $n=3$. Then compute the determinant of\n$$A = \\begin{pmatrix}\n1 & 4 & 3\\\\\n0 & 2 & 2\\\\\n0 & 1 & 1\n\\end{pmatrix}.$$\nWhat does it tell us about the columns?\n\n",

@@ -1,78 +1,62 @@
 import numpy as np
 import scipy.linalg as linalg
+from scipy.sparse import linalg as spla
 import scipy.sparse as sparse
-from time import time
+import timeit
 
 
-n = 5000
-a = -np.eye(n,k=-1) + 2*np.eye(n) + -np.eye(n,k=1)
-b = np.zeros(n)
-b[0], b[-1] = 1, 1
+def error(approx, exact):
+    return linalg.norm(approx-exact)/n
 
 
-start=time()
-a_inv = linalg.inv(a)
-x1 = a_inv @ b
-print("\ninverse dense\n", time()-start)
-print(linalg.norm(x1-np.ones(n))/n)
-#print(np.allclose(x1, np.ones(n), atol=1e-12, rtol=1e-12))
-
-start=time()
-x = linalg.solve(a, b)
-print("\nsolve dense\n", time()-start)
-print(linalg.norm(x-np.ones(n))/n)
-
-
-# symmwetric
-start=time()
-x = linalg.solve(a, b, assume_a = "sym")
-print("\nsolve symmetric\n",time()-start)
-print(linalg.norm(x-np.ones(n))/n)
-
-# symmetric and positive definite
-start=time()
-x = linalg.solve(a, b, assume_a = "pos")
-print("\nsolve symmetric + positive definite\n",time()-start)
-print(linalg.norm(x-np.ones(n))/n)
-
-# tell the solver about special structures
-# constant diagonals
-start=time()
-x = linalg.solve_toeplitz([2,-1]+[0]*(n-2),b)
-print("\nsolve toeplitz dense\n", time()-start)
-print(linalg.norm(x-np.ones(n))/n)
-
-start=time()
-x = sparse.linalg.cg(a, b)[0]
-print("\ncg dense\n", time()-start)
-print(linalg.norm(x-np.ones(n))/n)
+def solver_wrapper(a, b, solver="general"):
+    if solver == "inv":
+        a_inv = linalg.inv(a)
+        return a_inv @ b
+    elif solver == "general":
+        return linalg.solve(a, b)
+    elif solver == "spd":
+        return linalg.solve(a, b, assume_a="pos")
+    elif solver == "toeplitz":
+        return linalg.solve_toeplitz(a[0, :], b)
+    elif solver == "sparse_inv":
+        a_inv = spla.inv(a)
+        return a_inv @ b
+    elif solver == "sparse_general":
+        return spla.spsolve(a, b)
+    elif solver == "cg":
+        return spla.cg(a, b, maxiter=50)[0]
+    else:
+        raise Exception("Unknown solver")
 
 
-##############################################
-# sparsity
-a = sparse.csr_matrix(a)
+def experiment(solver, a, b, num_runs):
+    print("\nSolver:  {}".format(solver), end="\n"+"-"*25+"\n")
+    wall_time = timeit.timeit('x = solver_wrapper(a,b,solver=solver)',
+                              globals=globals(), number=num_runs)
+    print("Time:    {:2.2f} seconds".format(wall_time))
+    x = solver_wrapper(a, b, solver=solver)
+    print("Error:   {:.2e}".format(error(x, exact)))
 
 
-# solve
-start=time()
-x = sparse.linalg.spsolve(a, b)
-print("\nsolve sparse\n", time()-start)
-print(linalg.norm(x-np.ones(n))/n)
+if __name__ == "__main__":
 
-# sparse inv
-a = sparse.csr_matrix(a)
-start=time()
-a_inv = sparse.linalg.inv(a)
-x = a_inv @ b
-print("\ninverse sparse\n", time()-start)
-print(linalg.norm(x-np.ones(n))/n)
+    n = 2500
 
-# if some errors are tolerable, try to approximate
-start=time()
-x = sparse.linalg.cg(a, b, maxiter=50)[0]
-print("\ncg sparse\n", time()-start)
-print(linalg.norm(x-np.ones(n))/n)
+    b = np.zeros(n)
+    b[0], b[-1] = 1, 1
+    exact = np.ones(n)
 
+    num_runs = 5
 
+    # DENSE
+    a = -np.eye(n, k=-1) + 2 * np.eye(n) + -np.eye(n, k=1)
+    solvers = ("inv", "general", "spd", "toeplitz", "cg")
+    for solver in solvers:
+        experiment(solver, a, b, num_runs)
 
-#if __name__ == "__main__":
+    # SPARSE
+    a = sparse.csr_matrix(a)
+    sparse_solvers = ("sparse_inv", "sparse_general", "cg")
+    for solver in sparse_solvers:
+        experiment(solver, a, b, num_runs)
