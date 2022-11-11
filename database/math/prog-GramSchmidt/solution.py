@@ -1,14 +1,15 @@
 import numpy as np
 import scipy.linalg as la
+import matplotlib.pyplot as plt
 
 def qr_factor(A):
     """
     Computes a (reduced) QR-decomposition of a (mxn)-matrix with m>=n
-    via Gram-Schmidt Algorithm.
+    via Gram-Schmidt Algorithm assumed rank(A)=n.
 
     Parameters
     ----------
-    A : (mxn) matrix with m>=n
+    A : (mxn) matrix with m>=n, rank(A)=n
 
     Returns
     -------
@@ -32,17 +33,39 @@ def qr_factor(A):
     return Q, R
 
 
-if __name__ == "__main__":
-    # Example
-    m, n = 4, 2
-    A = np.random.rand(m, n)
-    print("A = \n", A)
-    # Another Example
-    A = np.array([[3, 1], [1, 2]])
-    print("A = \n", A)
+def example_vander_legendre(gridpoints, degree):
+    grid = np.linspace(-1, 1, 200)
+    A = np.vander(grid, degree, increasing=True)
+    plt.figure("Standard Monomials")
+    plt.plot(grid, A)
+    plt.legend(range(A.shape[1]))
+
     Q, R = qr_factor(A)
-    Q2, R2 = la.qr(A) #, mode='economic')  # Compare to SciPy
-    print("Ours:\n-------\nQ = \n", np.round(Q, 2), "\nR = \n", np.round(R, 2))
-    print("Sc:\n-------\nQ = \n", np.round(Q2, 2), "\nR = \n", np.round(R2, 2))
-    print("\nTest 1: Q^TQ = I is", np.allclose(Q.transpose()@Q, np.eye(n)))
-    print("\nTest 2: QR = A is", np.allclose(Q@R, A))
+    plt.figure("Variant of Legendre Polynomials")
+    Q, R = qr_factor(A)
+    plt.plot(grid, Q, "--")
+    plt.legend(range(Q.shape[1]))
+
+    return A, Q, R
+
+
+def test_qr(A, Q, R, mode="full"):
+    print("\nTest 1: Q.TQ = I is",
+          np.allclose(Q.transpose()@Q, np.eye(A.shape[1])))
+    print("\nTest 2: QR = A is",
+          np.allclose(Q@R, A))
+
+
+if __name__ == "__main__":
+    m, n = 200, 5
+    A, Q, R = example_vander_legendre(m, n)
+    test_qr(A, Q, R)
+
+
+
+
+
+
+
+
+
