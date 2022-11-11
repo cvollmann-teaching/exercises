@@ -1,7 +1,8 @@
 import numpy as np
-import scipy.linalg as la
 import matplotlib.pyplot as plt
 
+
+# in scipy: scipy.linalg.qr(A, mode="economic")
 def qr_factor(A):
     """
     Computes a (reduced) QR-decomposition of a (mxn)-matrix with m>=n
