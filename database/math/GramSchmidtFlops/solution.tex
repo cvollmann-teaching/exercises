@@ -1,1 +1,15 @@
-....
+\hspace*{1cm}\begin{minipage}{0.8\textwidth}
+	\begin{algorithm}[H]
+		$r_{11} = \| a_1 \|$ {~~\color{blue}m products, m-1 addition, 1 square root}\\
+		$q_1 = \frac{a_1}{r_{11}}${~~\color{blue}m divisons}\\
+		\For{ $k = 2, \dots, n$ {~~\color{blue}n-1 times} }{ 
+			\For{ $\ell = 1,\dots, k-1$ {~~\color{blue}k-1 times}}{  
+				$r_{\ell k} = a_k^\top q_\ell$ {~~\color{blue}m products, m-1 additions}	\\
+				
+			} 
+			$\widetilde{q}_k = a_k - \sum _{\ell=1}^{k-1} r_{\ell k} \, q_\ell$ {~~\color{blue}(k-1) $\times$ m products, (k-2) $\times$ m  additions)}\\
+			$r_{kk} = \| \widetilde{q}_k \|$ {~~\color{blue}m products, m-1 addition, 1 square root}\\
+			$q_k = \frac{\widetilde{q}_k}{r_{kk}}$ {~~\color{blue}m divisons}
+		}
+	\end{algorithm}
+\end{minipage}

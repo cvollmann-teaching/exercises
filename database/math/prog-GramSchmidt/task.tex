@@ -1,5 +1,5 @@
 % !TeX spellcheck = en_US
-\textbf{Gram-Schmidt algorithm ($QR$ factorization)}\\
+\textbf{Classical Gram Schmidt Algorithm}\\
 
 %{\color{navy}
 %The Gram-Schmidt algorithm is an algorithm that can be used to compute a reduced (sometimes also called ``thin'' or ``economic'') QR-decomposition of a matrix $A \in \mathbb{R}^{m\times n}$ with $m\geq n$ and $\text{rank}(A) = n$, i.e., of a matrix whose columns are linearly independent.\\
@@ -31,7 +31,7 @@
 %	\end{algorithm}
 %\end{minipage}
 %}
-Assume that $A \in \mathbb{R}^{m \times n}$ has full column rank, i.e., $\text{rank}(A) = n$ (or equivalently $\text{kernel}(A)=\{0\}$). Then the classical Gram Schmidt algorithm to compute a \textit{reduced} QR-decomposition of $A$ can be implemented as follows:\\
+Let $A \in \mathbb{R}^{m \times n}$ with $\text{ker}(A)=\{0\}$. Then the classical Gram Schmidt algorithm to compute a \textit{reduced} QR-decomposition of $A$ reads as follows:\\
 \hspace*{1cm}\begin{minipage}{0.8\textwidth}
 	\begin{algorithm}[H]
 		$r_{11} = \| a_1 \|$\\
@@ -51,14 +51,14 @@ Assume that $A \in \mathbb{R}^{m \times n}$ has full column rank, i.e., $\text{r
 \textbf{Task:} 
 \begin{enumerate}
 	\item Implement this algorithm as a function \verb|Q, R = qr_factor(A)|, which takes a matrix $A$ as input and returns the matrices $\widehat{Q}$ and $\widehat{R}$.
-	\item Legendre polynomials: Run your algorithm on the following example:
+	\item Legendre polynomials: Run your algorithm on the following example.
 	\begin{enumerate}
 		\item Find a NumPy function to generate an equidistant grid on the interval $(-1,1)$.
 		\item Find a NumPy function to generate a Vandermonde matrix \texttt{A} based on this grid.
-		\item Compute \texttt{Q,R = qr\_factor(A)} and plot the columns of \texttt{A} and \texttt{Q} over the interval $(-1,1)$ into a one figure.
-		\item Compute $\widehat{Q}^\top \widehat{Q}$ and $\widehat{Q}\widehat{R} - A$ and check whether the first yields the identity and the latter the zero-matrix.\\
-		\textit{Hint: } You can use \texttt{numpy.allclose()} to check whether two \texttt{numpy.ndarray}'s are equal up to a certain tolerance.
+		\item Compute \texttt{Q,R = qr\_factor(A)} and plot the columns of \texttt{A} and \texttt{Q} over the interval $(-1,1)$ into one figure.
+		\item Compute  \texttt{Q.TQ} and \texttt{Q@R - A}  and check whether the first yields the identity and the latter the zero-matrix.\\
+		\textit{Hint:  You can use \texttt{numpy.allclose()} to check whether two \texttt{numpy.ndarray}'s are equal up to a certain tolerance.}
 	\end{enumerate} 
-	\item Find a SciPy function to compute a $QR$ factorization (for the reduced $QR$ you may need to set the parameters accordingly).
+	\item Find a SciPy function to compute a full $QR$ factorization. To obtain the reduced $QR$ you need to set the parameters accordingly.
 \end{enumerate}
 
