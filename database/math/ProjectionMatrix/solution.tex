@@ -1,1 +1,54 @@
-....
+\begin{enumerate}
+	\item Let $\alpha \in \mathbb{R}$. We find $$P_\alpha^2 =\begin{pmatrix}
+	1 & \alpha\\
+	0 & 0
+	\end{pmatrix}\begin{pmatrix}
+	1 & \alpha\\
+	0 & 0
+	\end{pmatrix} = \begin{pmatrix}
+	1 & \alpha\\
+	0 & 0
+	\end{pmatrix} = P_\alpha.$$
+	\item Let $\alpha \in \mathbb{R}$. First note $$I- P_\alpha =  \begin{pmatrix}
+	0 & -\alpha\\
+	0 & 1
+	\end{pmatrix}. $$
+	Since $P_\alpha$ is a projector, we find $I-P_\alpha$ is a projector, too. We can also verify
+	$$(I- P_\alpha )^2=  \begin{pmatrix}
+	0 & -\alpha\\
+	0 & 1
+	\end{pmatrix}\begin{pmatrix}
+	0 & -\alpha\\
+	0 & 1
+	\end{pmatrix} = \begin{pmatrix}
+	0 & -\alpha\\
+	0 & 1
+	\end{pmatrix}=I- P_\alpha . $$
+	\item We know $\text{Im}(P_\alpha) = \text{ker}(I-P_\alpha)$. Since the columns are dependent, we have
+	$$\text{Im}(P_\alpha) = \text{span}(\begin{pmatrix}
+	1\\
+	0
+	\end{pmatrix}).$$
+	Similarly, we know $\text{ker}(P_\alpha)=\text{Im}(I-P_\alpha)$ and find 
+		$$\text{Im}(I-P_\alpha) = \text{span}(\begin{pmatrix}
+	-\alpha\\
+	1
+	\end{pmatrix}).$$
+	Remark: We observe that $\text{ker}(P_\alpha) \cap \text{ker}(I-P_\alpha) = \{0\}$.
+	\item Let $\alpha \in \mathbb{R}$ and $y \in \mathbb{R}^2$. Then from the lecture we know that  we can choose
+	$$v=P_\alpha y = \begin{pmatrix}
+	y_1 + \alpha y_2\\
+	0
+	\end{pmatrix} \in \text{Im}(P_\alpha)$$ 
+	and
+	$$r = (I-P_\alpha) y = \begin{pmatrix}
+	-\alpha y_2\\
+	y_2
+	\end{pmatrix} \in \text{ker}(P_\alpha).$$
+	Also we know that $r$ and $v$ are the only vectors in $\text{Im}(P_\alpha)$ and $\text{ker}(P_\alpha) $ respectively, so that $y = v +r $.
+	\item Choose $\alpha = 0$, then
+	$$P_0 = \begin{pmatrix}
+	1 & 0\\
+	0 & 0
+	\end{pmatrix}  = P_0^\top. $$
+\end{enumerate}
