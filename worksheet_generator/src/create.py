@@ -207,6 +207,13 @@ def exercises(exercise_database: str, exercises_dict: dict,
                 fallback_tags = meta.get("tags", default_fallback_dict["default_exercise_setting"]["tags"])
                 tags = exercise_dict.get("tags", fallback_tags)
 
+                # task_header needs to latex bool, i.e., string "true" or string "false"
+                task_header = exercise_dict.get("Header",
+                                                default_fallback_dict["default_exercise_setting"]["Header"])
+                if task_header in ["", 0, "False", "no", "false", False]:
+                    task_header = "false"
+                else:
+                    task_header = "true"
                 # WRITE LATEX exercise
                 # serve \exercise command interface as defined in the template file
                 exercise_directory = os.path.relpath(exercise_directory, sheet_output_directory)
@@ -216,7 +223,7 @@ def exercises(exercise_database: str, exercises_dict: dict,
                                      + solution_directory + "/}{" \
                                      + tags + "}{" \
                                      + str(exercise_dict.get("Points", default_fallback_dict["default_exercise_setting"]["Points"])) + "}{" \
-                                     + exercise_dict.get("Header", default_fallback_dict["default_exercise_setting"]["Header"]) + "}{" \
+                                     + task_header + "}{" \
                                      + version_bool_solution + "}{" \
                                      + exercise_dict.get("inclass", version_bools["inclass"]) + "}\n"
                 # print(exerciseCommand)
