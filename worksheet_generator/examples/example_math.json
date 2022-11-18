@@ -16,7 +16,8 @@
         "table": true,
         "exercises": {
             "MatrixAsMap": {
-                "Points": 6
+                "Points": 6,
+                "Header": false
             },
             "ImageKernelSubspace": {
                 "Points": 6

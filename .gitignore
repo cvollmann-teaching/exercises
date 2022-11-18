@@ -1,6 +1,7 @@
 build/*
 .idea/*
 
+worksheet_generator/examples/build/
 
 # Jupyter Notebook
 .ipynb_checkpoints
