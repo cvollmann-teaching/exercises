@@ -1,0 +1,167 @@
+{
+	\color{solution}
+\begin{enumerate}
+	\item  \textbf{\textit{The eigenvalues of the powers of a matrix:}}\\
+	For an eigenpair $(\lambda,v)$ of $A$ we find
+ \begin{align*}
+ A^kv = A^{k-1}Av =  A^{k-1}\lambda v.
+ \end{align*}
+ Iterating $k$ times gives the desired result.
+ %
+ %
+	\item	\textbf{\textit{Eigenvalues of invertible Matrices:}}\\ 
+	 Let $A\in GL_n(\mathbb{F})$ and $\lambda\in\sigma(A)$ with eigenvector $v\neq 0$.\\
+	First, we show that $\lambda\neq 0$ holds. For this purpose let us assume $\lambda = 0$. Then
+	$Av=\lambda v=0$ implies $v=A^{-1}\cdot 0=0$, which contradicts that $v$ is an eigenvector (and therefore nonzero).\\
+	Second, we proof $\frac{1}{\lambda}\in\sigma(A^{-1})$. We find
+	\begin{align*}Av=\lambda v~~\stackrel{\textcolor{blue}{A\in GL_n(\mathbb{F})}}{\Leftrightarrow}~~ v = \lambda A^{-1}v~~\stackrel{\textcolor{blue}{\lambda\neq 0}}{\Leftrightarrow}~~\frac{1}{\lambda}v=A^{-1}v~~\Leftrightarrow~~\frac{1}{\lambda}\in\sigma(A^{-1})~~\textcolor{blue}{(\text{with the same eigenvector}~v).}
+	\end{align*}
+%
+%
+%
+	\item \textbf{\textit{Eigenvalues of a scaled matrix:}}\\
+	Let $\alpha \in \F$, then for an eigenpair $(\lambda,v)$ of $A$ we find
+	\begin{align*}
+	Av = \lambda v & \Leftrightarrow (\alpha A) v = (\alpha \lambda)  v
+	\end{align*} 
+	implying that $(\alpha \lambda, v)$ is an eigenpair of $\alpha A$. \\ 
+
+
+	\item \textbf{\textit{Real symmetric matrices have real eigenvalues:}}\\ 
+	We first collect some observations:
+	\begin{itemize}
+		\item In general, for $x,y\in \F^n$ and a matrix $A \in \Fnn$ we easily find by the definition of the matrix product
+		\begin{align*}
+		x^\top A y = \sum_{i,j}a_{ij}x_i y_j .
+		\end{align*}
+		If the matrix is symmetric, i.e., $a_{ij}= a_{ji}$, we further find
+		\begin{equation} \label{eq:symEnergy}
+	     	x^\top A y = \sum_{i}a_{ii}x_iy_i  +  \sum_{i \neq j}a_{ij} (x_i y_j  + x_jy_i).
+		\end{equation}
+		\item For $z=x+iy \in \C$ let us define $\overline{z} := x-iy$ (the so-called \textit{complex conjugate} of $z$). Then we easily find
+		\begin{itemize}
+			\item[i)] $z \overline{z} = a^2 + b^2 \in \R$ (real number!),
+			\item[ii)] for $w = c +id$ we find $\overline{z}w + z \overline{w} = 2(ac+bd) \in \R$ (real number!) and also $\overline{z\cdot w} = \overline{z}\cdot\overline{w}$.
+		\end{itemize}
+	\end{itemize}
+	Now to the task: Let $(\lambda, v)$ be an eigenpair of $A=A^\top \in \Rnn$, i.e., 
+	$$Av = \lambda v. $$
+	Multiplying $\overline{v} := (\overline{v}_1,\ldots, \overline{v}_n)$ from the left yields
+		$$\overline{v}^\top Av = \lambda \overline{v}^\top v. $$
+	Now, if we can show that $\overline{v}^\top Av$ and $\overline{v}^\top v$ are real, then we know that $\lambda$ is real. First, we observe that 
+	$$\overline{v}^\top v = \sum_{i=1}^n  \overline{v}_i v_i,$$
+	which is real, since all summands $ \overline{v}_i v_i$ are real by i) above. Secondly, since $A$ is \textbf{symmetric} we can apply \eqref{eq:symEnergy} to obtain
+	\begin{align*}
+	 \overline{v}^\top Av = \sum_{i} a_{ii}\overline{v}_i v_i +  \sum_{i \neq j}a_{ij} (\overline{v}_i v_j  + \overline{v}_jv_i),
+	\end{align*}
+	which is real, since all summands are real by i) and ii) above and the assumption that the matrix only has \textbf{real} coefficients.
+~\\~\\
+	\textit{Remarks:} \begin{itemize}
+		\item \textbf{We cannot relax symmetry assumption:} Matrices with just real coefficients can have complex eigenvalues. Take for example the (orthogonal) matrix
+	$$
+	A = \begin{pmatrix}
+		0&-1\\
+		1&0
+	\end{pmatrix}
+	$$
+	for which $\det(A-\lambda I) = \lambda^2 +1$, so that $\sigma(A)=\{i,-i\}$  with eigenvectors $\lbrace \begin{pmatrix}
+	1\\ -i
+	\end{pmatrix}, \begin{pmatrix}
+	1\\ i
+	\end{pmatrix}\rbrace$. However, the additional property of symmetry is a sufficient condition for a real matrix $A$ to have solely real eigenvalues! 
+	\item \textbf{We cannot relax assumption of real coefficients:} A symmetric matrix with complex coefficients can have complex eigenvalues. Consider for example 
+		$$
+	A = \begin{pmatrix}
+	0&i\\
+	i&0
+	\end{pmatrix},
+	$$
+	for which $\det(A-\lambda I) = \lambda^2 +1$, so that $\sigma(A)=\{i,-i\}$.
+	\item \textbf{The general result for complex matrices:} Like \textit{symmetry} for real matrices we introduce for complex matrices: A matrix $A \in \C^{n\times n}$ is called \textit{Hermitian} or \textit{self-adjoint} if $A^\top = \overline{A}$. With other words, Hermitian matrices are invariant under transposition \textit{and} (additionally) conjugation. With the same proof as above one can show that such matrices also have real eigenvalues. For example, consider the Hermitian matrix
+			$$
+	A = \begin{pmatrix}
+	0&-i\\
+	i&0
+	\end{pmatrix},
+	$$
+    for which $\det(A-\lambda I) = \lambda^2 -1$, so that $\sigma(A)=\{1,-1\}$.
+	\end{itemize}
+	%
+	%
+	\item \textbf{\textit{The eigenvalues of real orthogonal matrices:}}\\
+%	{\small\color{red}(Note that we have introduced the notion of \textit{orthogonality} only for real matrices and vectors!)}\\
+	We know $Q^\top Q = I$.  Now let $(\lambda, v)$ be an eigenpair of $Q$, i.e., $Qv = \lambda v$. Using the notation from the previous subtask, i.e., letting $\overline{v}  = (\overline{v}_1,\ldots, \overline{v}_n)$ denote the complex conjugate of $v$, we find on the one hand that
+	$$(Q \overline{v})^\top (Qv) = \overline{v}^\top Q^\top Q v = \overline{v}^\top v  \in \R.$$
+ 	On the other hand, since $Q$ is assumed to be real we find
+		$$(Q \overline{v})^\top (Qv)=(\overline{Q v})^\top (Qv) =(\overline{ \lambda v})^\top ( \lambda v)  =\overline{ \lambda} \lambda  (\overline{v}^\top v ) = |\lambda |^2 (\overline{v}^\top v )\in \R.$$
+    Thus combining these two equations gives
+    $$|\lambda | = 1. $$
+%    \textit{Remark:} Due to the general result $\|Qv\|_2 = \|v\|_2$ derived above, orthogonal matrices are \textit{isometric}, i.e., they do not change the Euclidean norm (=length) of a vector.
+    %
+    %
+    %
+	\item \textbf{\textit{The eigenvalues of an upper (or lower) triangular matrix are sitting on its diagonal:}}\\ 
+		\underline{Recall:} \\
+1) The determinant of an (upper) triangular matrix is given by the product of its diagonal entries
+$$
+\text{det}(U)=u_{11}\cdot u_{22}\cdot\ldots\cdot u_{nn}.
+$$
+2) The eigenvalues $\lambda$ of a matrix $A\in\mathbb{R}^{n\times n}$ are the roots of the characteristic polynomial 
+$$
+\text{det}(A-\lambda I) = 0.
+$$
+Since $U-\lambda I = \begin{pmatrix}u_{11}-\lambda& &*\\ &\ddots& \\0& &u_{nn}-\lambda\end{pmatrix}$ is also upper triangular we find
+$$
+\text{det}(U-\lambda I)=(u_{11}-\lambda)\cdot(u_{22}-\lambda)\cdot\ldots\cdot(u_{nn}-\lambda)\stackrel{!}{=}0\Leftrightarrow \lambda\in\{u_{11},\dots,u_{nn}\}.
+$$
+Analogue proof for lower triangular matrices.
+%
+%
+	\item \textbf{\textit{Similar matrices have the same eigenvalues:}}\\ 
+		Let $(\lambda,v)$ be an eigenpair of $A$, then since $T$ is invertible we find
+$$
+\underbrace{Av=\lambda v}_{\textcolor{blue}{\text{by definition of} (\lambda,v)}}\stackrel{\textcolor{blue}{T^{-1}\cdot|}}{\Leftrightarrow} \underbrace{T^{-1}Av}_{\textcolor{blue}{=T^{-1}AIv}} = T^{-1}(\lambda v) \stackrel{\textcolor{blue}{I=TT^{-1}}}{\Leftrightarrow} T^{-1}AT(T^{-1}v) = \lambda(T^{-1}v).
+$$
+	Thus, $(\lambda, T^{-1}v)$ is an eigenpair for the matrix $T^{-1}AT$ (note that $T^{-1}v\neq 0$, since $v\neq 0$).\\~\\
+	\textit{Remark:} We call two matrices $A$ and $B$ \textit{similar} if there exists an invertible matrix $T$ such that $B = T^{-1}AT$.
+%
+%
+%
+	\item\textbf{\textit{Eigenvalues of a shifted matrix:}}\\ 
+		Let $\alpha\in\mathbb{F}$ and $(\lambda,v)$ be an eigenpair of $A$. Then $((A-\alpha I)-(\lambda -\alpha)I)v=(A-\lambda I)v\stackrel{\textcolor{blue}{\lambda\in\sigma(A)}}{=}0$\\
+	 Thus ${(\lambda-\alpha)~\text{is an eigenvalue of}~(A-\alpha I)~\text{with the same eigenvector}~v}$.
+		%
+		%
+	\item \textbf{\textit{Symmetric matrices have orthogonal eigenvectors:}}\\ 
+	\textit{Remark upfront:} Since we are considering a real symmetric matrix, we know that the eigenvalues are real. However, one may still find complex eigenvectors. For example consider the identity matrix $I$ with spectrum $\sigma(I) = \{1\}$. Then obviously any nonzero vector $v$ (complex or not) is an eigenvector to the eigenvalue $1$. We now show that real eigenvalues enable us to choose real eigenvectors (as implicitly assumed in the task). To clarify this, let $(\lambda,v)$ be an eigenpair, where $\lambda \in \R$ but $v$ may potentially have complex coefficients. Let us split $v$ according to the real and imaginary parts of its coefficient, more precisely
+	 $$v = \begin{pmatrix}
+	 v_1\\\vdots\\v_n
+	 \end{pmatrix}
+	 =  \begin{pmatrix}
+	 x_1 + i y_1\\\vdots\\ x_n + i y_n
+	 \end{pmatrix} = \begin{pmatrix}
+	 x_1 \\\vdots\\ x_n
+	 \end{pmatrix}+ i \begin{pmatrix}
+	 y_1\\\vdots\\  y_n
+	 \end{pmatrix} =: x + i y.$$
+	 Then we find 
+	 $$Av = \lambda v \Leftrightarrow  A(x+iy) = \lambda (x+iy) \Leftrightarrow Ax + i Ay = \lambda x + i \lambda y .$$ Note here that $\lambda$ is real and thus we have the splitting into real $\lambda x $ and imaginary part $\lambda y$. By comparing real parts in the last equation we obtain $$Ax = \lambda x, $$ so that the real part of $v$ is also an eigenvector to the eigenvalue $\lambda$.
+	~\\
+	
+	\textit{Now to the task:} Let $A$ be symmetric, i.e., $A=A^T$ and let $(\lambda_1,v_1)$ and $(\lambda_2,v_2)$ be two (real) eigenpairs of $A$ with $\lambda_1\neq\lambda_2$, then
+	$$
+	\textcolor{red}{v_1^T}\underbrace{\textcolor{red}{Av_2}}_{\textcolor{blue}{=\lambda_2v_2}} = \lambda_2v_1^Tv_2,
+	$$ \text{and also}
+	$$ \textcolor{red}{v_1^T}\underbrace{\textcolor{red}{A}}_{\textcolor{blue}{=A^T}}\textcolor{red}{v_2} = \underbrace{v_1^TA^Tv_2}_{\textcolor{blue}{=(v_1^TA^Tv_2)^T}} = v_2^T\underbrace{Av_1}_{\textcolor{blue}{=\lambda_1v_1}} = \lambda_1v_2^Tv_1 = \lambda_1v_1^Tv_2. 
+	$$
+	Now we subtract these terms and find 
+	$$
+	0=\textcolor{red}{v_1^TAv_2-v_1^TAv_2} = \lambda_2v_1^Tv_2 - \lambda_1v_1^Tv_2 = \underbrace{\lambda_2-\lambda_1}_{\textcolor{blue}{\neq 0,\  \text{since}\ \lambda_2\neq\lambda_1}}v_1^Tv_2
+	$$
+	$$
+	\stackrel{\textcolor{blue}{\lambda_1\neq\lambda_2}}{\Rightarrow} v_1^Tv_2 = 0.
+	$$
+\end{enumerate}
+
+
+}

@@ -1,0 +1,46 @@
+% !TeX spellcheck = en_US
+{
+\color{solution}
+\begin{enumerate}
+	\item % {\color{red}Note: This only works with the correct complex norm and inner product! If symmetry is assumed then everything is fine! }\\
+	Let $A$ be positive definite (semi--definite) and let $(\lambda, v)$ be an eigenpair of $A$. Then by using the Rayleigh quotient we find
+	$$\lambda = \frac{v^\top A v}{v^\top v} = \frac{v^\top A v}{\|v\|_2^2}~~{\color{cyan}\tfrac{> 0~~ (\geq 0)}{> 0 ~ \text{since}~v\neq 0  }} ~~> 0~~ (\geq 0). $$
+%	
+%	Proof by contradiction:\\
+%	Let $A$ be $\underbrace{\text{positive definite}}_{\textcolor{blue}{:\Leftrightarrow x^TAx>0~\forall x\neq 0}}$ and assume $\lambda\leq0$ for some $\underbrace{\lambda\in\sigma(A)}_{\textcolor{blue}{:\Leftrightarrow \exists v\neq 0: Av=\lambda v}}$ with eigenvector $v\neq 0$.\\
+%	Then we find
+%	$$
+%	v^T\underbrace{Av}_{\textcolor{blue}{=\lambda v}} 
+%	= \lambda v^Tv
+%	= \underbrace{\lambda}_{\textcolor{blue}{\leq0}}\underbrace{\|{v}\|_2^2}_{\textcolor{blue}{>0}} ~\leq 0~ ~~~\textcolor{red}{\text{[contradiction to the positivity of A]}}.$$\\
+%	(Analogous proof for $A$ positive semi-definite.)
+	\item Take for example 
+	$$A=\begin{pmatrix}
+	1&-4\\
+	0&2
+	\end{pmatrix} $$
+	which has positive eigenvalues $\sigma(A)=\{1,2\}$, but for $x=(1,1)^\top$ we have
+		$$x^\top A x = -3+2 = -1 < 0. $$
+	\item 	For symmetric $A\in\mathbb{R}^{n\times n}$ we find an orthogonal matrix $Q\in\mathbb{R}^{n\times n}$ and diagonal matrix $\Lambda = \text{diag}(\lambda_1,\ldots,\lambda_n)$ with $\lambda_i\in\sigma(A)$, so that   $$A=Q\Lambda Q^T ~~~~\text{(eigendecomposition)}.$$
+	Since $Q$ is orthogonal, any vector $x \in \R^n$ can be written as $x = Ix=QQ^\top x=Q\mu$, with coordinates $\mu := Q^\top x$ where $\mu \neq 0$ for $x\neq 0$. Therefore 
+	\begin{equation*}
+	\begin{aligned}
+	x^\top A x = \mu^\top Q^\top Q\Lambda Q^\top Q \mu = \mu^\top \Lambda \mu = \sum_{i=1}^n \mu_i^2 \lambda_i \geq 0.
+	\end{aligned}
+	\end{equation*}
+	We have ``$>$'' if $x \neq 0$.
+	\item 
+	For symmetric $A\in\mathbb{R}^{n\times n}$ we find an orthogonal matrix $Q\in\mathbb{R}^{n\times n}$ and diagonal matrix $\Lambda = \text{diag}(\lambda_1,\ldots,\lambda_n)$ with $\lambda_i\in\sigma(A)$, so that   $$A=Q\Lambda Q^T ~~~~\text{(eigendecomposition)}.$$
+	Therefore:
+	\begin{center}
+		$A$ invertible 
+		~~$\stackrel{(*)}{\Leftrightarrow}\ \ \Lambda$ invertible 
+		~~$\stackrel{(**)}{\Leftrightarrow}\ \ \lambda\neq 0\ \ \forall\lambda\in\sigma(A)$.
+	\end{center}
+	\begin{itemize}
+		\item[$(*)$]  product of matrices is invertible if all factors are invertible and orthogonal matrices are invertible with inverse $Q^T=Q^{-1}$
+		\item[$(**)$] diagonal matrices are invertible, if and only if diagonal elements are nonzero
+	\end{itemize}
+Example: $A$ symmetric and positive definite (spd) $\Rightarrow$ $A$ invertible.
+\end{enumerate}
+}
