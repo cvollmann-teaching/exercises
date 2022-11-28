@@ -5,17 +5,18 @@
 Prove the following statements (see also the corresponding Lemma from the lecture):
 \begin{enumerate}
 	\item  \textit{The eigenvalues of the powers of a matrix:}\\ 
-	Let $A \in \F^{n\times n} ,~\lambda \in \sigma(A)$ then $\lambda^k \in \sigma(A^k)~\text{for any}~k\in \N$ .
+	Let $A \in \mathbb{F}^{n\times n} ,~\lambda \in \sigma(A)$ then $\lambda^k \in \sigma(A^k)~\text{for any}~k\in \mathbb{N}$ .
 	\item	\textit{Eigenvalues of invertible Matrices:}\\ Let $A\in \mathbb{F}^{n \times n}$ be invertible and $\lambda \in \sigma(A)$, then $\lambda \neq 0$ and $\frac{1}{\lambda}$ is an eigenvalue of $A^{-1}$.
 	\item \textit{Eigenvalues of a scaled matrix:}\\ 
 	Let $A\in \mathbb{F}^{n \times n}$ and $\lambda \in \sigma(A)$, then $\alpha\lambda \in \sigma(\alpha A)$ for any $\alpha \in \mathbb{F}$.
-	\item \textit{Real symmetric matrices have real eigenvalues:} {\small\color{red}(Not obvious without using properties of complex numbers! Solution not relevant for exam and thus not discussed here.)}\\ $A \in \R^{n\times n},~A = A^T ~~\Rightarrow~~ \sigma(A)\subset\R$.
-	\item \textit{The eigenvalues of real orthogonal matrices:} {\small\color{red}(Not obvious without using properties of complex numbers! Solution not relevant for exam and thus not discussed here.)}\\
-	$Q \in \Rnn$ be orthogonal, $\lambda = a+ib \in \sigma(Q) ~~\Rightarrow~~|\lambda|:=\sqrt{a^2+b^2}=1$
+%	\item \textit{Real symmetric matrices have real eigenvalues:} {\small\color{red}(Not obvious without using properties of complex numbers! Solution not relevant for exam and thus not discussed here.)}\\ $A \in \R^{n\times n},~A = A^T ~~\Rightarrow~~ \sigma(A)\subset\R$.
+%	\item \textit{The eigenvalues of real orthogonal matrices:} {\small\color{red}(Not obvious without using properties of complex numbers! Solution not relevant for exam and thus not discussed here.)}\\
+%	$Q \in \mathbb{R}^{n \times n}$ be orthogonal, $\lambda = a+ib \in \sigma(Q) ~~\Rightarrow~~|\lambda|:=\sqrt{a^2+b^2}=1$
 	\item \textit{The eigenvalues of an upper (or lower) triangular matrix are sitting on its diagonal:}\\ 
 	Let $U\in \mathbb{F}^{n \times n}$ with $u_{ij} = 0$ for $i > j$. Then $\sigma(U) = \{u_{11}, \ldots, u_{nn}\}$.
-	\item \textit{Similar matrices have the same eigenvalues:}\\ Let $A \in \mathbb{F}^{n \times n}$ and $T \in GL_n(\mathbb{F})$, i.e., $T$ is invertible. Then $\sigma(A) = \sigma(T^{-1}AT)$.
+%	\item \textit{Similar matrices have the same eigenvalues:}\\ Let $A \in \mathbb{F}^{n \times n}$ and $T \in GL_n(\mathbb{F})$, i.e., $T$ is invertible. Then $\sigma(A) = \sigma(T^{-1}AT)$.
 	\item\textit{Eigenvalues of a shifted matrix:}\\ Let $A\in \mathbb{F}^{n \times n}$ and $\lambda \in \sigma(A)$, then $(\lambda - \alpha)$ is an eigenvalue of $(A - \alpha I)$ for any $\alpha \in \mathbb{F}$.
-	\item \textit{Symmetric matrices have orthogonal eigenvectors:} {\small\color{red}(Solution not relevant for exam and thus not discussed here.)}\\ Let $\lambda_1 \neq \lambda_2$ be two \textit{distinct} eigenvalues of a real \textit{symmetric} matrix $A \in \mathbb{R}^{n \times n}$ (i.e., $A = A^T$), and let 
-$v_1, v_2 \in \mathbb{R}^n$ be corresponding eigenvectors. Proof that $v_1$ and $v_2$ are orthogonal, i.e., $v_1^\top v_2 = 0$.
+	\item \textit{Hermitian matrices have orthogonal eigenvectors:} \\
+	Let $\lambda_1 \neq \lambda_2$ be two \textit{distinct} eigenvalues of a \textit{Hermitian} matrix $A \in \mathbb{C}^{n \times n}$ (i.e., $A = A^H$), and let 
+$v_1, v_2 \in \mathbb{C}^n$ be corresponding eigenvectors. Proof that $v_1$ and $v_2$ are orthogonal, i.e., $v_1^H v_2 = 0$.
 \end{enumerate}
