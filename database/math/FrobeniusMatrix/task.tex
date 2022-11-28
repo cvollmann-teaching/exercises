@@ -1,8 +1,9 @@
+% !TeX spellcheck = en_US
 \textbf{Frobenius Matrices}
 
 Let $\ell_j := (0,\ldots,0,\ell_{j+1,j},\ldots,\ell_{m,j})^\top\in\mathbb{R}^m$, $e_j\in\mathbb{R}^m$ be the $j$-th unit vector and $I \in \mathbb{R}^{m\times m}$ be the identity matrix. Then show that the matrix $$L_j := I + \ell_je_j^\top \in \mathbb{R}^{m\times m}$$ satisfies:
 \begin{enumerate}
 	\item The matrix $L_j$ is an invertible lower triangular matrix.
-	\item The inverse of $L_j$ is given by $L_j^{-1} := I - \ell_je_j^\top \in \mathbb{R}^{m\times m}$.
+	\item The inverse of $L_j$ is given by $L_j^{-1} = I - \ell_je_j^\top \in \mathbb{R}^{m\times m}$.
 	\item For $i\leq j$ it holds that $L_iL_j = I + \ell_je_j^\top+ \ell_ie_i^\top$ ~~and~~ $L_i^{-1}L_j^{-1} = I - \ell_je_j^\top- \ell_ie_i^\top$.
 \end{enumerate}
