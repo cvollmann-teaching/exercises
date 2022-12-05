@@ -1,3 +1,4 @@
+% !TeX spellcheck = en_US
 \textbf{\normalsize Compute the SVD}
 
 	Consider the matrix
@@ -14,7 +15,7 @@
 \begin{enumerate}
 	\color{navy}
 	\item Compute the eigenvalues $\lambda_i$ with eigenvectors $v_i$ of $A^TA$. Index the eigenvalues so that $\lambda_1 \geq \cdots \geq \lambda_r > 0$, where $r := $``number of positive eigenvalues''. Normalize the eigenvectors $v_i$. 
-	\vspace{-0.2cm}\item For $i =1,\ldots, r$: Set $\sigma_i := \sqrt{\lambda_i}$ and $u_i := \frac{1}{\sigma_i} Av_i$.\\ ~[Until here we will already have the reduced SVD]
+	\vspace{-0.2cm}\item For $i =1,\ldots, r$: Set $\sigma_i := \sqrt{\lambda_i}$ and $u_i := \frac{1}{\sigma_i} Av_i$.~[Until here we will already have the reduced SVD]
 		\vspace{-0.2cm}\item Extend the bases: 
 		\vspace{-0.2cm}\begin{itemize}
 \item If $r < n$: Find orthonormal $v_{r+1}, \ldots, v_n \in \ker(A)$ by solving $A v_i = 0$ and orthogonalizing.

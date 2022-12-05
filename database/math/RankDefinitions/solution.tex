@@ -6,7 +6,7 @@ Now assume $A$ has more than $r$ independent columns. Then by the reasoning from
 \textbf{ii) $\Leftrightarrow$ iii)} We show that $$\dim(\text{Im}(A)) = \text{number of positive singular values of }A .$$
 Let us consider the reduced SVD $A = U_r \Sigma_r V_r^\top$ where $r$ denotes the number of (positive) singular values, $\Sigma_r$ is an invertible diagonal matrix and $U_r$ and $V_r^\top$ have independent (even orthonormal) columns and rows, respectively. Thus
 $$\text{Im}(A) = \text{Im}(U_r \Sigma_r V_r^\top). $$
-In order to put Lemma 2.29 into position we show that $\Sigma_r V_r^\top$ is surjective, i.e., $\rank(\Sigma_r V_r^\top) = r$. This easily follows from the fact that $(\Sigma_r V_r^\top)^\top = V_r\Sigma_r $ has independent columns and thus $$\text{nullity}(V_r\Sigma_r) = 0 \Leftrightarrow \rank(\Sigma_r V_r^\top) = r.$$ Therefore by the mentioned Lemma we obtain
+We show that $\Sigma_r V_r^\top$ is surjective, i.e., $\text{rank}(\Sigma_r V_r^\top) = r$. This easily follows from the fact that $(\Sigma_r V_r^\top)^\top = V_r\Sigma_r $ has independent columns and thus $$\text{nullity}(V_r\Sigma_r) = 0 \Leftrightarrow \text{rank}(\Sigma_r V_r^\top) = r.$$ Therefore by the mentioned Lemma on the image of a product matrix we obtain
 $$\text{Im}(A) = \text{Im}(U_r \Sigma_r V_r^\top)= \text{Im}(U_r).$$
 Since the columns of $U_r$ are independent they are a basis of length $r$ for $\text{Im}(A)$, which implies $\dim(\text{Im}(A))=r$=number of (positive) singular values.
 

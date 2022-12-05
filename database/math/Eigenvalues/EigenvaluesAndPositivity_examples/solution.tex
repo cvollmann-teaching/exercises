@@ -22,7 +22,7 @@
 	which has positive eigenvalues $\sigma(A)=\{1,2\}$, but for $x=(1,1)^\top$ we have
 		$$x^\top A x = -3+2 = -1 < 0. $$
 	\item 	For symmetric $A\in\mathbb{R}^{n\times n}$ we find an orthogonal matrix $Q\in\mathbb{R}^{n\times n}$ and diagonal matrix $\Lambda = \text{diag}(\lambda_1,\ldots,\lambda_n)$ with $\lambda_i\in\sigma(A)$, so that   $$A=Q\Lambda Q^T ~~~~\text{(eigendecomposition)}.$$
-	Since $Q$ is orthogonal, any vector $x \in \R^n$ can be written as $x = Ix=QQ^\top x=Q\mu$, with coordinates $\mu := Q^\top x$ where $\mu \neq 0$ for $x\neq 0$. Therefore 
+	Since $Q$ is orthogonal, any vector $x \in \mathbb{R}^n$ can be written as $x = Ix=QQ^\top x=Q\mu$, with coordinates $\mu := Q^\top x$ where $\mu \neq 0$ for $x\neq 0$. Therefore 
 	\begin{equation*}
 	\begin{aligned}
 	x^\top A x = \mu^\top Q^\top Q\Lambda Q^\top Q \mu = \mu^\top \Lambda \mu = \sum_{i=1}^n \mu_i^2 \lambda_i \geq 0.
