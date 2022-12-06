@@ -2,13 +2,12 @@
 \textbf{Eigenvalues and Positivity of a Matrix}
 
 {\color{navy}
-	\textbf{Definition.} A matrix $A\in \mathbb{R}^{n\times n}$ is called positive definite (semi-definite) it $x^TAx > 0 ~~(\geq 0)$ for all $x \in \mathbb{R}^n\setminus\{0\}$.\\[10pt]}
+	\textbf{Definition.} A symmetric matrix $A\in \mathbb{R}^{n\times n}$ is called positive definite (semi-definite) if $x^TAx > 0 ~~(\geq 0)$ for all $x \in \mathbb{R}^n\setminus\{0\}$.\\[10pt]}
 Let $A\in \mathbb{R}^{n\times n}$ be any matrix. Please show:
 \begin{enumerate}
-	\item If $A$ is positive definite (semi-definite), then $\lambda > 0$ ($\geq 0$) for all eigenvalues $\lambda \in \sigma(A)$.~\\ (\textit{Hint:} Rayleigh quotient.)
-	\item The reverse is not true: Find an example of a matrix, which has positive eigenvalues, but is \textit{not} positive definite.\\
+	\item Find an example of a nonsymmetric matrix, which has strictly positive eigenvalues, but  $x^TAx < 0$ for some $x \in \mathbb{R}^n$.\\
 	(\textit{Hint:} Consider, e.g., a triangular $2 \times 2$ matrix.)
-	\item The reverse is true for symmetric matrices: Let $A$ be \textit{symmetric} and $\lambda > 0$ ($\geq 0$) for all eigenvalues $\lambda \in \sigma(A)$, then $A$ is positive definite (semi-definite).\\
-	(\textit{Hint:} Eigendecompostion.)
-	\item Let $A$ be \textit{symmetric}, then $A$ is invertible if and only if $\lambda \neq 0$ for all eigenvalues $\lambda \in \sigma(A)$.~\\ (\textit{Hint:} Eigendecompostion.)
+	\item Let $A$ be \textit{symmetric} and $\lambda > 0$ ($\geq 0$) for all eigenvalues $\lambda \in \sigma(A)$, then $A$ is positive definite (semi-definite).
+%	(\textit{Hint:} Eigendecompostion.)
+	\item Show that that symmetric and positive definite matrices are invertible.
 \end{enumerate}

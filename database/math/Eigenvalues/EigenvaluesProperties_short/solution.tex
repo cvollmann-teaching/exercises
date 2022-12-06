@@ -149,15 +149,15 @@ Analogue proof for lower triangular matrices.
 %	~\\
 %	
 %	\textit{Now to the task:} 
-	Let $A$ be hermitian, i.e., $A=A^H$ and let $(\lambda_1,v_1)$ and $(\lambda_2,v_2)$ be two eigenpairs of $A$ with $\lambda_1\neq\lambda_2$, then
+	Let $A$ be hermitian, i.e., $A=A^H$ and let $(\lambda_1,v_1)$ and $(\lambda_2,v_2)$ be two eigenpairs of $A$ with $\lambda_1\neq\lambda_2$ (both real), then
 	$$
 	\textcolor{red}{v_1^H}\underbrace{\textcolor{red}{Av_2}}_{\textcolor{blue}{=\lambda_2v_2}} = \lambda_2v_1^Hv_2,
 	$$ \text{and also}
-	$$ \textcolor{red}{v_1^H}\underbrace{\textcolor{red}{A}}_{\textcolor{blue}{=A^H}}\textcolor{red}{v_2} = \underbrace{v_1^HA^Hv_2}_{\textcolor{blue}{=(v_1^HA^Hv_2)^H}} = v_2^H\underbrace{Av_1}_{\textcolor{blue}{=\lambda_1v_1}} = \lambda_1v_2^Hv_1 = \lambda_1v_1^Hv_2. 
+	$$ \textcolor{red}{v_1^H}\underbrace{\textcolor{red}{A}}_{\textcolor{blue}{=A^H}}\textcolor{red}{v_2} = v_1^HA^Hv_2= \underbrace{(Av_1)^H}_{\textcolor{blue}{=(\lambda_1v_1)^H}}  v_2= \overline{\lambda_1}v_1^Hv_2 = \lambda_1 v_1^Hv_2. 
 	$$
 	Now we subtract these terms and find 
 	$$
-	0=\textcolor{red}{v_1^HAv_2-v_1^HAv_2} = \lambda_2v_1^Hv_2 - \lambda_1v_1^Hv_2 = \underbrace{\lambda_2-\lambda_1}_{\textcolor{blue}{\neq 0,\  \text{since}\ \lambda_2\neq\lambda_1}}v_1^Hv_2
+	0=\textcolor{red}{v_1^HAv_2-v_1^HAv_2} = \lambda_2v_1^Hv_2 - \lambda_1v_1^Hv_2 = \underbrace{(\lambda_2-\lambda_1)}_{\textcolor{blue}{\neq 0,\  \text{since}\ \lambda_2\neq\lambda_1}}v_1^Hv_2
 	$$
 	$$
 	\stackrel{\textcolor{blue}{\lambda_1\neq\lambda_2}}{\Rightarrow} v_1^Hv_2 = 0.

@@ -2,18 +2,6 @@
 {
 \color{solution}
 \begin{enumerate}
-	\item % {\color{red}Note: This only works with the correct complex norm and inner product! If symmetry is assumed then everything is fine! }\\
-	Let $A$ be positive definite (semi--definite) and let $(\lambda, v)$ be an eigenpair of $A$. Then by using the Rayleigh quotient we find
-	$$\lambda = \frac{v^\top A v}{v^\top v} = \frac{v^\top A v}{\|v\|_2^2}~~{\color{cyan}\tfrac{> 0~~ (\geq 0)}{> 0 ~ \text{since}~v\neq 0  }} ~~> 0~~ (\geq 0). $$
-%	
-%	Proof by contradiction:\\
-%	Let $A$ be $\underbrace{\text{positive definite}}_{\textcolor{blue}{:\Leftrightarrow x^TAx>0~\forall x\neq 0}}$ and assume $\lambda\leq0$ for some $\underbrace{\lambda\in\sigma(A)}_{\textcolor{blue}{:\Leftrightarrow \exists v\neq 0: Av=\lambda v}}$ with eigenvector $v\neq 0$.\\
-%	Then we find
-%	$$
-%	v^T\underbrace{Av}_{\textcolor{blue}{=\lambda v}} 
-%	= \lambda v^Tv
-%	= \underbrace{\lambda}_{\textcolor{blue}{\leq0}}\underbrace{\|{v}\|_2^2}_{\textcolor{blue}{>0}} ~\leq 0~ ~~~\textcolor{red}{\text{[contradiction to the positivity of A]}}.$$\\
-%	(Analogous proof for $A$ positive semi-definite.)
 	\item Take for example 
 	$$A=\begin{pmatrix}
 	1&-4\\
@@ -30,17 +18,15 @@
 	\end{equation*}
 	We have ``$>$'' if $x \neq 0$.
 	\item 
-	For symmetric $A\in\mathbb{R}^{n\times n}$ we find an orthogonal matrix $Q\in\mathbb{R}^{n\times n}$ and diagonal matrix $\Lambda = \text{diag}(\lambda_1,\ldots,\lambda_n)$ with $\lambda_i\in\sigma(A)$, so that   $$A=Q\Lambda Q^T ~~~~\text{(eigendecomposition)}.$$
-	Therefore:
-	\begin{center}
+	For $A=Q\Lambda Q^T$ (eigendecomposition) we have 
+		\begin{center}
 		$A$ invertible 
 		~~$\stackrel{(*)}{\Leftrightarrow}\ \ \Lambda$ invertible 
 		~~$\stackrel{(**)}{\Leftrightarrow}\ \ \lambda\neq 0\ \ \forall\lambda\in\sigma(A)$.
 	\end{center}
 	\begin{itemize}
 		\item[$(*)$]  product of matrices is invertible if all factors are invertible and orthogonal matrices are invertible with inverse $Q^T=Q^{-1}$
-		\item[$(**)$] diagonal matrices are invertible, if and only if diagonal elements are nonzero
+		\item[$(**)$] diagonal matrices are invertible, if and only if diagonal elements are nonzero; symmetric and positive definite matrices have positive eigenvalues
 	\end{itemize}
-Example: $A$ symmetric and positive definite (spd) $\Rightarrow$ $A$ invertible.
 \end{enumerate}
 }

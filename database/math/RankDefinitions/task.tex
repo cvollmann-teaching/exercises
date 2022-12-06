@@ -1,16 +1,13 @@
 \textbf{\normalsize Equivalent Definitions of the Matrix Rank}
 
-%{\color{red} The following exercise is not mandatory (no (bonus) points¸), but will be discussed during the next exercise class.}\\~\\
-Let $A \in \mathbb{R}^{m \times n}$, then show that the following statements are equivalent:
+Let $A \in \mathbb{R}^{m \times n}$, then use the SVD $A=U\Sigma V^\top$ to show that the following statements are equivalent:
 \begin{itemize}
 	\item[i)] The maximum number of linearly independent columns of $A$ is $r$.
 	\item[ii)] The dimension of the image of $A$ is $r$, i.e., $\dim(\text{im}(A)) = r$.
 	\item[iii)] The number of positive singular values of $A$ is $r$.
 \end{itemize}
-\textit{Hint:} Use the SVD $A=U\Sigma V^\top$.\\~\\
 {\color{navy}As a consequence (since $A^\top = V\Sigma^\top U^\top$), we find 
-$$\text{rank}(A) = r=\text{rank}(A^\top),  $$
-so that the dimension formulas for $A$ and $A^\top$ read as
+$\text{rank}(A) = r=\text{rank}(A^\top)$, i.e., ``column rank = row rank''. The dimension formulas for $A$ and $A^\top$ then read as
 \begin{align*}
 n &= \text{rank}(A) + \text{nullity}(A)= \text{rank}(A^\top) + \text{nullity}(A),\\
 m &= \text{rank}(A^\top) + \text{nullity}(A^\top)=\text{rank}(A) + \text{nullity}(A^\top).\\
