@@ -4,16 +4,16 @@
 def horner(z, a):
     n = len(a)
     x = a[n-1]
-    for k in range(1,n): 
+    for k in range(1,n):
         x = z*x + a[n-1-k]
     return x
 def anyToDez(a, basis):
     """
     Converts a representation a in a given basis to its representation as decimal number.
-    
+
     :param a: Representation as string, ex: a = 'fff'
     :param basis: Basis, ex: basis = 16.
-    
+
     :return: Dezimal number, int
     """
     digitList = '0123456789abcdefghijklmnopqrstuvwxyz'
@@ -25,4 +25,4 @@ def anyToDez(a, basis):
             raise ValueError("Some coefficients exceed the basis.")
     return horner(basis, aList)
 a = anyToDez("f", 16)
-a
+print(a)
