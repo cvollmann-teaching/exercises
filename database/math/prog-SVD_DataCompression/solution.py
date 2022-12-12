@@ -3,8 +3,7 @@ import matplotlib.pyplot as plt
 import scipy.linalg as linalg
 
 # load image as matrix
-path_to_image = 'spider.jpg'
-
+path_to_image = 'kalle.jpg'
 
 def load_image_as_gray(path_to_image):
     import matplotlib
@@ -51,19 +50,19 @@ plt.title("original")
 # ====================== #
 #    generate a video
 # ====================== #
-#from matplotlib import animation
-#dpi = 250
-#idlist = range(120)   
-#frames = [] # for storing the generated images
-#fig = plt.figure()
-#for k in range(len(idlist)):
-#    i=idlist[k]
-#    aux =  np.zeros((m, 2*n+50))
-#    aux[:,:n] = U[:, :i]@np.diag(sigma[:i])@Vt[:i, :]
-#    aux[:,-n:] = A
-#    storage = np.round(100* i * (1. + m + n)/(m*n), 2)
-#    frames.append([plt.imshow(aux, cmap='gray'), plt.text(1,1, "k="+str(idlist[i])+ ", storage="+str(storage)+"%",horizontalalignment='left',  verticalalignment='top' ,color = "white" ),plt.title("Truncated SVD A_k          VS         Original A         ")])
-#    #plt.title("Truncated SVD A_k          VS         Original        \n"+" k =  "+str(idlist[i])+ ",  storage = "+str(storage[i])+"%                                    " )])#, vmin = Amin, vmax = Amax, animated=True,cmap=cm.Greys_r), plt.text(8, 0.99, 'A_'+str(i), color='white')])
-#ani = animation.ArtistAnimation(fig, frames, interval=180, blit=True,  repeat_delay=1000)
-#ani.save('movie.mp4',dpi=dpi)
-#plt.show()
+from matplotlib import animation
+dpi = 250
+idlist = range(120)   
+frames = [] # for storing the generated images
+fig = plt.figure()
+for k in range(len(idlist)):
+    i=idlist[k]
+    aux =  np.zeros((m, 2*n+50))
+    aux[:,:n] = U[:, :i]@np.diag(sigma[:i])@Vt[:i, :]
+    aux[:,-n:] = A
+    storage = np.round(100* i * (1. + m + n)/(m*n), 2)
+    frames.append([plt.imshow(aux, cmap='gray'), plt.text(1,1, "k="+str(idlist[i])+ ", storage="+str(storage)+"%",horizontalalignment='left',  verticalalignment='top' ,color = "white" ),plt.title("Truncated SVD A_k          VS         Original A         ")])
+    #plt.title("Truncated SVD A_k          VS         Original        \n"+" k =  "+str(idlist[i])+ ",  storage = "+str(storage[i])+"%                                    " )])#, vmin = Amin, vmax = Amax, animated=True,cmap=cm.Greys_r), plt.text(8, 0.99, 'A_'+str(i), color='white')])
+ani = animation.ArtistAnimation(fig, frames, interval=180, blit=True,  repeat_delay=1000)
+ani.save('movie.mp4',dpi=dpi)
+plt.show()

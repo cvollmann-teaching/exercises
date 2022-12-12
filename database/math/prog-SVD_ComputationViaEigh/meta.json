@@ -1,0 +1,13 @@
+{
+    "filename": "prog-SVD_DataCompression.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "Linear Algebra, Singular Values, Python",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{\\normalsize Using the SVD for Image Compression}\n\nUse the code snippet below to transform an image of your choice (extension \\verb|.png| or \\verb|.jpg|) into gray scale and to load it as an array $A \\in \\mathbb{R}^{m \\times n}$ into Python.\n\\begin{enumerate}\n\t\\item Find a \\verb|scipy| routine to compute the SVD $U\\Sigma V^T = A$.\n\t\\item Plot the singular values.\n\t\\item For several $1 \\leq k \\leq \\text{rank}(A)$:\n\t\\begin{enumerate}\n\t\t\\item Compute the \\textit{truncated SVD}: Use only the first $k$ columns of $U$, the first $k$ singular values $\\sigma_1, \\ldots, \\sigma_k$ from $\\Sigma$ and the first $k$ rows of $V^T$ to reconstruct $A$ and plot the resulting image $A_k$ using \\verb|plt.imshow(A_k, cmap='gray')|.\n\t\t\\item For each $k$, compute the total number of floats that need to be stored for the truncated SVD $A_k$ and compare it to the total number of floats that need to be stored for the full image $A$.\n\t\\end{enumerate} \n\\end{enumerate}\n\\lstinputlisting[firstline =9,lastline=15]{prog-SVD_DataCompression_solution.py}",
+    "solution": "\\lstinputlisting[numbers=none]{prog-SVD_DataCompression_solution.py}\n",
+    "id": ""
+}

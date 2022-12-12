@@ -1,0 +1,28 @@
+{\color{solution}
+\begin{enumerate}
+    \item Because $S$ is symmetric.
+    \item 
+We already identify $r$ eigenpairs for $S$, namely, 
+$$(\sigma_1,\begin{pmatrix}
+u_1\\ v_1
+\end{pmatrix}), \ldots, (\sigma_r,\begin{pmatrix}
+u_r\\ v_r
+\end{pmatrix}),$$ where $(\sigma_i,\begin{pmatrix}
+u_i\\ v_i
+\end{pmatrix})$ are the $r$ singular values and vectors of $A$, respectively.
+~\\~\\
+Also, we easily find that 
+$$(-\sigma_1,\begin{pmatrix}
+-u_1\\ v_2
+\end{pmatrix}), \ldots, (-\sigma_r,\begin{pmatrix}
+-u_r\\ v_r
+\end{pmatrix})$$
+ are eigenpairs of $S$.\\ 
+ For the remaining $(m-r)+(n-r)$ eigenpairs take orthonomal bases $u_{r+1},\ldots, u_m\in\text{ker}A^\top$ and $v_{r+1},\ldots, v_n\in\text{ker}A$, then the $(0,\begin{pmatrix}
+	u_i\\ 0
+\end{pmatrix})$ and $(0,\begin{pmatrix}
+0\\ v_i
+\end{pmatrix})$ give the remaining eigenpairs (with eigenvalue $0$).
+\item Take the all eigenpairs $(\sigma, w)$ of $S$ corresponding to positive eigenvalues $\sigma >0 $. Split the eigenvectors $w =(u,v)$.
+\end{enumerate}
+}
