@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import numpy as np
 import scipy.sparse as scs
 import timeit
@@ -96,7 +97,7 @@ if __name__ == "__main__":
     #    EXPERIMENT
     # ---------------------------------------------------------------#
     # the experiment
-    n = int(1e3)  # matrix column dimension
+    n = int(1e1)  # matrix column dimension
     m = n  # matrix row dimension
     runs = 50  # how many runs for time measurement
     x = np.random.rand(n)  # random vector x
@@ -119,8 +120,6 @@ if __name__ == "__main__":
     for byhand in [0, 1]:
         print(teststr[byhand], np.allclose(btest,
                                            matvec_dense(A, xtest, byhand=byhand)))
-
-
         def dense():
             return matvec_dense(A, x, byhand=byhand)
 

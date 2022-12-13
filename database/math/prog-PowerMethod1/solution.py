@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def power_iteration(A, m, p=1):
     """
     Solves eigenvalue problem via Power Method
@@ -23,7 +22,6 @@ def power_iteration(A, m, p=1):
          largest eigenvalue
     """
     n = A.shape[1]
-    # x = np.random.dirichlet(np.ones(n), size=1).reshape(n)
     x = 1./n * np.ones(n)
     for k in range(m):
         z = A.dot(x)
@@ -54,7 +52,7 @@ if __name__ == "__main__":
     m = 20
     k = 10
     # run with different damping factors
-    for alpha in np.linspace(0, 1, k, endpoint=False):
+    for alpha in np.linspace(0, 1, k, endpoint=True):
         print("\n-----------------\nalpha =",
               np.round(alpha, 4),
               "\n-----------------")

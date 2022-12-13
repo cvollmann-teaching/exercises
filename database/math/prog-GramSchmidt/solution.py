@@ -46,6 +46,7 @@ def example_vander_legendre(gridpoints, degree):
     Q, R = qr_factor(A)
     plt.plot(grid, Q, "--")
     plt.legend(range(Q.shape[1]))
+    plt.show()
 
     return A, Q, R
 

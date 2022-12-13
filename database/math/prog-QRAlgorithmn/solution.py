@@ -48,7 +48,7 @@ def eig(A, m=50, qr="own"):
     if qr == "own":
         qr = qr_factor
     else:
-           
+        pass
 
     for k in range(m):
         Q, R = qr(A)
@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     # 2 test
     n = 10
-    qr = ""
+    qr = "own"
     A = A_gen(n)
     for m in [10, 50, 75, 150]:
         print("number of iterations:\n m =", m, "\napproximate eigenvalues:\n",
