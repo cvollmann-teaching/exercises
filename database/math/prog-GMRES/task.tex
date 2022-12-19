@@ -37,15 +37,10 @@ or the maximum number of iterations \texttt{maxiter} has been reached.
 	0 & \cdots 	&  0  &* &*\\
 	\end{pmatrix} \in \mathbb{R}^{n \times n}$$ 
 	and some right-hand side $b$ and initial guess $x_0$ of your choice. Choose different $n$ and check how many iterations you need (potentially many!).\\
-	\textit{Hint:} You can generate some random diagonals using \texttt{numpy.random.rand(n)} and then use $$\texttt{scipy.sparse.diags(diagonals, offsets=[-1,0,1]).tocsr()}$$ to construct a sparse CSR matrix. You can add \texttt{np.ones(n)} to the main diagonal in order to ``strengthen'' the diagonal of $A$ and thereby to get a better conditioned system. Then implement a function \texttt{A(x)} that outputs the matrix-vector product \texttt{A.dot(x)}. 
+	\textit{Hint: You can generate some random diagonals using \texttt{numpy.random.rand(n)} and then use $$\texttt{scipy.sparse.diags(diagonals, offsets=[-1,0,1]).tocsr()}$$ to construct a sparse CSR matrix. You can add \texttt{np.ones(n)} to the main diagonal in order to ``strengthen'' the diagonal of $A$ and thereby to get a better conditioned system. Then implement a function \texttt{A(x)} that outputs the matrix-vector product \texttt{A.dot(x)}.} 
 %
-%	random  \texttt{b = numpy.random.rand(n)}.
-%	You can use $$\texttt{A\_csr=4*scipy.sparse.eye(n,k=0)-scipy.sparse.eye(n,k=1)-scipy.sparse.eye(n,k=-1)}$$
-%	and 
-	\item \textbf{Preconditioner:} For the same system, run your GMRES routine with a preconditioner of your choice (for example Jacobi $N: v \mapsto D^{-1}v$). Do you observe any difference in the number of iterations needed? (Don't worry if not!)
+	\item \textbf{Preconditioner:} For the same system, run your GMRES routine with a preconditioner of your choice (for example Jacobi $N: v \mapsto D^{-1}v$). Do you observe any difference in the number of iterations needed? (You may not necessarily observe a difference!)
 	\item \textbf{Compare} your \texttt{GMRES} solver to \texttt{scipy.linalg.solve(A\_csr.toarray(),b)} for large dimension $n \geq 10^{5}$ and measure the time needed in each case. Also, find a SciPy implementation of GMRES and compare to yours.
-%	\item \textit{*Bonus:} Do you need to adapt your algorithm if you want to use a preconditioner? 
-%	\item \textbf{\textit{*Bonus:}} Allow for an optional parameter indicating whether $A$ is symmetric. Use the Lanczos iteration instead of Arnoldi, if $A$ is symmetric.
 \end{enumerate}
 
 \newpage

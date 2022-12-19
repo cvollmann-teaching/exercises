@@ -1,17 +1,17 @@
-\section{Richardson Iteration}
+\textbf{Richardson Iteration}\\
 Let $A \in \mathbb{R}^{n\times n}$ be a symmetric and positive definite matrix.  Consider the (relaxed) Richardson iteration 
 $$x_{k+1} = (I -  \theta A)x_k + \theta b $$
 with (symmetric) iteration matrix $M_\theta := I-\theta A$.
 \begin{enumerate}
 	\item Let $\lambda_{max} ~(\lambda_{min})$ denote the largest (smallest) eigenvalue of $A$. Show that the spectral radius of $M_\theta$ is given by  $$\rho(M_\theta) = \max\{|1 - \theta \lambda_{max}|, ~|1 - \theta \lambda_{min}|\}.$$ 
-	\textit{Hint:} Note that $A$ has only \textit{positive} eigenvalues. Determine the spectrum of $M_\theta$ by observing that it is a scaled and then shifted version of $A$.
+	\textit{Hint: Note that $A$ has only \textit{positive} eigenvalues. Determine the spectrum of $M_\theta$ by observing that it is a scaled and shifted version of $A$.}
 	\item  Determine all $\theta \in \mathbb{R}$ for which the Richardson iteration converges.\\[0.1cm]
-	\textit{Hint:} Use 1. and find all $\theta \in \mathbb{R}$ for which $\rho(M_\theta) < 1$.
+	\textit{Hint: Use 1. and find all $\theta \in \mathbb{R}$ for which $\rho(M_\theta) < 1$.}
 	\item Draw the function $\theta \mapsto \rho(M_\theta)$ to determine the optimal $\hat{\theta}$, which fulfills
-	$$\rho(M_{\hat{\theta}}) \leq  \rho(M_{\theta})$$
+	$\rho(M_{\hat{\theta}}) \leq  \rho(M_{\theta})$
 	for all $\theta \in \mathbb{R}$. \\[0.1cm]
-	\textit{Hint: } We find $\hat{\theta} = \frac{2}{\lambda_{max} + \lambda_{min}}$.
+	\textit{Hint: We find $\hat{\theta} = \frac{2}{\lambda_{max} + \lambda_{min}}$.} 
 	\item Show that for the optimal relaxation parameter $\hat{\theta}$ it holds that
 	$$\rho(M_{\hat{\theta}}) = \frac{\text{cond}(A) -1}{\text{cond}(A) +1},$$
-	where $\text{cond}(A) := \frac{\lambda_{max}}{\lambda_{min}}$ denotes the condition number of the symmetric matrix $A$. Consider the previous exercise: What impact does a large condition number (i.e., $\text{cond}(A) \gg 1$) have on the convergence speed?
+	where $\text{cond}(A) := \frac{\lambda_{max}}{\lambda_{min}}$ denotes the condition number of the symmetric matrix $A$. What impact does a large condition number (i.e., $\text{cond}(A) \gg 1$) have on the convergence speed?
 \end{enumerate}

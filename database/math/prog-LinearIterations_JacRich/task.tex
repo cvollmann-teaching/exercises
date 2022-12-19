@@ -1,10 +1,10 @@
-\section{Splitting Methods: relax. Richardson, relax. Jacobi, Gauß-Seidel and SOR}
+\textbf{Splitting Methods: relax. Richardson, relax. Jacobi, Gauß-Seidel and SOR}
 
 \begin{enumerate}
 		\item 	Implement a function 
 		$$\verb|x, error, numiter = iter_solve(A, b, x0, method="Jacobi", theta=.1, tol=1e-08, maxiter=50)|$$ 
 		which takes as arguments
-%		The function shall return an approximate solution of the problem $Ax = b$ after performing $m \in \N$ steps of the linear iteration specified by the parameter \verb|method|.	
+%		The function shall return an approximate solution of the problem $Ax = b$ after performing $m \in \mathbb{N}$ steps of the linear iteration specified by the parameter \verb|method|.	
 		\begin{itemize}
 			\item A : a matrix $A \in \mathbb{R}^{n \times n}$
 			\item b : a vector $b \in \mathbb{R}^ {n}$
@@ -22,8 +22,7 @@
 		\end{itemize}	
 		The iteration shall break if the residual is tolerably small, i.e., 
 		$$\|Ax^k-b\|_2 < \texttt{tol}$$
-	    or the maximum number of iterations \texttt{maxiter} has been reached.\\~\\
-\textit{Hint:} Implement the element-based formulas for the Jacobi, Gauß-Seidel and SOR method (see previous exercise).
+	    or the maximum number of iterations \texttt{maxiter} has been reached. Implement the \textbf{element-based} formulas for the Jacobi, Gauß-Seidel and SOR method.
 		\item \textbf{2d:} Test \underline{all} methods on the following two-dimensional setting:
 		$$A = 4 \begin{pmatrix}
 		2&-1\\ -1&2
@@ -34,7 +33,7 @@
 		Also create the following two plots for one fixed setting:
 		\begin{itemize}
 			\item Plot the error $\|Ax^k - b\|_2$  for each iterate $x^k \in \mathbb{R}^2$, $k=1,\dots,m$, for \underline{all} methods into one plot (use different colors).
-			\item Plot the iterates $x^k \in \mathbb{R}^2$, $k=1,\dots,m$, themselves for all methods into one plot (use different colors).
+			\item Plot the iterates $x^k \in \mathbb{R}^2$, $k=1,\dots,m$, for all methods into one plot (use different colors).
 		\end{itemize}
 		\item \textbf{nd:} Next, test all methods on the higher--dimensional analogue
 		$$
@@ -45,6 +44,6 @@
 		\vdots  &    &  -1 &  2 & -1  \\ 
 		0 &   \hdots  & 0& -1  &  2 \\
 		\end{array}\right)\in \mathbb{R}^{n \times n},$$
-		for different dimensions $n\in\N$ and data $b,x^0 \in \mathbb{R}^n$ of your choice. Play around with the parameters.
+		for different dimensions $n\in\mathbb{N}$ and data $b,x^0 \in \mathbb{R}^n$ of your choice. Play around with the parameters.
 	\end{enumerate}
-	\textit{Hint: } Of course, it can happen that the iterations do not converge. Use small values for $\theta$ when you use the Richardson iteration. This will assure that $\rho(I-NA)<1$. 
+	\textit{Hint: } It can happen that the iterations do not converge. Use small values for $\theta$ when you use the Richardson iteration. This will assure that $\rho(I-NA)<1$. 
