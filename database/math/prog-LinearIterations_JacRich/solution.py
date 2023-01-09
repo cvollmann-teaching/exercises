@@ -37,7 +37,7 @@ def steepestDescent_step(A, b, theta, x):
     return x - theta * (A @ x - b)
 
 
-def conjugateGradient(A, b, x0, maxiter=50, tol=1e-8):
+def conjugate_gradient(A, b, x0, maxiter=50, tol=1e-8):
     X = [x0]
     n = len(x0)
     error = []
@@ -61,7 +61,7 @@ def conjugateGradient(A, b, x0, maxiter=50, tol=1e-8):
 def iter_solve(A, b, x0, method="Jacobi", theta=.1, maxiter=50, tol=1e-8):
     """
     solves a system Ax = b, where A is assumed to be invertible,
-    with relaxed splitting methods: Jacobi, Richardson
+    with splitting methods
 
     Parameters
     ----------
@@ -82,13 +82,12 @@ def iter_solve(A, b, x0, method="Jacobi", theta=.1, maxiter=50, tol=1e-8):
 
     Returns
     -------
-    X : list of length N (=m or less), containing iterates
+    X : list of length N (<=m), containing iterates
         columns represent iterates from x_0 to x_(N-1)
     error : list of length numiter containing norm of all residuals
     numiter : integer indicating how many iterations have been performed
     """
-    X = [x0]
-    error = []
+
     if method in ["GS", "SOR", "Jacobi", "steepestDescent"] and \
        np.prod(A.diagonal()) == 0:
         print(f"WARNING: Method was chosen to be {method} \
@@ -98,21 +97,23 @@ def iter_solve(A, b, x0, method="Jacobi", theta=.1, maxiter=50, tol=1e-8):
         theta = 1.0
         method = "SOR"
     elif method == "CG":
-        return conjugateGradient(A, b, x0, maxiter=maxiter, tol=tol)
+        return conjugate_gradient(A, b, x0, maxiter=maxiter, tol=tol)
     # choose the function to compute the iteration instruction
     # according to method
-    stepInstructionDictionary = {"Jacobi": Jacobi_step,
-                                 "Richardson": Richardson_step,
-                                 "SOR": SOR_step,
-                                 "steepestDescent": steepestDescent_step}
-    stepInstruction = stepInstructionDictionary[method]
+    step_instruction_dict = {"Jacobi": Jacobi_step,
+                             "Richardson": Richardson_step,
+                             "SOR": SOR_step,
+                             "steepestDescent": steepestDescent_step}
+    step_instruction = step_instruction_dict[method]
 
     # ITERATION
+    X = [x0]
+    error = []
     for numiter in range(maxiter):
         error += [np.linalg.norm(A.dot(X[-1]) - b)]
         if error[-1] < tol:
             return X, error, numiter
-        X += [stepInstruction(A, b, theta, X[-1])]
+        X += [step_instruction(A, b, theta, X[-1])]
 
     return X, error, numiter
 
@@ -138,7 +139,7 @@ def main(A, b, x0, maxiter, methThet, plot=False, verbose=False):
             plt.subplot(1, 2, 1)
             plt.plot(error, colors[i]+"-x")
             plt.title("Residual $||Ax_k - b||_2$")
-            plt.legend(method)
+            plt.legend(list(methThet.keys()))
             plt.subplot(1, 2, 2)
             X = np.array(X)
             plt.plot(X[:, 0], X[:, 1], colors[i] + "o-")
@@ -160,8 +161,12 @@ if __name__ == "__main__":
     b = np.zeros(2)
     x0 = np.array([5, 8])
     maxiter = 100
-    methThet = {"Richardson": 0.1, "Jacobi": 1, "GS": 1, "SOR": 1.2,
-                "steepestDescent": -1, "CG": -1}
+    methThet = {"Richardson": 0.1,
+                "Jacobi": 1,
+                "GS": -1,
+                "SOR": 1.2,
+                "steepestDescent": -1,
+                "CG": -1}
     print("-"*40+"\n 2d EXAMPLE (numiter, error) \n"+"-"*40)
     X, error, numiter = main(A, b, x0, maxiter,
                              methThet, plot=True, verbose=True)
@@ -169,14 +174,18 @@ if __name__ == "__main__":
     # ---------------------------------------------------------------#
     #               HIGHER DIMENSIONAL EXAMPLE
     # ---------------------------------------------------------------#
-    n = 100  # 10000 # 100000
+    n = 150  # 10000 # 100000
     A = n ** 2 * (2 * np.eye(n, k=0) - np.eye(n, k=1) - np.eye(n, k=-1))
     b = np.random.rand(n)
-    x0 = np.random.rand(n)  # b#*100#
+    x0 = np.random.rand(n)  # b#
     firstMmethods = 4
-    maxiter = 50
-    methThet = {"Richardson": 0.00001, "Jacobi": 0.5, "GS": 1, "SOR": 1.9,
-                "steepestDescent": 1}
+    maxiter = 1000
+    methThet = {"Richardson": 0.00001,
+                "Jacobi": 0.001,
+                "GS": -1,
+                "SOR": 1.9,
+                "steepestDescent": -1,
+                "CG": -1}
     print("-"*40 + "\n nd EXAMPLE with n = {}\n".format(n) + "-"*40)
     X, error, numiter = main(A, b, x0, maxiter,
                              methThet, plot=0, verbose=True)

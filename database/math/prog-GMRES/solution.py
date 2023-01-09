@@ -141,10 +141,7 @@ def GMRES(A, b, x0, tol=1e-6, maxiter=None, N=None, sym=False):
     return x0 + xr, info
 
 
-def main():
-    # ------------- #
-    #    SETTING
-    # ------------- #
+def main(compare_LU_dense=1, compare_Scipy=0):
     # generate the random system matrix and rhs, as well as initial guess
     start_time = time()
     n = 10000  # 10000 # 100000
@@ -169,34 +166,32 @@ def main():
     maxiter = 1000
     sym = False
 
+    # --------------------- #
+    #    Preconditioner
+    # --------------------- #
+    # Jacobi
+    precondJacobiArray = sparse.diags(1. / A_sparseMatrix.diagonal())
+    def precondJacobi(b): return precondJacobiArray.dot(b)
+    # none
+    def precondNone(b): return b
+    # Gauss-Seidel
+    precondGSinvArray = scipy.sparse.tril(A_sparseMatrix).tocsr()
+    def precondGS(b): return spla.spsolve(precondGSinvArray, b)
+    # choice
+    preconditionerFunctionDict = {"none": precondNone,
+                                  "Jacobi": precondJacobi,
+                                  "GS": precondGS}
     # runtime parameter
-    compare_LU_dense = 1
-    compare_Scipy = 0
-    for preconditionerChoice in ["none", "Jacobi", "GS"]:
-        print("\n"+"*"*35+"\n\t\t\t"+preconditionerChoice+"\n"+"*"*35)
 
-        # --------------------- #
-        #    Preconditioner
-        # --------------------- #
-        # Jacobi
-        precondJacobiArray = sparse.diags(1. / A_sparseMatrix.diagonal())
-        def precondJacobi(b): return precondJacobiArray.dot(b)
-        # none
-        def precondNone(b): return b
-        # Gauss-Seidel
-        precondGSinvArray = scipy.sparse.tril(A_sparseMatrix).tocsr()
-        def precondGS(b): return spla.spsolve(precondGSinvArray, b)
-        # choice
-        preconditionerFunctionDict = {"none": precondNone,
-                                      "Jacobi": precondJacobi,
-                                      "GS": precondGS}
-        preconditionerFunction = \
-                               preconditionerFunctionDict[preconditionerChoice]
+    for preconditioner in ["none", "Jacobi", "GS"]:
+        print("\n"+"*"*35+"\nPreconditioner: "+preconditioner+"\n"+"*"*35)
+
+        preconditionerFunction = preconditionerFunctionDict[preconditioner]
 
         # ------------------------------ #
         #    Our GMRES
         # ------------------------------ #
-        print("-" * 30 + "\n\t\t Our GMRES \n" + "-" * 30)
+        print("-" * 30 + "\n\t Our GMRES \n" + "-" * 30)
         start_time = time()
         xk, info = GMRES(A_function, b, x0=x0, tol=tol,
                          maxiter=maxiter, N=preconditionerFunction, sym=sym)
@@ -209,7 +204,7 @@ def main():
             # ------------------------------ #
             #    Scipy's GMRES
             # ------------------------------ #
-            print("-" * 30 + "\n\t\t SciPy's GMRES \n" + "-" * 30)
+            print("-" * 30 + "\n\t SciPy's GMRES \n" + "-" * 30)
 
             # callback for gmres
             class gmres_counter(object):
@@ -235,11 +230,12 @@ def main():
     #    Compare to Scipy's LU (dense)
     # -------------------------------- #
     if compare_LU_dense:
-        print("\n" + "-" * 30 + "\n\t\t LU dense \n" + "-" * 30)
+        print("\n" + "-" * 30 + "\n\t LU dense \n" + "-" * 30)
         start_time = time()
-        xk = linalg.solve(A_sparseMatrix.toarray(), b)
+        x = linalg.solve(A_sparseMatrix.toarray(), b)
         print(f" Solving time = {time()-start_time:0.2f} [s]")
+        print(f" Residual norm: {norm(b - A_sparseMatrix.dot(x)):0.2e}")
 
 
 if __name__ == "__main__":
-    main()
+    main(compare_LU_dense=1, compare_Scipy=0)

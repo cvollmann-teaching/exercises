@@ -1,5 +1,6 @@
+% !TeX spellcheck = en_US
 \textbf{Arnoldi and Lanczos Iteration}\\
-Let $A\in \text{GL}_n(\mathbb{R})$ and $b\in\mathbb{R}^n\setminus \{0\}$. Then consider the Arnoldi iteration as sketched in Algorithm \ref{arnoldi} to produce an orthonormal basis $q_1,\ldots, q_r$ of the $r$-th Krylov subspace $K_r(A,b)$ with $r \leq \max_{s\leq n} \text{dim}(K_s(A,b))$. Further let $Q_r := [q_1,\ldots, q_{r}] \in \mathbb{R}^{n \times r}$ and $H_r := Q_r^TAQ_r \in \mathbb{R}^{r\times r}$.
+Let $A\in \text{GL}_n(\mathbb{R})$ and $b\in\mathbb{R}^n\setminus \{0\}$. Then consider the Arnoldi iteration as sketched in Algorithm \ref{arnoldi} to produces an orthonormal basis $q_1,\ldots, q_r$ of the $r$-th Krylov subspace $K_r(A,b)$ with $r \leq \max_{s\leq n} \text{dim}(K_s(A,b))$. Further let $Q_r := [q_1,\ldots, q_{r}] \in \mathbb{R}^{n \times r}$ and $H_r := Q_r^TAQ_r \in \mathbb{R}^{r\times r}$.
 \begin{enumerate}
 	\item In the $j$-th step: Assume $q_1,\ldots, q_{j}$ have been computed according to the Arnoldi iteration \ref{arnoldi} and assume that $q_1,\ldots, q_{j-1}$ are mutually orthonormal. Show that $q_j$ is orthogonal to all $q_1,\ldots, q_{j-1}$.
 	\item Derive an expression for the $(\ell,k)$-th entries of $H_r$ and find these numbers in the Arnoldi iteration. What structure does $H_r$ have?

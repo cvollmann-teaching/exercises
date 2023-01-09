@@ -1,4 +1,4 @@
-%% Creator: Inkscape 1.0.1 (3bc2e813f5, 2020-09-07), www.inkscape.org
+%% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file 'Richardson.pdf' (pdf, eps, ps)
 %%
@@ -59,7 +59,7 @@
     \put(-0.00224066,0.26497614){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\textcolor{red}{|1-\theta\lambda_{max}|}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{Richardson.pdf}}%
     \put(0.17678383,0.01007199){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{1}{\lambda_{max}}$\end{tabular}}}}%
-    \put(0.25718336,0.01139852){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{2}{\lambda_{max}}$\end{tabular}}}}%
+    \put(0.29631325,0.01139852){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{2}{\lambda_{max}}$\end{tabular}}}}%
     \put(0.43474253,0.01189973){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\frac{1}{\lambda_{min}}$\end{tabular}}}}%
     \put(0.09396577,0.47146282){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\rho(M_\theta)$\end{tabular}}}}%
     \put(0.56822984,0.05246863){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\theta$\end{tabular}}}}%
