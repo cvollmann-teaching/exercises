@@ -1,11 +1,12 @@
+% !TeX spellcheck = en_US
 \textbf{\normalsize More General Regularization Terms and \hyperref{https://en.wikipedia.org/wiki/Inpainting}{}{}{Image Inpainting}}
 
 ~\\
 {\color{navy}
 	\textbf{Background:}\\
-	Based on the idea of Tikhonov regularization we can use more general regularization terms by transforming the vector $x$ with some matrix $G\in\Rmn$. Specifically, let us consider the more general regularized problem
+	Based on the idea of Tikhonov regularization we can use more general regularization terms by transforming the vector $x$ with some matrix $G\in\mathbb{R}^{m \times n}$. Specifically, let us consider the more general regularized problem
 	\begin{equation} \label{prob:regularized_leastsquares}
-	\min_{x\in \Rn} \|Ax-b\|_2^2 + \frac{\delta}{2}\|Gx\|_2^2,~~~\delta > 0 ~\text{small}.
+	\min_{x\in \mathbb{R}^n} \|Ax-b\|_2^2 + \frac{\delta}{2}\|Gx\|_2^2,~~~\delta > 0 ~\text{small}.
 	\end{equation}
 	The corresponding ``regularized'' normal equation then reads as 
 	\begin{equation}\label{eq:regularized_normaleq}
@@ -30,7 +31,7 @@
 	  -1 & 1 &   &\\
 	   &\ddots&\ddots & \\
 	   & &-1 & 1\\
-	 \end{pmatrix} \in \R^{(n+1)\times n},
+	 \end{pmatrix} \in \mathbb{R}^{(n+1)\times n},
 	\end{equation}
 	which has $1$ on the main diagonal, $-1$ on the first lower off-diagonal, $0$ everywhere else and is of dimension $(n+1)\times n$. Then, given the measured image $b$, the masking operator $A$ (we assume that we know which pixels are original) and the regularization $G$ we reconstruct the unknown image $x$ by solving equation \eqref{eq:regularized_normaleq}. See Figure below for an example experiment.
 }
@@ -53,7 +54,7 @@ First note that due to the high dimensional image data you need to work with spa
 	\end{itemize}
 	\item \textbf{Solving:} Write a function 
 	 $$\texttt{reconImg = inpainting(b, indices, delta, G)},$$
-	 which expects a deteriorated image $b$ as vector of length $n$, a list \texttt{indices} $\subset \{0,\ldots, n-1\}$ of length $\leq n$ indicating which pixels are original, a regularization parameter \texttt{delta} $>0$ and a matrix \texttt{G} $\in \R^{m\times n}$. It then solves \eqref{eq:regularized_normaleq} and returns the solution as an $n$-dimensional vector \texttt{reconImg}.
+	 which expects a deteriorated image $b$ as vector of length $n$, a list \texttt{indices} $\subset \{0,\ldots, n-1\}$ of length $\leq n$ indicating which pixels are original, a regularization parameter \texttt{delta} $>0$ and a matrix \texttt{G} $\in \mathbb{R}^{m\times n}$. It then solves \eqref{eq:regularized_normaleq} and returns the solution as an $n$-dimensional vector \texttt{reconImg}.
 	 \begin{itemize}
 	 	\item The sparse  $(n \times n)$ masking matrix $A$ is zero everywhere except for $a_{ii} = 1$ for $i \in$\texttt{indices}. For example, you can easily implement this matrix with  \texttt{sparse.coo\_matrix} and then transform it to CSR format via its method \texttt{.tocsr()}.
 	 	\item You can implement the sparse matrix $G$ from \eqref{eq:G} with the help of the function \texttt{scipy.sparse.eye}.

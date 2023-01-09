@@ -1,12 +1,12 @@
 \textbf{\normalsize Least Squares and \textit{Total} Least Squares (Principal Components)}
 
 \begin{enumerate}
-	\item  Use the function \verb|np.random.multivariate_normal()| to create samples $(z_i,y_i) \in \mathbb{R}^2$ for $i = 1,\dots, 100$ from a 2-dimensional multivariate normal distribution
+	\item  Use the function \verb|numpy.random.multivariate_normal()| to create samples $(z_i,y_i) \in \mathbb{R}^2$ for $i = 1,\dots, 100$ from a 2-dimensional multivariate normal distribution
 	with mean $\mu := (0,0)$ and covariance $$\Sigma := \begin{bmatrix}
 	1&0.7\\
 	0.7&1
 	\end{bmatrix}.$$
-	\item Solve the least squares problem
+	\item Implement a function or find a Scipy function to solve the least squares problem
 		\begin{align*}
 			\min \limits_{c \in \mathbb{R}} \sum_{i=1}^{100} ( c z_i - y_i )^2
 		\end{align*}
