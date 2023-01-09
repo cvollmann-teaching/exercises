@@ -69,7 +69,7 @@ def GMRES(A, b, x0, tol=1e-6, maxiter=None, N=None, sym=False):
     maxiter : int (optional)
               maximum number of iterations
     N : python function (optional)
-        for evaluation matrix-vector product of preconditioner
+        for evaluating matrix-vector product of preconditioner
     sym : bool (optional)
           indicating whether A is symmetric or not
           if sym=True: Lanczos is used over Arnoldi
