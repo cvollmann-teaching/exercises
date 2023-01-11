@@ -1,24 +1,6 @@
-\section{Least Squares}
-\begin{table}[h]
-	\centering
-	\begin{tabular}{l|c c c c c c}
-		x&0&1&2&2.5&3&4\\
-		\hline
-		y&0.15&1&0.84&0&-0.2&-0.96
-	\end{tabular}
-	\caption{This table contains a dataset of pairs $(x_i, y_i)$ for $i = 1,\dots,6$ which is used in exercise \ref{ex:lstsq} and \ref{ex:proglstsq}.}
-	\label{tab:data}
-\end{table}
-\label{ex:proglstsq}
-Let the data points $(x_i, y_i)$ for $i=1,\dots,6$ be given as in Table \ref{tab:data}.
+\textbf{Least Squares for Curve Fitting}
 \begin{enumerate}
-	\item Solve the least squares problem of Exercise \ref{ex:lstsq} in Python using the \verb|lstsq()| function of 
-	\verb|scipy.linalg| as presented in the lecture.
-	\item Plot the data points and the fitted line.
-	\item You are given the additional information that the data stems from a sine-function of the form $ \sin(x)a + b \approx y$, i.e. the adjusted problem then is of the form
-	\begin{align*}
-	\min \limits_{a,b} \sum_{i=1}^6 ( \sin(x_i)a + b - y_i)^2.
-	\end{align*}
-	Solve the adjusted problem with the \verb|lstsq()| function.
-	\item Plot the data points and the fitted curve.
+	\item Download the data file \texttt{data\_lstsq.npy} (link ``data'' next to the link ``Sheet 10'') and use \texttt{numpy.load()} to import it into your Python script. The shape is \texttt{(2,100)}. The first row should be considered as the independent variables $z_i$ and the second row as the dependent variables $y_i$ for measurements $i=1,\ldots,100$.
+	\item Plot each two-dimensional column $(z_i,y_i)^\top \in \mathbb{R}^2$ of the data as point into a figure. Come up with a model of the form $$f(z) = \sum_{k=1}^n x_k f_k(z)$$ which could fit the data (also see Section 1.8.1 in the lecture notes).
+	\item Find suitable parameters $x_k$ by solving a least squares problem and plot the fitting curve into the same figure.
 \end{enumerate}

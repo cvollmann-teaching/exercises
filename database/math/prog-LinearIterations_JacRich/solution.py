@@ -31,7 +31,7 @@ def SOR_step(A, b, theta, x):
     return xnew
 
 
-def steepestDescent_step(A, b, theta, x):
+def steepest_descent_step(A, b, theta, x):
     r = A@x - b
     theta = np.dot(r, r) / np.dot(A@r, r)
     return x - theta * (A @ x - b)
@@ -103,7 +103,7 @@ def iter_solve(A, b, x0, method="Jacobi", theta=.1, maxiter=50, tol=1e-8):
     step_instruction_dict = {"Jacobi": Jacobi_step,
                              "Richardson": Richardson_step,
                              "SOR": SOR_step,
-                             "steepestDescent": steepestDescent_step}
+                             "steepestDescent": steepest_descent_step}
     step_instruction = step_instruction_dict[method]
 
     # ITERATION
