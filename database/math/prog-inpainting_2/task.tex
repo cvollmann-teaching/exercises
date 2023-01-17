@@ -1,0 +1,13 @@
+% !TeX spellcheck = en_US
+\textbf{Image Inpainting}
+\begin{enumerate}
+	\item Download the file \texttt{noisy\_image.npy} (link ``data'' next to the link ``Sheet 11'') and use numpy.load() to import it into your Python script. The shape is (823, 1238). This image is obtained from the original image by randomly setting 99\% (!) of the pixel values to zero.
+	\item Apply the techniques from the lecture to recover the original image:
+	\begin{enumerate}
+		\item Estimate the masking matrix $A$ from the given noisy image.
+		\item Solve a regularized least squares problem. Note that the solving step may take a few seconds due to the high--dimensional data.
+	\end{enumerate}
+	(Can you identify the objects on the image?)
+\end{enumerate}
+
+
