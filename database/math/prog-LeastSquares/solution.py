@@ -28,6 +28,7 @@ def main():
     x, residuals, rank, singular_val = np.linalg.lstsq(A, Y, rcond=None)
     Y_fitted = x[0] + x[1] * np.sin(Z)
     plt.plot(Z.T, Y_fitted.T, "-")
+    plt.show()
 
 
 if __name__ == "__main__":
