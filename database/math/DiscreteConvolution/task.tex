@@ -1,7 +1,74 @@
- \textbf{Discrete Convolution}\\
- 
-
-The discrete convolution is defined by the summation
-$$
-g(n)= f(n)\ast h(n) = \sum_{k=-\infty}^{\infty}f(k)h(n-k)
-$$
+\textbf{Discrete Convolution, Filters and Kronecker Product}
+\begin{enumerate}
+	\item \textit{\color{navy}Definition: Let $f\colon\mathbb{Z}\to\mathbb{R}$ and $g\colon\mathbb{Z}\to\mathbb{R}$. Then the discrete convolution $\ast\colon \mathbb{R}^\mathbb{Z}\times \mathbb{R}^\mathbb{Z} \to \mathbb{R}^\mathbb{Z}$ is defined by 
+	$$ (f \ast g)(k)  = \sum_{j\in \mathbb{Z}}f(k)g(n-k),~~~~k\in \mathbb{Z}. $$}
+	Consider 
+	$$
+	f(i) := \begin{cases}
+	1 &: i \in \{0,1,2\}\\
+	0 &: else
+	\end{cases},~~~~
+	g(i) := \begin{cases}
+	\tfrac{1}{3} &: i \in \{-1,0,1\}\\
+	0 &: else
+	\end{cases}
+	$$
+	and compute the discrete convolution $f \ast g$.\\
+	\textit{Remark: You can think of $f$ as a zero-padded finite signal and of $g$ as a centered filter. Also, most values of $f \ast g$ are zero.}
+	%
+	%
+	\item Consider $f$ and $g$ from above. Define a matrix $G \in \mathbb{R}^{3\times 3}$, so that 
+	$$
+	G \cdot \begin{pmatrix}
+	f(0)\\f(1)\\f(2)
+	\end{pmatrix} 
+	=
+	\begin{pmatrix}
+	(f \ast g)(0)\\(f \ast g)(1)\\(f \ast g)(2)
+	\end{pmatrix}
+	$$
+	Do you observe a structure in $G$?\\
+	\textit{Remark: The matrix $G$ is the filter matrix for the moving average $\tfrac{1}{3}[1~ 1~ 1]$.}
+	%
+	%
+	\item Now consider the 2d data
+	 $$F := \begin{pmatrix}
+	 0 & 0 & 0\\1 & 1 & 1\\ 0 & 1 & 0
+	 \end{pmatrix} $$
+	 and the matrix $G$ from above. Then compute the product
+	 $$G F G^\top. $$
+	 \textit{Remark: By computing this product we apply the 1d filter to each dimension of $F$, e.g., first column-wise and then row-wise is $(G(GF)^\top)^\top$. Thereby we obtain a 2d filter from the 1d filter.}
+	 %
+	 %
+	 \item \textit{\color{navy}Definition: The Kronecker product $\otimes\colon \mathbb{R}^{m \times n} \times \mathbb{R}^{M \times N} \to \mathbb{R}^{mM \times nN}$ is defined by
+	 $$A \otimes B = \begin{pmatrix}
+	 a_{11}B &\cdots& a_{1n} B \\
+	 \vdots & &\vdots\\
+	 a_{m1}B &\cdots& a_{mn} B
+	 \end{pmatrix} .$$
+ 	 Also let $\text{vec}\colon \mathbb{R}^{m \times n} \to \mathbb{R}^{mn}$ define the row-major vectorization (here start indexing at $0$)
+  	 $$\text{vec}(F)(k) := F(\lfloor\tfrac{k}{n}\rfloor, k \mod n),~~~0\leq k <mn.$$ }
+   	For $G$ and $F$ from above derive 
+   	$$\text{vec}(G F G^\top)~~~\text{and}~~~(G \otimes G)\text{vec}(F). $$
+   	\textit{Remark: These two vectors should be the same. The right one defines the application of the 2d filter as a matrix--vector product.}
+   	%
+   	%
+	\item \textit{\color{navy}Definition: Let $F\colon\mathbb{Z}^2\to\mathbb{R}$ and $W\colon\mathbb{Z}^2\to\mathbb{R}$. Then the two-dimensional discrete convolution $\ast\colon \mathbb{R}^{\mathbb{Z}^2}\times \mathbb{R}^{\mathbb{Z}^2}\to \mathbb{R}^{\mathbb{Z}^2}$ is analogously defined by 
+		$$ (F \ast W)(k,\ell)  = \sum_{(i,j)\in \mathbb{Z}^2}F(i,j)W(k-i, \ell-j),~~~(k,\ell)\in\mathbb{Z}^2. $$}
+	Consider 
+	$$
+	F(i,j) := \begin{cases}
+	1 &: (i,j) \in \{(1,0),(1,1),(1,2), (2,1)\}\\
+	0 &: else
+	\end{cases},~~~~
+	W(i,j) := \begin{cases}
+	\tfrac{1}{9} &: -1\leq i,j \leq 1\\
+	0 &: else
+	\end{cases}
+	$$
+	and compute the discrete convolution $F \ast W$. Compare the result to $GFG^\top$ from above.\\
+	\textit{Remark: This $F$ is the zero-padded version of the 2d signal $F$ from above and $W$ is the 2d average filter.}
+	%
+	%
+	\item Just for fun: Install the free software \url{https://www.gimp.org/downloads/}, open an image of your choice and check out the menu point ``Filter''. In particular, you can apply your own filters under ``Filter > Generic > Convolution Matrix'' (\url{https://docs.gimp.org/2.8/en/plug-in-convmatrix.html}).
+\end{enumerate}

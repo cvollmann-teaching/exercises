@@ -4,10 +4,10 @@
     "subtitle": "",
     "coding": "",
     "mathFields": "",
-    "tags": "Linear Algebra",
+    "tags": "Linear Algebra, Image Processing",
     "relatedExercises": "",
     "solutionLength": "",
-    "task": "{\\color{navy}\n\\textbf{\\normalsize Computation Rules for Matrices and Vectors}\n\nBelow you find a collection of computation rules that are helpful when dealing with matrices and vectors. \nFeel free to prove them based on the definitions given in the lecture.\\\\\n~\\\\\n\\textbf{Compatibility properties of summing and scaling matrices}\n\nLet $A,B \\in \\mathbb{F}^{m\\times n}$ and $r,s \\in \\mathbb{F}$. Then \n\n\\begin{eqnarray*} \n    \\begin{array}{lr@{~}l} \n        i) & (r\\cdot s) \\cdot A = & r\\cdot(s\\cdot A)  \\\\ \n        ii) & (r+s) \\cdot A =      & r\\cdot A+s\\cdot A  \\\\ \n        ~ & r\\cdot (A+B) =       & r \\cdot A+r \\cdot B  \\\\ \n        iii) & 1\\cdot A = & A  \\\\\n        &&\\\\\n        \\text{From which we can derive:}&&\\\\\n        i)& 0 \\cdot A &= 0 \\\\\n        ii)& r \\cdot 0 & = 0 \\\\\n        iii)& r\\cdot A &= 0 ~~ \\Rightarrow r = 0 ~\\lor ~A = 0\\\\ \n        iv) & (-1)\\cdot A &=    -A \n    \\end{array}  \n\\end{eqnarray*}\n\n\n\\textbf{Compatibility properties of matrix sum and product}\\\\\nLet $A,\\tilde{A} \\in \\mathbb{F}^{m\\times n}$, $B, \\tilde{B} \\in \\mathbb{F}^{n\\times \n    l}$, $C \\in \\mathbb{F}^{l\\times t}$, $r \\in \\mathbb{F}$. Then  \n\\begin{eqnarray*}\n    \\begin{array}{r@{~}l} \n        i) & (A\\cdot B) \\cdot C = A\\cdot (B\\cdot C)  \\\\ \n        ii)  & (A+\\tilde{A})B = AB + \\tilde{A} B\\\\ \n        iii)& A(B+\\tilde{B}) = AB + A\\tilde{B} \\\\ \n        iv) & I_m A = AI_n = A \\\\ \n        v)  & (r\\cdot A)\\cdot B  = r(A\\cdot B) = A(r\\cdot B)\\\\ \n        vi) & 0A = A0 = 0 \n    \\end{array}  \n\\end{eqnarray*} \n\n\n\\textbf{Group property of invertible matrices}\\\\\nFor two invertible matrices $A,B \\in \\mathbb{F}^{n\\times n}$ we find \n\\begin{eqnarray*}\n    \\begin{array}{r@{~}l} \n        i)    & (AB)^{-1} = B^{-1} A^{-1} \\\\ \n        ii)  & \\left(A^{-1}\\right)^{-1} = A \\\\ \n    \\end{array}  \n\\end{eqnarray*} \n\n\n\\textbf{Transpose matrices}\\\\\nLet $A\\in\\mathbb{R}^{m\\times r}$ and $B\\in\\mathbb{R}^{r\\times m}$. Then\n\\begin{itemize}\n\t\\item[i)] $(A^\\top)^\\top =A$,\n\t\\item[ii)] $(AB)^\\top=B^\\top A^\\top$ ,\n\t\\item[iii)] $(A+B)^\\top= A^\\top + B^\\top$ ,\n\t\\item[iv)] for $A\\in GL(n,\\mathbb{R})$ we have $(A^{\\top})^{-1}=(A^{-1})^{\\top}$.\n\\end{itemize}\n}",
-    "solution": "\n\n\n\n\n",
+    "task": "",
+    "solution": "",
     "id": ""
 }
