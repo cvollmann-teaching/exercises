@@ -1,1 +1,150 @@
-...
+\begin{enumerate}
+	\item  {\color{navy} Intuition (formally): Thinking about $f$ and $g$ as infinite vectors and defining $g_k(j):= g(k-j)$ for a fixed $k$, then under abuse of notation we have 
+		$$(f\ast g)(k) = f^\top g_k. $$
+	We have $g_0(j) = g(-j)$ (= reflection of $g$ on y axis), so that $g_k$ is a shift of $g_0$ of amount $k$ (to the right if $k$ is positive and to the left if $k$ is negative). If $g$ is even (=symmetric around the origin), then by definition $g(j)=g(-j)$.
+  }
+	Note that the support of $f$  and $g$ is $\{0,1,2\}$ and $\{-1,0,1\}$, respectively. Thus
+	$$
+	(f \ast g)(k) =
+	\begin{cases}
+	f(0)g(-1-0) + f(1)g(-1-1) + f(2)g(-1-2) & : k = -1 \\
+	f(0)g(0-0) + f(1)g(0-1) + f(2)g(0-2) & : k = 0 \\
+	f(0)g(1-0) + f(1)g(1-1) + f(2)g(1-2) & : k = 1 \\
+	f(0)g(2-0) + f(1)g(2-1) + f(2)g(2-2) & : k = 2 \\
+	f(0)g(3-0) + f(1)g(3-1) + f(2)g(3-2) & : k = 3 
+	\end{cases} =
+	\begin{cases}
+	\tfrac{1}{3}  & : k = -1 \\
+	\tfrac{2}{3}  & : k = 0 \\
+	1  & : k = 1 \\
+	\tfrac{2}{3}  & : k = 2 \\
+	\tfrac{1}{3}  & : k = 3 
+	\end{cases}
+	$$
+	Observe that the convolution ``increases the support'' of $f$.
+	%
+	%
+	\item We define the \textit{Toeplitz} matrix
+	$$
+	G = 
+	\frac{1}{3}
+	\begin{pmatrix}
+		1&1&0 \\
+		1&1&1 \\
+		0&1&1
+	\end{pmatrix}
+	$$
+	\item Applying the filter $G$ to each column:
+	$$GF = 
+		\frac{1}{3}
+	\begin{pmatrix}
+	1&1&0 \\
+	1&1&1 \\
+	0&1&1
+	\end{pmatrix}
+	\cdot 
+	\begin{pmatrix}
+	0 & 0 & 0\\1 & 1 & 1\\ 0 & 1 & 0
+	\end{pmatrix} 
+	=
+	 \frac{1}{3}
+	\begin{pmatrix}
+	1 & 1 & 1\\1 & 2 & 1\\ 1 & 2 & 1
+	\end{pmatrix} 
+	$$
+	Now apply the filter $G$ to each row of this intermediate result:
+	$$GFG^\top 
+	=  (G (GF)^\top)^\top 
+	= \frac{1}{9}\left(	
+		\begin{pmatrix}
+	1&1&0 \\
+	1&1&1 \\
+	0&1&1
+	\end{pmatrix}
+	\begin{pmatrix}
+	1 & 1 & 1\\
+	1 & 2 & 2\\ 
+	1 & 1 & 1
+	\end{pmatrix} 
+	\right)^\top
+		= 
+		\frac{1}{9}
+	\begin{pmatrix}
+	2&3&2 \\
+	\color{blue}3&\color{blue}4&\color{blue}3 \\
+	\color{red}3&\color{red}4&\color{red}3
+	\end{pmatrix}
+	$$
+	\item We find
+	$$\text{vec}(G F G^\top) = 
+		\frac{1}{9}
+	\begin{pmatrix}
+	 2\\3\\2\\\color{blue}3\\\color{blue}4\\\color{blue}3\\\color{red}3\\\color{red}4\\\color{red}3
+	\end{pmatrix}
+	, $$
+	$$(G \otimes G)
+	=\frac{1}{3} 	\begin{pmatrix}
+	G&G&0 \\
+	G&G&G\\
+	0&G&G
+	\end{pmatrix}
+	=
+	\frac{1}{9} 
+	\begin{pmatrix}
+		1&1&0&1&1&0&0&0&0\\
+		1&1&1&1&1&1&0&0&0\\
+		0&1&1&0&1&1&0&0&0\\
+		1&1&0&1&1&0&1&1&0\\
+		1&1&1&1&1&1&1&1&1\\
+		0&1&1&0&1&1&0&1&1\\
+		0&0&0&1&1&0&1&1&0\\
+		0&0&0&1&1&1&1&1&1\\
+		0&0&0&0&1&1&0&1&1
+\end{pmatrix}
+,~~~
+	\text{vec}(F)
+	=
+		\begin{pmatrix}
+	0\\0\\0\\1\\1\\1\\0\\1\\0
+	\end{pmatrix},
+	$$
+	
+	$$(G \otimes G)\text{vec}(F) = 
+		\frac{1}{9} 
+	\begin{pmatrix}
+	1&1&0&1&1&0&0&0&0\\
+	1&1&1&1&1&1&0&0&0\\
+	0&1&1&0&1&1&0&0&0\\
+	1&1&0&1&1&0&1&1&0\\
+	1&1&1&1&1&1&1&1&1\\
+	0&1&1&0&1&1&0&1&1\\
+	0&0&0&1&1&0&1&1&0\\
+	0&0&0&1&1&1&1&1&1\\
+	0&0&0&0&1&1&0&1&1
+	\end{pmatrix}
+		\begin{pmatrix}
+	0\\0\\0\\1\\1\\1\\0\\1\\0
+	\end{pmatrix}
+	=
+		\begin{pmatrix}
+	2\\3\\2\\\color{blue}3\\\color{blue}4\\\color{blue}3\\\color{red}3\\\color{red}4\\\color{red}3
+	\end{pmatrix}
+	. $$
+ \item Neglecting zeroes we find
+ $$
+ (F \ast W)(-1\leq k \leq 3, -1\leq \ell \leq 3)
+ =
+		\frac{1}{9}
+\begin{pmatrix}
+0&0&0&0&0\\
+1&2&3&2 &1\\
+1&\color{blue}3&\color{blue}4&\color{blue}3 &1\\
+1&\color{red}3&\color{red}4&\color{red}3&1\\
+0&1&1&1&0\\
+\end{pmatrix}
+ $$
+ Observe that the convolution ``increases the support'' of $F$.
+ %
+ \item GIMP demo.
+ 
+\end{enumerate}
