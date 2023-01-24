@@ -1,54 +1,55 @@
 % !TeX spellcheck = en_US
-\section{Vector Space of Polynomials}
-{\color{navy}
-Let $\F$ be a field. A set $V$ together with a mapping $+$ 
-(sum) and a mapping $\cdot$ (scalar multiplication) with 
-\begin{eqnarray*} \begin{array}{r@{~}lr@{~}l} 
-		+: V \times V & \to V & \cdot : \F \times V & \to V \\ 
-		(v,w)       & \mapsto v+ w    & (\lambda, v) & \mapsto \lambda \cdot v  
-\end{array} \end{eqnarray*} 
-is called \emph{\textbf{vector space (or linear space)} over $\mathbb{F}$}, if the following axioms \textbf{VR1} and \textbf{VR2} hold: 
-
-\begin{itemize} 
-	\item[\textbf{VR1}] $(V,+)$ is a commutative (or abelian) group with neutral element $0$, i.e., 
-	\begin{itemize}
-		\item[\textbf{G1}]Associativity: $\forall v_1, v_2,v_3\in V:~ v_1+(v_2+v_3)=(v_1+v_2)+v_3$
-		\item[\textbf{G2}] Neutral element: $\forall v \in V: ~v + 0 = v$
-		\item[\textbf{G3}] Inverse element: $\forall v \in V ~\exists_1 (-v) \in V:~ v+(-v)=0$
-		\item[\textbf{G4}] Commutativity: $\forall v_1, v_2 \in V:~ v_1 + v_2 = v_2+v_1$
-	\end{itemize}
-	\item[\textbf{VR2}] The scalar multiplication is consistent/compatible with 
-	$(V,+)$ in the following way:  
-	
-	for $\lambda,\mu \in \F$, $v,w \in V$ it holds that  
-	\begin{itemize} 
-		\item[(i)] $(\lambda + \mu)\cdot v = \lambda \cdot v + \mu \cdot v$ 
-		\item[(ii)] $\lambda \cdot (v+w) = \lambda \cdot v + \lambda \cdot w$ 
-		\item[(iii)] $\lambda \cdot (\mu \cdot v) = (\lambda \cdot \mu) \cdot v$  
-		\item[(iv)] $1 \cdot v = v$ 
-	\end{itemize} 
-\end{itemize}
-Furthermore, let $v_1,\ldots, v_n \in V$, then with the summation and scalar multiplication we can more generally define the \textbf{span} as
-$$\text{span}(v_1,\ldots, v_n)= \{\sum_{i=1}^n \lambda_i v_i: \lambda_i \in \mathbb{F}\}.$$
-Further we say that $v_1,\ldots, v_n \in V$ are \textbf{linearly independent} if 
-$$\sum_{i=1}^n \lambda_i v_i = 0 ~~~\Rightarrow ~~~\lambda_i = 0 ~~\forall~i. $$
-If $v_1,\ldots, v_n \in V$ are linearly independent and $\text{span}(v_1,\ldots, v_n) = V$, then we call $v_1,\ldots, v_n$ a \textbf{basis of $V$}.\\
-A mapping $f\colon V_1 \to V_2$ between two vector spaces is called \textbf{linear}, if $$f(\lambda \cdot_1 v +_1 w) = \lambda \cdot_2 f(v) +_2 f(w)$$
-for all $v,w\in V$. Here $+_1,\cdot_1$ and $+_2,\cdot_2$ denote the summation and scalar multiplication defined on $V_1$ and $V_2$, respectively. Examples are $\mathbb{R}^n$ and $\mathbb{R}^{m\times n}$ with the usual vector/matrix sum ``$+$'' and scalar multiplication ``$\cdot$''.
-}
-~\\
-Now we consider another example of a vector space: Let $n \in \mathbb{N}$ and $P_n(\mathbb{R})$ be the set of all polynomials of degree $\leq n$ on $\mathbb{R}$, i.e., the set $P_n(\mathbb{R})$ contains all functions $p:\mathbb{R} \rightarrow \mathbb{R}$ of the form
+\textbf{Vector Space of Polynomials}\\
+%{\color{navy}
+%Let $\F$ be a field. A set $V$ together with a mapping $+$ 
+%(sum) and a mapping $\cdot$ (scalar multiplication) with 
+%\begin{eqnarray*} \begin{array}{r@{~}lr@{~}l} 
+%		+: V \times V & \to V & \cdot : \F \times V & \to V \\ 
+%		(v,w)       & \mapsto v+ w    & (\lambda, v) & \mapsto \lambda \cdot v  
+%\end{array} \end{eqnarray*} 
+%is called \emph{\textbf{vector space (or linear space)} over $\mathbb{F}$}, if the following axioms \textbf{VR1} and \textbf{VR2} hold: 
+%
+%\begin{itemize} 
+%	\item[\textbf{VR1}] $(V,+)$ is a commutative (or abelian) group with neutral element $0$, i.e., 
+%	\begin{itemize}
+%		\item[\textbf{G1}]Associativity: $\forall v_1, v_2,v_3\in V:~ v_1+(v_2+v_3)=(v_1+v_2)+v_3$
+%		\item[\textbf{G2}] Neutral element: $\forall v \in V: ~v + 0 = v$
+%		\item[\textbf{G3}] Inverse element: $\forall v \in V ~\exists_1 (-v) \in V:~ v+(-v)=0$
+%		\item[\textbf{G4}] Commutativity: $\forall v_1, v_2 \in V:~ v_1 + v_2 = v_2+v_1$
+%	\end{itemize}
+%	\item[\textbf{VR2}] The scalar multiplication is consistent/compatible with 
+%	$(V,+)$ in the following way:  
+%	
+%	for $\lambda,\mu \in \F$, $v,w \in V$ it holds that  
+%	\begin{itemize} 
+%		\item[(i)] $(\lambda + \mu)\cdot v = \lambda \cdot v + \mu \cdot v$ 
+%		\item[(ii)] $\lambda \cdot (v+w) = \lambda \cdot v + \lambda \cdot w$ 
+%		\item[(iii)] $\lambda \cdot (\mu \cdot v) = (\lambda \cdot \mu) \cdot v$  
+%		\item[(iv)] $1 \cdot v = v$ 
+%	\end{itemize} 
+%\end{itemize}
+%Furthermore, let $v_1,\ldots, v_n \in V$, then with the summation and scalar multiplication we can more generally define the \textbf{span} as
+%$$\text{span}(v_1,\ldots, v_n)= \{\sum_{i=1}^n \lambda_i v_i: \lambda_i \in \mathbb{F}\}.$$
+%Further we say that $v_1,\ldots, v_n \in V$ are \textbf{linearly independent} if 
+%$$\sum_{i=1}^n \lambda_i v_i = 0 ~~~\Rightarrow ~~~\lambda_i = 0 ~~\forall~i. $$
+%If $v_1,\ldots, v_n \in V$ are linearly independent and $\text{span}(v_1,\ldots, v_n) = V$, then we call $v_1,\ldots, v_n$ a \textbf{basis of $V$}.\\
+%A mapping $f\colon V_1 \to V_2$ between two vector spaces is called \textbf{linear}, if $$f(\lambda \cdot_1 v +_1 w) = \lambda \cdot_2 f(v) +_2 f(w)$$
+%for all $v,w\in V$. Here $+_1,\cdot_1$ and $+_2,\cdot_2$ denote the summation and scalar multiplication defined on $V_1$ and $V_2$, respectively. Examples are $\mathbb{R}^n$ and $\mathbb{R}^{m\times n}$ with the usual vector/matrix sum ``$+$'' and scalar multiplication ``$\cdot$''.
+%}
+%~\\
+%Now we consider another example of a vector space: 
+Let $n \in \mathbb{N}$ and $P_n(\mathbb{R})$ be the set of all polynomials of degree $\leq n$ on $\mathbb{R}$, i.e., the set $P_n(\mathbb{R})$ contains all functions $p:\mathbb{R} \rightarrow \mathbb{R}$ of the form
 \begin{align*}
 p(x) = \sum_{k=0}^n \alpha_k x^k
 \end{align*}
-for some $\alpha_0, \dots,\alpha_n \in \mathbb{R}$. We define a summation and scalar multiplication:
+for some $\alpha_0,\alpha_1, \dots,\alpha_n \in \mathbb{R}$. We define a summation and scalar multiplication:
 \begin{align*}
 +&\colon P_n(\mathbb{R}) \times P_n(\mathbb{R}) \to P_n(\mathbb{R}),~(p+q)(x) := p(x) + q(x),\\
 \cdot &\colon  \mathbb{R} \times P_n(\mathbb{R}) \to P_n(\mathbb{R}),\quad\quad ~~(r\cdot p)(x) := r\cdot p(x) .
 \end{align*}
 \begin{enumerate}
-	\item \textbf{VR axioms:} Please show that $ P_n(\mathbb{R})$ together with the above defined summation and scalar multiplication forms a vector space.\\[0.2cm]
-	\textit{Hint:} Check \textbf{VR1} and \textbf{VR2} with $V = P_n(\mathbb{R})$.
+	\item \textbf{VR axioms:} Please show that $ P_n(\mathbb{R})$ together with the above defined summation and scalar multiplication forms a vector space.
+%	\textit{Hint:} Check \textbf{VR1} and \textbf{VR2} with $V = P_n(\mathbb{R})$.
 	\item Let $k<m \in \mathbb{N}$. Compute 
 	$$
 	\lim\limits_{x\rightarrow\infty} \frac{x^k}{x^m}, ~~\text{ and }~~ \lim\limits_{x\rightarrow\infty}  \frac{\sum_{k=0}^{m-1}\alpha_k x^k}{x^m}
@@ -59,24 +60,25 @@ for some $\alpha_0, \dots,\alpha_n \in \mathbb{R}$. We define a summation and sc
 	q_k: \mathbb{R} \rightarrow \mathbb{R}, \hspace{.2cm} x \mapsto x^k,
 	\end{align*} 
 	is a basis of $P_n(\mathbb{R})$. What is the dimension of the vector space $P_n(\mathbb{R})$?
+	\textit{Hint:  Part 2. basically provides the proof of linear independence.}
+	\item \textbf{Derivative as linear operator:} Show that the operator $\mathcal{D}:P_n(\mathbb{R}) \rightarrow P_{n-1}(\mathbb{R}), \hspace{.2cm} p \mapsto p'$, 
+	which maps a polynomial to its first derivative, is an $\mathbb{R}$-linear function.\\
+	\textit{Hint:  You can use that for $p(x) = \sum_{k=0}^n \alpha_k x^k$ we have $Dp(x)=p'(x) = \sum_{k=0}^{n-1} \alpha_{k+1} (k+1)x^k$. }					
 	
-	\textit{Hint: } Part (ii) basically provides the proof of linear independence and the other assertion is obvious from the definition of $p$. 
-	\item \textbf{Derivative as linear operator:} Show that the operator $\mathcal{D}:P_n(\mathbb{R}) \rightarrow P_n(\mathbb{R}), \hspace{.2cm} p \mapsto p'$, 
-	which maps a polynomial to its first derivative, is a $\mathbb{R}$-linear function. \\[0.2cm]
-	\textit{Hint: } For $p(x) = \sum_{k=0}^n \alpha_k x^k$ we have $p'(x) = \sum_{k=0}^n \alpha_k kx^{k-1}$. 					
+	\item[5.] \textbf{Matrix representation of the derivative:} Derive the matrix representation of $\mathcal{D}$ with respect to the bases of monomials, i.e., derive the matrix $\mathcal{M}^{\{q_0,\ldots,q_n\}}_{\{q_0,\ldots,q_{n-1}\}}(\mathcal{D})$.
 	
-	\item[5.] \textbf{Matrix representation of the derivative:}  Let $\Phi$ be the linear, invertible function which maps a polynomial to its coefficients (coordinates in the above basis), i.e.,
-	$$\Phi: P_n(\mathbb{R}) \rightarrow \mathbb{R}^{n+1}, \hspace{.2cm} \sum_{k=0}^n \alpha_k x^k \mapsto (\alpha_0, \dots, \alpha_n).$$ 
-	Please remark shortly why $\Phi$ is bijective.
-	What is the matrix representation of the linear function
-	$ F:\mathbb{R}^{n+1} \rightarrow \mathbb{R}^{n+1}$ defined by $$F :=\Phi \circ \mathcal{D} \circ \Phi^{-1}  $$ with respect to the standard basis $\lbrace e_1, \dots, e_{n+1}\rbrace$? More precisely, derive the matrix $A \in \R^{(n+1)\times (n+1)}$ defined by
-	$$
-	A:=\begin{pmatrix}
-	|& &|\\
-	F(e_1)&\dots&F(e_{n+1})\\
-	|& &|
-	\end{pmatrix}.
-	$$
+%Let $\Phi$ be the linear, invertible function which maps a polynomial to its coefficients (coordinates in the above basis), i.e.,
+%	$$\Phi: P_n(\mathbb{R}) \rightarrow \mathbb{R}^{n+1}, \hspace{.2cm} \sum_{k=0}^n \alpha_k x^k \mapsto (\alpha_0, \dots, \alpha_n).$$ 
+%	Please remark shortly why $\Phi$ is bijective.
+%	What is the matrix representation of the linear function
+%	$ F:\mathbb{R}^{n+1} \rightarrow \mathbb{R}^{n+1}$ defined by $$F :=\Phi \circ \mathcal{D} \circ \Phi^{-1}  $$ with respect to the standard basis $\lbrace e_1, \dots, e_{n+1}\rbrace$? More precisely, derive the matrix $A \in\mathbb{R}^{(n+1)\times (n+1)}$ defined by
+%	$$
+%	A:=\begin{pmatrix}
+%	|& &|\\
+%	F(e_1)&\dots&F(e_{n+1})\\
+%	|& &|
+%	\end{pmatrix}.
+%	$$
 	
 %	\textit{Note: } This is a bonus exercise. %The representation refers to the one in Thm 9.8 and the successive remark (as $\Pn$ is a general vector space).
 	

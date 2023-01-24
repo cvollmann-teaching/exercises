@@ -44,45 +44,37 @@
 	\item 
 	Let $p=\sum_{k=0}^{n}\alpha_kq_k$ and $w =\sum_{k=0}^{n}\beta_kq_k$ and $\lambda\in\mathbb{R}$, then:
 	\begin{align*}\text{D}(\lambda p+w)(x)&=\left(\sum_{k=0}^{n}(\lambda \alpha_k+\beta_k)x^k\right)'=\sum_{k=0}^{n}(\lambda \alpha_k+\beta_k)kx^{k-1}\\&=\lambda\sum_{k=0}^{n}\alpha_kkx^{k-1}+\sum_{k=0}^{n}\beta_kkx^{k-1}=\lambda \text{D}(p)(x)+\text{D}(q)(x)\end{align*}
-	\item[5.] We have:
-	\begin{align*}
-	D:~P_n(\mathbb{R})\rightarrow P_n(\mathbb{R}),~p=\sum_{k=0}^{n}\alpha_kq_k\mapsto p'&=\sum_{k=0}^{n-1}\alpha_{k+1}(k+1)q_k\\
-	\Phi:~P_n(\mathbb{R})\rightarrow\mathbb{R}^{n+1},~p=\sum_{k=0}^{n}\alpha_kq_k\mapsto &(\alpha_0,\dots,\alpha_n)^T\\
-	&\textcolor{blue}{=(\pi_0(p),\dots,\pi_n(p))}
-	\end{align*}
-	$\rightarrow$[$\Phi$ linear since $\pi_j$ are linear (see lecture) and bijective since $\{q_0,\dots,q_n\}$ basis, $\Phi^{-1}:\mathbb{R}^{n+1}\rightarrow P_n(\mathbb{R}),~(\alpha_0,\dots,,\alpha_n)^T\mapsto p=\sum \alpha_kq_k$]\\
+	\item[5.] 
+	For $j=0$ we have
+	$$\mathcal{D}q_0 = 0 $$
+	and for $1\leq j \leq n$ we have
+	$$\mathcal{D}q_j = j q_{j-1}.$$
+	These coordinates in the basis $q_j$ are simply scaled unit vectors, thus we obtain the $n\times (n+1)$ matrix
+	$$\mathcal{M}^{\{q_0,\ldots,q_n\}}_{\{q_0,\ldots,q_{n-1}\}}(\mathcal{D})
+	=
+	 \begin{pmatrix}
+	0&\textcolor{blue}{1}&0&0&0\\
+	0&0&\textcolor{blue}{2}&0&\vdots\\
+	\vdots&\vdots&0&\textcolor{blue}{\ddots}&\vdots\\
+	0&0&\cdots&\ddots&\textcolor{blue}{n}
+	\end{pmatrix}.$$
+ 	~\\
+	\textbf{Additional remark:}
+	Let us consider the coordinate mapping
+	$$
+	\Phi:~P_n(\mathbb{R})\rightarrow\mathbb{R}^{n+1},~p=\sum_{k=0}^{n}\alpha_kq_k\mapsto  (\alpha_0,\dots,\alpha_n)^T \textcolor{blue}{=(\pi_0(p),\dots,\pi_n(p))}
+	$$
+	This $\Phi$ is linear, since $\pi_j$ are linear (see lecture) and bijective since $\{q_0,\dots,q_n\}$ basis, $\Phi^{-1}:\mathbb{R}^{n+1}\rightarrow P_n(\mathbb{R}),~(\alpha_0,\dots,,\alpha_n)^T\mapsto p=\sum \alpha_kq_k$.\
 	\\
-	Now consider: $F:\mathbb{R}^{n+1}\rightarrow\mathbb{R}^{n+1},~F(\alpha):=\Phi\circ D\circ\Phi^{-1}$
+	We get the following commutative diagram
 	$$
 	\begin{matrix}
-	\textcolor{red}{(\alpha_o,\dots,\alpha_n)^T}&\mathbb{R}^{n+1}&\xrightarrow{A}&\mathbb{R}^{n+1}&\textcolor{red}{(\alpha_1,2\alpha_2,3\alpha_3,\dots,n\alpha_n,0)=:\beta}\\
-	&\textcolor{blue}{\{e_1,\dots,e_{n+1}\}}& &\textcolor{blue}{\{e_1,\dots,e_{n+1}\}}& \\
-	&\downarrow \Phi^{-1}& &\Phi\uparrow& \\
-	\textcolor{red}{p=\sum_{k=0}^{n}\alpha_kq_k}&P_n(\mathbb{R})&\overrightarrow{D}&P_n(\mathbb{R})&\textcolor{red}{p'=\sum_{k=0}^{n}\beta_kq_k}\\
-	&\textcolor{blue}{\{q_1,\dots,q_{n+1}\}}& &\textcolor{blue}{\{q_1,\dots,q_{n+1}\}}& 
+	\textcolor{red}{(\alpha_o,\dots,\alpha_n)^T}&\mathbb{R}^{n+1}&\xrightarrow{\mathcal{M}(\mathcal{D})}&\mathbb{R}^{n}&\textcolor{red}{(\alpha_1,2\alpha_2,3\alpha_3,\dots,n\alpha_n)=:\beta}\\
+	&\textcolor{blue}{\{e_1,\dots,e_{n+1}\}}& &\textcolor{blue}{\{e_1,\dots,e_{n}\}}& \\
+	&\uparrow \Phi& &\Phi^{-1}\downarrow& \\
+	\textcolor{red}{p=\sum_{k=0}^{n}\alpha_kq_k}&P_n(\mathbb{R})&\overrightarrow{\mathcal{D}}&P_{n-1}(\mathbb{R})&\textcolor{red}{p'=\sum_{k=0}^{n-1}\beta_kq_k}\\
+	&\textcolor{blue}{\{q_0,\dots,q_{n+1}\}}& &\textcolor{blue}{\{q_0,\dots,q_{n}\}}& 
 	\end{matrix}
-	$$
-	\begin{align*}
-	F(\alpha)&=(\Phi\circ D\circ\Phi^{-1})(\alpha)\\
-	&=(\Phi\circ D)\left(\sum_{k=0}^{n}\alpha_kq_k\right)\\
-	&=\Phi\left(\sum_{k=0}^{n-1}\alpha_{k+1}(k+1)q_k\right)\\
-	&=(\alpha_1,2\alpha_2,3\alpha_3,\dots,n\alpha_n,0)^T
-	\end{align*}
-	To obtain the matrix representation we have to evaluate $F$ on the standard basis $\{e_1,\dots,e_{n+1}\}$:
-	$$
-	A=\begin{pmatrix}
-	|& &|\\
-	F(e_1)&\dots&F(e_{n+1})\\
-	|& &|
-	\end{pmatrix}
-	=\begin{pmatrix}
-	0&\textcolor{blue}{1}&0&0&\cdots&0\\
-	0&0&\textcolor{blue}{2}&0&\cdots&0\\
-	\vdots&\vdots&0&\textcolor{blue}{\ddots}&\ddots&\vdots\\
-	0&0&\cdots&\ddots&\textcolor{blue}{n-1}&0\\
-	0&0&0&\cdots&0&\textcolor{blue}{n}\\
-	0&0&0&\cdots&0&0
-	\end{pmatrix}
 	$$
 \end{enumerate}
 }

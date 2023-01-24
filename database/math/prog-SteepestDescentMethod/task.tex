@@ -1,13 +1,13 @@
-\section{Appetizer: Gradient, Steepest Descent and Conjugate Gradient Method}
-{\color{navy} \textbf{Background}\\
-	Let $A \in \Rnn$ be symmetric and positive definite (spd). Then $A$ is in particular invertible, so that the
+\textbf{Appetizer: Gradient, Steepest Descent and Conjugate Gradient Method}\\~\\
+{\color{navy} \textbf{Background:}
+	Let $A \in \mathbb{R}^{n \times n}$ be symmetric and positive definite (spd). Then $A$ is in particular invertible, so that the
 	linear system
 	$Ax = b$
-	has a unique solution $x^* \in \Rn$  for all $b \in \Rn$  . Let us relate this linear system to an optimization problem.
+	has a unique solution $x^* \in \mathbb{R}^{n}$  for all $b \in \mathbb{R}^{n}$  . Let us relate this linear system to an optimization problem.
 	For this purpose we define for a fixed spd matrix $A$ and fixed right-hand side $b$ the function
-	$$f:=f_{A,b} : \Rn  \to \R, x  \to \tfrac{1}{2} x^T Ax - b^T x.$$
+	$$f:=f_{A,b} : \mathbb{R}^{n}  \to \mathbb{R}, ~~x  \mapsto \tfrac{1}{2} x^T Ax - b^T x.$$
 	Then one can show the equivalence
-	$$Ax^* = b ~~~\iff~~~	x^* = \arg \min_{x\in\Rn} f (x).	$$
+	$$Ax^* = b ~~~\iff~~~	x^* = \arg \min_{x\in\mathbb{R}^{n}} f (x).	$$
 	In words, $x^*$ solves the linear system on the left-hand side if and only if $x^*$ is the unique minimizer of the
 	functional $f$. In fact, you will learn in the next semester that the condition $Ax^* = b$ is the necessary first-order optimality
 	condition:
@@ -23,18 +23,19 @@
 	formulation
     $$x_{k+1} = x_{k} - \theta\nabla f (x_{k} ).$$
 	The latter is what is called a gradient method. A step from $x_{k}$ into (an appropriately scaled) direction of the gradient
-	$\nabla f (x_{k} )$ yields a decrease in the objective function $f$ , i.e., $f (x_{k+1} ) \leq  f (x_{k}$ ). Along the Richardson/
-	Gradient method the scaling (also called step size) $\theta$ is fixed. However, one could also choose a different
+	$\nabla f (x_{k} )$ yields a decrease in the objective function $f$ , i.e., $f (x_{k+1} ) \leq  f (x_{k}$ ). Along the Richardson aka Gradient method the scaling (also called step size) $\theta$ is fixed (in a machine learning context the step size $\theta$ is called the \textit{learning rate}). However, one could also choose a different
 	$\theta_k$  in each iteration step. This gives the more general version
 \begin{equation}\label{steepest_descent_method}
 	x_{k+1} = x_{k} - \theta_k  \nabla f (x_{k} ).
 \end{equation}
-	The well known method of steepest descent is given by choosing
+	The well known method of \textit{steepest descent} is given by choosing
 \begin{equation} \label{steepest_descent_stepsize}
 	\theta_k  = \frac{r_k^\top r_k}{ r_k^\top   Ar_k  },
 \end{equation}
 where $r_k : = Ax_{k} - b$ is the $k$-th residual. This choice can be shown to be optimal in terms of convergence
-	speed. Even general, one can think of using a different preconditioner $N_k$ in each iteration step -- this will later correspond to Newton-type optimization algorithms.
+	speed. Even more general, one can think of using a different preconditioner $N_k$ in each iteration step
+	$$x_{k+1} = x_{k} - N_k \nabla f (x_{k} ),$$ 
+	i.e., representing the gradient with respect to another inner product. This will later correspond to Newton-type optimization algorithms.
 }
 ~\\~\\
 \textbf{Task}\\
@@ -53,7 +54,7 @@ Convince yourself that $A$ is spd. Determine the minimal and maximal eigenvalue 
 	\begin{enumerate}
 		\item Implement the \textbf{steepest descent method} \eqref{steepest_descent_method} by choosing the stepsize $\theta_k$ from \eqref{steepest_descent_stepsize} in each iteration step.
 		\item Find a way to apply the \href{https://en.wikipedia.org/wiki/Conjugate_gradient_method#Example_code_in_MATLAB_/_GNU_Octave}{\textbf{conjugate gradient method}} to solve a system $Ax=b$, where $A$ is spd.\\
-		\textit{Hint:} You can either implement it on your own  or find a SciPy routine (for the latter: you can collect all iterates $x_k$ by using the callback interface).
+		\textit{Hint: You can either implement it on your own  or find a SciPy routine (for the latter: you can collect all iterates $x_k$ by using the callback interface).}
 		\item \textbf{Test:} Solve the above problem with the following routines:
 		\begin{enumerate}
 			\item Richardson method with $\theta = \frac{2}{\lambda_{\text{max}}}$
