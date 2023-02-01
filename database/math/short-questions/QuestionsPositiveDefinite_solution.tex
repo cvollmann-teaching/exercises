@@ -1,0 +1,26 @@
+{\color{solution}
+\begin{enumerate}
+	\item Assume $\lambda<0$ exists with the associated eigenvector v. Then
+	\begin{align*}
+	v^TAv=\underbrace{\lambda}_{\textcolor{blue}{<0}}\underbrace{v^Tv}_{\textcolor{blue}{>0}}<0\\
+	\Rightarrow~A~\text{is not semi-positive definite}.
+	\end{align*}
+	\item 
+	Assume $\lambda\leq0$ exists with the associated eigenvector v. Then
+	\begin{align*}
+	v^TAv=\underbrace{\lambda}_{\textcolor{blue}{\leq0}}\underbrace{\|v\|^2}_{\textcolor{blue}{>0}}\leq0\\
+	\Rightarrow~A~\text{is not positive definite}.
+	\end{align*}
+	\item 
+	\begin{align*}
+	A~\text{symmetric} & \Rightarrow~A=V\Lambda V^T\\
+	A~ \text{positive definite}&\Rightarrow~\lambda>0~~\forall\sigma(A)\\ 
+	&\Rightarrow~\Lambda ~\text{is invertible}
+	\end{align*}
+	\item 
+	\begin{align*}
+	&A:=M^TM,~\text{let}~x\in\mathbb{R}^n\\ 
+	&\Rightarrow~x^TAx=x^TM^TMx=\|Mx\|^2\geq 0
+	\end{align*}
+\end{enumerate}
+}

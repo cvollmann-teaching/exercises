@@ -1,0 +1,35 @@
+{\color{solution}
+\begin{enumerate}
+	\item $~~\textcolor{exampoints}{(2P)}~~L:\mathbb{F}^n\rightarrow[0,+\infty)$ norm: $\Leftrightarrow$
+	\begin{align*}
+	&\text{i)}~L(x)=0~~\Rightarrow~~x=0\\
+	&\text{ii)}~L(\lambda x)=|\lambda|L(x)\\
+	&\text{iii)}~L(x+y)\leq L(x)+L(y)
+	\end{align*}
+	
+	\item 
+	$A=U\Sigma V^T=\sum_{j=1}^{\text{min}(n,m)}\sigma_ju_jv_j^T$\\
+	best rank-k approximation is given by truncated SVD
+	\begin{align*}
+	&\textcolor{exampoints}{(1P)}~~A_k:=\sum_{j=1}^{k}\sigma_ju_jv_j^T~\text{for which}\\
+	&\textcolor{exampoints}{(1P)}~~A_k:=\min_{B,\text{rank}(B)=k}\|B-A\|_F^2.
+	\end{align*}
+	
+	\item $~~\textcolor{exampoints}{(2P)}~~A=\begin{pmatrix}0&1\\1&1\end{pmatrix}$
+	
+	\item $~~\textcolor{exampoints}{(2P)}~~A\in\mathbb{R}^{n\times n}~\text{symmetric}~, \lambda_1\neq\lambda_2\in\sigma(A)~\text{with}~v_1, v_2$
+	\begin{align*}
+	\Rightarrow~~&v_1^TAv_2=\lambda_2v_1^Tv_2\\
+	\text{and}~~&v_1^TAv_2=v_2^TA^Tv_1=\lambda_1v_1^Tv_2\\
+	\Rightarrow~~&(\lambda_1-\lambda_2)v_1^Tv_2=0\\
+	\stackrel{\textcolor{blue}{\lambda_1\neq\lambda_2}}{\Rightarrow}~~&v_1^Tv_2=0
+	\end{align*}
+	
+	\item 
+	$A\in\mathbb{R}^{n\times n}$ positive definite $:\Leftrightarrow~~\forall x\in\mathbb{R}^n\setminus\{0\}:~x^TAx>0$
+	\begin{align*}
+	&\Rightarrow~~0<x^T\underbrace{(Ax)}_{\textcolor{blue}{:=z}}=\text{cos}(\alpha)\underbrace{\|x\|\|Ax\|}_{\textcolor{blue}{\geq 0}}~~\textcolor{exampoints}{(1P)}\\
+	&\Rightarrow~~\text{cos}(\alpha)>0~~\Rightarrow~~\alpha\in\left(-\frac{\pi}{2},\frac{\pi}{2}\right),~|\alpha|<90^{\text{o}}~~\textcolor{exampoints}{(1P)}
+	\end{align*}
+\end{enumerate}
+}

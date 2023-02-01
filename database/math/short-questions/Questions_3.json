@@ -1,0 +1,12 @@
+{
+    "filename": "Questions_3.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Answer the following questions.\n\\begin{enumerate}\n\t\\item How is the rank of a real matrix $A \\in \\mathbb{R}^{n \\times m}$ defined?\n\t\n\t\\item What does the dimension formula say?\n\t\n\t\\item Denote the optimization problem which is related to the principal component analysis.\n\t\n\\end{enumerate}",
+    "solution": "Answer the following questions.\n\\begin{enumerate}\n\t\\item How is the rank of a real matrix $A \\in \\mathbb{R}^{n \\times m}$ defined?\n\t\n\t\\item What does the dimension formula say?\n\t\n\t\\item Denote the optimization problem which is related to the principal component analysis.\n\t\n\\end{enumerate}"
+}

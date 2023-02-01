@@ -1,0 +1,24 @@
+{\color{solution}
+\begin{enumerate}
+		\item 
+	$\textcolor{exampoints}{(1P)}$ Purpose: Compute eigenvalues of a matrix $A\in\mathbb{R}^{n\times n}$
+	\begin{align*}
+	\textcolor{exampoints}{(1P)}~~A_0&:=A\\
+	\text{for}~&i=1,\dots,n\\
+	&Q_iR_i:=A_i\\
+	&A_{i+1}:=R_iQ_i
+	\end{align*}
+	%
+\item 
+$\textcolor{exampoints}{(2P)}~$ $R$ is not invertible, because triangular matrices are invertible if and only if all diagonal entries are nonzero (see backward/forward substitution)
+%
+\item	$\textcolor{exampoints}{(2P)}~$ No! We have
+\begin{align*}
+\sigma_i:=\sqrt{\lambda_i}=|\tilde{\lambda}_i|& \text{,~where~~}\tilde{\lambda}_i\in\sigma(A)~~\text{and}~  \lambda_i=\tilde{\lambda}_i^2\in\sigma(A^TA)=\sigma(A^2).
+\end{align*}
+		%
+	\item $\textcolor{exampoints}{(1P)}~~Q\in\mathbb{R}^{n\times n}$ orthogonal $:\Leftrightarrow~~Q^TQ=I$\\
+	$\textcolor{exampoints}{(1P)}$ 
+	Thus the columns of $Q$ are mutually orthonormal.
+\end{enumerate}
+}

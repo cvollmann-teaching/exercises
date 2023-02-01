@@ -1,0 +1,12 @@
+{
+    "filename": "Questions_5.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Answer the following questions.\n\\begin{enumerate}\n\t\\item When is a diagonal matrix invertible? Write down the inverse in this case.\n\t\n\t\\item What is the purpose of the $QR$ Algorithm? Write down its iteration instruction.\n\t\n\t\\item Consider the iteration $x_{k+1} = Mx_k + b$ for some matrix $M \\in \\mathbb{R}^{n \\times n}$ and vector $b \\in \\mathbb{R}^n$. Name a sufficient condition for the convergence of this sequence. What is the limit in this case?\n\n\t\n\t\\item What is the definition of an orthogonal matrix? What does it mean for the columns of the matrix?\n\t\n\\end{enumerate}",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item $\\textcolor{exampoints}{(1P)}~~D=~\\text{diag}(d_{ii})$ invertible $\\Leftrightarrow~~d_{ii}\\neq 0~\\forall i$\\\\\n\t$\\textcolor{exampoints}{(1P)}$ Then $D^{-1}=~\\text{diag}(\\frac{1}{d_{ii}})$\n\t\n\t\\item \n\t$\\textcolor{exampoints}{(1P)}$ Purpose: Compute eigenvalues of a matrix $A\\in\\mathbb{R}^{n\\times n}$\n\t\\begin{align*}\n\t\\textcolor{exampoints}{(1P)}~~A_0&:=A\\\\\n\t\\text{for}~&i=1,\\dots,n\\\\\n\t&Q_iR_i:=A_i\\\\\n\t&A_{i+1}:=R_iQ_i\n\t\\end{align*}\n\t\n\t\\item $\\rho(M)<1~\\textcolor{exampoints}{(1P)}~~\\Rightarrow~~(x_k)_k$ converges to fixed point $x^*=Mx^*+b~~\\textcolor{exampoints}{(1P)}$\n\t\n\t\\item $\\textcolor{exampoints}{(1P)}~~Q\\in\\mathbb{R}^{n\\times n}$ orthogonal $:\\Leftrightarrow~~Q^TQ=I$\\\\\n\t$\\textcolor{exampoints}{(1P)}$ \n\tThus the columns of $Q$ are mutually orthonormal.\n\\end{enumerate}\n}"
+}

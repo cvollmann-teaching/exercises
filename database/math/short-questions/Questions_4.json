@@ -1,0 +1,12 @@
+{
+    "filename": "Questions_4.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "Answer the following questions.\n\\begin{enumerate}\n\t\\item When is a diagonal matrix invertible? Write down the inverse in this case.\n\t\n\t\\item What is the purpose of the $QR$ Algorithm? Write down its iteration instruction.\n\t\n\t\\item Consider the iteration $x_{k+1} = Mx_k + b$ for some matrix $M \\in \\R^{n \\times n}$ and vector $b \\in \\R^n$. Name a sufficient condition for the convergence of this sequence. What is the limit in this case?\n\t\n\t\\item Let $A \\in \\R^{n \\times n}$ be a symmetric matrix. Are its singular values equal to its eigenvalues?\n\t\n\t\\item What is the definition of an orthogonal matrix? What does it mean for the columns of the matrix?\n\t\n\\item Let $\\lambda_1 \\neq \\lambda_2$ be two eigenvalues of a \\textit{symmetric} matrix $A \\in \\R^{n \\times n}$, and let \n$v_1, v_2 \\in \\R^n$ be corresponding eigenvectors. Proof that $v_1^\\top v_2 = 0$.\n\\end{enumerate}",
+    "solution": "Answer the following questions.\n\\begin{enumerate}\n\t\\item When is a diagonal matrix invertible? Write down the inverse in this case.\n\t\n\t\\item What is the purpose of the $QR$ Algorithm? Write down its iteration instruction.\n\t\n\t\\item Consider the iteration $x_{k+1} = Mx_k + b$ for some matrix $M \\in \\R^{n \\times n}$ and vector $b \\in \\R^n$. Name a sufficient condition for the convergence of this sequence. What is the limit in this case?\n\t\n\t\\item Let $A \\in \\R^{n \\times n}$ be a symmetric matrix. Are its singular values equal to its eigenvalues?\n\t\n\t\\item What is the definition of an orthogonal matrix? What does it mean for the columns of the matrix?\n\t\n\\item Let $\\lambda_1 \\neq \\lambda_2$ be two eigenvalues of a \\textit{symmetric} matrix $A \\in \\R^{n \\times n}$, and let \n$v_1, v_2 \\in \\R^n$ be corresponding eigenvectors. Proof that $v_1^\\top v_2 = 0$.\n\\end{enumerate}"
+}

@@ -1,0 +1,12 @@
+{
+    "filename": "QuestionsPositiveDefinite.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\section{Questions Positive Definite}\n\\textbf{Definition.} A matrix $A\\in \\mathbb{R}^{n\\times n}$ is called positive definite (semi-definite) it $x^TAx > 0 ~~(\\geq 0)$ for all $x \\in \\mathbb{R}^n\\setminus\\{0\\}$.\\\\[10pt]\nLet $A\\in \\mathbb{R}^{n\\times n}$ be a matrix and $\\lambda \\in \\sigma(A)$. Please show:\n\\begin{enumerate}\n\t\\item If $A$ is positive semi-definite, then $\\lambda \\geq 0$. (\\textit{Hint:} Proof by contradiction.)\n\t\\item If $A$ is positive definite, then $\\lambda > 0$. (\\textit{Hint:} Proof by contradiction.)\n\t\\item If $A$ is symmetric and positive definite, then $A$ is invertible. (\\textit{Hint:} Eigendecompostion.)\n\t\\item Show that $A :=M^TM$ is positive semi-definite for all matrices $M \\in \\mathbb{R}^{m\\times n}$. \\\\(\\textit{Hint:} $\\|x\\|_2^2 = x^Tx \\geq 0 ~~\\forall x \\in \\mathbb{R}^n$.)\n\\end{enumerate}",
+    "solution": "{\\color{solution}\n\\begin{enumerate}\n\t\\item Assume $\\lambda<0$ exists with the associated eigenvector v. Then\n\t\\begin{align*}\n\tv^TAv=\\underbrace{\\lambda}_{\\textcolor{blue}{<0}}\\underbrace{v^Tv}_{\\textcolor{blue}{>0}}<0\\\\\n\t\\Rightarrow~A~\\text{is not semi-positive definite}.\n\t\\end{align*}\n\t\\item \n\tAssume $\\lambda\\leq0$ exists with the associated eigenvector v. Then\n\t\\begin{align*}\n\tv^TAv=\\underbrace{\\lambda}_{\\textcolor{blue}{\\leq0}}\\underbrace{\\|v\\|^2}_{\\textcolor{blue}{>0}}\\leq0\\\\\n\t\\Rightarrow~A~\\text{is not positive definite}.\n\t\\end{align*}\n\t\\item \n\t\\begin{align*}\n\tA~\\text{symmetric} & \\Rightarrow~A=V\\Lambda V^T\\\\\n\tA~ \\text{positive definite}&\\Rightarrow~\\lambda>0~~\\forall\\sigma(A)\\\\ \n\t&\\Rightarrow~\\Lambda ~\\text{is invertible}\n\t\\end{align*}\n\t\\item \n\t\\begin{align*}\n\t&A:=M^TM,~\\text{let}~x\\in\\mathbb{R}^n\\\\ \n\t&\\Rightarrow~x^TAx=x^TM^TMx=\\|Mx\\|^2\\geq 0\n\t\\end{align*}\n\\end{enumerate}\n}"
+}
