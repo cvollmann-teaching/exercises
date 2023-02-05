@@ -1,8 +1,60 @@
 % !TeX spellcheck = en_US
-\textbf{\normalsize ...}\\
-~\\
 \begin{enumerate}
-	\item 
-
+	
+	\item Solve the system
+	$$\begin{pmatrix}
+	2 & 0\\
+	1 & 1
+	\end{pmatrix}\begin{pmatrix}
+	x_1 \\ x_2
+	\end{pmatrix} = \begin{pmatrix}
+	4 \\ 3
+	\end{pmatrix}.  $$
+	\item Find a reduced QR decomposition of 
+		$$A = \begin{pmatrix}
+	1 & 1\\
+	1 & -1 \\
+	0 & 0
+	\end{pmatrix} .$$
+	Check $\widehat{Q}\widehat{R} = A$.
+	\item Apply Gaussian elimination with partial row pivoting to compute an LU decomposition of 
+	$$A = \begin{pmatrix}
+	1 & 1\\
+	4 & 8
+	\end{pmatrix} .$$
+	Check $PA=LU$.
+	\item Let $A \in \mathbb{R}^{m \times n}$ with $\text{ker}(A)=\{0\}$ and $b \in \mathbb{R}^m$. How many solutions can the system $Ax=b$ have at most?
+	\item Let $A = \begin{pmatrix}
+	1 & 2\\
+	0 & 0
+	\end{pmatrix}$ and $b = \begin{pmatrix}
+	0\\1
+	\end{pmatrix}$. How many solutions does the system $Ax=b$ have? Shortly explain your answer.
+	\item ---
+	\item Give an example for a matrix $A \in \mathbb{R}^{2 \times 2}$ where the LU-decomposition algorithm
+	necessarily needs a permutation step. 
+\item Let $R=(r_{ij})_{ij} \in \mathbb{R}^{n \times n}$ be a (lower or upper) triangular matrix with $r_{nn} = 0$. Is $R$ invertible? Explain your answer.
+\item When is a diagonal matrix invertible? Write down the inverse in this case.
+\item Let $A\in\mathbb{R}^{n \times n}$ and $b \in \mathbb{R}^n$. Also let $\widehat{Q}\widehat{R}$ be a $\underline{\text{reduced}}$ $QR$--decomposition of $A$. What properties do $\widehat{Q}$ and $\widehat{R}$ have? How can we use it to solve the system $Ax = b$?
+\item Consider the system
+$$
+\begin{pmatrix}
+0	&-2				& 1\\
+2	&2				& 0\\
+-2	&-\frac{3}{2}	&0
+\end{pmatrix} x = 
+\begin{pmatrix}
+-5\\
+6\\
+-5
+\end{pmatrix}.
+$$
+\begin{enumerate}
+	%	\item Define a matrix $A$ and a vector $b$, so that this system reads as $Ax = b$. 
+	\item  Define a matrix $A$ and a vector $b$, so that this system reads as $Ax = b$. Then compute an $LU$-decomposition of $A$ by applying Gaussian elimination with \underline{\textbf{row pivoting}}. Denote the respective matrices $L$, $U$ and $P$, such that $PA = LU$.\\
+	(\textit{Hint: Verify the desired properties of the factor matrices and test whether  $PA = LU$ holds.})
+	\item Use the result from the $LU$-decomposition to determine an $x$ which solves $Ax=b$.\\
+	(\textit{Hint: Test whether $Ax=b$ holds.})
+\end{enumerate}
 \end{enumerate}
  

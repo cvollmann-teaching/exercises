@@ -1,6 +1,28 @@
 {\color{solution}
 \begin{enumerate}
-	\item ...
+		\item In this case: $A=
+	\begin{pmatrix}
+	1&4\\
+	1&1\\
+	1&0\\
+	1&1\\
+	1&4
+	\end{pmatrix}~~\textcolor{exampoints}{(2P)}$,
+	\begin{align*}
+	A^TA&=\begin{pmatrix}5&10\\10&34\end{pmatrix}~~\textcolor{exampoints}{(2P)},\\
+	A^Ty&=\begin{pmatrix}1&1&1&1&1\\4&1&0&1&4\end{pmatrix}
+	\begin{pmatrix}-1\\0\\0\\2\\9\end{pmatrix}
+	=\begin{pmatrix}7\\28\end{pmatrix}~~\textcolor{exampoints}{(2P)}
+	\end{align*}
+	Normal equation: 
+	$$\begin{pmatrix}5&10\\10&34\end{pmatrix}\begin{pmatrix}c_0\\c_1\end{pmatrix}
+	=\begin{pmatrix}7\\28\end{pmatrix}$$
+	Gaussian elimination yields
+	$$\begin{pmatrix}5&10\\0&14\end{pmatrix}\begin{pmatrix}c_0\\c_1\end{pmatrix}
+	=\begin{pmatrix}7\\14\end{pmatrix}$$
+	
+	$$\Leftrightarrow~~c_0=-\tfrac{2}{3},~c_1=1~~\textcolor{exampoints}{(1+1P)}$$
+	$\Rightarrow~~\hat{x}=\begin{pmatrix}-\tfrac{2}{3}\\1\end{pmatrix}$
 
 \end{enumerate}
 }
