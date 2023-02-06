@@ -8,7 +8,7 @@ def fun(A,b, m=50):
     N = 1 / A.diagonal()		
     for k in range(m):
         x = x - N * (A @ x - b)
-        return x
+    return x
 \end{lstlisting}
 	\begin{enumerate}
 		\item Which algorithm is implemented?
