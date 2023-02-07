@@ -1,7 +1,28 @@
 {\color{solution}
 \begin{enumerate}
-	\item ...
-	\item Suppose $BA = I_n$ and $AC = I_n$, then $B = BI_n =B(AC) = (BA)C=I_nC = C. $
+	\item\textcolor{exampoints}{(1P)}  $\text{ker}(A)=\{x\in\mathbb{R}^2\colon x_1 -x_2= 0\}=\text{span}(\begin{pmatrix}
+	1\\1
+	\end{pmatrix})$\\
+	\textcolor{exampoints}{(1P)} $\Rightarrow$ $\text{nullity}(A)=1$
+	\item \textcolor{exampoints}{(1P)} $x = Q^\top y$, then $y=QQ^\top y =Qx $
+	\item  Let $a_i^\top$ denote the rows of $A$, then $Az = 0$\\
+	 \textcolor{exampoints}{(1P)}  $\iff a_i^\top z = 0$\\
+	 \textcolor{exampoints}{(1P)}  $ \iff a_i \bot z$ for all $1\leq i \leq m$.
+	\item \textcolor{exampoints}{(1P)} Let $y= Px$, then $Py = PPx = Px = y$
+	\item  $P= I_2$, then\\
+	 \textcolor{exampoints}{(1P)} $P^2 = P$\\
+	 \textcolor{exampoints}{(1P)}  and $P^\top = P$
+	\item \textcolor{exampoints}{(2P)} $1 = \text{det}(I) = \text{det}(Q^\top Q)=\text{det}(Q)^2 ~\Rightarrow~\text{det}(Q)=\pm 1$
+	\item \textcolor{exampoints}{(1P)}  $\text{proj}_x(y) = \frac{xx^\top}{\|x\|^2_2}  y= \begin{pmatrix}
+	 1 &0\\0&0
+	\end{pmatrix}y = \begin{pmatrix}
+	1 \\0
+	\end{pmatrix}$\\
+	\textcolor{exampoints}{(1P)} $ \Rightarrow~(y - \text{proj}_x(y))^\top x = \begin{pmatrix}
+	0 \\1
+	\end{pmatrix}^\top\begin{pmatrix}
+	1 \\0
+	\end{pmatrix}=0$
 
 \end{enumerate}
 }

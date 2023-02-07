@@ -1,59 +1,17 @@
 {\color{solution}
 \begin{enumerate}
-	\item ...
-	\item $A=\begin{pmatrix}\frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}\\1&1\end{pmatrix}$
-	\begin{align*}
-	\textcolor{blue}{\text{SVD-Recipe:}}~&\textcolor{blue}{\lambda\in\sigma(A^TA),~\lambda\neq 0,~\tilde{v}~\text{eigenvector}}\\&\textcolor{blue}{(\text{i})~\sigma:=\sqrt{\lambda}}\\&\textcolor{blue}{(\text{ii})~v:=\frac{\tilde{v}}{\|\tilde{v}\|}}\\&\textcolor{blue}{(\text{iii})~u:=\frac{1}{\sigma}Av}
-	\end{align*}
-	\begin{enumerate}
-		\item 
-		Compute SVD and test:%
-		%
-		\begin{itemize}
-			\item $A^TA =\begin{pmatrix}\frac{3}{2}&\frac{1}{2}\\\frac{1}{2}&\frac{3}{2}\end{pmatrix}$
-			\item Eigenvalues:\\$\text{det}(A^TA-\lambda I) =(\frac{3}{2}-\lambda)^2-\frac{1}{4}=0~~\Leftrightarrow~~\lambda\in\{1,2\}$
-			\item Eigenvectors:
-			%
-			\begin{enumerate}
-				\item \begin{align*}(A^TA-\underbrace{\lambda_1}_{\textcolor{blue}{=2}}I)\tilde{v}=0~~&\Leftrightarrow~~\begin{pmatrix}-\frac{1}{2}&\frac{1}{2}\\\frac{1}{2}&-\frac{1}{2}\end{pmatrix}\tilde{v}=0\\
-				&\Leftrightarrow~~\tilde{v}_1=\begin{pmatrix}1\\1\end{pmatrix}
-				\end{align*}
-				\item 
-				\begin{align*}
-				(A^TA-\underbrace{\lambda_2}_{\textcolor{blue}{=1}}I)\tilde{v}=0~~&\Leftrightarrow~~\begin{pmatrix}\frac{1}{2}&\frac{1}{2}\\\frac{1}{2}&\frac{1}{2}\end{pmatrix}\tilde{v}=0\\
-				&\Leftrightarrow~~\tilde{v}_2=\begin{pmatrix}1\\-1\end{pmatrix}
-				\end{align*}
-			\end{enumerate}
-			%
-			\item $\sigma_1:=\sqrt{\lambda_1}=\sqrt{2},~\sigma_2:=\sqrt{\lambda_2}=1,\\
-			v_1:=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix},~v_2:=\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix},\\
-			u_1:=\frac{1}{\sigma_1}Av_1=\frac{1}{\sqrt{2}}\frac{1}{\sqrt{2}}
-			\begin{pmatrix}
-			\frac{1}{\sqrt{2}}&-\frac{1}{\sqrt{2}}\\
-			1&1
-			\end{pmatrix}\begin{pmatrix}1\\1\end{pmatrix}=\begin{pmatrix}0\\1\end{pmatrix},\\
-			u_2:=\frac{1}{\sigma_2}Av_2=\frac{1}{\sqrt{2}}\begin{pmatrix}\frac{2}{\sqrt{2}}\\0\end{pmatrix}=\begin{pmatrix}1\\0\end{pmatrix}$
-			\item 
-			Thus:
-			$$
-			\Sigma =\begin{pmatrix}\sqrt{2}&0\\0&1\end{pmatrix},~~
-			V=\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix},~~
-			U=\begin{pmatrix}0&1\\1&0\end{pmatrix}
-			$$
-			\item 
-			Test:
-			$$
-			U\Sigma V^T
-			=\frac{1}{\sqrt{2}}\begin{pmatrix}0&1\\1&0\end{pmatrix}\underbrace{\begin{pmatrix}\sqrt{2}&0\\0&1\end{pmatrix}\begin{pmatrix}1&1\\1&-1\end{pmatrix}}_{\textcolor{blue}{=\begin{pmatrix}\sqrt{2}&\sqrt{2}\\1&-1\end{pmatrix}}}
-			=\frac{1}{\sqrt{2}}\begin{pmatrix}1&-1\\\sqrt{2}&\sqrt{2}\end{pmatrix}=A~~\checkmark$$
-		\end{itemize}
-		\item 
-		\begin{align*}
-		A=\sigma_1u_1v_1^T+\sigma_2u_2v_2^T&=\frac{\sqrt{2}}{\sqrt{2}}\begin{pmatrix}0\\1\end{pmatrix}(1, 1)+\frac{1}{\sqrt{2}}\begin{pmatrix}1\\0\end{pmatrix}(1, -1)\\
-		&=\begin{pmatrix}0&0\\1&1\end{pmatrix}+\frac{1}{\sqrt{2}}\begin{pmatrix}1&-1\\0&0\end{pmatrix}~~\checkmark
-		\end{align*}
-		\item 
-		Yes, since $\sigma_1\neq0\neq\sigma_2$.
-	\end{enumerate}
+	\item \textcolor{exampoints}{(1P)} $A =\sum_k^r \sigma_k u_kv_k^\top$
+	\item \textcolor{exampoints}{(1P)} truncated SVD: $A_k = U_k \Sigma_k V_k^\top$, where\\
+	\textcolor{exampoints}{(1P)} $U_k, V_k,\Sigma_k$ contain only first $k$ columns of $U, V,\Sigma$
+	\item \textcolor{exampoints}{(1P)} $A^\top = V\Sigma^\top U ^\top$\\
+	\textcolor{exampoints}{(1P)} $\text{Im}(A)= \text{span}(u_1,\ldots, u_r), \text{Im}(A^\top)= \text{span}(v_1,\ldots, v_r)$\\
+	\textcolor{exampoints}{(1P)} $\text{rank}(A^\top) = r$
+	\item \textcolor{exampoints}{(1P)}$A^+ = V\Sigma^+ U^\top$, where\\
+	\textcolor{exampoints}{(1P)} $\Sigma^+ = diag(1/\sigma_k)$
+	\item \textcolor{exampoints}{(2P)} $A = \begin{pmatrix}
+	\frac{1}{2} & 0\\0&0
+	\end{pmatrix}$
+	\item \textcolor{exampoints}{(1P)} eigenvalues and singular values are the same\\
+	\textcolor{exampoints}{(1P)}  $A^+ = A^{-1} = V \Sigma^{-1}U^\top$ (note that $A$ has $m=n$ strictly positive eigenvalues)
 \end{enumerate}
 }

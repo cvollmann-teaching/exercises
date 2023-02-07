@@ -1,14 +1,15 @@
+\vspace*{-0.5cm}
 \begin{enumerate}
 \item Consider:
 \begin{lstlisting}[language=python,numbers=left]
 def fun(A, m=50):
-	n = A.shape[1]
-	x = numpy.zeros(n)
-	x[0] = 1	
-	for k in range(m):
-		x = A @ x
-		x = x / numpy.linalg.norm(x)
-	return x
+    n = A.shape[1]
+    x = numpy.zeros(n)
+    x[0] = 1	
+    for k in range(m):
+        x = A @ x
+        x = x / numpy.linalg.norm(x)
+    return x
 \end{lstlisting}
 \begin{enumerate}
 	\item Which algorithm is implemented? 

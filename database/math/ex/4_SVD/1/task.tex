@@ -1,39 +1,14 @@
-% !TeX spellcheck = en_US
-\begin{enumerate}
-	\item Let $A \in \mathbb{R}^{m \times n}$ and $r:=\text{rank}(A)$. Assume you are given a singular value decomposition 
-	$U \Sigma V^\top = A$, where the 
-	entries on the diagonal of $\Sigma$ are given in a descending order.
-	\begin{enumerate}
-			\item Use the SVD to write $A$ as a sum of rank--$1$ matrices.
-		\item Let $k \leq r$. Find the best rank-$k$ approximation of $A$, i.e., give a formula for the matrix
-		$$A_k = \arg \min_{B \in  \mathbb{R}^{m \times n},~ \text{rank}(B)=k  } \|B-A\|_F.$$ 
-		\item Find a singular value decomposition of $A^\top$ and give a basis for $\text{Im}(A)$ and $\text{Im}(A^\top)$.		
-		\item Determine the pseudoinverse $A^+$ of $A$ with the help of the SVD. 
-		\item Explain why $A^+ = A^{-1}$, if $A$ is invertible.
-		\item Assume now that $A$ is symmetric and positive definite. What is the relation between its singular values and its eigenvalues?
-	\end{enumerate}
-\item ---
-\item Consider the matrix
-$$A = \begin{pmatrix}
-\frac{1}{\sqrt{2}} &-\frac{1}{\sqrt{2}}\\
-1&1
-\end{pmatrix}.$$
-\begin{enumerate}
-	\item Derive its singular value decomposition.
-	\item Compute $U\Sigma V^T = A$ to check your result.
-	\item Write $A$ as a sum of rank-1 matrices.
-	\item Is $A$ invertible? Explain your answer.
-\end{enumerate}
-\item Consider the matrix
-$$A = \begin{pmatrix}
-\frac{1}{\sqrt{2}} &-\frac{1}{\sqrt{2}}\\
-1&1
-\end{pmatrix}.$$	
-\begin{enumerate}
-	\item Derive its singular value decomposition (SVD).\\
-	(\textit{Hint:} Compute $U\Sigma V^T$ to check your result.)
-	\item Write $A$ as a sum of rank-1 matrices by using the singular values and vectors.
-	\item Is $A$ invertible? Use the SVD to answer this question.
-\end{enumerate}
-\end{enumerate}
- 
+ Let $A \in \mathbb{R}^{m \times n}$ and $r:=\text{rank}(A)$. Assume you are given a singular value decomposition 
+ $U \Sigma V^\top = A$, where the 
+ entries on the diagonal of $\Sigma$ are given in a descending order.
+ \begin{enumerate}
+ 	\item Use the SVD to write $A$ as a sum of rank--$1$ matrices.
+ 	\item Let $k \leq r$. Denote the best rank-$k$ approximation of $A$, i.e., give a formula for the matrix
+ 	$$A_k = \arg \min_{B \in  \mathbb{R}^{m \times n},~ \text{rank}(B)=k  } \|B-A\|_F.$$ 
+ 	\item Find a singular value decomposition of $A^\top$ and give a basis for $\text{Im}(A)$ and $\text{Im}(A^\top)$.	From that derive $\text{rank}(A^\top)$.	
+ 	\item Determine the pseudoinverse $A^+$ of $A$ with the help of the SVD. 
+ 	\item What is the pseudoinverse of $A = \begin{pmatrix}
+ 	2 & 0\\0&0
+ 	\end{pmatrix}?$
+ 	\item Assume that $A$ is symmetric (thus $m=n$) and positive definite. What is the relation between its singular values and its eigenvalues? What is the pseudoinverse in this case?
+ \end{enumerate}
