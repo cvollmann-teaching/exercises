@@ -1,6 +1,19 @@
 {\color{solution}
 \begin{enumerate}
-	\item ...
-
+		\item In this case: 
+		\begin{align*}
+		\textcolor{exampoints}{(2P):}~~~A=\begin{pmatrix}1&-3\\1&-1\\1&0\\1&1\\1&3\end{pmatrix},~~
+		\textcolor{exampoints}{(2P):}~A^TA=\begin{pmatrix}5&0\\0&20\end{pmatrix},~~
+		\textcolor{exampoints}{(2P):}~A^Ty=\begin{pmatrix}1&1&1&1&1\\-3&-1&0&1&3\end{pmatrix}
+		\begin{pmatrix}-3\\-1,5\\0\\2,5\\4\end{pmatrix}
+		=\begin{pmatrix}2\\25\end{pmatrix}
+		\end{align*}
+		Normal equation: $$\begin{pmatrix}5&0\\0&20\end{pmatrix}
+		\begin{pmatrix}c_0\\c_1\end{pmatrix}
+		=\begin{pmatrix}2\\25\end{pmatrix}
+		~~\Leftrightarrow~~\textcolor{exampoints}{(1P)~} c_0=\frac{2}{5}=0,4,~\textcolor{exampoints}{(1P)~} c_1=\frac{25}{20}=1,25$$
+\item Use $A=\widehat{Q}\widehat{R}$ in normal equation: $A^\top A x = A^\top b$ \\
+\textcolor{exampoints}{(3P)} $~\iff~ \widehat{R}^\top \widehat{R}x = \widehat{R}^\top\widehat{Q}^\top  b$\\
+\textcolor{exampoints}{(1P)} $~\iff~  \widehat{R}x =  \widehat{Q}^\top  b$ ($A$ independent columns implies $\widehat{R}$ invertible)
 \end{enumerate}
 }

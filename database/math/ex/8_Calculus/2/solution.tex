@@ -1,6 +1,21 @@
 {\color{solution}
 \begin{enumerate}
-	\item ...
-
+%		\item Let $f\colon \mathbb{R} \to \mathbb{R},~x\mapsto |x|$. Compute the following directional (G\^ateaux) derivatives:
+%	\begin{enumerate}
+%		\item $Gf(0)(1) = \lim_{t\to0} \frac{|0+t1|-|0|}{t}= \lim_{t\to0} \frac{|t|}{t}= \lim_{t\to0} \frac{t}{t} =1$
+%		\item $Gf(0)(-1) = \lim_{t\to0} \frac{|0-t1|-|0|}{t} =1$
+%	\end{enumerate}
+\item \textcolor{exampoints}{(1P)}  $\frac{\partial}{\partial x_1} f(x) = 2x_1$\\
+\textcolor{exampoints}{(1P)}  $\frac{\partial}{\partial x_2} f(x) = 0$\\
+\textcolor{exampoints}{(1P)}  $\nabla f(x) = \begin{pmatrix}
+ 2x_1\\0
+\end{pmatrix}$ 
+\item
+\begin{enumerate}
+	 	\item \textcolor{exampoints}{(3P)} $Gf(x)(v)=\lim_{t\to 0}\frac{1}{t}(f(x+tv)-f(x))= \lim_{t\to 0}\frac{1}{t}(Ax + tAv - b-Ax+b) = Av$
+	\item \textcolor{exampoints}{(2P)} by assumption $Df(x)=Gf(x)$, let $e_j$ be standard basis vectors, then\\ $J_f(x) = (Df(x)(e_1),\ldots,Df(x)(e_n) )= (Ae_1 ,\ldots,Ae_n  ) = A$
+	\item \textcolor{exampoints}{(2P)} $x_1 = x_0 - J_f(x)^{-1}f(x_0)  = x_0 - A^{-1} (Ax_0-b)=A^{-1}b$\\
+	\textcolor{exampoints}{(2P)} $x_1$ is solution to $Ax=b$, i.e., Newton iteration solves linear systems in one step
+\end{enumerate}
 \end{enumerate}
 }

@@ -2,18 +2,19 @@
 \begin{enumerate}
 \item Consider:
 \begin{lstlisting}[language=python,numbers=left]
-def fun(A, m=50):
+def fun(A, m=50, p=2):
     n = A.shape[1]
     x = numpy.zeros(n)
     x[0] = 1	
     for k in range(m):
         x = A @ x
-        x = x / numpy.linalg.norm(x)
+        x = x / numpy.linalg.norm(x, ord=p)
     return x
 \end{lstlisting}
 \begin{enumerate}
 	\item Which algorithm is implemented? 
 	\item What is the purpose of this algorithm?
+	\item Which role does the parameter \texttt{p} play here?
 \end{enumerate}
 	\item Consider:
 \begin{lstlisting}[language=python,numbers=left]

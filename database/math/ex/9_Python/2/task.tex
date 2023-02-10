@@ -1,8 +1,50 @@
-% !TeX spellcheck = en_US
-\textbf{\normalsize ...}\\
-~\\
+\vspace*{-0.5cm}
 \begin{enumerate}
-	\item 
+\item Consider:
+\begin{lstlisting}[language=python,numbers=left]
+def fun(A, m=50, p=2):
+    n = A.shape[1]
+    x = numpy.zeros(n)
+    x[0] = 1	
+    for k in range(m):
+        x = A @ x
+        x = x / numpy.linalg.norm(x, ord=p)
+    return x
+\end{lstlisting}
+\begin{enumerate}
+	\item Which algorithm is implemented? 
+	\item What is the purpose of this algorithm?
+	\item Which role does the parameter \texttt{p} play here?
+\end{enumerate}
+	\item Consider:
+\begin{lstlisting}[language=python,numbers=left]
+def fun(A,b, m=50):
+    n = A.shape[1]
+    x = numpy.zeros(n)
+    N = 1 / A.diagonal()		
+    for k in range(m):
+        x = x - N * (A @ x - b)
+    return x
+\end{lstlisting}
+	\begin{enumerate}
+		\item Which algorithm is implemented?
+		\item What is its purpose? 
+		\item Which role does \verb|N| play here?
+	\end{enumerate}
 
+\item Consider:
+\begin{lstlisting}[language=python,numbers=left]
+def fun(A, b, theta=.1, m=50):
+    n = A.shape[1]
+    x = numpy.zeros(n)		
+    for k in range(m):
+        x = x - theta * (A @ x - b)
+    return x
+\end{lstlisting}
+\begin{enumerate}
+	\item Which algorithm is implemented? 
+	\item What is the purpose of this algorithm?
+	\item Which role does \verb|theta| play here?
+\end{enumerate}
 \end{enumerate}
  
