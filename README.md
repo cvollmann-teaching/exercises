@@ -150,8 +150,8 @@ The Latex code and the Python sample programs are licensed under [GPL-3.0](LICEN
 
 # Acknowledgement
 
- - Manuel Klar has contributed all exercises in `exercises/database/Python_Intro_de/`
- - Dominik Annen has translated handwritten solutions into LaTex and also added new exercises.
+ - [Manuel Klar](https://github.com/cagau) has contributed all exercises in `exercises/database/Python_Intro_de/`
+ - [Dominik Annen](https://github.com/annendominik) has translated handwritten solutions into LaTex and also added new exercises.
 
 # To Do
 
