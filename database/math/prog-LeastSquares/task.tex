@@ -1,6 +1,0 @@
-\textbf{Least Squares for Curve Fitting}
-\begin{enumerate}
-	\item Download the data file \texttt{data\_lstsq.npy} (link ``data'' next to the link ``Sheet 10'') and use \texttt{numpy.load()} to import it into your Python script. The shape is \texttt{(2,100)}. The first row should be considered as the independent variables $z_i$ and the second row as the dependent variables $y_i$ for measurements $i=1,\ldots,100$.
-	\item Plot each two-dimensional column $(z_i,y_i)^\top \in \mathbb{R}^2$ of the data as point into a figure. Come up with a model of the form $$f(z) = \sum_{k=1}^n x_k f_k(z)$$ which could fit the data (also see Section 1.8.1 in the lecture notes).
-	\item Find suitable parameters $x_k$ by solving a least squares problem and plot the fitting curve into the same figure.
-\end{enumerate}

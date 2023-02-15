@@ -1,0 +1,12 @@
+{
+    "filename": "prog-progSparseVecDict.tex",
+    "title": "",
+    "subtitle": "",
+    "coding": "",
+    "mathFields": "",
+    "tags": "",
+    "relatedExercises": "",
+    "solutionLength": "",
+    "task": "\\textbf{D\u00fcnnbesetzte Vektoren und Matrizen als Dictionary speichern}\\\\\nNehmen Sie an, Sie m\u00f6chten einen Vektor $x \\in \\R^n$ als Dictionary in der Form \\verb|vec[i] = value| speichern. Das k\u00f6nnte sinnvoll sein, wenn $n$ sehr gro\u00df ist, aber der Vektor nur wenige Werte ungleich 0 enth\u00e4lt.\n\\begin{enumerate}\n\t\\item Schreiben Sie eine Funktion \\verb|setValue(vec, i, value)| ohne R\u00fcckgabewert, die das Dictionary \\verb|vec|, einen Index \\verb|i| und einen Wert \\verb|value| entgegennimmt und den Vektor \\texttt{vec} entsprechend ver\u00e4ndert. \n\t\\item \u00dcberlegen Sie sich wie man eine Matrix $A \\in \\R^{n\\times n}$ als langen Vektor $x \\in \\R^{n^2}$ auffassen kann und schreiben Sie eine entsprechende Funktion \\verb|setValue(mat, i, j, value)|.\n\t\\item Schreiben Sie eine Funktion \\verb|value = getValue(mat, i, j)|, die eine d\u00fcnnbesetzte Matrix \\texttt{mat} und Indizes \\texttt{i,j} entgegennimmt und den Matrixeintrag an der Stelle \\texttt{[i,j]} zur\u00fcckgibt \n\\end{enumerate}\n\\textit{Hinweis:} Ein Schl\u00fcssel-Wort Paar sollte die Dimension des Vektors bzw. der Matrix speichern.",
+    "solution": "\\lstinputlisting[numbers=none]{prog-progSparseVecDict_solution.py}"
+}

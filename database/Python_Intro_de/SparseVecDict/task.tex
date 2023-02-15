@@ -1,0 +1,8 @@
+\textbf{Dünnbesetzte Vektoren und Matrizen als Dictionary speichern}\\
+Nehmen Sie an, Sie möchten einen Vektor $x \in \mathbb{R}^n$ als Dictionary in der Form \verb|vec[i] = value| speichern. Das könnte sinnvoll sein, wenn $n$ sehr groß ist, aber der Vektor nur wenige Werte ungleich 0 enthält.
+\begin{enumerate}
+	\item Schreiben Sie eine Funktion \verb|setValue(vec, i, value)| ohne Rückgabewert, die das Dictionary \verb|vec|, einen Index \verb|i| und einen Wert \verb|value| entgegennimmt und den Vektor \texttt{vec} entsprechend verändert. 
+	\item Überlegen Sie sich wie man eine Matrix $A \in \mathbb{R}^{n\times n}$ als langen Vektor $x \in \mathbb{R}^{n^2}$ auffassen kann und schreiben Sie eine entsprechende Funktion \verb|setValue(mat, i, j, value)|.
+	\item Schreiben Sie eine Funktion \verb|value = getValue(mat, i, j)|, die eine dünnbesetzte Matrix \texttt{mat} und Indizes \texttt{i,j} entgegennimmt und den Matrixeintrag an der Stelle \texttt{[i,j]} zurückgibt 
+\end{enumerate}
+\textit{Hinweis:} Ein Schlüssel-Wort Paar sollte die Dimension des Vektors bzw. der Matrix speichern.

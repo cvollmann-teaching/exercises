@@ -1,0 +1,21 @@
+\textbf{Umwandlung: Binär zu Oktal (und Hexadezimal)}\\
+Aus der Vorlesung wissen wir, dass für die Umrechnung einer Zahl $x \in \mathbb{N}$ von Binärdarstellung
+(mit Ziffern $a_k$) in Oktaldarstellung (mit Ziffern $c_k$) gilt, dass
+
+$$
+x = \sum_{k=0}^{N-1} a_k 2^k = \sum_{k=0}^{M-1} c_k 8^k,
+$$
+wobei
+$$
+c_k := \sum_{l=0}^{2} a_{3k+l}2^l ~~~\text{und}~~~M := \left\lceil{\frac{N}{3}} \right\rceil.
+$$
+
+
+
+\begin{enumerate}
+	\item Schreiben Sie eine Python-Funktion \verb|test_bintooct(a)| und \verb|bintooct(a)|, die entsprechend der obigen Formel
+	eine Binärzahl \texttt{a} in eine Oktalzahl umwandelt. Implementieren Sie die Ein- und Ausgabe der Funktion als Strings, welche die entsprechenden Ziffern beinhalten und mit dem richtigen Literalpräfix beginnen. Zum Beispiel \texttt{"0b1001"} für die Binärzahl $(1001)_2$ oder \texttt{"0o11"} für die Oktalzahl $(11)_8$.
+	\item Schreiben Sie eine Python-Funktion  \verb|test_bintohex(a)| und \verb|bintohex(a)|, die den entsprechenden Zusammenhang für Hexadezimalzahlen ausnutzt.
+%	\item Testen Sie Ihre Funktionen.
+\end{enumerate}
+\textit{Hinweis:} Sie können die obere Gauß-Klammer (``aufrunden'') $\left\lceil{\frac{N}{3}} \right\rceil$ direkt durch eine Ganzzahldivision \verb|N//3 +1| bestimmen.

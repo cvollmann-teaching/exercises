@@ -1,0 +1,19 @@
+\begin{enumerate}
+	\item $f = -1^{\nu} m b ^{e}$, mit $m=(a_0 . a_{-1}, \dots, a_{-N+1})$, 
+wobei $\nu, a_k, b$ ganze Zahlen sind. Damit ist
+$$
+	f = -1^{\nu} b^e \sum_{i=0}^{N-1} a_{-i} b^{-i} 
+$$
+eine rationale Zahl.
+	\item Es sei $$n = m b^{e_{max}} = \sum_{i=0}^{N-1} a_{-i} b^{e_{max}-i}$$ 
+	eine Fließkommazahl, dann ist $n \in \mathbb{N}$ falls $a_{-i}=0$ für alle $i > e_{max}$. 		
+	Auf dieser Weise lassen sich allerdings alle natürlichen Zahlen im bereich $0$ bis 
+	$n=(a_0 . a_{-1}, \dots, a_{-k}, 0, \dots, 0) b^{e_{max}}$ mit $k = \min \lbrace e_{max}, N-1 \rbrace$ darstellen.
+	Das overlfow Level ist definiert als 
+	$$
+		\textnormal{OFL} = \sum_{i=0}^{N-1} (b-1) b^{e_{max}-i},
+	$$
+	und abrunden ergibt $\lfloor$OFL$\rfloor = \sum_{i=0}^k (b-1) b^{e_{max}-i}$.
+	Damit sind also alle natürlichen Zahlen $\mathbb{N} \cap [1,$OFL$]$ 			
+	darstellbar. Das Vorzeichen $-1^\nu$ erlaubt zusätzlich die Darstellung der negativen ganzen Zahlen.
+\end{enumerate}

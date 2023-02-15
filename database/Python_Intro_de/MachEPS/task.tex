@@ -1,0 +1,12 @@
+\textbf{Mantissenlänge und relative Maschinengenauigkeit \texttt{macheps}}
+\begin{enumerate}
+	\item Gegeben seien $z = \pm m \cdot2^e$, wobei $e \in \lbrace e_{\text{min}}, \dots, e_{\text{max}}\rbrace$, $b=2$, $m = (1\textbf{. }a_{-1}~a_{-2}~a_{-3} \cdots)_2$ (ggf. unendlich viele Ziffern).
+	Zudem sei $\varepsilon > 0$ gegeben. Angenommen Sie wollen $z$ als binäre Gleitkommazahl $\overline{z}=fl(z)$ mit Mantissenlänge $N$ darstellen, wobei $fl$ gemäß \textit{roundest-to-nearest, ties-to-even} rundet. Wie groß müssen Sie $N$ wählen, sodass für den relativen Fehler 
+	\begin{align*}
+	\frac{|z - \overline{z}|}{|z|} < \varepsilon
+	\end{align*}
+	gilt? Berechnen Sie $N$ beispielhaft für $\varepsilon\in\{10^{-7},10^{-16}\}$.
+	
+	\item Schreiben Sie ein Python-Programm, dass die Maschinengenauigkeit ermittelt, indem es einen Wert $\varepsilon$ so lange halbiert, bis
+	$1 + \varepsilon > \varepsilon$ als Falsch gewertet wird. Geben Sie diese Zahl an.
+\end{enumerate}

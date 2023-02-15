@@ -1,0 +1,8 @@
+\textbf{Dünnbesetzte Vektoren und Matrizen als Dictionary speichern}\\
+Nehmen Sie an, Sie möchten einen Vektor $x \in \mathbb{R}^n$ als Dictionary in der Form \verb|vec[i] = value| speichern. Das könnte sinnvoll sein, wenn $n$ sehr groß ist, aber der Vektor nur wenige Werte ungleich 0 enthält.
+\begin{enumerate}
+	\item Dort wo die Vektoren keine Einträge haben, nehmen wir an sie seien 0. Testen sie zum Zweck der Auswertung des Vektors die Funktion \verb*|get()| des Typs \verb*|dict|.
+	\item Überlegen Sie sich wie man eine Matrix $A \in \mathbb{R}^{n\times n}$ als langen Vektor $x \in \mathbb{R}^{n^2}$ auffassen kann und schreiben Sie eine Funktion \verb|value = get_matentry(mat, i, j)|, die eine solche dünnbesetzte Matrix \texttt{mat} und Indizes \texttt{i,j} entgegennimmt und den Matrixeintrag an der Stelle \texttt{[i,j]} zurückgibt.
+	\item Implementieren sie das matrix-vektorprodukt \verb|dot(mat, vec)|, das eine Matrix und einen Vektor vom obigen Typ entgegen nimmt und multipliziert und das ergebnis als dünn besetzten Vektor (Dictionary) zurück gibt.
+\end{enumerate}
+\textit{Hinweis:} Zur Darstellung der Matrix könnten die Operation \verb*|%| und \verb|\\| hilfreich sein.
