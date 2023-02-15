@@ -6,6 +6,14 @@
 write code which, e.g., generates a worksheet from a user-defined selection of exercises;
 see [Worksheet Generator](#worksheet-generator) for an example.
 
+ - Overview:
+   - [Database](#database)
+   - [Database Editor](#database-editor)
+   - [Worksheet Generator](#worksheet-generator)
+   - [License](#license)
+   - [Acknowledgement](#acknowledgement)
+   - [To Do](#to-do)
+
 ## Database
 
 The directory `database` is a collection of exercises.
@@ -135,6 +143,15 @@ or for an exercise, where the solution is just (Python) code:
 - some examples can be found in `worksheet_generator/examples`
 - copy them and adapt to your needs
 
+
+# License
+
+The Latex code and the Python sample programs are licensed under [GPL-3.0](LICENSE) and the content of the exercises is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+# Acknowledgement
+
+ - Manuel Klar has contributed all exercises in `exercises/database/Python_Intro_de/`
+ - Dominik Annen has translated handwritten solutions into LaTex and also added new exercises.
 
 # To Do
 
