@@ -1,11 +1,6 @@
 # Exercises
 
  - The main purpose of this repository is to collect exercises (pairs of *task* and *solution*).
- - These exercises are organized in a specific way; see [Database](#database).
-- This organization thus provides an interface to the exercise pool, which can be exploited to
-write code which, e.g., generates a worksheet from a user-defined selection of exercises;
-see [Worksheet Generator](#worksheet-generator) for an example.
-
  - Overview:
    - [Database](#database)
    - [Database Editor](#database-editor)
@@ -52,15 +47,6 @@ or for an exercise, where the solution is just (Python) code:
     - if the solution just contains code, which is written in `solution.py`
       or `solution.ipynb`, then the `solution.tex` is auto-generated (simply inputs the
       code as listing) and thus located in the directory `build/`
-
-## Database Editor
-
-- nothing here yet
-- utilities will be provided to work with the database, e.g., to
-    - create and modify exercises in the correct format
-    - create a preview-pdf of a single exercise (see `build/print.pdf`)
-    - query the database based on the sidecar files meta.json
-- (finally consider mongoDB?!)
 
 ## Worksheet Generator
 
@@ -155,10 +141,6 @@ The Latex code and the Python sample programs are licensed under [GPL-3.0](LICEN
 
 # To Do
 
-- data base editor, see [above](#database-editor)
+- data base editor
 - data base
-  - clean up names
   - set reasonable meta in sidecar files meta.json
-- docs
-- test
-- requirements
