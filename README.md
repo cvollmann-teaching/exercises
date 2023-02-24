@@ -3,7 +3,6 @@
  - The main purpose of this repository is to collect exercises (pairs of *task* and *solution*).
  - Overview:
    - [Database](#database)
-   - [Database Editor](#database-editor)
    - [Worksheet Generator](#worksheet-generator)
    - [License](#license)
    - [Acknowledgement](#acknowledgement)
