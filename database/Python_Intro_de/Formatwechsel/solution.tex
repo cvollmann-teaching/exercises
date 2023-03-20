@@ -1,4 +1,9 @@
-Es sei $x_{N} = (a_{N-1}, \dots, a_0)_{Z}$ eine Zweierkomplementzahl, dann ist die korrespondierende Zahl im nächstgrößeren Stellensystem gegeben durch $x_{N+1} = (a_{N-1}, a_{N-1}, \dots, a_0)_{Z}$. Falls also $a_{N-1} = 0$ ist, ist die Zahl $x_{N}$ nichtnegativ und wir füllen mit $0$--en auf. Andererseits nutzen wir aus, dass gilt
+Es sei $x_{N} = (a_{N-1}, \dots, a_0)_{Z}$ eine Zweierkomplementzahl, dann ist die korrespondierende Zahl im nächstgrößeren Stellensystem gegeben durch $x_{N+1} = (a_{N}, a_{N-1}, \dots, a_0)_{Z}$. Falls $a_{N-1} = 0$ ist, ist die Zahl $x_{N}$ nichtnegativ und wir füllen mit $0$--en auf. Andererseits nutzen wir aus, dass gilt
 $$
-	-2^{N} + 2^{N-1} = 2^{N-1}(-2 + 1) = - 2^{N-1}.
+	-2^{N} + 2^{N-1} = 2^{N-1}(-2 + 1) = - 2^{N-1}
 $$
+und wir füllen mit $1$--en auf. Insgesamt erhalten wir also
+$$x_{N+1} = \begin{cases}
+(0,a_{N-1}, \dots, a_0)_{Z}& : a_{N-1} = 0\\
+(1, a_{N-1}, \dots, a_0)_{Z}& : a_{N-1} = 1.
+\end{cases} $$

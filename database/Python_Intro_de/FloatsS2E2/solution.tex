@@ -1,9 +1,29 @@
- Betrachten Sie die binären Gleitkommazahlen gemäß der Parameter \texttt{s2e2}.
+% !TeX spellcheck = de_AT_frami
+(Vergleiche Kapitel 4.4.1)
 	\begin{enumerate}
-		\item  Länge für Exponentenbitfolge = 2, also  $B = 2^{2-1}-1 = 1$\\
-		mögliche Bitmuster für Exponent: 00, 11 (reserviert für subnormals und NaN), 10 (=2), 01 (=1)\\
-		Also \textcolor{red}{(0.5P)} $e_{\text{min}} = (01)_2 - B = 1- 1 = 0$\\
-		und \textcolor{red}{(0.5P)} $e_{\text{max}}= (01)_2 - B = 2- 1 = 1$ 
-		\item \textcolor{red}{(1P)} 5 Bits: 1 Vorzeichen, 2 Exponent, 2 Mantisse \\ in der Reihenfolge: \texttt{VEEMM}
+		\item  M = Länge Exponentenbitfolge = 2\\
+		 also  $$B= 2^{M-1}-1 = 2^{2-1}-1 = 1$$
+		mögliche Bitmuster für Exponent:
+		\begin{itemize}
+			\item 00 reserviert für subnormals  
+			\item reserviert für inf, NaN
+			\item 10 (=2), 01 (=1) 
+		\end{itemize} 
+		Also 
+		\begin{itemize}
+			\item  $e_{\text{min}} = (01)_2 - B = 1- 1 = 0$
+			\item $e_{\text{max}}= (10)_2 - B = 2- 1 = 1$ 
+		\end{itemize}
+		\item  5 Bits: 1 Vorzeichen, 2 Exponent, 2 Mantisse \\ in der Reihenfolge: \texttt{VEEMM}%, wobei \texttt{VEEMM}=$(-1)^V\cdot (1.MM)_2 \cdot 2^{(EE)_2 - B}$
+		\item N = Mantissenlänge = 2, also $$\texttt{macheps}=(\frac{1}{2})^2=\frac{1}{4}.$$
+		\item Geben Sie die Bitmuster mit zugehörigem Zahlenwert an:
+		\begin{enumerate}
+			\item signed zero (EE=00): +0 = [00000], -0 = [10000]\\
+			signed infinity (EE=11):  +$\infty$=[01100], -$\infty$=[11100]
+			\item Kleinste positive normale Zahl = [00100] = 1.0\\
+			Größte positive normale Zahl = [01011] = 3.5
+			\item Kleinste  positive denormalisierte Zahl = [00000] = 0 \\
+			Größte positive denormalisierte Zahl = [00011] = 0.75
+		\end{enumerate}
 	\end{enumerate}
 

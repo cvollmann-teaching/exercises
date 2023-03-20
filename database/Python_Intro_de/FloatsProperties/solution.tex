@@ -1,19 +1,19 @@
 \begin{enumerate}
 	\item $f = -1^{\nu} m b ^{e}$, mit $m=(a_0 . a_{-1}, \dots, a_{-N+1})$, 
-wobei $\nu, a_k, b$ ganze Zahlen sind. Damit ist
+wobei $\nu \in \{0,1\},~ a_k\in\{0,1,\ldots, b-1\}$. Dann gilt
 $$
-	f = -1^{\nu} b^e \sum_{i=0}^{N-1} a_{-i} b^{-i} 
+	f = \frac{b^{N-1}}{b^{N-1}} \cdot f = \frac{b^{N-1}}{b^{N-1}} \cdot (-1)^{\nu} b^e \sum_{i=0}^{N-1} a_{-i} b^{-i} = \frac{(-1)^{\nu}\cdot b^e \cdot (a_0 a_{-1}\dots a_{-N+1}.0)_b}{b^{N-1}}~~ \frac{\in \mathbb{Z}}{\in \mathbb{Z}} \in  \mathbb{Q}.
 $$
-eine rationale Zahl.
+
 	\item Es sei $$n = m b^{e_{max}} = \sum_{i=0}^{N-1} a_{-i} b^{e_{max}-i}$$ 
 	eine Fließkommazahl, dann ist $n \in \mathbb{N}$ falls $a_{-i}=0$ für alle $i > e_{max}$. 		
-	Auf dieser Weise lassen sich allerdings alle natürlichen Zahlen im bereich $0$ bis 
+	Auf diese Weise lassen sich allerdings alle natürlichen Zahlen im Bereich $0$ bis 
 	$n=(a_0 . a_{-1}, \dots, a_{-k}, 0, \dots, 0) b^{e_{max}}$ mit $k = \min \lbrace e_{max}, N-1 \rbrace$ darstellen.
-	Das overlfow Level ist definiert als 
+	Das Overflow-Level ist definiert als 
 	$$
 		\textnormal{OFL} = \sum_{i=0}^{N-1} (b-1) b^{e_{max}-i},
 	$$
 	und abrunden ergibt $\lfloor$OFL$\rfloor = \sum_{i=0}^k (b-1) b^{e_{max}-i}$.
 	Damit sind also alle natürlichen Zahlen $\mathbb{N} \cap [1,$OFL$]$ 			
-	darstellbar. Das Vorzeichen $-1^\nu$ erlaubt zusätzlich die Darstellung der negativen ganzen Zahlen.
+	darstellbar. Das Vorzeichen $(-1)^\nu$ erlaubt zusätzlich die Darstellung der negativen ganzen Zahlen.
 \end{enumerate}

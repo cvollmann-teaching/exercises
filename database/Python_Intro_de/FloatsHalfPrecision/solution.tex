@@ -1,9 +1,35 @@
 \begin{enumerate}
-	\item s10e5 bedeutet M=10, N=5. Damit erhalten wir 
-	$B = \lfloor \frac{2^{10}-1}{2}\rfloor = 511$.
-	\item Vorzeichenbit, Exponent (5 Bits), Mantisse (10 Bits) insgesamt 16 Bit. Die Gleitkommazahl ergibt sich als 
-	$$
-		z = (-1)^{\nu} m 2^e.
-	$$
-	\item $\frac{1}{2} b^{-M+1} = \frac{1}{1024} = 0.0009765625$.
+	\item s10e5 bedeutet M=5, N=10. Damit erhalten wir \\
+	$B = 2^5 - 1= 15$,\\
+	$e_{min} = (00001)_2 - B = 1-15 = 14$,\\
+	$e_{max} = (11110)_2 - B = 30-15 = 15$
+	\item Vorzeichenbit, Exponent (5 Bits), Mantisse (10 Bits) insgesamt 16 Bit in der Reihenfolge
+	$$\texttt{VEEEEEMMMMMMMMMM}.$$
+	 Der Zahlenwert ergibt sich abhängig vom Exponentenbitmuster; siehe Abschnitt 4.4.1, insbesondere Folge 97.
+	 \item N = Mantissenlänge = 10, also $$\texttt{macheps}=\left(\frac{1}{2}\right)^{10}  = 0.0009765625.$$
+	\begin{enumerate}
+			\item siehe  \href{https://en.wikipedia.org/wiki/Half-precision_floating-point_format#Half_precision_examples}{Wikipedia}
+			\item Wikipedia
+			\item Wikipedia
+		\item NaN (EEEEE=11111)\\
+			kleinste positive NaN =
+			\texttt{0111110000000001}\\
+			größte positive NaN =
+\texttt{0111111111111111}
+			\item z := \texttt{0011110000000001}\\
+			V = 0, also positiv\\
+			EEEEE=01111, also normal und realer Exponent $e = (01111)_2 - B = 15-15 = 0 $\\
+			Mantisse = $m=(1.0000000001)=1+\left(\frac{1}{2}\right)^{10} = 0.0009765625 \approx 1.001$\\
+			also $z = (-1)^V \cdot m \cdot 2^e \approx 1.001$
+	\item $\texttt{fl}(-4)$\\
+	$4 = (100)_2 = (1.{\color{orange}0000000000})_2 \cdot 2^2$\\
+	Also realer Exponent $e = 2 = E - B = E - 15 ~\iff~$ verschobener Exponent $E=17=(10001)_2$\\
+	Mit Vorzeichen V=1, erhalten wir
+	$$fl(-4)= -4 = \texttt{110001{\color{orange}0000000000}} $$
+	\item $\texttt{fl}(\frac{2}{3})= \texttt{fl}((0.10101010\ldots)_2)=(1.{\color{orange}0101010101})_2\cdot 2^{-1}$\\
+	positiv also $V=0$\\
+	realer Exponent $e = -1 = E - B = E - 15 ~\iff~$ verschobener Exponent $E=14=(01110)_2$\\
+	insgesamt also 
+		$$\texttt{fl}(\frac{2}{3})=\texttt{001110{\color{orange}0101010101}} $$
+	\end{enumerate}
 \end{enumerate}

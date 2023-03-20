@@ -1,5 +1,11 @@
-1 Zahl in double = 64 Bit = 8 Byte 
-$\Rightarrow$ A Bytes = $n^2$8 Byte = $n^210^{-6}$ GB
-
-
-A Bytes $>$ 8 GB $\Leftrightarrow$ $n^2 10 ^{-6} > 1 \Leftrightarrow n>10^3$ 
+\begin{enumerate}
+	\item 1 Zahl in double = 64 Bit = 8 Byte 
+$\Rightarrow$  Bytes(A) = $n^2$8 Byte = $n^28\cdot10^{-9}$ GB
+\item Bytes(A) $>$ 8 GB $\Leftrightarrow$ $n^28\cdot 10 ^{-9} ~\text{GB} > 8 ~\text{GB}  \Leftrightarrow n>\sqrt{ 10^9} \approx 31`623$. 
+\item Im CSR Format speichern wir $$2\cdot \texttt{nnz} + (n+1)$$ Zahlen, wobei \texttt{nnz}=Anzahl der Nichtnulleinträge. Für eine quadratische tridiagonale Matrix also $\texttt{nnz}=3n-2$. Wir müssen also 
+$$2\cdot \texttt{nnz} + (n+1) = 7n -3$$
+Zahlen speichern. Also
+$$GB(A_{csr})  = (7n-3)\cdot 10^{-9}~GB,$$
+wobei 
+$$(7n-3)\cdot 10^{-9} > 8 \iff n > \frac{8 + 3\cdot 10^{-9} }{7 \cdot 10^{-9} } \approx 1`142`857`143.$$
+\end{enumerate}

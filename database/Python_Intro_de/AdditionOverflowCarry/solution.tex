@@ -1,6 +1,5 @@
-%Addieren sie die folgenden Binärzahlen (im Format signed bzw. unsigned char (N=5)) und notieren sie das carry- und das overflow-flag. Bestimmen sie damit ob die Summen im unsigned bzw. sigen Fall darstellbar wären. 
 \begin{enumerate}
-	\item 11111 + 00001 = 00000, Carry = 1, Overflow = 0, Unsigend X, Signed OK
-	\item 11111 + 10001  = ..., Carry = 1, Overflow = 0, Unsigend X, Signed OK
-	\item 11111 + 10000  = ..., Carry = 1, Overflow = 1, Unsigend X, Signed X
+	\item 1111 + 0001 = 0000, \texttt{carry} = 1, \texttt{overflow} = 0, unsigned X, signed OK
+	\item 0111 + 0001  = 1000, \texttt{carry} = 0, \texttt{overflow} = 1, unsigned OK, signed X
+	\item 1111 + 1000  = 0111, \texttt{carry} = 1, \texttt{overflow} = 1, unsigned X, signed X
 \end{enumerate}

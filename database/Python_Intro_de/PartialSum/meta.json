@@ -1,5 +1,5 @@
 {
-    "filename": "prog-PartialSum.tex",
+    "filename": "prog-progPartialSum.tex",
     "title": "",
     "subtitle": "",
     "coding": "",
@@ -7,7 +7,6 @@
     "tags": "",
     "relatedExercises": "",
     "solutionLength": "",
-    "task": "\\textbf{Partial Sum}\n\nImplement a program which outputs the $n$-th partial sum $\\sum_{k=1}^n a_k$ of a sequence ${(a_k)}_{k\\in\\mathbb{N}}$.\\\\\n\\textit{Hint:} Define the sequence as a Python function (\\verb|def|) and use a for-loop (\\verb|for|) to compute the sum.",
-    "solution": "\\lstinputlisting[numbers=none]{prog-PartialSum_solution.py}\n",
-    "id": ""
+    "task": "\\textbf{Partialsumme}\\\\\n\\begin{enumerate}\n\t\\item Implementieren Sie eine Python Funktion \\texttt{partialSum(a, n)} zur Berechnung der $n$-ten Partialsumme $\\sum_{k=1}^n a_k$ einer Folge ${(a_k)}_{k\\in\\mathbb{N}} \\in \\mathbb{R}^\\mathbb{N}$. Implementieren Sie die Folge als Python Funktion \\texttt{a(k)}.\n\t\\item Implementieren Sie geeignete Tests.\\\\\n\t\\textit{Hinweis:} Tests k\u00f6nnen mitunter Beispiele sein, bei denen wir das korrekte Ergebnis kennen, oder logische Tests.\n\\end{enumerate}\n\n",
+    "solution": "blabla"
 }

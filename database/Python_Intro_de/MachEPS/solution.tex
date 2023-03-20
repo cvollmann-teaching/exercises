@@ -1,10 +1,19 @@
-Vorlesung
+Vorlesung Kapitel 4.3.1 Rundungsfehler:
 
 \begin{align*}
 \frac{|z - \overline{z}|}{|z|} \leq \left( \frac{1}{2}\right)^N < \varepsilon~~
-\Leftrightarrow~~ N < \frac{\log(\varepsilon)}{\log(\frac{1}{2})}
+\Leftrightarrow~~ N > \frac{\log(\varepsilon)}{\log(\frac{1}{2})} \approx \begin{cases}
+23.25 &: \varepsilon=10^{-7} \\
+53.15 &: \varepsilon=10^{-16} \\
+\end{cases}
 \end{align*}
-
+Vergleiche:
+\begin{enumerate}
+	\item single precision: \url{https://de.wikipedia.org/wiki/Einfache_Genauigkeit}
+	\item double precision: \url{https://de.wikipedia.org/wiki/Doppelte_Genauigkeit}
+\end{enumerate}
+~\\
+Code:
 \begin{verbatim}
 >>> eps = 1
 >>> while 1+eps > 1:
